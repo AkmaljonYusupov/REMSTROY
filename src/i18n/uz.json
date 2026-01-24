@@ -1,0 +1,13 @@
+{
+	"hero": {
+		"title": "Davlat va noturar obyektlar uchun ishonchli qurilish",
+		"desc": "REMSTROY kompaniyasi davlat buyurtmalari asosida qurilish va montaj ishlarini amalga oshiradi.",
+		"button": "Ariza yuborish"
+	},
+	"nav": {
+		"projects": "Loyihalar",
+		"about": "Biz haqimizda",
+		"reviews": "Sharhlar",
+		"news": "Yangiliklar"
+	}
+}
