@@ -2,10 +2,12 @@ import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 import './Header.scss'
-import closeIcon from '/src/assets/icons/close.svg'
-import ruFlag from '/src/assets/icons/ru.svg'
-import userIcon from '/src/assets/icons/user.svg'
-import uzFlag from '/src/assets/icons/uz.svg'
+
+// SVG larni React komponenti sifatida import qilamiz (?react suffix bilan)
+import CloseIcon from '../../assets/icons/close.svg?react'
+import RuFlag from '../../assets/icons/ru.svg?react'
+import UserIcon from '../../assets/icons/user.svg?react'
+import UzFlag from '../../assets/icons/uzb.svg?react'
 
 const Header = () => {
 	const { i18n, t } = useTranslation()
@@ -58,26 +60,29 @@ const Header = () => {
 								className='current-lang'
 								onClick={() => setLangMenu(!langMenu)}
 							>
-								<img
-									src={lang === 'uzb' ? uzFlag : ruFlag}
-									alt={lang.toUpperCase()}
-								/>
+								{lang === 'uzb' ? (
+									<UzFlag width={24} height={16} />
+								) : (
+									<RuFlag width={24} height={16} />
+								)}
+
 								<span>{lang.toUpperCase()}</span>
 							</button>
 
 							{/* Doim render qilinadi, faqat class bilan ko‘rinadi */}
 							<ul className={`lang-dropdown ${langMenu ? 'show' : ''}`}>
 								<li onClick={() => changeLang('uzb')}>
-									<img src={uzFlag} alt='Uzbek' /> O‘zbekcha
+									<UzFlag width={24} height={16} /> O‘zbekcha
 								</li>
 								<li onClick={() => changeLang('ru')}>
-									<img src={ruFlag} alt='Russian' /> Русский
+									<RuFlag width={24} height={16} /> Русский
 								</li>
 							</ul>
 						</div>
+
 						{/* USER ICON */}
 						<div className='user'>
-							<img src={userIcon} alt='user' />
+							<UserIcon width={24} height={24} />
 						</div>
 
 						{/* BURGER */}
@@ -100,7 +105,12 @@ const Header = () => {
 			<aside className={`offcanvas ${open ? 'open' : ''}`}>
 				<div className='offcanvas__header'>
 					<span>Menu</span>
-					<img src={closeIcon} onClick={() => setOpen(false)} />
+					<CloseIcon
+						width={24}
+						height={24}
+						onClick={() => setOpen(false)}
+						style={{ cursor: 'pointer' }}
+					/>
 				</div>
 
 				<nav className='offcanvas__nav'>
@@ -120,10 +130,10 @@ const Header = () => {
 
 				<div className='offcanvas__lang'>
 					<button onClick={() => changeLang('uzb')}>
-						<img src={uzFlag} /> Uzbek
+						<UzFlag width={20} height={14} /> Uzbek
 					</button>
 					<button onClick={() => changeLang('ru')}>
-						<img src={ruFlag} /> Russian
+						<RuFlag width={20} height={14} /> Russian
 					</button>
 				</div>
 			</aside>

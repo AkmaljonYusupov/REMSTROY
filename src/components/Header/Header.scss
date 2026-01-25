@@ -93,7 +93,15 @@ $breakpoints: (
 
 /* ================= LANGUAGE (ALWAYS VISIBLE) ================= */
 .lang {
+	/* UZ flag vizual jihatdan kattaroq bo‘lgani uchun */
+
 	position: relative;
+
+	.current-lang svg {
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+	}
 
 	.current-lang {
 		display: flex;
@@ -106,12 +114,6 @@ $breakpoints: (
 		cursor: pointer;
 		font-size: 14px;
 		user-select: none;
-
-		img {
-			width: 22px;
-			height: 22px;
-			border-radius: 50%;
-		}
 	}
 
 	.lang-dropdown {
@@ -163,12 +165,6 @@ $breakpoints: (
 
 			&:active {
 				background: #e0efff;
-			}
-
-			img {
-				width: 20px;
-				height: 20px;
-				border-radius: 50%;
 			}
 		}
 	}
