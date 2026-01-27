@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 import './Header.scss'
 
-// SVG larni React komponenti sifatida import qilamiz (?react suffix bilan)
 import CloseIcon from '../../assets/icons/close.svg?react'
 import RuFlag from '../../assets/icons/ru.svg?react'
 import UserIcon from '../../assets/icons/user.svg?react'
@@ -46,12 +45,11 @@ const Header = () => {
 		<>
 			<header className='header'>
 				<div className='header__inner'>
-					{/* LOGO */}
-					<NavLink to='/' className='logo'>
-						<img src={Logo} alt='Remstroy logo' />
-					</NavLink>
-					{/* NAV – desktop only */}
+					{/* NAV + LOGO */}
 					<nav className='nav'>
+						<NavLink to='/' className='logo'>
+							<img src={Logo} alt='Logo' />
+						</NavLink>
 						<NavLink to='/projects'>{t('nav.projects')}</NavLink>
 						<NavLink to='/about'>{t('nav.about')}</NavLink>
 						<NavLink to='/reviews'>{t('nav.reviews')}</NavLink>
@@ -59,7 +57,7 @@ const Header = () => {
 					</nav>
 
 					<div className='actions'>
-						{/* LANGUAGE – always visible */}
+						{/* LANGUAGE */}
 						<div className='lang' ref={langRef}>
 							<button
 								className='current-lang'
@@ -70,11 +68,8 @@ const Header = () => {
 								) : (
 									<RuFlag width={24} height={16} />
 								)}
-
 								<span>{lang.toUpperCase()}</span>
 							</button>
-
-							{/* Doim render qilinadi, faqat class bilan ko‘rinadi */}
 							<ul className={`lang-dropdown ${langMenu ? 'show' : ''}`}>
 								<li onClick={() => changeLang('uzb')}>
 									<UzFlag width={24} height={16} /> O‘zbekcha
@@ -106,8 +101,8 @@ const Header = () => {
 				onClick={() => setOpen(false)}
 			/>
 
-			{/* OFF-CANVAS */}
 			<aside className={`offcanvas ${open ? 'open' : ''}`}>
+				{/* Header */}
 				<div className='offcanvas__header'>
 					<span>Menu</span>
 					<CloseIcon
@@ -118,6 +113,7 @@ const Header = () => {
 					/>
 				</div>
 
+				{/* Nav Links */}
 				<nav className='offcanvas__nav'>
 					<NavLink to='/projects' onClick={() => setOpen(false)}>
 						{t('nav.projects')}
@@ -133,6 +129,7 @@ const Header = () => {
 					</NavLink>
 				</nav>
 
+				{/* Language Buttons */}
 				<div className='offcanvas__lang'>
 					<button onClick={() => changeLang('uzb')}>
 						<UzFlag width={20} height={14} /> Uzbek
