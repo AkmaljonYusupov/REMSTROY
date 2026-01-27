@@ -8,6 +8,7 @@ import CloseIcon from '../../assets/icons/close.svg?react'
 import RuFlag from '../../assets/icons/ru.svg?react'
 import UserIcon from '../../assets/icons/user.svg?react'
 import UzFlag from '../../assets/icons/uzb.svg?react'
+import Logo from '../../assets/images/amazon-color-svgrepo-com.svg'
 
 const Header = () => {
 	const { i18n, t } = useTranslation()
@@ -45,6 +46,10 @@ const Header = () => {
 		<>
 			<header className='header'>
 				<div className='header__inner'>
+					{/* LOGO */}
+					<NavLink to='/' className='logo'>
+						<img src={Logo} alt='Remstroy logo' />
+					</NavLink>
 					{/* NAV – desktop only */}
 					<nav className='nav'>
 						<NavLink to='/projects'>{t('nav.projects')}</NavLink>

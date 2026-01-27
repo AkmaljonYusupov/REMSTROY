@@ -83,6 +83,16 @@ $breakpoints: (
 		}
 	}
 }
+.logo {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+
+	img {
+		height: 36px;
+		width: auto;
+	}
+}
 
 /* ================= ACTIONS ================= */
 .actions {
@@ -98,9 +108,9 @@ $breakpoints: (
 	position: relative;
 
 	.current-lang svg {
-		width: 24px;
-		height: 24px;
-		border-radius: 50%;
+		width: 35px;
+		height: 30px;
+		// border-radius: 50%;
 	}
 
 	.current-lang {
@@ -112,7 +122,7 @@ $breakpoints: (
 		border: 1px solid #ddd;
 		background: #f8f8f8;
 		cursor: pointer;
-		font-size: 14px;
+		font-size: 18px;
 		user-select: none;
 	}
 
@@ -289,13 +299,6 @@ $breakpoints: (
 	gap: 12px;
 }
 
-/* umumiy img stillari (ehtiyot chorasi) */
-img {
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-}
-
 /* ================= RESPONSIVE ================= */
 
 // ≤ 991px (mobil + kichik planshet) — burger chiqadi, nav yashirinadi
@@ -304,6 +307,16 @@ img {
 		opacity: 0;
 		transform: translateY(-10px);
 		pointer-events: none;
+	}
+
+	.offcanvas {
+		.offcanvas__lang svg {
+			width: 30px;
+			height: 25px;
+		}
+		.offcanvas__lang button {
+			font-size: 18px;
+		}
 	}
 
 	.burger {
@@ -331,6 +344,9 @@ img {
 
 	.offcanvas {
 		width: 80%;
+	}
+	.logo img {
+		height: 30px;
 	}
 }
 
