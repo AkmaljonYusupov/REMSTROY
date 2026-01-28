@@ -6,24 +6,50 @@ const Home = () => {
 
 	return (
 		<main className='home'>
+			{/* ================= HERO ================= */}
 			<section className='hero'>
 				<div className='hero__overlay' />
 
-				<div className='hero__content'>
-					<span className='hero__company'>REMSTROY CONSTRUCTION</span>
+				<div className='container'>
+					<div className='hero__content'>
+						<span className='hero__company'>REMSTROY CONSTRUCTION</span>
 
-					<h1 className='hero__title'>{t('hero.title')}</h1>
+						<h1 className='hero__title'>{t('hero.title')}</h1>
 
-					<p className='hero__desc'>{t('hero.desc')}</p>
+						<p className='hero__desc'>{t('hero.desc')}</p>
 
-					<button className='hero__btn'>{t('hero.button')}</button>
+						<button className='hero__btn'>{t('hero.button')}</button>
+					</div>
 				</div>
 			</section>
 
-			<section className='features'>
-				<div className='feature'>Соответствие стандартам</div>
-				<div className='feature'>Соответствие стандартам</div>
-				<div className='feature'>Соответствие стандартам</div>
+			{/* ================= FEATURES ================= */}
+			<section className='features-wrapper'>
+				<div className='container'>
+					<div className='features'>
+						<div className='feature'>
+							Соответствие стандартам
+							<div className='feature__desc'>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Veritatis incidunt eius possimus.
+							</div>
+						</div>
+
+						<div className='feature'>
+							Гарантия качества
+							<div className='feature__desc'>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							</div>
+						</div>
+
+						<div className='feature'>
+							Современные технологии
+							<div className='feature__desc'>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
 		</main>
 	)
