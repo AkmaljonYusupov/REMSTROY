@@ -1,5 +1,5 @@
 // =============================================
-// BREAKPOINTS MAP
+// BREAKPOINTS
 // =============================================
 $breakpoints: (
 	xs: 480px,
@@ -11,7 +11,7 @@ $breakpoints: (
 );
 
 // =============================================
-// MEDIA QUERY MIXINS
+// MIXINS
 // =============================================
 @mixin mq($bp) {
 	@if map-has-key($breakpoints, $bp) {
@@ -29,36 +29,54 @@ $breakpoints: (
 	}
 }
 
-/* ================= GLOBAL ================= */
+// =============================================
+// GLOBAL
+// =============================================
 .home {
 	width: 100%;
 	overflow-x: hidden;
 }
 
-/* ================= CONTAINER (HEADER__INNER bilan 1:1) ================= */
+// =============================================
+// CONTAINER (MARGINSIZ)
+// =============================================
 .container {
 	max-width: 1380px;
-	width: 90%;
-	margin: 0 auto;
+	width: 100%;
+	margin: 0; // ❌ chap/o‘ng margin olib tashlandi
+	// padding-left: 5%;
+	// padding-right: 5%;
 
 	@include mq(xl) {
 		max-width: 1400px;
-		width: 88%;
+		padding-left: 6%;
+		padding-right: 6%;
 	}
 
 	@include mq-max(sm) {
-		width: 80%;
+		padding-left: 16px;
+		padding-right: 16px;
 	}
 }
 
-/* ================= HERO ================= */
+// =============================================
+// HERO
+// =============================================
 .hero {
 	position: relative;
-	width: 100%;
 	min-height: 85vh;
-	background: url('/src/assets/images/hero.jpg') center / cover no-repeat;
 	display: flex;
 	align-items: center;
+	background: url('/src/assets/images/hero.png') center / cover no-repeat;
+	padding: 120px 0 220px;
+
+	@include mq-max(lg) {
+		padding: 100px 0 180px;
+	}
+
+	@include mq-max(md) {
+		padding: 40px 0 120px;
+	}
 }
 
 .hero__overlay {
@@ -72,13 +90,14 @@ $breakpoints: (
 	);
 }
 
-/* ================= HERO CONTENT ================= */
+// =============================================
+// HERO CONTENT
+// =============================================
 .hero__content {
 	position: relative;
 	z-index: 2;
-	color: #fff;
 	max-width: 720px;
-	margin-top: -120px;
+	color: #fff;
 
 	@include mq-max(md) {
 		margin: 0 auto;
@@ -87,7 +106,6 @@ $breakpoints: (
 }
 
 .hero__company {
-	display: block;
 	font-size: 24px;
 	letter-spacing: 2px;
 	opacity: 0.85;
@@ -123,40 +141,42 @@ $breakpoints: (
 	}
 }
 
-/* ================= HERO BUTTON ================= */
+// =============================================
+// BUTTON
+// =============================================
 .hero__btn {
-	margin-top: 12px;
+	margin-top: 20px;
+	padding: 18px 42px;
 	background: #1a73e8;
-	border: none;
 	color: #fff;
-	padding: 20px 45px;
-	font-size: 18px;
+	border: none;
 	border-radius: 8px;
+	font-size: 18px;
 	cursor: pointer;
 	transition: all 0.25s ease;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
+	width: fit-content;
 
 	&:hover {
 		background: #1558b0;
-		transform: translateY(-1px);
+		transform: translateY(-2px);
 	}
 
 	@include mq-max(lg) {
-		padding: 12px 28px;
+		padding: 14px 32px;
 		font-size: 15px;
 	}
 
 	@include mq-max(md) {
-		padding: 10px 22px;
+		padding: 12px 26px;
 		font-size: 14px;
 	}
 }
 
-/* ================= FEATURES ================= */
+// =============================================
+// FEATURES
+// =============================================
 .features-wrapper {
-	margin-top: -200px;
+	margin-top: -140px;
 	padding-bottom: 80px;
 
 	@include mq-max(lg) {
@@ -176,10 +196,11 @@ $breakpoints: (
 	background: rgba(255, 255, 255, 0.15);
 	backdrop-filter: blur(20px);
 	-webkit-backdrop-filter: blur(20px);
-	padding: 60px 40px;
+
 	border-radius: 16px;
+	padding: 56px 40px;
+
 	color: #fff;
-	font-size: 20px;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 
 	@include mq-max(lg) {
@@ -190,13 +211,12 @@ $breakpoints: (
 	@include mq-max(md) {
 		grid-template-columns: 1fr;
 		padding: 28px;
-		font-size: 16px;
 	}
 }
 
 .feature__desc {
+	margin-top: 10px;
 	font-size: 16px;
 	line-height: 1.5;
-	margin-top: 10px;
 	opacity: 0.9;
 }

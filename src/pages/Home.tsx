@@ -31,7 +31,6 @@ const Home = () => {
 							Соответствие стандартам
 							<div className='feature__desc'>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Veritatis incidunt eius possimus.
 							</div>
 						</div>
 

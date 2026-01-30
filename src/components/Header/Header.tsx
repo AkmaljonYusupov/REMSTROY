@@ -7,7 +7,7 @@ import CloseIcon from '../../assets/icons/close.svg?react'
 import RuFlag from '../../assets/icons/ru.svg?react'
 import UserIcon from '../../assets/icons/user.svg?react'
 import UzFlag from '../../assets/icons/uzb.svg?react'
-import Logo from '../../assets/images/amazon-color-svgrepo-com.svg'
+import Logo from '../../assets/images/logo.png'
 
 const Header = () => {
 	const { i18n, t } = useTranslation()
