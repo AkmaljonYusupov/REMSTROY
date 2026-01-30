@@ -28,24 +28,18 @@ const Home = () => {
 				<div className='container'>
 					<div className='features'>
 						<div className='feature'>
-							<h3 className='feature__title'>Соответствие стандартам</h3>
-							<p className='feature__desc'>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							</p>
+							<h3 className='feature__title'>{t('features.standard.title')}</h3>
+							<p className='feature__desc'>{t('features.standard.desc')}</p>
 						</div>
 
 						<div className='feature'>
-							<h3 className='feature__title'>Гарантия качества</h3>
-							<p className='feature__desc'>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							</p>
+							<h3 className='feature__title'>{t('features.quality.title')}</h3>
+							<p className='feature__desc'>{t('features.quality.desc')}</p>
 						</div>
 
 						<div className='feature'>
-							<h3 className='feature__title'>Современные технологии</h3>
-							<p className='feature__desc'>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							</p>
+							<h3 className='feature__title'>{t('features.tech.title')}</h3>
+							<p className='feature__desc'>{t('features.tech.desc')}</p>
 						</div>
 					</div>
 				</div>

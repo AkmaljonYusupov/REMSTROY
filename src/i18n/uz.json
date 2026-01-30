@@ -9,5 +9,19 @@
 		"about": "Biz haqimizda",
 		"reviews": "Sharhlar",
 		"news": "Yangiliklar"
+	},
+	"features": {
+		"standard": {
+			"title": "Standartlarga moslik",
+			"desc": "REMSTROY — ixtisoslashgan qurilish kompaniyasi"
+		},
+		"quality": {
+			"title": "Sifat kafolati",
+			"desc": "REMSTROY — yuqori sifat standartlariga amal qiladi"
+		},
+		"tech": {
+			"title": "Zamonaviy texnologiyalar",
+			"desc": "REMSTROY — eng so‘nggi qurilish texnologiyalaridan foydalanadi"
+		}
 	}
 }
