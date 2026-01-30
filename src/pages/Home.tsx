@@ -44,6 +44,42 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
+			{/* ================= ABOUT ================= */}
+			<section className='about'>
+				<div className='container'>
+					<div className='about__wrapper'>
+						{/* LEGEND */}
+						<h6 className='about__label'>{t('about.label')}</h6>
+
+						{/* LEFT */}
+						<div className='about__content'>
+							<h2 className='about__title'>{t('about.title')}</h2>
+
+							<p className='about__text'>{t('about.text')}</p>
+
+							<div className='about__stats'>
+								<div className='about__stat'>
+									<span>{t('about.stat1.value')}</span>
+									<p>{t('about.stat1.label')}</p>
+								</div>
+
+								<div className='about__stat'>
+									<span>{t('about.stat2.value')}</span>
+									<p>{t('about.stat2.label')}</p>
+								</div>
+							</div>
+						</div>
+
+						{/* RIGHT */}
+						<div className='about__image'>
+							<img
+								src='../assets/images/about_company.png'
+								alt='RSC Construction'
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 	)
 }

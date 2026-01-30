@@ -23,5 +23,18 @@
 			"title": "Zamonaviy texnologiyalar",
 			"desc": "REMSTROY — eng so‘nggi qurilish texnologiyalaridan foydalanadi"
 		}
+	},
+	"about": {
+		"label": "KOMPANIYA HAQIDA",
+		"title": "Har bir loyihada sifat va mas’uliyat",
+		"text": "REMSTROY — davlat tashkilotlari uchun noturar binolar va infratuzilma obyektlarini qurishga ixtisoslashgan qurilish kompaniyasi. Kompaniya o‘z faoliyatida amaldagi qurilish me’yorlari, sifat standartlari va belgilangan muddatlarga qat’iy amal qiladi.",
+		"stat1": {
+			"value": "10+ yil",
+			"label": "qurilishdagi tajriba"
+		},
+		"stat2": {
+			"value": "Davlat buyurtmalari",
+			"label": "asosiy yo‘nalish sifatida"
+		}
 	}
 }
