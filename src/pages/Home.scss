@@ -38,22 +38,17 @@ $breakpoints: (
 }
 
 // =============================================
-// CONTAINER (MARGINSIZ)
+// CONTAINER
 // =============================================
 .container {
-	max-width: 1380px;
-	width: 100%;
-	margin: 0; // ❌ chap/o‘ng margin olib tashlandi
-	// padding-left: 5%;
-	// padding-right: 5%;
+	max-width: 1400px;
+	width: 90%;
+	margin: 0 auto; // brauzer chetlariga yopishmaydi
+	padding-left: 6%;
+	padding-right: 6%;
 
-	@include mq(xl) {
-		max-width: 1400px;
-		padding-left: 6%;
-		padding-right: 6%;
-	}
-
-	@include mq-max(sm) {
+	@include mq-max(md) {
+		width: 95%;
 		padding-left: 16px;
 		padding-right: 16px;
 	}
@@ -68,14 +63,14 @@ $breakpoints: (
 	display: flex;
 	align-items: center;
 	background: url('/src/assets/images/hero.png') center / cover no-repeat;
-	padding: 120px 0 220px;
+	padding: 40px 0 200px;
 
 	@include mq-max(lg) {
-		padding: 100px 0 180px;
+		padding: 40px 0 180px;
 	}
 
 	@include mq-max(md) {
-		padding: 40px 0 120px;
+		padding: 30px 0 120px;
 	}
 }
 
@@ -106,7 +101,7 @@ $breakpoints: (
 }
 
 .hero__company {
-	font-size: 24px;
+	font-size: 22px;
 	letter-spacing: 2px;
 	opacity: 0.85;
 
@@ -145,13 +140,13 @@ $breakpoints: (
 // BUTTON
 // =============================================
 .hero__btn {
-	margin-top: 20px;
-	padding: 18px 42px;
+	margin-top: 24px;
+	padding: 16px 38px;
 	background: #1a73e8;
 	color: #fff;
 	border: none;
 	border-radius: 8px;
-	font-size: 18px;
+	font-size: 16px;
 	cursor: pointer;
 	transition: all 0.25s ease;
 	width: fit-content;
@@ -161,51 +156,46 @@ $breakpoints: (
 		transform: translateY(-2px);
 	}
 
-	@include mq-max(lg) {
-		padding: 14px 32px;
-		font-size: 15px;
-	}
-
 	@include mq-max(md) {
-		padding: 12px 26px;
+		padding: 12px 28px;
 		font-size: 14px;
 	}
 }
 
 // =============================================
-// FEATURES
+// FEATURES WRAPPER
 // =============================================
 .features-wrapper {
-	margin-top: -140px;
+	margin-top: -180px; // tepaga ko‘tarildi
 	padding-bottom: 80px;
+	width: 100%;
 
 	@include mq-max(lg) {
-		margin-top: -100px;
+		margin-top: -140px;
 	}
 
 	@include mq-max(md) {
-		margin-top: -70px;
+		margin-top: -90px;
 	}
 }
 
+// =============================================
+// FEATURES GRID
+// =============================================
 .features {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 24px;
-
 	background: rgba(255, 255, 255, 0.15);
 	backdrop-filter: blur(20px);
-	-webkit-backdrop-filter: blur(20px);
-
 	border-radius: 16px;
 	padding: 56px 40px;
-
 	color: #fff;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+	position: relative;
 
 	@include mq-max(lg) {
 		grid-template-columns: repeat(2, 1fr);
-		padding: 40px 32px;
 	}
 
 	@include mq-max(md) {
@@ -214,9 +204,45 @@ $breakpoints: (
 	}
 }
 
+// =============================================
+// FEATURE ITEMS + VERTICAL DIVIDER
+// =============================================
+.feature {
+	position: relative;
+	padding: 0 32px;
+
+	&:not(:last-child)::after {
+		content: '';
+		position: absolute;
+		top: 10%;
+		right: 0;
+		width: 1px;
+		height: 80%;
+		background: rgba(255, 255, 255, 0.35);
+	}
+
+	@include mq-max(lg) {
+		&:nth-child(2)::after {
+			display: none; // 2 ta box bo‘lgan holatda chiziq o‘chadi
+		}
+	}
+
+	@include mq-max(md) {
+		padding: 0;
+		&::after {
+			display: none; // mobilda chiziqlar o‘chadi
+		}
+	}
+}
+
+.feature__title {
+	font-size: 20px;
+	font-weight: 600;
+}
+
 .feature__desc {
 	margin-top: 10px;
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 1.5;
 	opacity: 0.9;
 }

@@ -28,24 +28,24 @@ const Home = () => {
 				<div className='container'>
 					<div className='features'>
 						<div className='feature'>
-							Соответствие стандартам
-							<div className='feature__desc'>
+							<h3 className='feature__title'>Соответствие стандартам</h3>
+							<p className='feature__desc'>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							</div>
+							</p>
 						</div>
 
 						<div className='feature'>
-							Гарантия качества
-							<div className='feature__desc'>
+							<h3 className='feature__title'>Гарантия качества</h3>
+							<p className='feature__desc'>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							</div>
+							</p>
 						</div>
 
 						<div className='feature'>
-							Современные технологии
-							<div className='feature__desc'>
+							<h3 className='feature__title'>Современные технологии</h3>
+							<p className='feature__desc'>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							</div>
+							</p>
 						</div>
 					</div>
 				</div>
