@@ -73,7 +73,7 @@ const Home = () => {
 						{/* RIGHT */}
 						<div className='about__image'>
 							<img
-								src='../assets/images/about_company.png'
+								src='../assets/images/about_company.pngs'
 								alt='RSC Construction'
 							/>
 						</div>
