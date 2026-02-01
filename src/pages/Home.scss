@@ -46,8 +46,8 @@ $breakpoints: (
 	margin: 0 auto; // brauzer chetlariga yopishmaydi
 
 	@include mq-max(md) {
-		width: 94%;
-		margin-left: 12px;
+		width: 93%;
+		margin-left: 6px;
 		margin-right: 0px;
 	}
 }
