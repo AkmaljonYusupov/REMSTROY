@@ -1,7 +1,7 @@
 function Footer() {
 	return (
 		<div>
-			<h1>Biz haqimizda</h1>
+			<h1>Footer section</h1>
 		</div>
 	)
 }

@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next'
+import gearsGif from '../assets/images/1667-yellow-gears.gif'
 import AboutImage from '../assets/images/about_company.png'
+import alarm from '../assets/images/unnamed.png'
 import './Home.scss'
 const Home = () => {
 	const { t } = useTranslation()
@@ -27,17 +29,21 @@ const Home = () => {
 			<section className='features-wrapper'>
 				<div className='container'>
 					<div className='features'>
-						<div className='feature'>
-							<h3 className='feature__title'>{t('features.standard.title')}</h3>
+						<div className='feature' id='feature'>
+							<h3 className='feature__title' id='feature__title'>
+								{t('features.standard.title')}
+							</h3>
 							<p className='feature__desc'>{t('features.standard.desc')}</p>
 						</div>
 
 						<div className='feature'>
+							<img src={alarm} alt='nastroy' />
 							<h3 className='feature__title'>{t('features.quality.title')}</h3>
 							<p className='feature__desc'>{t('features.quality.desc')}</p>
 						</div>
 
 						<div className='feature'>
+							<img src={gearsGif} alt='nastroy' />
 							<h3 className='feature__title'>{t('features.tech.title')}</h3>
 							<p className='feature__desc'>{t('features.tech.desc')}</p>
 						</div>

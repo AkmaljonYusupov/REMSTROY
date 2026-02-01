@@ -192,7 +192,7 @@ $breakpoints: (
 	}
 
 	@include mq-max(lg) {
-		margin-top: -340px;
+		margin-top: -360px;
 	}
 
 	@include mq-max(md) {
@@ -229,7 +229,7 @@ $breakpoints: (
 	@include mq-max(md) {
 		grid-template-columns: repeat(2, 1fr);
 		margin-left: 40px;
-		gap: 5px;
+		gap: 10px;
 		padding: 5px 20px;
 	}
 	@include mq-max(sm) {
@@ -243,17 +243,29 @@ $breakpoints: (
 // =============================================
 // FEATURE ITEMS + VERTICAL DIVIDER
 // =============================================
+#feature {
+	padding-top: 50px;
+	@include mq-max(md) {
+		padding-top: 10px;
+	}
+}
 .feature {
 	position: relative;
 	padding: 0 5px;
 
+	img {
+		width: 40px;
+		height: auto;
+		margin-bottom: 12px;
+	}
+
 	&:not(:last-child)::after {
 		content: '';
 		position: absolute;
-		top: 10%;
+		top: 5%;
 		right: 0;
 		width: 1px;
-		height: 80%;
+		height: 90%;
 		background: rgba(255, 255, 255, 0.35);
 	}
 
@@ -264,7 +276,7 @@ $breakpoints: (
 	}
 
 	@include mq-max(md) {
-		padding: 0;
+		padding: 5px 0px;
 		&::after {
 			display: none; // mobilda chiziqlar o‘chadi
 		}
@@ -272,8 +284,12 @@ $breakpoints: (
 }
 
 .feature__title {
+	margin: 5px 0px;
 	font-size: 20px;
 	font-weight: 600;
+}
+#feature__title {
+	margin: 10px 0px;
 }
 
 .feature__desc {
@@ -406,10 +422,10 @@ $breakpoints: (
 .about__stat::before {
 	content: '';
 	position: absolute;
-	top: 48px;
+	top: 58px;
 	left: 0;
 
-	width: 150px;
+	width: 140px;
 	height: 2px;
 	background: #878686;
 
