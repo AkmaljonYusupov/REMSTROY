@@ -137,11 +137,9 @@ $breakpoints: (
 		font-size: 30px;
 	}
 	@include mq-max(sm) {
-		font-size: 25px;
-	}
-	@include mq-max(sm) {
 		font-size: 15px;
 		width: 100%;
+		margin: 10px 0px;
 	}
 }
 
@@ -240,7 +238,7 @@ $breakpoints: (
 	@include mq-max(sm) {
 		grid-template-columns: 1fr;
 		margin-left: 20px;
-		margin-top: -400px;
+		margin-top: -410px;
 		padding: 5px 15px;
 	}
 }
