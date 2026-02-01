@@ -36,5 +36,34 @@
 			"value": "Davlat buyurtmalari",
 			"label": "asosiy yo‘nalish sifatida"
 		}
+	},
+	"advantages": {
+		"label": "Afzalliklar",
+		"items": {
+			"1": {
+				"title": "Davlat standartlariga muvofiqlik",
+				"desc": "Barcha ishlar amaldagi me’yor va talablar asosida bajariladi"
+			},
+			"2": {
+				"title": "Tajribali mutaxassislar",
+				"desc": "Malakali muhandislar va texnik xodimlar"
+			},
+			"3": {
+				"title": "Individual yondashuv",
+				"desc": "Har bir loyiha o‘ziga xos jihatlari asosida ishlab chiqiladi"
+			},
+			"4": {
+				"title": "Xavfsizlik texnikasi",
+				"desc": "Mehnatni muhofaza qilish qoidalariga qat’iy rioya qilinadi"
+			},
+			"5": {
+				"title": "Ishonchlilik va mas’uliyat",
+				"desc": "Buyurtmachi oldidagi majburiyatlarni aniq bajarish"
+			},
+			"6": {
+				"title": "Muddatlarga rioya qilish",
+				"desc": "Obyektlarni belgilangan vaqtda topshirish"
+			}
+		}
 	}
 }

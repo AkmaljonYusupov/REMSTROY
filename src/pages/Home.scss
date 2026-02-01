@@ -413,34 +413,14 @@ $breakpoints: (
 	}
 }
 
-.about__stat {
-	position: relative;
-	padding-top: 18px;
-	max-width: 100%;
-}
-
-.about__stat::before {
-	content: '';
-	position: absolute;
-	top: 58px;
-	left: 0;
-
-	width: 140px;
-	height: 2px;
-	background: #878686;
-
-	@include mq-max(md) {
-		width: 80px;
-		top: 42px;
-	}
-}
-
 .about__stat span {
 	display: block;
 	font-size: 30px;
 	font-weight: 700;
 	color: #f2b441;
 	margin-bottom: 6px;
+	border-bottom: 2px solid #878686;
+	padding-bottom: 10px;
 }
 
 .about__stat p {
@@ -469,4 +449,76 @@ $breakpoints: (
 	@include mq-max(md) {
 		height: 220px;
 	}
+}
+
+// =============================================
+// ADVANTAGES (IMAGE-LIKE DESIGN)
+// =============================================
+.advantages {
+	padding: 140px 0;
+	background: radial-gradient(
+		circle at top left,
+		#ffffff 0%,
+		#f2f2f2 45%,
+		#e9e9e9 100%
+	);
+
+	@include mq-max(md) {
+		padding: 90px 0;
+	}
+}
+
+.advantages__label {
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #111;
+	margin-bottom: 80px;
+}
+
+.advantages__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 120px;
+	row-gap: 70px;
+
+	@include mq-max(lg) {
+		column-gap: 60px;
+	}
+
+	@include mq-max(md) {
+		grid-template-columns: 1fr;
+		row-gap: 40px;
+	}
+}
+
+.advantage {
+	display: flex;
+	align-items: flex-start;
+	gap: 32px;
+}
+
+.advantage__num {
+	font-size: 72px;
+	font-weight: 700;
+	line-height: 1;
+	color: transparent;
+	-webkit-text-stroke: 2px #f2b441;
+	min-width: 90px;
+}
+
+.advantage h3 {
+	font-size: 20px;
+	font-weight: 600;
+	color: #1e3a5f;
+	margin-bottom: 10px;
+	max-width: 360px;
+}
+
+.advantage p {
+	font-size: 15px;
+	line-height: 1.6;
+	color: #3f3f3f;
+	max-width: 420px;
 }

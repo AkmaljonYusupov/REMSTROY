@@ -78,6 +78,62 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
+			{/* ================= ADVANTAGES ================= */}
+			<section className='advantages'>
+				<div className='container'>
+					<h2 className='advantages__label'>{t('advantages.label')}</h2>
+
+					<div className='advantages__grid'>
+						<div className='advantage'>
+							<span className='advantage__num'>01</span>
+							<div>
+								<h3>{t('advantages.items.1.title')}</h3>
+								<p>{t('advantages.items.1.desc')}</p>
+							</div>
+						</div>
+
+						<div className='advantage'>
+							<span className='advantage__num'>04</span>
+							<div>
+								<h3>{t('advantages.items.4.title')}</h3>
+								<p>{t('advantages.items.4.desc')}</p>
+							</div>
+						</div>
+
+						<div className='advantage'>
+							<span className='advantage__num'>02</span>
+							<div>
+								<h3>{t('advantages.items.2.title')}</h3>
+								<p>{t('advantages.items.2.desc')}</p>
+							</div>
+						</div>
+
+						<div className='advantage'>
+							<span className='advantage__num'>05</span>
+							<div>
+								<h3>{t('advantages.items.5.title')}</h3>
+								<p>{t('advantages.items.5.desc')}</p>
+							</div>
+						</div>
+
+						<div className='advantage'>
+							<span className='advantage__num'>03</span>
+							<div>
+								<h3>{t('advantages.items.3.title')}</h3>
+								<p>{t('advantages.items.3.desc')}</p>
+							</div>
+						</div>
+
+						<div className='advantage'>
+							<span className='advantage__num'>06</span>
+							<div>
+								<h3>{t('advantages.items.6.title')}</h3>
+								<p>{t('advantages.items.6.desc')}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 	)
 }
