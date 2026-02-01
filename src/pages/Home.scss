@@ -96,7 +96,7 @@ $breakpoints: (
 	max-width: 720px;
 	color: #fff;
 	margin-top: -140px;
-	margin-left: -70px;
+	margin-left: -30px;
 
 	@include mq-max(md) {
 		margin: 0 auto;
@@ -105,7 +105,7 @@ $breakpoints: (
 }
 
 .hero__company {
-	font-size: 22px;
+	font-size: 20px;
 	letter-spacing: 2px;
 	opacity: 0.85;
 
@@ -116,8 +116,8 @@ $breakpoints: (
 
 .hero__title {
 	font-size: 40px;
-	line-height: 1.2;
-	margin: 20px 0;
+	line-height: 1.1;
+	margin: 16px 0;
 	text-transform: uppercase;
 
 	@include mq-max(lg) {
@@ -144,7 +144,7 @@ $breakpoints: (
 // BUTTON
 // =============================================
 .hero__btn {
-	margin-top: 24px;
+	// margin-top: 5px;
 	padding: 16px 38px;
 	background: #1a73e8;
 	color: #fff;
@@ -202,13 +202,14 @@ $breakpoints: (
 	background: rgba(255, 255, 255, 0.15);
 	backdrop-filter: blur(20px);
 	border-radius: 16px;
-	padding: 25px 30px;
+	padding: 20px 30px;
 	color: #fff;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 	position: relative;
 
 	@include mq-max(lg) {
 		grid-template-columns: repeat(2, 1fr);
+		margin-top: -50px;
 	}
 
 	@include mq-max(md) {
