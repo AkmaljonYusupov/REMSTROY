@@ -206,6 +206,7 @@ $breakpoints: (
 
 	@include mq-max(sm) {
 		margin-top: 0; // 🔒 to‘liq hero ichida
+		gap: 10px;
 	}
 }
 
