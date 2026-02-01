@@ -69,6 +69,7 @@ $breakpoints: (
 
 	@include mq-max(lg) {
 		padding: 40px 0 180px;
+		min-height: 100vh;
 	}
 
 	@include mq-max(md) {
@@ -102,6 +103,10 @@ $breakpoints: (
 		margin: 0 auto;
 		text-align: center;
 	}
+	@include mq-max(lg) {
+		margin-top: -240px;
+		margin-left: 30px;
+	}
 }
 
 .hero__company {
@@ -121,11 +126,14 @@ $breakpoints: (
 	text-transform: uppercase;
 
 	@include mq-max(lg) {
-		font-size: 40px;
+		font-size: 30px;
 	}
 
 	@include mq-max(md) {
 		font-size: 30px;
+	}
+	@include mq-max(sm) {
+		font-size: 25px;
 	}
 }
 
@@ -137,6 +145,7 @@ $breakpoints: (
 	@include mq-max(md) {
 		font-size: 14px;
 		margin: 0 auto;
+		line-height: 1;
 	}
 }
 
@@ -163,6 +172,7 @@ $breakpoints: (
 	@include mq-max(md) {
 		padding: 12px 28px;
 		font-size: 14px;
+		margin-top: 10px;
 	}
 }
 
@@ -180,11 +190,12 @@ $breakpoints: (
 	}
 
 	@include mq-max(lg) {
-		margin-top: -140px;
+		margin-top: -340px;
 	}
 
 	@include mq-max(md) {
-		margin-top: -60px; // hero’dan chiqmaydi
+		margin-top: -340px;
+		// hero’dan chiqmaydi
 	}
 
 	@include mq-max(sm) {
@@ -213,8 +224,16 @@ $breakpoints: (
 	}
 
 	@include mq-max(md) {
+		grid-template-columns: repeat(2, 1fr);
+		margin-left: 40px;
+		gap: 5px;
+		padding: 5px 20px;
+	}
+	@include mq-max(sm) {
 		grid-template-columns: 1fr;
-		padding: 28px;
+		margin-left: 28px;
+		margin-top: -355px;
+		padding: 5px 15px;
 	}
 }
 
