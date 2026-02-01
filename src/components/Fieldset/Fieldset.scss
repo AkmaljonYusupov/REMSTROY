@@ -1,0 +1,67 @@
+/* =============================================
+   BREAKPOINTS & MIXIN (LOCAL)
+============================================= */
+$breakpoints: (
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+);
+
+@mixin mq-max($size) {
+	@media (max-width: map-get($breakpoints, $size)) {
+		@content;
+	}
+}
+
+/* =============================================
+   FIELDSET
+============================================= */
+.fieldset {
+	position: relative;
+	width: 100%;
+
+	border: 2px solid #878686;
+	border-radius: 28px;
+	background: #fff;
+
+	padding: 72px 64px 56px;
+
+	@include mq-max(lg) {
+		padding: 56px 40px;
+	}
+
+	@include mq-max(md) {
+		padding: 48px 20px 32px;
+	}
+}
+
+/* =============================================
+   LEGEND (REAL FIELDSET EFFECT)
+============================================= */
+.fieldset__legend {
+	position: absolute;
+	top: 0;
+	left: 32px;
+	transform: translateY(-50%);
+
+	padding: 0 18px;
+	background: #fff; // border kesilgan joyni yopadi
+
+	font-size: 26px;
+	font-weight: 700;
+	letter-spacing: 1.6px;
+	text-transform: uppercase;
+
+	color: #111;
+	line-height: 1;
+	white-space: nowrap;
+
+	z-index: 5; // contentdan har doim yuqorida
+
+	@include mq-max(md) {
+		left: 16px;
+		font-size: 18px;
+		padding: 0 12px;
+	}
+}

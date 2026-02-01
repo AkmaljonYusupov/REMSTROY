@@ -49,8 +49,10 @@ $breakpoints: (
 
 	@include mq-max(md) {
 		width: 95%;
-		padding-left: 16px;
-		padding-right: 16px;
+		// padding-left: 16px;
+		// padding-right: 16px;
+		margin-left: 0px;
+		margin-right: 0px;
 	}
 }
 
@@ -93,6 +95,7 @@ $breakpoints: (
 	z-index: 2;
 	max-width: 720px;
 	color: #fff;
+	margin-top: -160px;
 
 	@include mq-max(md) {
 		margin: 0 auto;
@@ -166,8 +169,8 @@ $breakpoints: (
 // FEATURES WRAPPER
 // =============================================
 .features-wrapper {
-	margin-top: -180px; // tepaga ko‘tarildi
-	padding-bottom: 80px;
+	margin-top: -280px; // tepaga ko‘tarildi
+	// padding-bottom: 80px;
 	width: 100%;
 
 	@include mq-max(lg) {
