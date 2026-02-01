@@ -42,10 +42,10 @@ $breakpoints: (
 // =============================================
 .container {
 	max-width: 1400px;
-	width: 90%;
+	width: 88%;
 	margin: 0 auto; // brauzer chetlariga yopishmaydi
-	padding-left: 6%;
-	padding-right: 6%;
+	// padding-left: 6%;
+	// padding-right: 6%;
 
 	@include mq-max(md) {
 		width: 95%;
@@ -95,7 +95,8 @@ $breakpoints: (
 	z-index: 2;
 	max-width: 720px;
 	color: #fff;
-	margin-top: -160px;
+	margin-top: -140px;
+	margin-left: -70px;
 
 	@include mq-max(md) {
 		margin: 0 auto;
@@ -114,7 +115,7 @@ $breakpoints: (
 }
 
 .hero__title {
-	font-size: 46px;
+	font-size: 40px;
 	line-height: 1.2;
 	margin: 20px 0;
 	text-transform: uppercase;
@@ -166,19 +167,28 @@ $breakpoints: (
 }
 
 // =============================================
-// FEATURES WRAPPER
+// FEATURES WRAPPER (HERO ICHIDA QOLADI)
 // =============================================
 .features-wrapper {
-	margin-top: -280px; // tepaga ko‘tarildi
-	// padding-bottom: 80px;
+	position: relative;
 	width: 100%;
+	margin-top: -240px; // desktop — dizayn saqlanadi
+	z-index: 3;
+
+	@include mq-max(xl) {
+		margin-top: -220px;
+	}
 
 	@include mq-max(lg) {
 		margin-top: -140px;
 	}
 
 	@include mq-max(md) {
-		margin-top: -90px;
+		margin-top: -60px; // hero’dan chiqmaydi
+	}
+
+	@include mq-max(sm) {
+		margin-top: 0; // 🔒 to‘liq hero ichida
 	}
 }
 
@@ -192,7 +202,7 @@ $breakpoints: (
 	background: rgba(255, 255, 255, 0.15);
 	backdrop-filter: blur(20px);
 	border-radius: 16px;
-	padding: 56px 40px;
+	padding: 25px 30px;
 	color: #fff;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 	position: relative;
@@ -212,7 +222,7 @@ $breakpoints: (
 // =============================================
 .feature {
 	position: relative;
-	padding: 0 32px;
+	padding: 0 5px;
 
 	&:not(:last-child)::after {
 		content: '';
