@@ -89,5 +89,10 @@
 				"author": "Tuxsinov Doniyorbek"
 			}
 		}
+	},
+	"news": {
+		"label": "Yangiliklar",
+		"title": "Davlat obyektining qurilishi yakunlandi",
+		"desc": "REMSTROY kompaniyasi davlat buyurtmasi asosida navbatdagi qurilish obyektini muvaffaqiyatli yakunladi."
 	}
 }

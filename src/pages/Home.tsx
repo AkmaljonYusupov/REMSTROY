@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import gearsGif from '../assets/images/1667-yellow-gears.gif'
 import AboutImage from '../assets/images/about_company.png'
 
+import newsImg from '../assets/images/news-main.png'
 import bgSlider from '../assets/images/projects-main.webp'
 import sliderImg1 from '../assets/images/slider1.png'
 import sliderImg2 from '../assets/images/slider2.avif'
@@ -203,6 +204,7 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
+
 			{/* ================= REVIEWS ================= */}
 			<section className='reviews'>
 				<div className='container'>
@@ -233,6 +235,46 @@ const Home = () => {
 							<div className='review__stars'>★★★★★</div>
 							<p className='review__text'>{t('reviews.items.3.text')}</p>
 							<h4 className='review__author'>{t('reviews.items.3.author')}</h4>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* ================= NEWS ================= */}
+			<section className='news'>
+				<div className='container news__wrapper'>
+					{/* LEFT */}
+					<div className='news__left'>
+						<span className='news__label'>{t('news.label')}</span>
+
+						<h2 className='news__title'>{t('news.title')}</h2>
+
+						<p className='news__desc'>{t('news.desc')}</p>
+
+						<div className='news__video'>
+							{/* <video
+								src={nevsVideo}
+								controls
+								preload='metadata'
+								poster='/images/news-video-poster.jpg'
+							/> */}
+							<iframe
+								width='560'
+								height='315'
+								src='https://www.youtube.com/embed/ijC99D2Maa0?si=rucewdJ86utlC8rf&amp;start=1'
+								title='YouTube video player'
+								frameborder='0'
+								allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+								referrerpolicy='strict-origin-when-cross-origin'
+								allowfullscreen
+							></iframe>
+						</div>
+					</div>
+
+					{/* RIGHT */}
+					<div className='news__right'>
+						<div className='news__image'>
+							<img src={newsImg} alt='construction' />
 						</div>
 					</div>
 				</div>

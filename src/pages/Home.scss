@@ -789,7 +789,7 @@ $breakpoints: (
 // =============================================
 
 .reviews {
-	padding: 10px 0;
+	padding: 10px 0px 160px 0px;
 	background: #fff;
 	text-align: center;
 }
@@ -889,5 +889,102 @@ $breakpoints: (
 
 	.review__divider {
 		display: none;
+	}
+}
+// =============================================
+// NEWS SECTION — CORPORATE CLEAN
+// =============================================
+
+.news {
+	position: relative; // MUHIM
+	padding: 140px 0;
+	background: #f4f6f8;
+	overflow: hidden; // tashqariga chiqsa kesadi
+}
+
+.news__wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 80px;
+}
+
+// LEFT
+.news__label {
+	display: block;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #000;
+	margin-bottom: 28px;
+}
+
+.news__title {
+	font-size: 36px;
+	font-weight: 700;
+	color: #1f6ed4;
+	margin-bottom: 22px;
+	line-height: 1.25;
+}
+
+.news__desc {
+	font-size: 16px;
+	color: #111;
+	line-height: 1.6;
+	margin-bottom: 48px;
+	max-width: 520px;
+}
+
+// VIDEO PREVIEW
+.news__video {
+	width: 420px;
+	border-radius: 6px;
+	overflow: hidden;
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+
+	img {
+		width: 100%;
+		display: block;
+	}
+}
+
+// RIGHT IMAGE — BOTTOM RIGHT FIXED TO SECTION
+.news__right {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	pointer-events: none; // agar ustiga bosilmasin desang
+}
+
+.news__image {
+	width: 520px;
+
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+		object-fit: cover;
+	}
+}
+
+// RESPONSIVE
+@include mq-max(md) {
+	.news {
+		padding: 80px 0;
+	}
+
+	.news__wrapper {
+		grid-template-columns: 1fr;
+		gap: 60px;
+	}
+
+	.news__right {
+		position: static;
+	}
+
+	.news__image {
+		width: 100%;
+		margin-top: 40px;
 	}
 }
