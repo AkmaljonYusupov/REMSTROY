@@ -169,15 +169,18 @@ const Home = () => {
 						{/* RIGHT SIDE */}
 						<div className='projects__right'>
 							<div className='projects__mini'>
-								<img src='/src/assets/images/projects-small.jpg' alt='Detail' />
+								<img
+									src='/src/assets/images/projects-small01.webp'
+									alt='Detail'
+								/>
 							</div>
 
 							<div className='projects__box'>
-								<img src='/src/assets/images/projects-small.jpg' alt='' />
+								<img src='/src/assets/images/projects-small02.avif' alt='' />
 							</div>
 
 							<div className='projects__box'>
-								<img src='/src/assets/images/projects-small.jpg' alt='' />
+								<img src='/src/assets/images/projects-small.png' alt='' />
 							</div>
 						</div>
 					</div>
