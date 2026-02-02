@@ -1,6 +1,9 @@
 import { useTranslation } from 'react-i18next'
 import gearsGif from '../assets/images/1667-yellow-gears.gif'
 import AboutImage from '../assets/images/about_company.png'
+import sliderImg1 from '../assets/images/slider1.png'
+import sliderImg2 from '../assets/images/slider2.avif'
+import sliderImg3 from '../assets/images/slider3.webp'
 import alarm from '../assets/images/unnamed.png'
 import './Home.scss'
 const Home = () => {
@@ -169,18 +172,15 @@ const Home = () => {
 						{/* RIGHT SIDE */}
 						<div className='projects__right'>
 							<div className='projects__mini'>
-								<img
-									src='/src/assets/images/projects-small01.webp'
-									alt='Detail'
-								/>
+								<img src={sliderImg1} alt='Detail1' />
 							</div>
 
 							<div className='projects__box'>
-								<img src='/src/assets/images/projects-small02.avif' alt='' />
+								<img src={sliderImg2} alt='Detail2' />
 							</div>
 
 							<div className='projects__box'>
-								<img src='/src/assets/images/projects-small.png' alt='' />
+								<img src={sliderImg3} alt='Detail3' />
 							</div>
 						</div>
 					</div>
