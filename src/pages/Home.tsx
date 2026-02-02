@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import gearsGif from '../assets/images/1667-yellow-gears.gif'
 import AboutImage from '../assets/images/about_company.png'
+import bgSlider from '../assets/images/projects-main.webp'
 import sliderImg1 from '../assets/images/slider1.png'
 import sliderImg2 from '../assets/images/slider2.avif'
 import sliderImg3 from '../assets/images/slider3.webp'
@@ -144,11 +145,7 @@ const Home = () => {
 
 					<div className='projects__card'>
 						{/* BACKGROUND IMAGE */}
-						<img
-							src='/src/assets/images/projects-main.webp'
-							alt='Projects'
-							className='projects__bg'
-						/>
+						<img src={bgSlider} alt='Projects' className='projects__bg' />
 
 						<div className='projects__overlay' />
 
