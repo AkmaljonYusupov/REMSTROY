@@ -568,3 +568,144 @@ $breakpoints: (
 	color: #3f3f3f;
 	max-width: 440px;
 }
+// =============================================
+// PROJECTS (IMAGE CARD STYLE)
+// =============================================
+.projects {
+	padding: 120px 0;
+}
+
+.projects__label {
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+
+// =============================================
+// MAIN CARD
+// =============================================
+.projects__card {
+	position: relative;
+	border-radius: 28px;
+	overflow: hidden;
+	height: 520px;
+}
+
+// BG IMAGE
+.projects__bg {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+// OVERLAY
+.projects__overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.25);
+}
+
+// =============================================
+// LEFT CONTENT
+// =============================================
+.projects__left {
+	position: absolute;
+	bottom: 40px;
+	left: 40px;
+	z-index: 2;
+	color: #fff;
+}
+
+.projects__title {
+	font-size: 26px;
+	font-weight: 700;
+	margin-bottom: 24px;
+}
+
+// BADGES
+.projects__badges {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.badge {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 12px 18px;
+	border-radius: 12px;
+	background: rgba(255, 255, 255, 0.7);
+	backdrop-filter: blur(6px);
+	color: #111;
+	width: fit-content;
+
+	strong {
+		font-size: 22px;
+		font-weight: 800;
+		color: #f2b441;
+	}
+
+	span {
+		font-size: 14px;
+		font-weight: 600;
+	}
+}
+
+// =============================================
+// RIGHT SIDE
+// =============================================
+.projects__right {
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	bottom: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	z-index: 2;
+}
+
+// MINI IMAGE
+.projects__mini {
+	width: 180px;
+	height: 110px;
+	border-radius: 18px;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+// BLUE BOXES
+.projects__box {
+	width: 180px;
+	flex: 1;
+	border-radius: 18px;
+	background: #1f6ed4;
+}
+
+// =============================================
+// RESPONSIVE
+// =============================================
+@include mq-max(md) {
+	.projects__card {
+		height: 420px;
+	}
+
+	.projects__right {
+		display: none; // 📱 mobile’da yo‘q (rasmga mos)
+	}
+
+	.projects__left {
+		left: 24px;
+		bottom: 24px;
+	}
+}

@@ -65,5 +65,11 @@
 				"desc": "Obyektlarni belgilangan vaqtda topshirish"
 			}
 		}
+	},
+	"projects": {
+		"label": "PROYEKTLAR",
+		"objects": "OBYEKTLAR",
+		"experience": "yillik tajriba",
+		"completed": "bajarilgan loyihalar"
 	}
 }
