@@ -572,7 +572,7 @@ $breakpoints: (
 // PROJECTS SECTION — CINEMATIC PREMIUM
 // =============================================
 .projects {
-	padding: 160px 0;
+	padding: 60px 0;
 }
 
 .projects__label {
@@ -782,5 +782,112 @@ $breakpoints: (
 	.projects__left {
 		left: 24px;
 		bottom: 24px;
+	}
+}
+// =============================================
+// REVIEWS SECTION — CINEMATIC PREMIUM
+// =============================================
+
+.reviews {
+	padding: 10px 0;
+	background: #fff;
+	text-align: center;
+}
+
+// TITLE
+.reviews__title {
+	font-size: 36px;
+	font-weight: 700;
+	margin-bottom: 18px;
+	letter-spacing: 0.5px;
+}
+
+.reviews__subtitle {
+	max-width: 900px;
+	margin: 0 auto 80px;
+	font-size: 16px;
+	color: #555;
+	line-height: 1.6;
+}
+
+// GRID
+.reviews__grid {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr auto 1fr;
+	align-items: stretch;
+}
+
+// CARD
+.review {
+	padding: 0 36px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: transform 0.4s ease;
+
+	&:hover {
+		transform: translateY(-6px);
+	}
+}
+
+// STARS
+.review__stars {
+	color: #f2b441;
+	font-size: 22px;
+	letter-spacing: 4px;
+	margin-bottom: 24px;
+}
+
+// TEXT
+.review__text {
+	font-size: 15px;
+	line-height: 1.7;
+	color: #222;
+	margin-bottom: 32px;
+	max-width: 320px;
+}
+
+// AUTHOR
+.review__author {
+	font-size: 16px;
+	font-weight: 600;
+	color: #000;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -14px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 40px;
+		height: 2px;
+		background: linear-gradient(90deg, transparent, #1f6ed4, transparent);
+	}
+}
+
+// DIVIDER
+.review__divider {
+	width: 1px;
+	background: linear-gradient(to bottom, transparent, #ddd, transparent);
+}
+
+// RESPONSIVE
+@include mq-max(md) {
+	.reviews {
+		padding: 100px 0;
+	}
+
+	.reviews__grid {
+		grid-template-columns: 1fr;
+		gap: 60px;
+	}
+
+	.review {
+		padding: 0 16px;
+	}
+
+	.review__divider {
+		display: none;
 	}
 }

@@ -71,5 +71,23 @@
 		"objects": "OBYEKTLAR",
 		"experience": "yillik tajriba",
 		"completed": "bajarilgan loyihalar"
+	},
+	"reviews": {
+		"title": "Biz haqimizda fikrlar",
+		"subtitle": "RSC bilan hamkorlik qilgan buyurtmachilar kompaniyamizning professional yondashuvi va sifatli ishlarini yuqori baholaydi.",
+		"items": {
+			"1": {
+				"text": "Qurilish jarayonlari sifatiga alohida e’tibor qaratildi. Ishlar o‘z vaqtida topshirildi va natijadan mamnunmiz.",
+				"author": "Abduqodirov Dilshod"
+			},
+			"2": {
+				"text": "Mutaxassislarning malakasi va ishga bo‘lgan yondashuvi yuqori darajada.",
+				"author": "Qarshiyev Aziz"
+			},
+			"3": {
+				"text": "Kompaniya o‘zini ishonchli va mas’uliyatli hamkor sifatida namoyon etdi.",
+				"author": "Tuxsinov Doniyorbek"
+			}
+		}
 	}
 }
