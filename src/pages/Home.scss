@@ -569,23 +569,21 @@ $breakpoints: (
 	max-width: 440px;
 }
 // =============================================
-// PROJECTS
+// PROJECTS SECTION — CINEMATIC PREMIUM
 // =============================================
 .projects {
 	padding: 160px 0;
 }
 
 .projects__label {
-	font-size: 24px;
+	font-size: 28px;
 	font-weight: 700;
 	letter-spacing: 3px;
 	text-transform: uppercase;
-	margin-bottom: 40px;
+	margin-bottom: 50px;
 }
 
-// =============================================
 // MAIN CARD
-// =============================================
 .projects__card {
 	position: relative;
 	border-radius: 32px;
@@ -594,9 +592,7 @@ $breakpoints: (
 	background: #000;
 }
 
-// =============================================
-// BG IMAGE — CINEMATIC SLIDER
-// =============================================
+// BACKGROUND SLIDER
 .projects__bg {
 	position: absolute;
 	inset: 0;
@@ -605,54 +601,48 @@ $breakpoints: (
 	object-fit: cover;
 	z-index: 0;
 
-	animation:
-		projectsFadeIn 0.9s ease,
-		projectsKenBurns 7s ease forwards;
+	animation: fadeZoom 12s ease-in-out infinite alternate;
 
 	will-change: transform, opacity;
+	transition: opacity 1s ease-in-out;
 }
 
-// FADE + BLUR
-@keyframes projectsFadeIn {
-	from {
+// Fade + subtle zoom
+@keyframes fadeZoom {
+	0% {
 		opacity: 0;
-		filter: blur(14px);
-	}
-	to {
-		opacity: 1;
-		filter: blur(0);
-	}
-}
-
-// KEN BURNS (SEKIN ZOOM)
-@keyframes projectsKenBurns {
-	from {
-		transform: scale(1.14);
-	}
-	to {
 		transform: scale(1);
 	}
+	20% {
+		opacity: 1;
+		transform: scale(1.05);
+	}
+	80% {
+		opacity: 1;
+		transform: scale(1.08) translateY(-5px);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.1);
+	}
 }
 
-// =============================================
-// OVERLAY — GRADIENT FLOW
-// =============================================
+// OVERLAY — subtle cinematic gradient
 .projects__overlay {
 	position: absolute;
 	inset: 0;
 	z-index: 1;
-
 	background: linear-gradient(
-		180deg,
-		rgba(0, 0, 0, 0.15) 0%,
-		rgba(0, 0, 0, 0.55) 100%
+		120deg,
+		rgba(0, 0, 0, 0.25),
+		rgba(31, 110, 212, 0.15),
+		rgba(0, 0, 0, 0.55)
 	);
-
-	background-size: 200% 200%;
-	animation: overlayFlow 7s ease infinite;
+	background-size: 300% 300%;
+	animation: overlayMove 14s ease-in-out infinite alternate;
 }
 
-@keyframes overlayFlow {
+@keyframes overlayMove {
 	0% {
 		background-position: 0% 50%;
 	}
@@ -664,9 +654,7 @@ $breakpoints: (
 	}
 }
 
-// =============================================
 // LEFT CONTENT
-// =============================================
 .projects__left {
 	position: absolute;
 	bottom: 56px;
@@ -676,18 +664,16 @@ $breakpoints: (
 }
 
 .projects__title {
-	font-size: 28px;
+	font-size: 36px;
 	font-weight: 700;
-	margin-bottom: 26px;
+	margin-bottom: 28px;
 }
 
-// =============================================
 // BADGES
-// =============================================
 .projects__badges {
 	display: flex;
 	flex-direction: column;
-	gap: 14px;
+	gap: 16px;
 }
 
 .badge {
@@ -696,7 +682,7 @@ $breakpoints: (
 	gap: 12px;
 	padding: 14px 20px;
 	border-radius: 14px;
-	background: rgba(255, 255, 255, 0.72);
+	background: rgba(255, 255, 255, 0.75);
 	backdrop-filter: blur(6px);
 	color: #111;
 	width: fit-content;
@@ -713,64 +699,63 @@ $breakpoints: (
 	}
 }
 
-// =============================================
-// RIGHT SIDE — CENTERED
-// =============================================
+// RIGHT BOXES — INTERACTIVE
 .projects__right {
 	position: absolute;
 	right: 32px;
 	top: 50%;
 	transform: translateY(-50%);
 	z-index: 2;
-
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
 }
 
-// =============================================
-// MINI & BOX — INTERACTIVE CARDS
-// =============================================
-.projects__mini,
 .projects__box {
 	width: 270px;
 	height: 190px;
 	border-radius: 24px;
 	overflow: hidden;
 	border: 4px solid #1f6ed4;
-	background: transparent;
-	position: relative;
+	background: rgba(0, 0, 0, 0.1);
 	cursor: pointer;
+	position: relative;
 	flex-shrink: 0;
-
 	transition:
-		transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-		box-shadow 0.45s ease;
+		transform 0.45s ease,
+		box-shadow 0.45s ease,
+		border-color 0.45s ease;
 
 	img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		display: block;
+		transition: transform 0.45s ease;
 	}
 
-	// GRADIENT HOVER
 	&::after {
 		content: '';
 		position: absolute;
 		inset: 0;
 		background: linear-gradient(
 			135deg,
-			rgba(31, 110, 212, 0.55),
-			rgba(0, 0, 0, 0.45)
+			rgba(31, 110, 212, 0.5),
+			rgba(0, 0, 0, 0.35)
 		);
 		opacity: 0;
 		transition: opacity 0.35s ease;
+		border-radius: 24px;
 	}
 
 	&:hover {
-		transform: translateY(-10px) scale(1.05);
+		transform: translateY(-10px) scale(1.06);
 		box-shadow: 0 28px 60px rgba(31, 110, 212, 0.45);
+		border-color: #f2b441;
+
+		img {
+			transform: scale(1.1);
+		}
 
 		&::after {
 			opacity: 1;
@@ -778,14 +763,13 @@ $breakpoints: (
 	}
 
 	&.is-active {
-		transform: scale(1.08);
-		box-shadow: 0 30px 65px rgba(31, 110, 212, 0.6);
+		transform: scale(1.08) translateY(-6px);
+		box-shadow: 0 32px 70px rgba(31, 110, 212, 0.55);
+		border-color: #f2b441;
 	}
 }
 
-// =============================================
 // RESPONSIVE
-// =============================================
 @include mq-max(md) {
 	.projects__card {
 		height: 560px;
