@@ -590,28 +590,78 @@ $breakpoints: (
 	position: relative;
 	border-radius: 32px;
 	overflow: hidden;
-	height: 860px; // ⬅️ kattalashtirildi
+	height: 860px;
+	background: #000;
 }
 
-// BG IMAGE
+// =============================================
+// BG IMAGE — CINEMATIC SLIDER
+// =============================================
 .projects__bg {
 	position: absolute;
 	inset: 0;
 	width: 100%;
 	height: 100%;
-	object-fit: cover; // ⬅️ rasm to‘liq ko‘rinsin
-	background: #000; // bo‘sh joylar chiroyli chiqishi uchun
+	object-fit: cover;
+	z-index: 0;
+
+	animation:
+		projectsFadeIn 0.9s ease,
+		projectsKenBurns 7s ease forwards;
+
+	will-change: transform, opacity;
 }
 
-// OVERLAY
+// FADE + BLUR
+@keyframes projectsFadeIn {
+	from {
+		opacity: 0;
+		filter: blur(14px);
+	}
+	to {
+		opacity: 1;
+		filter: blur(0);
+	}
+}
+
+// KEN BURNS (SEKIN ZOOM)
+@keyframes projectsKenBurns {
+	from {
+		transform: scale(1.14);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+// =============================================
+// OVERLAY — GRADIENT FLOW
+// =============================================
 .projects__overlay {
 	position: absolute;
 	inset: 0;
+	z-index: 1;
+
 	background: linear-gradient(
 		180deg,
 		rgba(0, 0, 0, 0.15) 0%,
 		rgba(0, 0, 0, 0.55) 100%
 	);
+
+	background-size: 200% 200%;
+	animation: overlayFlow 7s ease infinite;
+}
+
+@keyframes overlayFlow {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 // =============================================
@@ -664,38 +714,38 @@ $breakpoints: (
 }
 
 // =============================================
-// RIGHT SIDE (VERTICAL CENTER)
+// RIGHT SIDE — CENTERED
 // =============================================
 .projects__right {
 	position: absolute;
 	right: 32px;
 	top: 50%;
-	transform: translateY(-50%); // ⬅️ card bo‘yicha center
+	transform: translateY(-50%);
+	z-index: 2;
 
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
-	z-index: 2;
 }
 
 // =============================================
-// MINI & BOX — BIR XIL, KATTA, FAQAT BORDER
+// MINI & BOX — INTERACTIVE CARDS
 // =============================================
 .projects__mini,
 .projects__box {
-	width: 270px; // ⬅️ kattalashtirildi
-	height: 190px; // ⬅️ kattalashtirildi
+	width: 270px;
+	height: 190px;
 	border-radius: 24px;
 	overflow: hidden;
 	border: 4px solid #1f6ed4;
 	background: transparent;
-	flex-shrink: 0;
-	cursor: pointer;
 	position: relative;
+	cursor: pointer;
+	flex-shrink: 0;
 
 	transition:
-		transform 0.4s ease,
-		box-shadow 0.4s ease;
+		transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+		box-shadow 0.45s ease;
 
 	img {
 		width: 100%;
@@ -704,7 +754,7 @@ $breakpoints: (
 		display: block;
 	}
 
-	// HOVER OVERLAY GRADIENT
+	// GRADIENT HOVER
 	&::after {
 		content: '';
 		position: absolute;
@@ -719,12 +769,17 @@ $breakpoints: (
 	}
 
 	&:hover {
-		transform: translateY(-8px) scale(1.04);
-		box-shadow: 0 20px 48px rgba(31, 110, 212, 0.4);
+		transform: translateY(-10px) scale(1.05);
+		box-shadow: 0 28px 60px rgba(31, 110, 212, 0.45);
 
 		&::after {
 			opacity: 1;
 		}
+	}
+
+	&.is-active {
+		transform: scale(1.08);
+		box-shadow: 0 30px 65px rgba(31, 110, 212, 0.6);
 	}
 }
 
