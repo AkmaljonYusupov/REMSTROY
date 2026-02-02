@@ -1,29 +1,43 @@
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+
 import gearsGif from '../assets/images/1667-yellow-gears.gif'
 import AboutImage from '../assets/images/about_company.png'
+
 import bgSlider from '../assets/images/projects-main.webp'
 import sliderImg1 from '../assets/images/slider1.png'
 import sliderImg2 from '../assets/images/slider2.avif'
 import sliderImg3 from '../assets/images/slider3.webp'
+
 import alarm from '../assets/images/unnamed.png'
 import './Home.scss'
+
 const Home = () => {
 	const { t } = useTranslation()
+
+	// ================= PROJECTS SLIDER =================
+	const projectImages = [bgSlider, sliderImg1, sliderImg2, sliderImg3]
+	const [activeIndex, setActiveIndex] = useState(0)
+
+	// AUTO SLIDER (responsive uchun)
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setActiveIndex(prev => (prev + 1) % projectImages.length)
+		}, 4500)
+
+		return () => clearInterval(interval)
+	}, [])
 
 	return (
 		<main className='home'>
 			{/* ================= HERO ================= */}
 			<section className='hero'>
 				<div className='hero__overlay' />
-
 				<div className='container'>
 					<div className='hero__content'>
 						<span className='hero__company'>REMSTROY CONSTRUCTION</span>
-
 						<h1 className='hero__title'>{t('hero.title')}</h1>
-
 						<p className='hero__desc'>{t('hero.desc')}</p>
-
 						<button className='hero__btn'>{t('hero.button')}</button>
 					</div>
 				</div>
@@ -33,27 +47,26 @@ const Home = () => {
 			<section className='features-wrapper'>
 				<div className='container'>
 					<div className='features'>
-						<div className='feature' id='feature'>
-							<h3 className='feature__title' id='feature__title'>
-								{t('features.standard.title')}
-							</h3>
+						<div className='feature'>
+							<h3 className='feature__title'>{t('features.standard.title')}</h3>
 							<p className='feature__desc'>{t('features.standard.desc')}</p>
 						</div>
 
 						<div className='feature'>
-							<img src={alarm} alt='nastroy' />
+							<img src={alarm} alt='alarm' />
 							<h3 className='feature__title'>{t('features.quality.title')}</h3>
 							<p className='feature__desc'>{t('features.quality.desc')}</p>
 						</div>
 
 						<div className='feature'>
-							<img src={gearsGif} alt='nastroy' />
+							<img src={gearsGif} alt='gears' />
 							<h3 className='feature__title'>{t('features.tech.title')}</h3>
 							<p className='feature__desc'>{t('features.tech.desc')}</p>
 						</div>
 					</div>
 				</div>
 			</section>
+
 			{/* ================= ABOUT ================= */}
 			<section className='about'>
 				<div className='container'>
@@ -77,75 +90,25 @@ const Home = () => {
 						</div>
 
 						<div className='about__image'>
-							<img src={AboutImage} alt='RSC Construction' />
+							<img src={AboutImage} alt='About' />
 						</div>
 					</div>
 				</div>
 			</section>
-			{/* ================= ADVANTAGES ================= */}
-			<section className='advantages'>
-				<div className='container'>
-					<h2 className='advantages__label'>{t('advantages.label')}</h2>
 
-					<div className='advantages__grid'>
-						<div className='advantage'>
-							<span className='advantage__num'>01</span>
-							<div>
-								<h3>{t('advantages.items.1.title')}</h3>
-								<p>{t('advantages.items.1.desc')}</p>
-							</div>
-						</div>
-
-						<div className='advantage'>
-							<span className='advantage__num'>04</span>
-							<div>
-								<h3>{t('advantages.items.4.title')}</h3>
-								<p>{t('advantages.items.4.desc')}</p>
-							</div>
-						</div>
-
-						<div className='advantage'>
-							<span className='advantage__num'>02</span>
-							<div>
-								<h3>{t('advantages.items.2.title')}</h3>
-								<p>{t('advantages.items.2.desc')}</p>
-							</div>
-						</div>
-
-						<div className='advantage'>
-							<span className='advantage__num'>05</span>
-							<div>
-								<h3>{t('advantages.items.5.title')}</h3>
-								<p>{t('advantages.items.5.desc')}</p>
-							</div>
-						</div>
-
-						<div className='advantage'>
-							<span className='advantage__num'>03</span>
-							<div>
-								<h3>{t('advantages.items.3.title')}</h3>
-								<p>{t('advantages.items.3.desc')}</p>
-							</div>
-						</div>
-
-						<div className='advantage'>
-							<span className='advantage__num'>06</span>
-							<div>
-								<h3>{t('advantages.items.6.title')}</h3>
-								<p>{t('advantages.items.6.desc')}</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
 			{/* ================= PROJECTS ================= */}
 			<section className='projects'>
 				<div className='container'>
 					<h2 className='projects__label'>{t('projects.label')}</h2>
 
 					<div className='projects__card'>
-						{/* BACKGROUND IMAGE */}
-						<img src={bgSlider} alt='Projects' className='projects__bg' />
+						{/* SLIDER BACKGROUND */}
+						<img
+							key={activeIndex}
+							src={projectImages[activeIndex]}
+							alt='Projects'
+							className='projects__bg projects__bg--animate'
+						/>
 
 						<div className='projects__overlay' />
 
@@ -166,19 +129,19 @@ const Home = () => {
 							</div>
 						</div>
 
-						{/* RIGHT SIDE */}
+						{/* RIGHT SIDE (CONTROLS SLIDER) */}
 						<div className='projects__right'>
-							<div className='projects__mini'>
-								<img src={sliderImg1} alt='Detail1' />
-							</div>
-
-							<div className='projects__box'>
-								<img src={sliderImg2} alt='Detail2' />
-							</div>
-
-							<div className='projects__box'>
-								<img src={sliderImg3} alt='Detail3' />
-							</div>
+							{projectImages.slice(1).map((img, index) => (
+								<div
+									key={index}
+									className={`projects__box ${
+										activeIndex === index + 1 ? 'is-active' : ''
+									}`}
+									onClick={() => setActiveIndex(index + 1)}
+								>
+									<img src={img} alt={`Detail ${index + 1}`} />
+								</div>
+							))}
 						</div>
 					</div>
 				</div>
