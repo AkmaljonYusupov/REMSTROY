@@ -569,10 +569,10 @@ $breakpoints: (
 	max-width: 440px;
 }
 // =============================================
-// PROJECTS (IMAGE CARD STYLE)
+// PROJECTS
 // =============================================
 .projects {
-	padding: 120px 0;
+	padding: 140px 0;
 }
 
 .projects__label {
@@ -588,9 +588,9 @@ $breakpoints: (
 // =============================================
 .projects__card {
 	position: relative;
-	border-radius: 28px;
+	border-radius: 32px;
 	overflow: hidden;
-	height: 520px;
+	height: 760px;
 }
 
 // BG IMAGE
@@ -606,7 +606,7 @@ $breakpoints: (
 .projects__overlay {
 	position: absolute;
 	inset: 0;
-	background: rgba(0, 0, 0, 0.25);
+	background: rgba(0, 0, 0, 0.28);
 }
 
 // =============================================
@@ -614,8 +614,8 @@ $breakpoints: (
 // =============================================
 .projects__left {
 	position: absolute;
-	bottom: 40px;
-	left: 40px;
+	bottom: 48px;
+	left: 48px;
 	z-index: 2;
 	color: #fff;
 }
@@ -626,7 +626,9 @@ $breakpoints: (
 	margin-bottom: 24px;
 }
 
+// =============================================
 // BADGES
+// =============================================
 .projects__badges {
 	display: flex;
 	flex-direction: column;
@@ -637,9 +639,9 @@ $breakpoints: (
 	display: flex;
 	align-items: center;
 	gap: 12px;
-	padding: 12px 18px;
-	border-radius: 12px;
-	background: rgba(255, 255, 255, 0.7);
+	padding: 14px 20px;
+	border-radius: 14px;
+	background: rgba(255, 255, 255, 0.72);
 	backdrop-filter: blur(6px);
 	color: #111;
 	width: fit-content;
@@ -661,35 +663,49 @@ $breakpoints: (
 // =============================================
 .projects__right {
 	position: absolute;
-	top: 24px;
-	right: 24px;
-	bottom: 24px;
+	inset-block: 28px; // ⬅️ top va bottom = 28px
+	right: 28px;
+
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
+	gap: 20px;
 	z-index: 2;
 }
 
-// MINI IMAGE
-.projects__mini {
-	width: 180px;
-	height: 110px;
-	border-radius: 18px;
+// =============================================
+// MINI & BOX — BIR XIL, KATTA, FAQAT BORDER
+// =============================================
+.projects__mini,
+.projects__box {
+	width: 240px;
+	height: 170px;
+	border-radius: 22px;
 	overflow: hidden;
+	border: 4px solid #1f6ed4;
+	background: transparent;
+	flex-shrink: 0;
+	transition:
+		transform 0.35s ease,
+		box-shadow 0.35s ease,
+		border-color 0.35s ease;
+	cursor: pointer;
 
 	img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		display: block;
 	}
-}
 
-// BLUE BOXES
-.projects__box {
-	width: 180px;
-	flex: 1;
-	border-radius: 18px;
-	background: #1f6ed4;
+	// =============================================
+	// RIGHT CARDS HOVER EFFECT
+	// =============================================
+
+	&:hover {
+		transform: translateY(-6px) scale(1.03);
+		box-shadow: 0 18px 40px rgba(31, 110, 212, 0.35);
+		border-color: #1f6ed4;
+	}
 }
 
 // =============================================
@@ -697,11 +713,11 @@ $breakpoints: (
 // =============================================
 @include mq-max(md) {
 	.projects__card {
-		height: 420px;
+		height: 540px;
 	}
 
 	.projects__right {
-		display: none; // 📱 mobile’da yo‘q (rasmga mos)
+		display: none; // 📱 rasmga mos
 	}
 
 	.projects__left {

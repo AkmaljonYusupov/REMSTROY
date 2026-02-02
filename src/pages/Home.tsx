@@ -142,7 +142,7 @@ const Home = () => {
 					<div className='projects__card'>
 						{/* BACKGROUND IMAGE */}
 						<img
-							src='/src/assets/images/projects-main.jpg'
+							src='/src/assets/images/projects-main.webp'
 							alt='Projects'
 							className='projects__bg'
 						/>
@@ -172,8 +172,13 @@ const Home = () => {
 								<img src='/src/assets/images/projects-small.jpg' alt='Detail' />
 							</div>
 
-							<div className='projects__box' />
-							<div className='projects__box' />
+							<div className='projects__box'>
+								<img src='/src/assets/images/projects-small.jpg' alt='' />
+							</div>
+
+							<div className='projects__box'>
+								<img src='/src/assets/images/projects-small.jpg' alt='' />
+							</div>
 						</div>
 					</div>
 				</div>
