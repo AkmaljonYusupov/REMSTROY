@@ -235,7 +235,7 @@ $breakpoints: (
 	@include mq-max(sm) {
 		grid-template-columns: 1fr;
 		margin-left: 15px;
-		margin-top: -400px;
+		margin-top: -420px;
 		gap: 0px;
 	}
 }
@@ -519,7 +519,7 @@ $breakpoints: (
 		grid-template-columns: 1fr;
 
 		/* 🔑 MUHIM: brauzer chetlaridan masofa */
-		padding-left: 46px;
+		padding-left: 26px;
 		padding-right: 16px;
 	}
 }
