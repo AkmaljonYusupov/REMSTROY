@@ -15,8 +15,6 @@ $breakpoints: (
 		@media (max-width: map-get($breakpoints, $size)) {
 			@content;
 		}
-	} @else {
-		@warn "Breakpoint `#{$size}` not found!";
 	}
 }
 
@@ -25,14 +23,13 @@ $breakpoints: (
 		@media (min-width: map-get($breakpoints, $size)) {
 			@content;
 		}
-	} @else {
-		@warn "Breakpoint `#{$size}` not found!";
 	}
 }
 
 // =============================================
 // FOOTER
 // =============================================
+
 .footer {
 	padding: 120px 0;
 	background: #fff;
@@ -111,7 +108,7 @@ $breakpoints: (
 		cursor: pointer;
 		background: #fff;
 		color: #2f5373;
-		transition: all 0.25s ease;
+		transition: 0.25s;
 
 		&:hover {
 			background: #f5c26b;
@@ -122,12 +119,16 @@ $breakpoints: (
 	// ================= RIGHT =================
 	&__nav {
 		display: flex;
+		justify-content: center;
 		gap: 40px;
 		margin-bottom: 50px;
+		padding-bottom: 22px;
+		border-bottom: 1px solid #dcdcdc;
 
 		a {
 			font-weight: 500;
 			color: #000;
+			text-decoration: none;
 			position: relative;
 
 			&::after {
@@ -150,12 +151,14 @@ $breakpoints: (
 	&__info {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: 40px;
 		margin-bottom: 50px;
 	}
 
 	&__item {
 		max-width: 200px;
+		text-align: center;
 
 		h4 {
 			color: #2f5cff;
@@ -177,8 +180,10 @@ $breakpoints: (
 
 	&__bottom {
 		display: flex;
-		justify-content: space-between;
+		flex-direction: column;
 		align-items: center;
+		gap: 18px;
+		text-align: center;
 
 		p {
 			font-size: 14px;
@@ -198,7 +203,7 @@ $breakpoints: (
 			background: #f1f1f1;
 			border-radius: 6px;
 			cursor: pointer;
-			transition: all 0.25s ease;
+			transition: 0.25s;
 
 			&:hover {
 				background: #2f5cff;
@@ -213,15 +218,13 @@ $breakpoints: (
 // RESPONSIVE — XL
 // =============================================
 @include mq-max(xl) {
-	.footer {
-		&__wrapper {
-			gap: 70px;
-		}
+	.footer__wrapper {
+		gap: 70px;
 	}
 }
 
 // =============================================
-// RESPONSIVE — LG (TABLET LANDSCAPE)
+// RESPONSIVE — LG
 // =============================================
 @include mq-max(lg) {
 	.footer {
@@ -237,14 +240,7 @@ $breakpoints: (
 			margin: 0 auto;
 		}
 
-		&__nav {
-			justify-content: center;
-			flex-wrap: wrap;
-			row-gap: 20px;
-		}
-
 		&__info {
-			justify-content: center;
 			flex-wrap: wrap;
 			gap: 30px;
 		}
@@ -252,21 +248,11 @@ $breakpoints: (
 		&__line {
 			display: none;
 		}
-
-		&__item {
-			text-align: center;
-		}
-
-		&__bottom {
-			flex-direction: column;
-			gap: 20px;
-			text-align: center;
-		}
 	}
 }
 
 // =============================================
-// RESPONSIVE — MD (TABLET / LARGE MOBILE)
+// RESPONSIVE — MD
 // =============================================
 @include mq-max(md) {
 	.footer {
@@ -287,7 +273,7 @@ $breakpoints: (
 }
 
 // =============================================
-// RESPONSIVE — SM (MOBILE)
+// RESPONSIVE — SM
 // =============================================
 @include mq-max(sm) {
 	.footer {
@@ -300,11 +286,6 @@ $breakpoints: (
 
 		&__logo {
 			font-size: 28px;
-			margin-bottom: 28px;
-		}
-
-		&__card-title {
-			font-size: 20px;
 		}
 
 		&__info {
@@ -312,18 +293,13 @@ $breakpoints: (
 			gap: 24px;
 		}
 
-		&__socials {
-			justify-content: center;
-
-			i {
-				width: 40px;
-				height: 40px;
-			}
+		&__socials i {
+			width: 40px;
+			height: 40px;
 		}
 
 		&__bottom p {
 			font-size: 13px;
-			line-height: 1.5;
 		}
 	}
 }
