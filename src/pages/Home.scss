@@ -892,27 +892,30 @@ $breakpoints: (
 	}
 }
 // =============================================
-// NEWS SECTION — CORPORATE CLEAN
+// NEWS SECTION — CORPORATE CLEAN (FINAL)
 // =============================================
 
 .news {
-	position: relative; // MUHIM
+	position: relative;
 	padding: 140px 0;
 	background: #f4f6f8;
-	overflow: hidden; // tashqariga chiqsa kesadi
+	overflow: hidden;
 }
 
+// CONTENT LAYER
 .news__wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
 	gap: 80px;
+	position: relative;
+	z-index: 2; // rasm ustidan chiqmasligi uchun
 }
 
 // LEFT
 .news__label {
 	display: block;
-	font-size: 14px;
+	font-size: 28px;
 	font-weight: 700;
 	letter-spacing: 3px;
 	text-transform: uppercase;
@@ -936,10 +939,10 @@ $breakpoints: (
 	max-width: 520px;
 }
 
-// VIDEO PREVIEW
+// VIDEO
 .news__video {
 	width: 420px;
-	height: 240px; // MUHIM
+	height: 240px;
 	border-radius: 6px;
 	overflow: hidden;
 	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
@@ -952,12 +955,13 @@ $breakpoints: (
 	}
 }
 
-// RIGHT IMAGE — BOTTOM RIGHT FIXED TO SECTION
+// RIGHT IMAGE — DESKTOP: BOTTOM RIGHT
 .news__right {
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	pointer-events: none; // agar ustiga bosilmasin desang
+	z-index: 1;
+	pointer-events: none;
 }
 
 .news__image {
@@ -971,23 +975,59 @@ $breakpoints: (
 	}
 }
 
+// =============================================
 // RESPONSIVE
+// =============================================
+
+@include mq-max(lg) {
+	.news__image {
+		width: 420px;
+		opacity: 0.85;
+	}
+}
+
 @include mq-max(md) {
 	.news {
-		padding: 80px 0;
+		padding: 90px 0;
 	}
 
 	.news__wrapper {
 		grid-template-columns: 1fr;
-		gap: 60px;
+		gap: 48px;
 	}
 
+	// 🔥 MUHIM QISM — RASM PASTGA TUSHADI
 	.news__right {
 		position: static;
+		pointer-events: auto;
+	}
+
+	.news__video {
+		width: 100%;
+		max-width: 420px;
 	}
 
 	.news__image {
-		width: 100%;
-		margin-top: 40px;
+		width: 360px;
+		margin: 0 auto;
+		opacity: 1;
+	}
+}
+
+@include mq-max(sm) {
+	.news {
+		padding: 70px 0;
+	}
+
+	.news__title {
+		font-size: 28px;
+	}
+
+	.news__desc {
+		font-size: 15px;
+	}
+
+	.news__image {
+		width: 280px;
 	}
 }

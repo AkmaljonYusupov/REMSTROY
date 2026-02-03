@@ -1,0 +1,134 @@
+.footer {
+	padding: 120px 0;
+	background: #fff;
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 420px 1fr;
+		gap: 100px;
+		align-items: flex-start;
+	}
+
+	/* LEFT */
+	&__card {
+		background: #2f5373;
+		border-radius: 28px;
+		padding: 48px;
+		color: #fff;
+	}
+
+	&__logo {
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 1.1;
+		margin-bottom: 40px;
+
+		span {
+			font-size: 14px;
+			letter-spacing: 2px;
+		}
+	}
+
+	&__card-title {
+		font-size: 22px;
+		font-weight: 600;
+		color: #f5c26b;
+		margin-bottom: 10px;
+	}
+
+	&__card-desc {
+		font-size: 14px;
+		opacity: 0.8;
+		margin-bottom: 30px;
+	}
+
+	&__label {
+		font-size: 12px;
+		opacity: 0.7;
+	}
+
+	input {
+		width: 100%;
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		padding: 10px 0;
+		color: #fff;
+		margin-bottom: 30px;
+	}
+
+	&__btn {
+		width: 100%;
+		padding: 14px;
+		border-radius: 8px;
+		border: none;
+		font-weight: 600;
+		cursor: pointer;
+	}
+
+	/* RIGHT */
+	&__nav {
+		display: flex;
+		gap: 40px;
+		margin-bottom: 50px;
+
+		a {
+			font-weight: 500;
+			color: #000;
+		}
+	}
+
+	&__info {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+		margin-bottom: 50px;
+	}
+
+	&__item {
+		max-width: 200px;
+
+		h4 {
+			color: #2f5cff;
+			font-size: 22px;
+			margin-bottom: 12px;
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 1.6;
+		}
+	}
+
+	&__line {
+		width: 1px;
+		height: 70px;
+		background: #ddd;
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		p {
+			font-size: 14px;
+			color: #777;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		gap: 10px;
+
+		i {
+			width: 36px;
+			height: 36px;
+			display: grid;
+			place-items: center;
+			background: #f1f1f1;
+			border-radius: 6px;
+			cursor: pointer;
+		}
+	}
+}

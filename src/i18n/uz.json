@@ -94,5 +94,17 @@
 		"label": "Yangiliklar",
 		"title": "Davlat obyektining qurilishi yakunlandi",
 		"desc": "REMSTROY kompaniyasi davlat buyurtmasi asosida navbatdagi qurilish obyektini muvaffaqiyatli yakunladi."
+	},
+	"footer": {
+		"request": "Ariza qoldiring va biz sizga qo‘ng‘iroq qilamiz",
+		"requestDesc": "Xodimlarimiz ish vaqtida siz bilan bog‘lanadi",
+		"phonePlaceholder": "Telefon raqamingiz",
+		"send": "Yuborish",
+		"contact": "Aloqa",
+		"address": "Manzil",
+		"addressValue": "Toshkent shahri, Yashnobod tumani, Parkent",
+		"worktime": "Ish vaqti",
+		"worktimeValue": "Har kuni 09:00 dan 20:00 gacha",
+		"rights": "Barcha huquqlar himoyalangan"
 	}
 }

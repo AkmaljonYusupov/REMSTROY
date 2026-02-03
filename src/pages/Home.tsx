@@ -9,7 +9,6 @@ import bgSlider from '../assets/images/projects-main.webp'
 import sliderImg1 from '../assets/images/slider1.png'
 import sliderImg2 from '../assets/images/slider2.avif'
 import sliderImg3 from '../assets/images/slider3.webp'
-// import nevsVideo from '../assets/videos/news-video.mp4?url'
 
 import alarm from '../assets/images/unnamed.png'
 import './Home.scss'
@@ -155,10 +154,110 @@ const Home = () => {
 				</div>
 			</section>
 
-			{/* ================= PROJECTS ================= */}
+			{/* ================= PROJECTS 1 ================= */}
 			<section className='projects'>
 				<div className='container'>
 					<h2 className='projects__label'>{t('projects.label')}</h2>
+
+					<div className='projects__card'>
+						{/* SLIDER BACKGROUND */}
+						<img
+							key={activeIndex}
+							src={projectImages[activeIndex]}
+							alt='Projects'
+							className='projects__bg projects__bg--animate'
+						/>
+
+						<div className='projects__overlay' />
+
+						{/* LEFT INFO */}
+						<div className='projects__left'>
+							<h3 className='projects__title'>{t('projects.objects')}</h3>
+
+							<div className='projects__badges'>
+								<div className='badge'>
+									<strong>10+</strong>
+									<span>{t('projects.experience')}</span>
+								</div>
+
+								<div className='badge'>
+									<strong>150+</strong>
+									<span>{t('projects.completed')}</span>
+								</div>
+							</div>
+						</div>
+
+						{/* RIGHT SIDE (CONTROLS SLIDER) */}
+						<div className='projects__right'>
+							{projectImages.slice(1).map((img, index) => (
+								<div
+									key={index}
+									className={`projects__box ${
+										activeIndex === index + 1 ? 'is-active' : ''
+									}`}
+									onClick={() => setActiveIndex(index + 1)}
+								>
+									<img src={img} alt={`Detail ${index + 1}`} />
+								</div>
+							))}
+						</div>
+					</div>
+				</div>
+			</section>
+			{/* ================= PROJECTS 2 ================= */}
+			<section className='projects'>
+				<div className='container'>
+					{/* <h2 className='projects__label'>{t('projects.label')}</h2> */}
+
+					<div className='projects__card'>
+						{/* SLIDER BACKGROUND */}
+						<img
+							key={activeIndex}
+							src={projectImages[activeIndex]}
+							alt='Projects'
+							className='projects__bg projects__bg--animate'
+						/>
+
+						<div className='projects__overlay' />
+
+						{/* LEFT INFO */}
+						<div className='projects__left'>
+							<h3 className='projects__title'>{t('projects.objects')}</h3>
+
+							<div className='projects__badges'>
+								<div className='badge'>
+									<strong>10+</strong>
+									<span>{t('projects.experience')}</span>
+								</div>
+
+								<div className='badge'>
+									<strong>150+</strong>
+									<span>{t('projects.completed')}</span>
+								</div>
+							</div>
+						</div>
+
+						{/* RIGHT SIDE (CONTROLS SLIDER) */}
+						<div className='projects__right'>
+							{projectImages.slice(1).map((img, index) => (
+								<div
+									key={index}
+									className={`projects__box ${
+										activeIndex === index + 1 ? 'is-active' : ''
+									}`}
+									onClick={() => setActiveIndex(index + 1)}
+								>
+									<img src={img} alt={`Detail ${index + 1}`} />
+								</div>
+							))}
+						</div>
+					</div>
+				</div>
+			</section>
+			{/* ================= PROJECTS 3 ================= */}
+			<section className='projects'>
+				<div className='container'>
+					{/* <h2 className='projects__label'>{t('projects.label')}</h2> */}
 
 					<div className='projects__card'>
 						{/* SLIDER BACKGROUND */}

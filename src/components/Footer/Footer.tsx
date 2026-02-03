@@ -1,8 +1,80 @@
+import { useTranslation } from 'react-i18next'
+import './Footer.scss'
+
 function Footer() {
+	const { t } = useTranslation()
+
 	return (
-		<div>
-			<h1>Footer section</h1>
-		</div>
+		<footer className='footer'>
+			<div className='container footer__wrapper'>
+				{/* LEFT CARD */}
+				<div className='footer__left'>
+					<div className='footer__card'>
+						<h3 className='footer__logo'>
+							RSC
+							<br />
+							<span>CONSTRUCTION</span>
+						</h3>
+
+						<h4 className='footer__card-title'>{t('footer.request')}</h4>
+
+						<p className='footer__card-desc'>{t('footer.requestDesc')}</p>
+
+						<label className='footer__label'>
+							{t('footer.phonePlaceholder')}
+						</label>
+
+						<input type='tel' />
+
+						<button className='footer__btn'>{t('footer.send')}</button>
+					</div>
+				</div>
+
+				{/* RIGHT */}
+				<div className='footer__right'>
+					<nav className='footer__nav'>
+						<a href='#projects'>{t('nav.projects')}</a>
+						<a href='#about'>{t('nav.about')}</a>
+						<a href='#reviews'>{t('nav.reviews')}</a>
+						<a href='#news'>{t('nav.news')}</a>
+					</nav>
+
+					<div className='footer__info'>
+						<div className='footer__item'>
+							<h4>{t('footer.contact')}</h4>
+							<p>+998 93 900 99 59</p>
+							<p>info@webera.uz</p>
+						</div>
+
+						<div className='footer__line' />
+
+						<div className='footer__item'>
+							<h4>{t('footer.address')}</h4>
+							<p>{t('footer.addressValue')}</p>
+						</div>
+
+						<div className='footer__line' />
+
+						<div className='footer__item'>
+							<h4>{t('footer.worktime')}</h4>
+							<p>{t('footer.worktimeValue')}</p>
+						</div>
+					</div>
+
+					<div className='footer__bottom'>
+						<div className='footer__socials'>
+							<i className='fab fa-facebook-f'></i>
+							<i className='fab fa-linkedin-in'></i>
+							<i className='fab fa-twitter'></i>
+							<i className='fab fa-telegram-plane'></i>
+							<i className='fab fa-whatsapp'></i>
+						</div>
+
+						<p>Copyright © 2026 RSC Construction. {t('footer.rights')}</p>
+					</div>
+				</div>
+			</div>
+		</footer>
 	)
 }
 
