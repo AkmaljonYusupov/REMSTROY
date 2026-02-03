@@ -5,7 +5,6 @@ import './Header.scss'
 
 import CloseIcon from '../../assets/icons/close.svg?react'
 import RuFlag from '../../assets/icons/ru.svg?react'
-import UserIcon from '../../assets/icons/user.svg?react'
 import UzFlag from '../../assets/icons/uz.svg?react'
 import Logo from '../../assets/images/logo.png'
 
@@ -81,9 +80,9 @@ const Header = () => {
 						</div>
 
 						{/* USER ICON */}
-						<div className='user'>
+						{/* <div className='user'>
 							<UserIcon width={24} height={24} />
-						</div>
+						</div> */}
 
 						{/* BURGER */}
 						<button className='burger' onClick={() => setOpen(true)}>
