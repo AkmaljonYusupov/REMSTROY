@@ -65,9 +65,12 @@ const Header = () => {
 							>
 								{lang === 'uzb' ? (
 									<UzFlag width={24} height={16} />
-								) : (
+								) : lang === 'ru' ? (
 									<RuFlag width={24} height={16} />
+								) : (
+									<EngFlag width={24} height={16} />
 								)}
+
 								<span>{lang.toUpperCase()}</span>
 							</button>
 							<ul className={`lang-dropdown ${langMenu ? 'show' : ''}`}>
@@ -139,6 +142,9 @@ const Header = () => {
 					</button>
 					<button onClick={() => changeLang('ru')}>
 						<RuFlag width={20} height={14} /> Russian
+					</button>
+					<button onClick={() => changeLang('eng')}>
+						<EngFlag width={20} height={14} /> English
 					</button>
 				</div>
 			</aside>
