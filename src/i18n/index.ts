@@ -1,5 +1,6 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
+import eng from './eng.json'
 import ru from './ru.json'
 import uz from './uz.json'
 
@@ -7,6 +8,7 @@ i18n.use(initReactI18next).init({
 	resources: {
 		uz: { translation: uz },
 		ru: { translation: ru },
+		eng: { translation: eng },
 	},
 	lng: localStorage.getItem('lang') || 'uz',
 	fallbackLng: 'uz',

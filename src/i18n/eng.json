@@ -1,0 +1,110 @@
+{
+	"hero": {
+		"title": "Reliable construction for government and non-residential facilities",
+		"desc": "REMSTROY company carries out construction and installation works based on government contracts.",
+		"button": "Submit an application"
+	},
+	"nav": {
+		"projects": "Projects",
+		"about": "About us",
+		"reviews": "Reviews",
+		"news": "News"
+	},
+	"features": {
+		"standard": {
+			"title": "Compliance with standards",
+			"desc": "REMSTROY is a specialized construction company"
+		},
+		"quality": {
+			"title": "Quality guarantee",
+			"desc": "REMSTROY adheres to high quality standards"
+		},
+		"tech": {
+			"title": "Modern technologies",
+			"desc": "REMSTROY uses the latest construction technologies"
+		}
+	},
+	"about": {
+		"label": "ABOUT THE COMPANY",
+		"title": "Quality and responsibility in every project",
+		"text": "REMSTROY is a construction company specialized in building non-residential buildings and infrastructure facilities for government organizations. The company strictly follows current construction regulations, quality standards, and project deadlines.",
+		"stat1": {
+			"value": "10+ years",
+			"label": "of construction experience"
+		},
+		"stat2": {
+			"value": "Government contracts",
+			"label": "as the main focus"
+		}
+	},
+	"advantages": {
+		"label": "Advantages",
+		"items": {
+			"1": {
+				"title": "Compliance with government standards",
+				"desc": "All works are carried out in accordance with current regulations and requirements"
+			},
+			"2": {
+				"title": "Experienced specialists",
+				"desc": "Qualified engineers and technical staff"
+			},
+			"3": {
+				"title": "Individual approach",
+				"desc": "Each project is developed based on its specific requirements"
+			},
+			"4": {
+				"title": "Safety regulations",
+				"desc": "Strict compliance with occupational safety rules"
+			},
+			"5": {
+				"title": "Reliability and responsibility",
+				"desc": "Precise fulfillment of obligations to clients"
+			},
+			"6": {
+				"title": "Meeting deadlines",
+				"desc": "Timely completion and delivery of facilities"
+			}
+		}
+	},
+	"projects": {
+		"label": "PROJECTS",
+		"objects": "FACILITIES",
+		"experience": "years of experience",
+		"completed": "completed projects"
+	},
+	"reviews": {
+		"title": "What people say about us",
+		"subtitle": "Clients who have worked with RSC highly appreciate our professional approach and quality results.",
+		"items": {
+			"1": {
+				"text": "Great attention was paid to construction quality. The project was delivered on time and we are satisfied with the results.",
+				"author": "Abduqodirov Dilshod"
+			},
+			"2": {
+				"text": "The specialists demonstrated a high level of expertise and professionalism.",
+				"author": "Qarshiyev Aziz"
+			},
+			"3": {
+				"text": "The company proved itself as a reliable and responsible partner.",
+				"author": "Tuxsinov Doniyorbek"
+			}
+		}
+	},
+	"news": {
+		"label": "News",
+		"title": "Construction of a government facility completed",
+		"desc": "REMSTROY company has successfully completed another construction project under a government contract."
+	},
+	"footer": {
+		"request": "Leave a request and we will call you back",
+		"requestDesc": "Our staff will contact you during business hours",
+		"phonePlaceholder": "Your phone number",
+		"send": "Send",
+		"contact": "Contact",
+		"address": "Address",
+		"addressValue": "Tashkent city, Yashnabad district, Parkent",
+		"worktime": "Working hours",
+		"worktimeValue": "Daily from 09:00 to 20:00",
+		"rights": "All rights reserved"
+	}
+}

@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import './Header.scss'
 
 import CloseIcon from '../../assets/icons/close.svg?react'
+import EngFlag from '../../assets/icons/eng.svg?react'
 import RuFlag from '../../assets/icons/ru.svg?react'
 import UzFlag from '../../assets/icons/uz.svg?react'
 import Logo from '../../assets/images/logo.png'
@@ -75,6 +76,9 @@ const Header = () => {
 								</li>
 								<li onClick={() => changeLang('ru')}>
 									<RuFlag width={24} height={16} /> Русский
+								</li>
+								<li onClick={() => changeLang('eng')}>
+									<EngFlag width={24} height={16} /> English
 								</li>
 							</ul>
 						</div>
