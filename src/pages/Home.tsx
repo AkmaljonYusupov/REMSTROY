@@ -9,6 +9,7 @@ import bgSlider from '../assets/images/projects-main.webp'
 import sliderImg1 from '../assets/images/slider1.png'
 import sliderImg2 from '../assets/images/slider2.avif'
 import sliderImg3 from '../assets/images/slider3.webp'
+import sliderImg4 from '../assets/images/slider4.webp'
 
 import alarm from '../assets/images/unnamed.png'
 import './Home.scss'
@@ -17,7 +18,13 @@ const Home = () => {
 	const { t } = useTranslation()
 
 	// ================= PROJECTS SLIDER =================
-	const projectImages = [bgSlider, sliderImg1, sliderImg2, sliderImg3]
+	const projectImages = [
+		bgSlider,
+		sliderImg1,
+		sliderImg2,
+		sliderImg3,
+		sliderImg4
+	]
 	const [activeIndex, setActiveIndex] = useState(0)
 
 	// AUTO SLIDER (responsive uchun)
