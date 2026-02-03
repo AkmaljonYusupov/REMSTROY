@@ -588,7 +588,7 @@ $breakpoints: (
 	position: relative;
 	border-radius: 32px;
 	overflow: hidden;
-	height: 860px;
+	height: 960px;
 	background: #000;
 }
 
@@ -775,7 +775,7 @@ $breakpoints: (
 // RESPONSIVE
 @include mq-max(md) {
 	.projects__card {
-		height: 1200px;
+		height: 560px;
 	}
 
 	.projects__right {
