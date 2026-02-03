@@ -1,3 +1,38 @@
+// =============================================
+// MEDIA QUERY MIXINS
+// =============================================
+
+$breakpoints: (
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+);
+
+@mixin mq-max($size) {
+	@if map-has-key($breakpoints, $size) {
+		@media (max-width: map-get($breakpoints, $size)) {
+			@content;
+		}
+	} @else {
+		@warn "Breakpoint `#{$size}` not found!";
+	}
+}
+
+@mixin mq($size) {
+	@if map-has-key($breakpoints, $size) {
+		@media (min-width: map-get($breakpoints, $size)) {
+			@content;
+		}
+	} @else {
+		@warn "Breakpoint `#{$size}` not found!";
+	}
+}
+
+// =============================================
+// FOOTER
+// =============================================
 .footer {
 	padding: 120px 0;
 	background: #fff;
@@ -9,7 +44,7 @@
 		align-items: flex-start;
 	}
 
-	/* LEFT */
+	// ================= LEFT CARD =================
 	&__card {
 		background: #2f5373;
 		border-radius: 28px;
@@ -24,8 +59,10 @@
 		margin-bottom: 40px;
 
 		span {
+			display: block;
 			font-size: 14px;
 			letter-spacing: 2px;
+			opacity: 0.85;
 		}
 	}
 
@@ -40,11 +77,14 @@
 		font-size: 14px;
 		opacity: 0.8;
 		margin-bottom: 30px;
+		line-height: 1.5;
 	}
 
 	&__label {
 		font-size: 12px;
 		opacity: 0.7;
+		margin-bottom: 6px;
+		display: block;
 	}
 
 	input {
@@ -55,6 +95,11 @@
 		padding: 10px 0;
 		color: #fff;
 		margin-bottom: 30px;
+		font-size: 14px;
+
+		&::placeholder {
+			color: rgba(255, 255, 255, 0.6);
+		}
 	}
 
 	&__btn {
@@ -64,9 +109,17 @@
 		border: none;
 		font-weight: 600;
 		cursor: pointer;
+		background: #fff;
+		color: #2f5373;
+		transition: all 0.25s ease;
+
+		&:hover {
+			background: #f5c26b;
+			color: #000;
+		}
 	}
 
-	/* RIGHT */
+	// ================= RIGHT =================
 	&__nav {
 		display: flex;
 		gap: 40px;
@@ -75,6 +128,22 @@
 		a {
 			font-weight: 500;
 			color: #000;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -6px;
+				width: 0;
+				height: 2px;
+				background: #2f5cff;
+				transition: width 0.25s ease;
+			}
+
+			&:hover::after {
+				width: 100%;
+			}
 		}
 	}
 
@@ -129,6 +198,132 @@
 			background: #f1f1f1;
 			border-radius: 6px;
 			cursor: pointer;
+			transition: all 0.25s ease;
+
+			&:hover {
+				background: #2f5cff;
+				color: #fff;
+				transform: translateY(-2px);
+			}
+		}
+	}
+}
+
+// =============================================
+// RESPONSIVE — XL
+// =============================================
+@include mq-max(xl) {
+	.footer {
+		&__wrapper {
+			gap: 70px;
+		}
+	}
+}
+
+// =============================================
+// RESPONSIVE — LG (TABLET LANDSCAPE)
+// =============================================
+@include mq-max(lg) {
+	.footer {
+		padding: 100px 0;
+
+		&__wrapper {
+			grid-template-columns: 1fr;
+			gap: 80px;
+		}
+
+		&__card {
+			max-width: 520px;
+			margin: 0 auto;
+		}
+
+		&__nav {
+			justify-content: center;
+			flex-wrap: wrap;
+			row-gap: 20px;
+		}
+
+		&__info {
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 30px;
+		}
+
+		&__line {
+			display: none;
+		}
+
+		&__item {
+			text-align: center;
+		}
+
+		&__bottom {
+			flex-direction: column;
+			gap: 20px;
+			text-align: center;
+		}
+	}
+}
+
+// =============================================
+// RESPONSIVE — MD (TABLET / LARGE MOBILE)
+// =============================================
+@include mq-max(md) {
+	.footer {
+		padding: 80px 0;
+
+		&__logo {
+			font-size: 32px;
+		}
+
+		&__card {
+			padding: 40px 32px;
+		}
+
+		&__item h4 {
+			font-size: 20px;
+		}
+	}
+}
+
+// =============================================
+// RESPONSIVE — SM (MOBILE)
+// =============================================
+@include mq-max(sm) {
+	.footer {
+		padding: 70px 0;
+
+		&__card {
+			border-radius: 22px;
+			padding: 32px 24px;
+		}
+
+		&__logo {
+			font-size: 28px;
+			margin-bottom: 28px;
+		}
+
+		&__card-title {
+			font-size: 20px;
+		}
+
+		&__info {
+			flex-direction: column;
+			gap: 24px;
+		}
+
+		&__socials {
+			justify-content: center;
+
+			i {
+				width: 40px;
+				height: 40px;
+			}
+		}
+
+		&__bottom p {
+			font-size: 13px;
+			line-height: 1.5;
 		}
 	}
 }
