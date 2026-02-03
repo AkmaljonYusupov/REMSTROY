@@ -9,6 +9,7 @@ import bgSlider from '../assets/images/projects-main.webp'
 import sliderImg1 from '../assets/images/slider1.png'
 import sliderImg2 from '../assets/images/slider2.avif'
 import sliderImg3 from '../assets/images/slider3.webp'
+// import nevsVideo from '../assets/videos/news-video.mp4?url'
 
 import alarm from '../assets/images/unnamed.png'
 import './Home.scss'
@@ -252,22 +253,14 @@ const Home = () => {
 						<p className='news__desc'>{t('news.desc')}</p>
 
 						<div className='news__video'>
-							{/* <video
-								src={nevsVideo}
+							<video
+								src='/videos/news-video.mp4'
 								controls
-								preload='metadata'
-								poster='/images/news-video-poster.jpg'
-							/> */}
-							<iframe
-								width='560'
-								height='315'
-								src='https://www.youtube.com/embed/ijC99D2Maa0?si=rucewdJ86utlC8rf&amp;start=1'
-								title='YouTube video player'
-								frameborder='0'
-								allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-								referrerpolicy='strict-origin-when-cross-origin'
-								allowfullscreen
-							></iframe>
+								autoPlay
+								muted
+								loop
+								playsInline
+							/>
 						</div>
 					</div>
 
