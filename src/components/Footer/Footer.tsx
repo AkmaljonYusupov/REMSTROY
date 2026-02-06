@@ -3,6 +3,7 @@ import './Footer.scss'
 
 function Footer() {
 	const { t } = useTranslation()
+	const currentYear = new Date().getFullYear()
 
 	return (
 		<footer className='footer'>
@@ -17,7 +18,6 @@ function Footer() {
 						</h3>
 
 						<h4 className='footer__card-title'>{t('footer.request')}</h4>
-
 						<p className='footer__card-desc'>{t('footer.requestDesc')}</p>
 
 						<label className='footer__label'>
@@ -25,7 +25,6 @@ function Footer() {
 						</label>
 
 						<input type='tel' />
-
 						<button className='footer__btn'>{t('footer.send')}</button>
 					</div>
 				</div>
@@ -42,8 +41,14 @@ function Footer() {
 					<div className='footer__info'>
 						<div className='footer__item'>
 							<h4>{t('footer.contact')}</h4>
-							<p>+998 93 900 99 59</p>
-							<p>info@webera.uz</p>
+
+							<a href='tel:+998939009959'>
+								+998 93 900 99 59
+							</a>
+
+							<a href='mailto:info@webera.uz'>
+								info@webera.uz
+							</a>
 						</div>
 
 						<div className='footer__line' />
@@ -63,14 +68,62 @@ function Footer() {
 
 					<div className='footer__bottom'>
 						<div className='footer__socials'>
-							<i className='fab fa-facebook-f'></i>
-							<i className='fab fa-linkedin-in'></i>
-							<i className='fab fa-twitter'></i>
-							<i className='fab fa-telegram-plane'></i>
-							<i className='fab fa-whatsapp'></i>
-						</div>
+	<a
+		href='#'
+		target='_blank'
+		rel='noopener noreferrer'
+		aria-label='Share on Facebook'
+		title="Facebook"
+	>
+		<i className='fab fa-facebook-f'></i>
+	</a>
 
-						<p>Copyright © 2026 RSC Construction. {t('footer.rights')}</p>
+	<a
+		href='#'
+		target='_blank'
+		rel='noopener noreferrer'
+		aria-label='Share on LinkedIn'
+		title="LinkedIn"
+	>
+		<i className='fab fa-linkedin-in'></i>
+	</a>
+
+	<a
+		href='#'
+		target='_blank'
+		rel='noopener noreferrer'
+		aria-label='Share on Twitter'
+		title="Twitter"
+		
+	>
+		<i className='fab fa-twitter'></i>
+	</a>
+
+	<a
+		href='#'
+		target='_blank'
+		rel='noopener noreferrer'
+		aria-label='Share on Telegram'
+			title="Telegram"
+	>
+		<i className='fab fa-telegram-plane'></i>
+	</a>
+
+	<a
+		href='#'
+		target='_blank'
+		rel='noopener noreferrer'
+		aria-label='Share on WhatsApp'
+		title="WhatsApp"
+	>
+		<i className='fab fa-whatsapp'></i>
+	</a>
+</div>
+
+
+						<p>
+							Copyright © {currentYear} RSC Construction. {t('footer.rights')}
+						</p>
 					</div>
 				</div>
 			</div>
