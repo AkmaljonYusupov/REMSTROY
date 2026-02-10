@@ -1021,15 +1021,16 @@ $breakpoints: (
 	}
 
 	.news__image {
-		width: 460px;
-		
+		width: 460px;		
 		margin: 0 auto;
 		opacity: 1;
 		img{
-			margin-left: 135px;margin-bottom: -90px;
+			margin-left: 135px;
+			margin-bottom: -90px;
 		}
 	}
 }
+
 
 @include mq-max(sm) {
 	.news {
@@ -1046,5 +1047,9 @@ $breakpoints: (
 
 	.news__image {
 		width: 280px;
+		img{
+			margin-left: 100px;
+		}
 	}
 }
+
