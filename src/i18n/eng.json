@@ -5,10 +5,10 @@
 		"button": "Submit an application"
 	},
 	"nav": {
-		"projects": "Projects",
-		"about": "About us",
-		"reviews": "Reviews",
-		"news": "News"
+		"projects": "Home",
+		"about": "Projects",
+		"reviews": "About Us",
+		"news": "Contact"
 	},
 	"features": {
 		"standard": {

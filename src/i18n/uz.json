@@ -5,10 +5,10 @@
 		"button": "Ariza yuborish"
 	},
 	"nav": {
-		"projects": "Loyihalar",
-		"about": "Biz haqimizda",
-		"reviews": "Sharhlar",
-		"news": "Yangiliklar"
+		"projects": "Bosh sahifa",
+		"about": "Loyihalar",
+		"reviews": "Biz haqimizda",
+		"news": "Aloqa"
 	},
 	"features": {
 		"standard": {
