@@ -12,12 +12,12 @@ import Logo from '../../assets/images/logo.png'
 const Header = () => {
 	const { i18n, t } = useTranslation()
 	const [open, setOpen] = useState(false)
-	const [lang, setLang] = useState<'uzb' | 'ru'>('uzb')
+	const [lang, setLang] = useState<'uz' | 'ru'>('uz')
 	const [langMenu, setLangMenu] = useState(false)
 	const langRef = useRef<HTMLDivElement>(null)
 
 	useEffect(() => {
-		const savedLang = localStorage.getItem('lang') as 'uzb' | 'ru'
+		const savedLang = localStorage.getItem('lang') as 'uz' | 'ru'
 		if (savedLang) {
 			setLang(savedLang)
 			i18n.changeLanguage(savedLang)
@@ -33,7 +33,7 @@ const Header = () => {
 		return () => document.removeEventListener('mousedown', handleClickOutside)
 	}, [i18n])
 
-	const changeLang = (newLang: 'uzb' | 'ru') => {
+	const changeLang = (newLang: 'uz' | 'ru') => {
 		setLang(newLang)
 		i18n.changeLanguage(newLang)
 		localStorage.setItem('lang', newLang)
@@ -63,7 +63,7 @@ const Header = () => {
 								className='current-lang'
 								onClick={() => setLangMenu(!langMenu)}
 							>
-								{lang === 'uzb' ? (
+								{lang === 'uz' ? (
 									<UzFlag width={24} height={16} />
 								) : lang === 'ru' ? (
 									<RuFlag width={24} height={16} />
@@ -74,7 +74,7 @@ const Header = () => {
 								<span>{lang.toUpperCase()}</span>
 							</button>
 							<ul className={`lang-dropdown ${langMenu ? 'show' : ''}`}>
-								<li onClick={() => changeLang('uzb')}>
+								<li onClick={() => changeLang('uz')}>
 									<UzFlag width={24} height={16} /> O‘zbekcha
 								</li>
 								<li onClick={() => changeLang('ru')}>
@@ -137,8 +137,8 @@ const Header = () => {
 
 				{/* Language Buttons */}
 				<div className='offcanvas__lang'>
-					<button onClick={() => changeLang('uzb')}>
-						<UzFlag width={20} height={14} /> Uzbek
+					<button onClick={() => changeLang('uz')}>
+						<UzFlag width={20} height={14} /> uzek
 					</button>
 					<button onClick={() => changeLang('ru')}>
 						<RuFlag width={20} height={14} /> Russian
