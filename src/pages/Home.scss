@@ -968,9 +968,10 @@ $breakpoints: (
 }
 
 .news__image {
-	width: 620px;
+	width: 720px;
 
 	img {
+		margin-bottom: -140px;
 		margin-left: 95px;
 		width: 100%;
 		height: auto;
