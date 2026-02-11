@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
+import aboutpageImg from '../../src/assets/images/aboutpage-image.jpg'
 import aboutCartimg1 from '../assets/icons/card1-icon.png'
 import aboutCartimg2 from '../assets/icons/card2-icon.png'
 import aboutCartimg3 from '../assets/icons/card3-icon.png'
-// import aboutpageImg from '../src/assets/images/aboutpage-image.jpg'
 import './About.scss'
 
 function About() {
@@ -70,7 +70,7 @@ function About() {
 						{/* Chap taraf: Rasm + overlay effekt */}
 						<div className='us-image-side'>
 							<img
-								src='/src/assets/images/aboutpage-image.jpg' // <-- bu rasmni o'zgartiring (masalan image:3 yoki image:6 dan oling)
+								src={aboutpageImg} // <-- bu rasmni o'zgartiring (masalan image:3 yoki image:6 dan oling)
 								alt='Construction team discussing plans'
 								className='us-main-photo'
 							/>
