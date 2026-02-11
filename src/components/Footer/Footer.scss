@@ -1,0 +1,303 @@
+// =============================================
+// MEDIA QUERY MIXINS
+// =============================================
+
+$breakpoints: (
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+);
+
+@mixin mq-max($size) {
+	@if map-has-key($breakpoints, $size) {
+		@media (max-width: map-get($breakpoints, $size)) {
+			@content;
+		}
+	}
+}
+
+@mixin mq($size) {
+	@if map-has-key($breakpoints, $size) {
+		@media (min-width: map-get($breakpoints, $size)) {
+			@content;
+		}
+	}
+}
+
+// =============================================
+// FOOTER
+// =============================================
+
+.footer {
+	padding: 120px 0;
+	background: #fff;
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 420px 1fr;
+		gap: 100px;
+		align-items: flex-start;
+	}
+
+	// ================= LEFT CARD =================
+	&__card {
+		background: #2f5373;
+		border-radius: 28px;
+		padding: 48px;
+		color: #fff;
+	}
+
+	&__logo {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-size: 56px;
+		font-weight: 700;
+		margin-bottom: 40px;
+
+		span {
+			font-size: 14px;
+			letter-spacing: 2px;
+			opacity: 0.85;
+		}
+	}
+
+	&__card-title {
+		font-size: 22px;
+		font-weight: 600;
+		color: #f5c26b;
+		margin-bottom: 10px;
+	}
+
+	&__card-desc {
+		font-size: 14px;
+		opacity: 0.8;
+		margin-bottom: 30px;
+		line-height: 1.5;
+	}
+
+	&__label {
+		font-size: 12px;
+		opacity: 0.7;
+		margin-bottom: 6px;
+		display: block;
+	}
+
+	input {
+		width: 100%;
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		padding: 10px 0;
+		color: #fff;
+		margin-bottom: 30px;
+		font-size: 14px;
+
+		&::placeholder {
+			color: rgba(255, 255, 255, 0.6);
+		}
+
+		&:focus,
+		&:focus-visible,
+		&:active {
+			outline: none;
+			box-shadow: none;
+			border-bottom-color: rgba(255, 255, 255, 0.6);
+		}
+
+		&:-webkit-autofill {
+			-webkit-text-fill-color: #fff;
+			transition: background-color 9999s ease-in-out 0s;
+		}
+	}
+
+	&__btn {
+		width: 100%;
+		padding: 14px;
+		border-radius: 8px;
+		border: none;
+		font-weight: 600;
+		cursor: pointer;
+		background: #fff;
+		color: #2f5373;
+		transition: 0.25s;
+
+		&:hover {
+			background: #f5c26b;
+			color: #000;
+		}
+	}
+
+	// ================= RIGHT =================
+	&__nav {
+		display: flex;
+		justify-content: center;
+		gap: 40px;
+		margin-bottom: 50px;
+		padding-bottom: 22px;
+		border-bottom: 1px solid #dcdcdc;
+		flex-wrap: wrap;
+
+		a {
+			font-weight: 500;
+			color: #000;
+			text-decoration: none;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -6px;
+				width: 0;
+				height: 2px;
+				background: #2f5cff;
+				transition: width 0.25s ease;
+			}
+
+			&:hover::after {
+				width: 100%;
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+		margin-bottom: 50px;
+		flex-wrap: wrap;
+	}
+
+	// 🔥 ASOSIY O‘ZGARISH SHU YERDA
+	&__item {
+		max-width: 220px;
+		text-align: center;
+
+		h4 {
+			color: #2f5cff;
+			font-size: 22px;
+			margin-bottom: 12px;
+		}
+
+		a {
+			display: block;
+			font-size: 14px;
+			line-height: 1.6;
+			color: #000;
+			text-decoration: none;
+			transition: color 0.25s ease;
+
+			&:hover {
+				color: #2f5cff;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__line {
+		width: 1px;
+		height: 70px;
+		background: #ddd;
+	}
+
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 18px;
+		text-align: center;
+
+		p {
+			font-size: 14px;
+			color: #777;
+		}
+	}
+
+	&__socials {
+	display: flex;
+	gap: 10px;
+
+	a {
+		width: 36px;
+		height: 36px;
+		display: grid;
+		place-items: center;
+		background: #f1f1f1;
+		border-radius: 6px;
+		text-decoration: none;
+		color: inherit;
+		cursor: pointer;
+		transition: 0.25s;
+
+		i {
+			font-size: 14px;
+		}
+
+		&:hover {
+			background: #2f5cff;
+			color: #fff;
+			transform: translateY(-2px);
+		}
+	}
+}
+
+}
+
+// =============================================
+// RESPONSIVE
+// =============================================
+
+@include mq-max(lg) {
+	.footer {
+		padding: 100px 0;
+
+		&__wrapper {
+			grid-template-columns: 1fr;
+			gap: 80px;
+		}
+
+		&__card {
+			max-width: 520px;
+			margin: 0 auto;
+		}
+
+		&__line {
+			display: none;
+		}
+	}
+}
+
+@include mq-max(md) {
+	.footer {
+		padding: 80px 0;
+
+		&__logo {
+			font-size: 32px;
+		}
+
+		&__card {
+			padding: 40px 32px;
+		}
+	}
+}
+
+@include mq-max(sm) {
+	.footer {
+		padding: 70px 0;
+
+		&__card {
+			border-radius: 22px;
+			padding: 32px 24px;
+		}
+
+		&__logo {
+			font-size: 28px;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+body {
+	margin: 0;
+	font-family: Inter, sans-serif;
+}
+
+.hero {
+	padding: 80px;
+}
+
+@media (max-width: 1024px) {
+	.hero {
+		padding: 40px;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero {
+		padding: 20px;
+		text-align: center;
+	}
+}

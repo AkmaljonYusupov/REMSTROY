@@ -1,0 +1,140 @@
+{
+	"hero": {
+		"title": "Davlat va noturar obyektlar uchun ishonchli qurilish",
+		"desc": "REMSTROY kompaniyasi davlat buyurtmalari asosida qurilish va montaj ishlarini amalga oshiradi.",
+		"button": "Ariza yuborish"
+	},
+	"nav": {
+		"projects": "Bosh sahifa",
+		"about": "Loyihalar",
+		"reviews": "Biz haqimizda",
+		"news": "Aloqa"
+	},
+	"features": {
+		"standard": {
+			"title": "Standartlarga moslik",
+			"desc": "REMSTROY — ixtisoslashgan qurilish kompaniyasi"
+		},
+		"quality": {
+			"title": "Sifat kafolati",
+			"desc": "REMSTROY — yuqori sifat standartlariga amal qiladi"
+		},
+		"tech": {
+			"title": "Zamonaviy texnologiyalar",
+			"desc": "REMSTROY — eng so‘nggi qurilish texnologiyalaridan foydalanadi"
+		}
+	},
+	"about": {
+		"label": "KOMPANIYA HAQIDA",
+		"title": "Har bir loyihada sifat va mas’uliyat",
+		"aboutjoyiy": "Biz haqimizda",
+		"text": "REMSTROY — davlat tashkilotlari uchun noturar binolar va infratuzilma obyektlarini qurishga ixtisoslashgan qurilish kompaniyasi. Kompaniya o‘z faoliyatida amaldagi qurilish me’yorlari, sifat standartlari va belgilangan muddatlarga qat’iy amal qiladi.",
+		"home": "Bosh sahifa",
+		"card1": {
+			"title": "Bizda tajribali muhandislar bor.",
+			"text": "Bizning mutaxassislarimiz yuqori malakaga ega va har bir loyihani sifatli bajaradi."
+		},
+		"card2": {
+			"title": "24/7 mijozlarni qo‘llab-quvvatlash.",
+			"text": "Biz har doim mijozlarimizga yordam berishga tayyormiz va tezkor xizmat ko‘rsatamiz."
+		},
+		"card3": {
+			"title": "Iqtidorli jamoa a’zolari.",
+			"text": "Bizning jamoamiz professional va mas’uliyatli xodimlardan iborat."
+		},
+		"stat1": {
+			"value": "10+ yil",
+			"label": "qurilishdagi tajriba"
+		},
+		"stat2": {
+			"value": "Davlat buyurtmalari",
+			"label": "asosiy yo‘nalish sifatida"
+		}
+	},
+	"advantages": {
+		"label": "Afzalliklar",
+		"items": {
+			"1": {
+				"title": "Davlat standartlariga muvofiqlik",
+				"desc": "Barcha ishlar amaldagi me’yor va talablar asosida bajariladi"
+			},
+			"2": {
+				"title": "Tajribali mutaxassislar",
+				"desc": "Malakali muhandislar va texnik xodimlar"
+			},
+			"3": {
+				"title": "Individual yondashuv",
+				"desc": "Har bir loyiha o‘ziga xos jihatlari asosida ishlab chiqiladi"
+			},
+			"4": {
+				"title": "Xavfsizlik texnikasi",
+				"desc": "Mehnatni muhofaza qilish qoidalariga qat’iy rioya qilinadi"
+			},
+			"5": {
+				"title": "Ishonchlilik va mas’uliyat",
+				"desc": "Buyurtmachi oldidagi majburiyatlarni aniq bajarish"
+			},
+			"6": {
+				"title": "Muddatlarga rioya qilish",
+				"desc": "Obyektlarni belgilangan vaqtda topshirish"
+			}
+		}
+	},
+	"projects": {
+		"label": "PROYEKTLAR",
+		"objects": "OBYEKTLAR",
+		"experience": "yillik tajriba",
+		"completed": "bajarilgan loyihalar"
+	},
+	"reviews": {
+		"title": "Biz haqimizda fikrlar",
+		"subtitle": "RSC bilan hamkorlik qilgan buyurtmachilar kompaniyamizning professional yondashuvi va sifatli ishlarini yuqori baholaydi.",
+		"items": {
+			"1": {
+				"text": "Qurilish jarayonlari sifatiga alohida e’tibor qaratildi. Ishlar o‘z vaqtida topshirildi va natijadan mamnunmiz.",
+				"author": "Abduqodirov Dilshod"
+			},
+			"2": {
+				"text": "Mutaxassislarning malakasi va ishga bo‘lgan yondashuvi yuqori darajada.",
+				"author": "Qarshiyev Aziz"
+			},
+			"3": {
+				"text": "Kompaniya o‘zini ishonchli va mas’uliyatli hamkor sifatida namoyon etdi.",
+				"author": "Tuxsinov Doniyorbek"
+			}
+		}
+	},
+	"news": {
+		"label": "Yangiliklar",
+		"title": "Davlat obyektining qurilishi yakunlandi",
+		"desc": "REMSTROY kompaniyasi davlat buyurtmasi asosida navbatdagi qurilish obyektini muvaffaqiyatli yakunladi."
+	},
+	"footer": {
+		"request": "Ariza qoldiring va biz sizga qo‘ng‘iroq qilamiz",
+		"requestDesc": "Xodimlarimiz ish vaqtida siz bilan bog‘lanadi",
+		"phonePlaceholder": "Telefon raqamingiz",
+		"send": "Yuborish",
+		"contact": "Aloqa",
+		"address": "Manzil",
+		"addressValue": "Toshkent shahri, Yashnobod tumani, Parkent",
+		"worktime": "Ish vaqti",
+		"worktimeValue": "Har kuni 09:00 dan 20:00 gacha",
+		"rights": "Barcha huquqlar himoyalangan"
+	},
+	"partners": {
+		"title": "HAMKORLARIMIZ",
+		"ngmk": "NKMK",
+		"agmk": "AGMK",
+		"eriell": "ERIELL",
+		"temiryul": "O‘zbekiston Temir Yo‘llari",
+		"acwa": "ACWA Power",
+		"uzelectro": "Uzelectroapparat",
+		"uzbekenergo": "O‘zbekenergo",
+		"uzneftgaz": "O‘zbekneftgaz",
+		"uztransgaz": "Uztransgaz",
+		"ued": "UED Construction",
+		"shurtan": "Sho‘rtan Gaz Kimyo",
+		"bojxona": "Davlat Bojxona Qo‘mitasi",
+		"aral": "Aral Sea"
+	}
+}
