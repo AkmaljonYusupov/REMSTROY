@@ -51,8 +51,8 @@ const Header = () => {
 							<img src={Logo} alt='Logo' />
 						</NavLink>
 						<NavLink to='/projects'>{t('nav.projects')}</NavLink>
-						<NavLink to='/about'>{t('nav.about')}</NavLink>
-						<NavLink to='/reviews'>{t('nav.reviews')}</NavLink>
+						<NavLink to='/projects'>{t('nav.about')}</NavLink>
+						<NavLink to='/about'>{t('nav.reviews')}</NavLink>
 						<NavLink to='/news'>{t('nav.news')}</NavLink>
 					</nav>
 

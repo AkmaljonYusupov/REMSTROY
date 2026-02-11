@@ -27,7 +27,21 @@
 	"about": {
 		"label": "KOMPANIYA HAQIDA",
 		"title": "Har bir loyihada sifat va mas’uliyat",
+		"aboutjoyiy": "Biz haqimizda",
 		"text": "REMSTROY — davlat tashkilotlari uchun noturar binolar va infratuzilma obyektlarini qurishga ixtisoslashgan qurilish kompaniyasi. Kompaniya o‘z faoliyatida amaldagi qurilish me’yorlari, sifat standartlari va belgilangan muddatlarga qat’iy amal qiladi.",
+		"home": "Bosh sahifa",
+		"card1": {
+			"title": "Bizda tajribali muhandislar bor.",
+			"text": "Bizning mutaxassislarimiz yuqori malakaga ega va har bir loyihani sifatli bajaradi."
+		},
+		"card2": {
+			"title": "24/7 mijozlarni qo‘llab-quvvatlash.",
+			"text": "Biz har doim mijozlarimizga yordam berishga tayyormiz va tezkor xizmat ko‘rsatamiz."
+		},
+		"card3": {
+			"title": "Iqtidorli jamoa a’zolari.",
+			"text": "Bizning jamoamiz professional va mas’uliyatli xodimlardan iborat."
+		},
 		"stat1": {
 			"value": "10+ yil",
 			"label": "qurilishdagi tajriba"

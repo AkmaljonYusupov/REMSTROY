@@ -1,13 +1,13 @@
 {
 	"hero": {
-		"title": "Reliable construction for government and non-residential facilities",
-		"desc": "REMSTROY company carries out construction and installation works based on government contracts.",
-		"button": "Submit an application"
+		"title": "Reliable construction for government and non-residential buildings",
+		"desc": "REMSTROY company carries out construction and installation work based on government orders.",
+		"button": "Submit Application"
 	},
 	"nav": {
 		"projects": "Home",
 		"about": "Projects",
-		"reviews": "About Us",
+		"reviews": "About us",
 		"news": "Contact"
 	},
 	"features": {
@@ -17,7 +17,7 @@
 		},
 		"quality": {
 			"title": "Quality guarantee",
-			"desc": "REMSTROY adheres to high quality standards"
+			"desc": "REMSTROY follows high quality standards"
 		},
 		"tech": {
 			"title": "Modern technologies",
@@ -27,22 +27,36 @@
 	"about": {
 		"label": "ABOUT THE COMPANY",
 		"title": "Quality and responsibility in every project",
-		"text": "REMSTROY is a construction company specialized in building non-residential buildings and infrastructure facilities for government organizations. The company strictly follows current construction regulations, quality standards, and project deadlines.",
+		"aboutjoyiy": "About us",
+		"text": "REMSTROY is a construction company specializing in the construction of non-residential buildings and infrastructure facilities for government organizations. The company strictly follows construction norms, quality standards, and deadlines.",
+		"home": "Home",
+		"card1": {
+			"title": "We have experienced engineers.",
+			"text": "Our specialists are highly qualified and perform each project with quality."
+		},
+		"card2": {
+			"title": "24/7 customer support.",
+			"text": "We are always ready to help our clients and provide prompt services."
+		},
+		"card3": {
+			"title": "Talented team members.",
+			"text": "Our team consists of professional and responsible employees."
+		},
 		"stat1": {
 			"value": "10+ years",
-			"label": "of construction experience"
+			"label": "construction experience"
 		},
 		"stat2": {
-			"value": "Government contracts",
-			"label": "as the main focus"
+			"value": "Government orders",
+			"label": "main direction"
 		}
 	},
 	"advantages": {
 		"label": "Advantages",
 		"items": {
 			"1": {
-				"title": "Compliance with government standards",
-				"desc": "All works are carried out in accordance with current regulations and requirements"
+				"title": "Compliance with state standards",
+				"desc": "All work is performed according to current norms and requirements"
 			},
 			"2": {
 				"title": "Experienced specialists",
@@ -50,73 +64,73 @@
 			},
 			"3": {
 				"title": "Individual approach",
-				"desc": "Each project is developed based on its specific requirements"
+				"desc": "Each project is developed according to its specific features"
 			},
 			"4": {
 				"title": "Safety regulations",
-				"desc": "Strict compliance with occupational safety rules"
+				"desc": "Strict compliance with labor protection rules"
 			},
 			"5": {
 				"title": "Reliability and responsibility",
-				"desc": "Precise fulfillment of obligations to clients"
+				"desc": "Clear fulfillment of obligations to the customer"
 			},
 			"6": {
-				"title": "Meeting deadlines",
-				"desc": "Timely completion and delivery of facilities"
+				"title": "Deadline adherence",
+				"desc": "Delivery of objects on time"
 			}
 		}
 	},
 	"projects": {
 		"label": "PROJECTS",
-		"objects": "FACILITIES",
+		"objects": "OBJECTS",
 		"experience": "years of experience",
 		"completed": "completed projects"
 	},
 	"reviews": {
-		"title": "What people say about us",
-		"subtitle": "Clients who have worked with RSC highly appreciate our professional approach and quality results.",
+		"title": "Our clients' feedback",
+		"subtitle": "Clients who have worked with RSC highly appreciate the company's professional approach and quality work.",
 		"items": {
 			"1": {
-				"text": "Great attention was paid to construction quality. The project was delivered on time and we are satisfied with the results.",
+				"text": "Special attention was paid to the quality of the construction processes. Work was completed on time, and we are satisfied with the result.",
 				"author": "Abduqodirov Dilshod"
 			},
 			"2": {
-				"text": "The specialists demonstrated a high level of expertise and professionalism.",
+				"text": "The qualification of specialists and their approach to work is at a high level.",
 				"author": "Qarshiyev Aziz"
 			},
 			"3": {
-				"text": "The company proved itself as a reliable and responsible partner.",
+				"text": "The company has shown itself as a reliable and responsible partner.",
 				"author": "Tuxsinov Doniyorbek"
 			}
 		}
 	},
 	"news": {
 		"label": "News",
-		"title": "Construction of a government facility completed",
-		"desc": "REMSTROY company has successfully completed another construction project under a government contract."
+		"title": "Construction of government facility completed",
+		"desc": "REMSTROY successfully completed the next construction project based on a government order."
 	},
 	"footer": {
-		"request": "Leave a request and we will call you back",
-		"requestDesc": "Our staff will contact you during business hours",
+		"request": "Submit an application and we will call you",
+		"requestDesc": "Our staff will contact you during working hours",
 		"phonePlaceholder": "Your phone number",
 		"send": "Send",
 		"contact": "Contact",
 		"address": "Address",
-		"addressValue": "Tashkent city, Yashnabad district, Parkent",
+		"addressValue": "Tashkent city, Yashnobod district, Parkent",
 		"worktime": "Working hours",
-		"worktimeValue": "Daily from 09:00 to 20:00",
+		"worktimeValue": "Every day from 09:00 to 20:00",
 		"rights": "All rights reserved"
 	},
 	"partners": {
 		"title": "OUR PARTNERS",
-		"ngmk": "NGMK",
+		"ngmk": "NKMK",
 		"agmk": "AGMK",
 		"eriell": "ERIELL",
 		"temiryul": "Uzbekistan Railways",
 		"acwa": "ACWA Power",
 		"uzelectro": "Uzelectroapparat",
 		"uzbekenergo": "Uzbekenergo",
-		"uzneftgaz": "Uzbekneftegaz",
+		"uzneftgaz": "Uzbekneftgaz",
 		"uztransgaz": "Uztransgaz",
 		"ued": "UED Construction",
 		"shurtan": "Shurtan Gas Chemical",
