@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import aboutCartimg1 from '../assets/icons/card1-icon.png'
 import aboutCartimg2 from '../assets/icons/card2-icon.png'
 import aboutCartimg3 from '../assets/icons/card3-icon.png'
+
 import './About.scss'
 
 function About() {
