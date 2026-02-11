@@ -406,7 +406,6 @@ const Home = () => {
 						{partners.map((item, index) => (
 							<div className='partner-item' key={index}>
 								<img src={item.logo} alt={t(item.name)} />
-								<p className='partner-name'>{t(item.name)}</p>
 							</div>
 						))}
 					</div>

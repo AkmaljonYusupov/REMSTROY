@@ -1057,7 +1057,7 @@ $breakpoints: (
 
 .partners-section {
 	padding: 10px 0px 100px 0px;
-	// background: #f4f6f8;
+	background: #f4f6f8;
 
 	@include mq-max(lg) {
 		padding: 10px 0px 100px 0px;
@@ -1089,7 +1089,7 @@ $breakpoints: (
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	align-items: center;
-	gap: 48px;
+	gap: 15px;
 
 	@include mq-max(xl) {
 		grid-template-columns: repeat(2, 1fr);
@@ -1097,12 +1097,12 @@ $breakpoints: (
 
 	@include mq-max(lg) {
 		grid-template-columns: repeat(2, 1fr);
-		gap: 36px;
+		gap: 10px;
 	}
 
 	@include mq-max(md) {
 		grid-template-columns: repeat(2, 1fr);
-		gap: 28px;
+		gap: 8px;
 	}
 
 	@include mq-max(sm) {
@@ -1113,7 +1113,7 @@ $breakpoints: (
 
 // CARD
 .partner-item {
-	height: 190px;
+	height: 100px;
 	background: #ffffff;
 	border-radius: 14px;
 	display: flex;
@@ -1122,7 +1122,7 @@ $breakpoints: (
 	justify-content: center;
 	padding: 26px;
 	gap: 14px;
-	border: 1px solid #f4f6f8;
+	// border: 1px solid #f4f6f8;
 	@include mq-max(sm) {
 		border: none;
 		padding: 5px;
@@ -1135,7 +1135,7 @@ $breakpoints: (
 
 // LOGO — EXTRA LARGE (KEEP DESIGN)
 .partner-item img {
-	max-width: 280px;
+	max-width: 200px;
 	max-height: 130px;
 	object-fit: contain;
 
@@ -1147,18 +1147,5 @@ $breakpoints: (
 	@include mq-max(md) {
 		max-width: 150px;
 		max-height: 100px;
-	}
-}
-
-// NAME — SODDA
-.partner-name {
-	font-size: 14px;
-	font-weight: 600;
-	color: #1e3a5f;
-	text-align: center;
-	line-height: 1.3;
-
-	@include mq-max(md) {
-		font-size: 13px;
 	}
 }

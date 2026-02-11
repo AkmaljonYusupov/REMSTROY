@@ -12,16 +12,16 @@ import uzneftgaz from '../assets/partners/uzneftgaz.png'
 import uztransgaz from '../assets/partners/uztransgaz.svg'
 
 export const partners = [
-	{ name: 'partners.ngmk', logo: ngmk },
-	{ name: 'partners.agmk', logo: agmk },
-	{ name: 'partners.eriell', logo: eriell },
-	{ name: 'partners.temiryul', logo: temiryul },
-	{ name: 'partners.acwa', logo: acwa },
-	{ name: 'partners.uzelectro', logo: uzelectro },
-	{ name: 'partners.uzbekenergo', logo: uzbekenergo },
-	{ name: 'partners.uzneftgaz', logo: uzneftgaz },
+	{ name: 'partners.bojxona', logo: bojxona },
 	{ name: 'partners.uztransgaz', logo: uztransgaz },
 	{ name: 'partners.ued', logo: ued },
 	{ name: 'partners.shurtan', logo: shurtan },
-	{ name: 'partners.bojxona', logo: bojxona },
+	{ name: 'partners.uzneftgaz', logo: uzneftgaz },
+	{ name: 'partners.ngmk', logo: ngmk },
+	{ name: 'partners.acwa', logo: acwa },
+	{ name: 'partners.agmk', logo: agmk },
+	{ name: 'partners.eriell', logo: eriell },
+	{ name: 'partners.temiryul', logo: temiryul },
+	{ name: 'partners.uzelectro', logo: uzelectro },
+	{ name: 'partners.uzbekenergo', logo: uzbekenergo },
 ]
