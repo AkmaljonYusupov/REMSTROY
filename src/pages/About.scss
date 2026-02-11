@@ -214,3 +214,90 @@ $breakpoints: (
 		}
 	}
 }
+
+/* ============================================= */
+/* BELIEVE SECTION – rasmga 1:1 mos */
+/* ============================================= */
+.about-believe-section {
+	background: #f8f9fa;
+	padding: 8vw 2vw;
+	text-align: center;
+}
+
+.believe-content {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.believe-title {
+	font-size: clamp(32px, 5vw, 54px);
+	font-weight: 700;
+	color: #1e3a5f;
+	margin-bottom: 1.8rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.believe-desc {
+	font-size: clamp(16px, 2vw, 18px);
+	line-height: 1.7;
+	color: #555;
+	margin-bottom: 3rem;
+	max-width: 760px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.believe-checklist {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 3rem;
+	text-align: left;
+	max-width: 680px;
+	margin-left: auto;
+	margin-right: auto;
+
+	li {
+		font-size: clamp(15px, 1.8vw, 17px);
+		margin-bottom: 1.2rem;
+		display: flex;
+		align-items: flex-start;
+		gap: 1rem;
+		color: #444;
+
+		.check-icon {
+			color: #28a745;
+			font-size: 1.4rem;
+			font-weight: bold;
+			min-width: 24px;
+		}
+	}
+}
+
+.btn-read-more {
+	background: #ffb703;
+	color: #1e3a5f;
+	border: none;
+	padding: 1rem 2.5rem;
+	font-size: 1.1rem;
+	font-weight: 600;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	&:hover {
+		background: #e0a000;
+		transform: translateY(-3px);
+		box-shadow: 0 10px 25px rgba(255, 183, 3, 0.3);
+	}
+}
+
+/* Responsive */
+@include mq-max(md) {
+	.believe-title {
+		font-size: clamp(28px, 7vw, 42px);
+	}
+	.believe-checklist {
+		text-align: left;
+	}
+}

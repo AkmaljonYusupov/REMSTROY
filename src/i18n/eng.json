@@ -49,8 +49,19 @@
 		"stat2": {
 			"value": "Government orders",
 			"label": "main direction"
+		},
+		"believe": {
+			"title": "We Believe In The Power of Great Ideas",
+			"desc": "Reprehenderit qui in ea voluptate velitatum vel eum quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
+			"check1": "Oemno enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+			"check2": "Aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+			"check3": "Voluptatem sequi nesciunt neque porro quisquam est qui dolorem ipsum quia dolor sit amet.",
+			"check4": "Reprehenderit in ea voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+			"check5": "Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+			"readMore": "Read More"
 		}
 	},
+
 	"advantages": {
 		"label": "Advantages",
 		"items": {
