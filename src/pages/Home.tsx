@@ -362,6 +362,20 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
+			{/* ================= PARTNERS ================= */}
+			<section className='partners-section'>
+				<div className='container'>
+					<h2 className='partners-title'>{t('partners.title')}</h2>
+
+					<div className='partners-grid'>
+						{partners.map((item, index) => (
+							<div className='partner-item' key={index}>
+								<img src={item.logo} alt={t(item.name)} />
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
 
 			{/* ================= REVIEWS ================= */}
 			<section className='reviews'>
@@ -394,20 +408,6 @@ const Home = () => {
 							<p className='review__text'>{t('reviews.items.3.text')}</p>
 							<h4 className='review__author'>{t('reviews.items.3.author')}</h4>
 						</div>
-					</div>
-				</div>
-			</section>
-			{/* ================= PARTNERS ================= */}
-			<section className='partners-section'>
-				<div className='container'>
-					<h2 className='partners-title'>{t('partners.title')}</h2>
-
-					<div className='partners-grid'>
-						{partners.map((item, index) => (
-							<div className='partner-item' key={index}>
-								<img src={item.logo} alt={t(item.name)} />
-							</div>
-						))}
 					</div>
 				</div>
 			</section>
