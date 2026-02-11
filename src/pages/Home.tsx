@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { partners } from '../data/partners'
 
 import gearsGif from '../assets/images/1667-yellow-gears.gif'
 import AboutImage from '../assets/images/about_company.png'
@@ -23,7 +24,7 @@ const Home = () => {
 		sliderImg1,
 		sliderImg2,
 		sliderImg3,
-		sliderImg4
+		sliderImg4,
 	]
 	const [activeIndex, setActiveIndex] = useState(0)
 
@@ -393,6 +394,21 @@ const Home = () => {
 							<p className='review__text'>{t('reviews.items.3.text')}</p>
 							<h4 className='review__author'>{t('reviews.items.3.author')}</h4>
 						</div>
+					</div>
+				</div>
+			</section>
+			{/* ================= PARTNERS ================= */}
+			<section className='partners-section'>
+				<div className='container'>
+					<h2 className='partners-title'>{t('partners.title')}</h2>
+
+					<div className='partners-grid'>
+						{partners.map((item, index) => (
+							<div className='partner-item' key={index}>
+								<img src={item.logo} alt={t(item.name)} />
+								<p className='partner-name'>{t(item.name)}</p>
+							</div>
+						))}
 					</div>
 				</div>
 			</section>

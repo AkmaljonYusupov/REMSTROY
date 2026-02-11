@@ -106,5 +106,21 @@
 		"worktime": "График работы",
 		"worktimeValue": "Ежедневно с 09:00 до 20:00",
 		"rights": "Все права защищены"
+	},
+	"partners": {
+		"title": "НАШИ ПАРТНЕРЫ",
+		"ngmk": "НГМК",
+		"agmk": "АГМК",
+		"eriell": "ERIELL",
+		"temiryul": "Железные дороги Узбекистана",
+		"acwa": "ACWA Power",
+		"uzelectro": "Uzelectroapparat",
+		"uzbekenergo": "Uzbekenergo",
+		"uzneftgaz": "Uzbekneftegaz",
+		"uztransgaz": "Uztransgaz",
+		"ued": "UED Construction",
+		"shurtan": "Шуртан Газ Кимё",
+		"bojxona": "Государственный таможенный комитет",
+		"aral": "Аральское море"
 	}
 }

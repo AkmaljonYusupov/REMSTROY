@@ -106,5 +106,21 @@
 		"worktime": "Working hours",
 		"worktimeValue": "Daily from 09:00 to 20:00",
 		"rights": "All rights reserved"
+	},
+	"partners": {
+		"title": "OUR PARTNERS",
+		"ngmk": "NGMK",
+		"agmk": "AGMK",
+		"eriell": "ERIELL",
+		"temiryul": "Uzbekistan Railways",
+		"acwa": "ACWA Power",
+		"uzelectro": "Uzelectroapparat",
+		"uzbekenergo": "Uzbekenergo",
+		"uzneftgaz": "Uzbekneftegaz",
+		"uztransgaz": "Uztransgaz",
+		"ued": "UED Construction",
+		"shurtan": "Shurtan Gas Chemical",
+		"bojxona": "State Customs Committee",
+		"aral": "Aral Sea"
 	}
 }

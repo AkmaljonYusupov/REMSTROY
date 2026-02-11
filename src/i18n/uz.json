@@ -106,5 +106,21 @@
 		"worktime": "Ish vaqti",
 		"worktimeValue": "Har kuni 09:00 dan 20:00 gacha",
 		"rights": "Barcha huquqlar himoyalangan"
+	},
+	"partners": {
+		"title": "HAMKORLARIMIZ",
+		"ngmk": "NKMK",
+		"agmk": "AGMK",
+		"eriell": "ERIELL",
+		"temiryul": "O‘zbekiston Temir Yo‘llari",
+		"acwa": "ACWA Power",
+		"uzelectro": "Uzelectroapparat",
+		"uzbekenergo": "O‘zbekenergo",
+		"uzneftgaz": "O‘zbekneftgaz",
+		"uztransgaz": "Uztransgaz",
+		"ued": "UED Construction",
+		"shurtan": "Sho‘rtan Gaz Kimyo",
+		"bojxona": "Davlat Bojxona Qo‘mitasi",
+		"aral": "Aral Sea"
 	}
 }
