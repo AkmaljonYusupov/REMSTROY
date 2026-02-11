@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
-import aboutCartimg3 from '../assets/images/card1-icon.png'
-import aboutCartimg2 from '../assets/images/card2-icon.png'
-import aboutCartimg1 from '../assets/images/card3-icon.png'
+import aboutCartimg1 from '../assets/icons/card1-icon.png'
+import aboutCartimg2 from '../assets/icons/card2-icon.png'
+import aboutCartimg3 from '../assets/icons/card3-icon.png'
 import './About.scss'
 
 function About() {
