@@ -1,4 +1,7 @@
 import { useTranslation } from 'react-i18next'
+import aboutCartimg3 from '../assets/images/card1-icon.png'
+import aboutCartimg2 from '../assets/images/card2-icon.png'
+import aboutCartimg1 from '../assets/images/card3-icon.png'
 import './About.scss'
 
 function About() {
@@ -38,19 +41,19 @@ function About() {
 					<div className='features-grid'>
 						<div className='features-grid'>
 							<div className='feature-card'>
-								<img src='/src/assets/icons/card3-icon.png' alt='Card 1 Icon' />
+								<img src={aboutCartimg1} alt='Card 1 Icon' />
 								<h3>{t('about.card1.title')}</h3>
 								<p>{t('about.card1.text')}</p>
 							</div>
 
 							<div className='feature-card'>
-								<img src='/src/assets/icons/card2-icon.png' alt='Card 2 Icon' />
+								<img src={aboutCartimg2} alt='Card 2 Icon' />
 								<h3>{t('about.card2.title')}</h3>
 								<p>{t('about.card2.text')}</p>
 							</div>
 
 							<div className='feature-card'>
-								<img src='/src/assets/icons/card1-icon.png' alt='Card 3 Icon' />
+								<img src={aboutCartimg3} alt='Card 3 Icon' />
 								<h3>{t('about.card3.title')}</h3>
 								<p>{t('about.card3.text')}</p>
 							</div>
