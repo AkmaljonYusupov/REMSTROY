@@ -31,7 +31,7 @@ $breakpoints: (
 }
 
 // =============================================
-// ABOUT HERO
+// ABOUT HERO (yuqori qism – breadcrumb bilan)
 // =============================================
 .about-hero {
 	position: relative;
@@ -91,7 +91,7 @@ $breakpoints: (
 }
 
 // =============================================
-// FEATURES GRID
+// FEATURES GRID (3 ta karta bo'limi)
 // =============================================
 .about-features {
 	background: #eef2f5;
@@ -152,7 +152,159 @@ $breakpoints: (
 }
 
 // =============================================
-// RESPONSIVE BREAKPOINTS
+// ABOUT US HERO SECTION – rasmdagi dizayn bilan 1:1 yaqin
+// chapda rasm, o'ngda matn, och ko'k fon + subtle pattern
+// =============================================
+.about-us-hero {
+	background: #f0f8ff; // och ko'k / alice blue
+	padding: 7rem 2rem 9rem;
+	position: relative;
+	overflow: hidden;
+
+	// Subtle dotted / kvadrat pattern (rasmdagi fon effektiga yaqin)
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background:
+			radial-gradient(
+				circle at 12% 18%,
+				rgba(200, 220, 255, 0.18) 1.2px,
+				transparent 1.2px
+			),
+			radial-gradient(
+				circle at 88% 82%,
+				rgba(200, 220, 255, 0.14) 1px,
+				transparent 1px
+			);
+		background-size: 48px 48px;
+		pointer-events: none;
+		z-index: 0;
+	}
+}
+
+.us-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5rem;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+
+	@include mq-max(lg) {
+		grid-template-columns: 1fr;
+		gap: 4rem;
+		text-align: center;
+	}
+}
+
+.us-image-side {
+	position: relative;
+
+	// engil gradient overlay (rasmdagi kabi yumshoq effekt)
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			to right,
+			rgba(240, 248, 255, 0.18),
+			transparent 50%
+		);
+		pointer-events: none;
+		border-radius: 12px;
+	}
+}
+
+.us-main-photo {
+	width: 100%;
+	height: auto;
+	border-radius: 12px;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
+	display: block;
+	object-fit: cover;
+}
+
+.us-text-side {
+	padding: 1rem 0;
+}
+
+.us-small-label {
+	font-size: clamp(14px, 1.4vw, 16px);
+	font-weight: 600;
+	color: #ffb703;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	display: block;
+	margin-bottom: 1.2rem;
+}
+
+.us-main-title {
+	font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+	font-weight: 700;
+	line-height: 1.12;
+	color: #1a365d;
+	margin-bottom: 1.6rem;
+}
+
+.us-description {
+	font-size: clamp(16px, 1.7vw, 1.125rem);
+	line-height: 1.75;
+	color: #4a5568;
+	margin-bottom: 2.8rem;
+}
+
+.us-check-list {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 3rem 0;
+
+	li {
+		font-size: clamp(15px, 1.6vw, 17px);
+		margin-bottom: 1.3rem;
+		display: flex;
+		align-items: center;
+		gap: 1.1rem;
+		color: #2d3748;
+
+		@include mq-max(lg) {
+			justify-content: center;
+		}
+	}
+
+	.check-mark {
+		color: #22c55e; // zamonaviy yashil (rasmdagi checkga yaqin)
+		font-size: 1.7rem;
+		line-height: 1;
+		font-weight: bold;
+	}
+}
+
+.read-more-btn {
+	background: #ffb703;
+	color: #1e293b;
+	border: none;
+	padding: 1.1rem 3rem;
+	font-size: 1.125rem;
+	font-weight: 600;
+	border-radius: 9999px;
+	cursor: pointer;
+	transition: all 0.35s ease;
+	box-shadow: 0 6px 20px rgba(255, 183, 3, 0.28);
+
+	&:hover {
+		background: #ffca28;
+		transform: translateY(-4px);
+		box-shadow: 0 14px 35px rgba(255, 183, 3, 0.4);
+	}
+
+	@include mq-max(lg) {
+		margin: 1.5rem auto 0;
+	}
+}
+
+// =============================================
+// RESPONSIVE BREAKPOINTS (oldingi qismlar uchun)
 // =============================================
 @include mq-max(xl) {
 	.features-grid {
@@ -202,102 +354,18 @@ $breakpoints: (
 
 	.feature-card {
 		padding: 1.5rem;
+
 		h3 {
 			font-size: 18px;
 		}
+
 		p {
 			font-size: 14px;
 		}
+
 		img {
 			width: 40px;
 			height: 40px;
 		}
-	}
-}
-
-/* ============================================= */
-/* BELIEVE SECTION – rasmga 1:1 mos */
-/* ============================================= */
-.about-believe-section {
-	background: #f8f9fa;
-	padding: 8vw 2vw;
-	text-align: center;
-}
-
-.believe-content {
-	max-width: 900px;
-	margin: 0 auto;
-}
-
-.believe-title {
-	font-size: clamp(32px, 5vw, 54px);
-	font-weight: 700;
-	color: #1e3a5f;
-	margin-bottom: 1.8rem;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-.believe-desc {
-	font-size: clamp(16px, 2vw, 18px);
-	line-height: 1.7;
-	color: #555;
-	margin-bottom: 3rem;
-	max-width: 760px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.believe-checklist {
-	list-style: none;
-	padding: 0;
-	margin-bottom: 3rem;
-	text-align: left;
-	max-width: 680px;
-	margin-left: auto;
-	margin-right: auto;
-
-	li {
-		font-size: clamp(15px, 1.8vw, 17px);
-		margin-bottom: 1.2rem;
-		display: flex;
-		align-items: flex-start;
-		gap: 1rem;
-		color: #444;
-
-		.check-icon {
-			color: #28a745;
-			font-size: 1.4rem;
-			font-weight: bold;
-			min-width: 24px;
-		}
-	}
-}
-
-.btn-read-more {
-	background: #ffb703;
-	color: #1e3a5f;
-	border: none;
-	padding: 1rem 2.5rem;
-	font-size: 1.1rem;
-	font-weight: 600;
-	border-radius: 50px;
-	cursor: pointer;
-	transition: all 0.3s ease;
-
-	&:hover {
-		background: #e0a000;
-		transform: translateY(-3px);
-		box-shadow: 0 10px 25px rgba(255, 183, 3, 0.3);
-	}
-}
-
-/* Responsive */
-@include mq-max(md) {
-	.believe-title {
-		font-size: clamp(28px, 7vw, 42px);
-	}
-	.believe-checklist {
-		text-align: left;
 	}
 }
