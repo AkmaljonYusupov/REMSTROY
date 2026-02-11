@@ -130,6 +130,11 @@ $breakpoints: (
 		object-fit: cover;
 		margin-bottom: 1.5rem;
 		border-radius: 8px;
+		transition: transform 0.3s ease;
+	}
+
+	&:hover img {
+		transform: scale(1.1);
 	}
 
 	h3 {
@@ -201,6 +206,10 @@ $breakpoints: (
 		}
 		p {
 			font-size: 14px;
+		}
+		img {
+			width: 40px;
+			height: 40px;
 		}
 	}
 }

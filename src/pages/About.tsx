@@ -36,19 +36,24 @@ function About() {
 			<div className='about-features'>
 				<div className='container'>
 					<div className='features-grid'>
-						<div className='feature-card'>
-							<h3>{t('about.card1.title')}</h3>
-							<p>{t('about.card1.text')}</p>
-						</div>
+						<div className='features-grid'>
+							<div className='feature-card'>
+								<img src='/src/assets/icons/card3-icon.png' alt='Card 1 Icon' />
+								<h3>{t('about.card1.title')}</h3>
+								<p>{t('about.card1.text')}</p>
+							</div>
 
-						<div className='feature-card'>
-							<h3>{t('about.card2.title')}</h3>
-							<p>{t('about.card2.text')}</p>
-						</div>
+							<div className='feature-card'>
+								<img src='/src/assets/icons/card2-icon.png' alt='Card 2 Icon' />
+								<h3>{t('about.card2.title')}</h3>
+								<p>{t('about.card2.text')}</p>
+							</div>
 
-						<div className='feature-card'>
-							<h3>{t('about.card3.title')}</h3>
-							<p>{t('about.card3.text')}</p>
+							<div className='feature-card'>
+								<img src='/src/assets/icons/card1-icon.png' alt='Card 3 Icon' />
+								<h3>{t('about.card3.title')}</h3>
+								<p>{t('about.card3.text')}</p>
+							</div>
 						</div>
 					</div>
 				</div>
