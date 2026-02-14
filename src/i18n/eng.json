@@ -59,7 +59,15 @@
 			"check4": "Reprehenderit in ea voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 			"check5": "Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
 			"readMore": "Read More"
-		}
+		},
+		"stats": {
+	"small": "Our Statistics",
+	"title": "We do big things with big ideas.",
+	"projects": "Projects Complete",
+	"team": "Team Members",
+	"coffee": "Cups Of Coffee",
+	"awards": "Winning Awards"
+}
 	},
 
 	"advantages": {

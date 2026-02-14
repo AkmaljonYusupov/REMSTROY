@@ -59,7 +59,15 @@
 			"check4": "Reprehenderit in ea voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 			"check5": "Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
 			"readMore": "Читать далее"
-		}
+		},
+		"stats": {
+	"small": "Наша Статистика",
+	"title": "Мы делаем большие дела с большими идеями.",
+	"projects": "Завершённые Проекты",
+	"team": "Члены Команды",
+	"coffee": "Выпито Чашек Кофе",
+	"awards": "Полученные Награды"
+}
 	},
 
 	"advantages": {

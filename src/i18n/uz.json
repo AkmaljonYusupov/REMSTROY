@@ -59,7 +59,14 @@
 			"check4": "Reprehenderit in ea voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 			"check5": "Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
 			"readMore": "Batafsil o‘qish"
-		}
+		},
+		"stats": {
+	"small": "Bizning Statistika",
+	"title": "Katta g'oyalar bilan katta ishlar qilamiz.",
+	"projects": "Tugallangan Loyihalar",
+	"team": "Jamoa A'zolari",
+	"coffee": "Ichilgan Qahvalar",
+	"awards": "Yutgan Mukofotlar"
 	},
 
 	"advantages": {
@@ -148,4 +155,6 @@
 		"bojxona": "Davlat Bojxona Qo‘mitasi",
 		"aral": "Aral Sea"
 	}
+	
+}
 }
