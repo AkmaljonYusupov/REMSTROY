@@ -1,6 +1,6 @@
 {
 	"hero": {
-		"title": "Davlat va noturar obyektlar uchun ishonchli qurilish",
+		"title": "Davlat va nodavlat binolari uchun ishonchli qurilish",
 		"desc": "REMSTROY kompaniyasi davlat buyurtmalari asosida qurilish va montaj ishlarini amalga oshiradi.",
 		"button": "Ariza yuborish"
 	},
@@ -12,27 +12,27 @@
 	},
 	"features": {
 		"standard": {
-			"title": "Standartlarga moslik",
-			"desc": "REMSTROY — ixtisoslashgan qurilish kompaniyasi"
+			"title": "Standartlarga rioya",
+			"desc": "REMSTROY ixtisoslashgan qurilish kompaniyasidir"
 		},
 		"quality": {
 			"title": "Sifat kafolati",
-			"desc": "REMSTROY — yuqori sifat standartlariga amal qiladi"
+			"desc": "REMSTROY yuqori sifat standartlariga rioya qiladi"
 		},
 		"tech": {
 			"title": "Zamonaviy texnologiyalar",
-			"desc": "REMSTROY — eng so‘nggi qurilish texnologiyalaridan foydalanadi"
+			"desc": "REMSTROY so‘nggi qurilish texnologiyalaridan foydalanadi"
 		}
 	},
 	"about": {
 		"label": "KOMPANIYA HAQIDA",
 		"title": "Har bir loyihada sifat va mas’uliyat",
 		"aboutjoyiy": "Biz haqimizda",
-		"text": "REMSTROY — davlat tashkilotlari uchun noturar binolar va infratuzilma obyektlarini qurishga ixtisoslashgan qurilish kompaniyasi. Kompaniya o‘z faoliyatida amaldagi qurilish me’yorlari, sifat standartlari va belgilangan muddatlarga qat’iy amal qiladi.",
+		"text": "REMSTROY nodavlat binolar va davlat tashkilotlari uchun infratuzilma obyektlarini qurishga ixtisoslashgan qurilish kompaniyasidir. Kompaniya qurilish normalari, sifat standartlari va muddatlarga qat’iy rioya qiladi.",
 		"home": "Bosh sahifa",
 		"card1": {
-			"title": "Bizda tajribali muhandislar bor.",
-			"text": "Bizning mutaxassislarimiz yuqori malakaga ega va har bir loyihani sifatli bajaradi."
+			"title": "Tajriba ega muhandislarimiz bor.",
+			"text": "Mutaxassislarimiz yuqori malakaga ega va har bir loyihani sifat bilan bajaradi."
 		},
 		"card2": {
 			"title": "24/7 mijozlarni qo‘llab-quvvatlash.",
@@ -40,18 +40,18 @@
 		},
 		"card3": {
 			"title": "Iqtidorli jamoa a’zolari.",
-			"text": "Bizning jamoamiz professional va mas’uliyatli xodimlardan iborat."
+			"text": "Jamoamiz professional va mas’uliyatli xodimlardan iborat."
 		},
 		"stat1": {
 			"value": "18+ yil",
-			"label": "qurilishdagi tajriba"
+			"label": "qurilish tajribasi"
 		},
 		"stat2": {
 			"value": "Davlat buyurtmalari",
-			"label": "asosiy yo‘nalish sifatida"
+			"label": "asosiy yo‘nalish"
 		},
 		"believe": {
-			"title": "Biz buyuk g‘oyalar qudratiga ishonamiz",
+			"title": "Biz Buyuk G‘oyalarning Kuchiga Ishonamiz",
 			"desc": "Reprehenderit qui in ea voluptate velitatum vel eum quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
 			"check1": "Oemno enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
 			"check2": "Aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
@@ -61,100 +61,98 @@
 			"readMore": "Batafsil o‘qish"
 		},
 		"stats": {
-	"small": "Bizning Statistika",
-	"title": "Katta g'oyalar bilan katta ishlar qilamiz.",
-	"projects": "Tugallangan Loyihalar",
-	"team": "Jamoa A'zolari",
-	"coffee": "Ichilgan Qahvalar",
-	"awards": "Yutgan Mukofotlar"
+			"small": "Bizning Statistikamiz",
+			"title": "Katta g‘oyalar bilan katta ishlarni qilamiz.",
+			"projects": "Tugallangan loyihalar",
+			"team": "Jamoa a’zolari",
+			"coffee": "Stakan kofe",
+			"awards": "Olingan mukofotlar"
+		}
 	},
-
 	"advantages": {
 		"label": "Afzalliklar",
 		"items": {
 			"1": {
-				"title": "Davlat standartlariga muvofiqlik",
-				"desc": "Barcha ishlar amaldagi me’yor va talablar asosida bajariladi"
+				"title": "Davlat standartlariga rioya",
+				"desc": "Barcha ishlar amaldagi norma va talablar bo‘yicha bajariladi"
 			},
 			"2": {
-				"title": "Tajribali mutaxassislar",
+				"title": "Tajriba ega mutaxassislar",
 				"desc": "Malakali muhandislar va texnik xodimlar"
 			},
 			"3": {
 				"title": "Individual yondashuv",
-				"desc": "Har bir loyiha o‘ziga xos jihatlari asosida ishlab chiqiladi"
+				"desc": "Har bir loyiha uning xususiyatlariga mos ishlab chiqiladi"
 			},
 			"4": {
-				"title": "Xavfsizlik texnikasi",
-				"desc": "Mehnatni muhofaza qilish qoidalariga qat’iy rioya qilinadi"
+				"title": "Xavfsizlik qoidalari",
+				"desc": "Mehnatni muhofaza qilish qoidalariga qat’iy rioya"
 			},
 			"5": {
 				"title": "Ishonchlilik va mas’uliyat",
-				"desc": "Buyurtmachi oldidagi majburiyatlarni aniq bajarish"
+				"desc": "Mijozga bo‘lgan majburiyatlarni aniq bajarish"
 			},
 			"6": {
-				"title": "Muddatlarga rioya qilish",
-				"desc": "Obyektlarni belgilangan vaqtda topshirish"
+				"title": "Muddatga rioya",
+				"desc": "Obyektlarni o‘z vaqtida topshirish"
 			}
 		}
 	},
 	"projects": {
-		"label": "PROYEKTLAR",
+		"label": "LOYIHALAR",
 		"objects": "OBYEKTLAR",
 		"experience": "yillik tajriba",
-		"completed": "bajarilgan loyihalar"
+		"completed": "tugallangan loyihalar"
 	},
 	"reviews": {
-		"title": "Biz haqimizda fikrlar",
-		"subtitle": "RSC bilan hamkorlik qilgan buyurtmachilar kompaniyamizning professional yondashuvi va sifatli ishlarini yuqori baholaydi.",
+		"title": "Mijozlarimiz fikri",
+		"subtitle": "RSC bilan ishlagan mijozlar kompaniyaning professional yondashuvi va sifatli ishini yuqori baholaydi.",
 		"items": {
 			"1": {
-				"text": "Qurilish jarayonlari sifatiga alohida e’tibor qaratildi. Ishlar o‘z vaqtida topshirildi va natijadan mamnunmiz.",
+				"text": "Qurilish jarayonlarining sifati alohida e’tiborga olindi. Ishlar o‘z vaqtida tugallandi va natijdan mamnunmiz.",
 				"author": "Abduqodirov Dilshod"
 			},
 			"2": {
-				"text": "Mutaxassislarning malakasi va ishga bo‘lgan yondashuvi yuqori darajada.",
+				"text": "Mutaxassislarning malakasi va ishga yondashuvi yuqori darajada.",
 				"author": "Qarshiyev Aziz"
 			},
 			"3": {
-				"text": "Kompaniya o‘zini ishonchli va mas’uliyatli hamkor sifatida namoyon etdi.",
+				"text": "Kompaniya o‘zini ishonchli va mas’uliyatli hamkor sifatida ko‘rsatdi.",
 				"author": "Tuxsinov Doniyorbek"
 			}
 		}
 	},
 	"news": {
 		"label": "Yangiliklar",
-		"title": "Davlat obyektining qurilishi yakunlandi",
-		"desc": "REMSTROY kompaniyasi davlat buyurtmasi asosida navbatdagi qurilish obyektini muvaffaqiyatli yakunladi."
+		"title": "Davlat obyekti qurilishi yakunlandi",
+		"desc": "REMSTROY navbatdagi qurilish loyihasini davlat buyurtmasi asosida muvaffaqiyatli yakunladi."
 	},
 	"footer": {
-		"request": "Ariza qoldiring va biz sizga qo‘ng‘iroq qilamiz",
-		"requestDesc": "Xodimlarimiz ish vaqtida siz bilan bog‘lanadi",
-		"phonePlaceholder": "Telefon raqamingiz",
+		"request": "Ariza yuboring va biz sizga qo‘ng‘iroq qilamiz",
+		"requestDesc": "Xodimlarimiz ish vaqti davomida siz bilan bog‘lanadi",
+		"phonePlaceholder": "Sizning telefon raqamingiz",
 		"send": "Yuborish",
 		"contact": "Aloqa",
 		"address": "Manzil",
-		"addressValue": "Toshkent shahri, Yashnobod tumani, Parkent",
+		"addressValue": "Toshkent shahar, Yashnobod tumani, Parkent",
 		"worktime": "Ish vaqti",
 		"worktimeValue": "Har kuni 09:00 dan 20:00 gacha",
 		"rights": "Barcha huquqlar himoyalangan"
 	},
 	"partners": {
-		"title": "HAMKORLARIMIZ",
+		"title": "BIZNING HAMKORLAR",
 		"ngmk": "NKMK",
 		"agmk": "AGMK",
 		"eriell": "ERIELL",
 		"temiryul": "O‘zbekiston Temir Yo‘llari",
 		"acwa": "ACWA Power",
 		"uzelectro": "Uzelectroapparat",
-		"uzbekenergo": "O‘zbekenergo",
-		"uzneftgaz": "O‘zbekneftgaz",
+		"uzbekenergo": "Uzbekenergo",
+		"uzneftgaz": "Uzneftgaz",
 		"uztransgaz": "Uztransgaz",
 		"ued": "UED Construction",
-		"shurtan": "Sho‘rtan Gaz Kimyo",
-		"bojxona": "Davlat Bojxona Qo‘mitasi",
-		"aral": "Aral Sea"
+		"shurtan": "Shurtan Gaz Kimyo",
+		"bojxona": "Davlat bojxona qo‘mitasi",
+		"aral": "Aral dengizi"
 	}
-	
-}
 }
