@@ -67,7 +67,24 @@
 			"team": "Jamoa a’zolari",
 			"coffee": "Stakan kofe",
 			"awards": "Olingan mukofotlar"
-		}
+		},
+		"team": {
+  "small": "Bizning jamoamiz",
+  "title": "Mutaxassislar jamoasi bilan tanishing",
+
+  "member1": {
+    "name": "Mike Hardson",
+    "position": "Bosh menejer"
+  },
+  "member2": {
+    "name": "Rayan Collins",
+    "position": "Direktor o‘rinbosari"
+  },
+  "member3": {
+    "name": "Brian Rooney",
+    "position": "Maydon boshlig‘i"
+  }
+}
 	},
 	"advantages": {
 		"label": "Afzalliklar",

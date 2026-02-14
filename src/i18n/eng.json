@@ -67,7 +67,25 @@
 	"team": "Team Members",
 	"coffee": "Cups Of Coffee",
 	"awards": "Winning Awards"
+},
+"team": {
+  "small": "Our Team Members",
+  "title": "Meet Experts Team",
+
+  "member1": {
+    "name": "Mike Hardson",
+    "position": "Manager"
+  },
+  "member2": {
+    "name": "Rayan Collins",
+    "position": "Field Officer"
+  },
+  "member3": {
+    "name": "Brian Rooney",
+    "position": "Field Supervisor"
+  }
 }
+
 	},
 
 	"advantages": {

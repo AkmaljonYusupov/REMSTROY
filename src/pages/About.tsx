@@ -1,10 +1,15 @@
-import { useTranslation } from 'react-i18next'
 import { useEffect, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa"
+
 
 import aboutpageImg from '../../src/assets/images/aboutpage-image.jpg'
 import aboutCartimg1 from '../assets/icons/card1-icon.png'
 import aboutCartimg2 from '../assets/icons/card2-icon.png'
 import aboutCartimg3 from '../assets/icons/card3-icon.png'
+import teamImg1 from '../assets/images/team-image1.jpg'
+import teamImg2 from '../assets/images/team-image2.jpg'
+import teamImg3 from '../assets/images/team-image3.jpg'
 
 import './About.scss'
 
@@ -17,55 +22,55 @@ function About() {
 	const statsRef = useRef(null)
 	const [visible, setVisible] = useState(false)
 
-useEffect(() => {
-	const observer = new IntersectionObserver(
-		([entry]) => {
-			if (entry.isIntersecting) {
-				setVisible(true)
-				observer.disconnect() // faqat 1 marta ishlaydi
-			}
-		},
-		{ threshold: 0.4 }
-	)
-
-	if (statsRef.current) {
-		observer.observe(statsRef.current)
-	}
-
-	return () => observer.disconnect()
-}, [])
-
-	const useCountUp = (end, duration = 2000) => {
-	const [count, setCount] = useState(0)
-
 	useEffect(() => {
-		if (!visible) return
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) {
+					setVisible(true)
+					observer.disconnect() // faqat 1 marta ishlaydi
+				}
+			},
+			{ threshold: 0.4 }
+		)
 
-		let startTime = null
-		let animationFrame
-
-		const animate = (time) => {
-			if (!startTime) startTime = time
-			const progress = time - startTime
-			const percent = Math.min(progress / duration, 1)
-
-			const value = Math.floor(end * percent)
-			setCount(value)
-
-			if (percent < 1) {
-				animationFrame = requestAnimationFrame(animate)
-			} else {
-				setCount(end) // oxirida aniq end ga tenglashadi
-			}
+		if (statsRef.current) {
+			observer.observe(statsRef.current)
 		}
 
-		animationFrame = requestAnimationFrame(animate)
+		return () => observer.disconnect()
+	}, [])
 
-		return () => cancelAnimationFrame(animationFrame)
-	}, [visible, end, duration]) // MUHIM
+	const useCountUp = (end, duration = 2000) => {
+		const [count, setCount] = useState(0)
 
-	return count
-}
+		useEffect(() => {
+			if (!visible) return
+
+			let startTime = null
+			let animationFrame
+
+			const animate = (time) => {
+				if (!startTime) startTime = time
+				const progress = time - startTime
+				const percent = Math.min(progress / duration, 1)
+
+				const value = Math.floor(end * percent)
+				setCount(value)
+
+				if (percent < 1) {
+					animationFrame = requestAnimationFrame(animate)
+				} else {
+					setCount(end) // oxirida aniq end ga tenglashadi
+				}
+			}
+
+			animationFrame = requestAnimationFrame(animate)
+
+			return () => cancelAnimationFrame(animationFrame)
+		}, [visible, end, duration]) // MUHIM
+
+		return count
+	}
 
 	const projects = useCountUp(5698)
 	const team = useCountUp(864)
@@ -89,9 +94,8 @@ useEffect(() => {
 						<span className='arrow'>→</span>
 
 						<span
-							className={`breadcrumb-link ${
-								window.location.pathname === '/about' ? 'active' : ''
-							}`}
+							className={`breadcrumb-link ${window.location.pathname === '/about' ? 'active' : ''
+								}`}
 							onClick={() => (window.location.href = '/about')}
 						>
 							{t('about.aboutjoyiy')}
@@ -218,6 +222,81 @@ useEffect(() => {
 					</div>
 				</div>
 			</div>
+
+			{/* TEAM SECTION */}
+			<div className='about-team'>
+				<div className='container'>
+					<div className='team-header'>
+						<span className='team-small'>
+							{t('about.team.small')}
+						</span>
+						<h2 className='team-title'>
+							{t('about.team.title')}
+						</h2>
+					</div>
+
+					<div className='team-grid'>
+
+						{/* MEMBER 1 */}
+						<div className='team-card'>
+							<div className='team-image'>
+								<img src={teamImg1} alt={t('about.team.member1.name')} />
+							</div>
+
+							<div className='team-info'>
+								<h3>{t('about.team.member1.name')}</h3>
+								<p>{t('about.team.member1.position')}</p>
+
+								<div className='team-social'>
+									<a href="#"><FaFacebookF /></a>
+									<a href="#"><FaTwitter /></a>
+									<a href="#"><FaLinkedinIn /></a>
+								</div>
+							</div>
+						</div>
+
+						{/* MEMBER 2 */}
+						<div className='team-card'>
+							<div className='team-image'>
+								<img src={teamImg2} alt={t('about.team.member2.name')} />
+							</div>
+
+							<div className='team-info'>
+								<h3>{t('about.team.member2.name')}</h3>
+								<p>{t('about.team.member2.position')}</p>
+
+								<div className='team-social'>
+									<a href="#"><FaFacebookF /></a>
+									<a href="#"><FaTwitter /></a>
+									<a href="#"><FaLinkedinIn /></a>
+								</div>
+							</div>
+						</div>
+
+						{/* MEMBER 3 */}
+						<div className='team-card'>
+							<div className='team-image'>
+								<img src={teamImg3} alt={t('about.team.member3.name')} />
+							</div>
+
+							<div className='team-info'>
+								<h3>{t('about.team.member3.name')}</h3>
+								<p>{t('about.team.member3.position')}</p>
+
+								<div className='team-social'>
+									<a href="#"><FaFacebookF /></a>
+									<a href="#"><FaTwitter /></a>
+									<a href="#"><FaLinkedinIn /></a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+
 		</section>
 	)
 }

@@ -67,7 +67,25 @@
 	"team": "Члены Команды",
 	"coffee": "Выпито Чашек Кофе",
 	"awards": "Полученные Награды"
+},
+"team": {
+  "small": "Наша команда",
+  "title": "Познакомьтесь с нашей командой экспертов",
+
+  "member1": {
+    "name": "Mike Hardson",
+    "position": "Главный менеджер"
+  },
+  "member2": {
+    "name": "Rayan Collins",
+    "position": "Заместитель директора"
+  },
+  "member3": {
+    "name": "Brian Rooney",
+    "position": "Руководитель участка"
+  }
 }
+
 	},
 
 	"advantages": {

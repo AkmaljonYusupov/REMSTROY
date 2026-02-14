@@ -498,3 +498,213 @@ $breakpoints: (
 		padding: 2.5rem 1.5rem;
 	}
 }
+// =============================================
+// TEAM SECTION — GLASSMORPHISM CLEAN VERSION
+// =============================================
+.team-header{
+	text-align: center;
+	margin-bottom: 4rem;
+
+	.team-small {
+		display: block;
+		color: #ffb703;
+		font-size: 14px;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		margin-bottom: 1.2rem;
+		font-weight: 600;
+	}
+
+	.team-title {
+		font-size: clamp(2rem, 5vw, 3.2rem);
+		font-weight: 600;
+		line-height: 1.25;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+}
+.about-team {
+	background: #eaf1f7;
+	padding: 10rem 2rem 14rem; // pastga joy ochildi
+	position: relative;
+}
+
+.team-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem;
+
+	@include mq-max(lg) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include mq-max(sm) {
+		grid-template-columns: 1fr;
+	}
+}
+
+// =============================================
+// TEAM CARD
+// =============================================
+
+.team-card {
+	position: relative;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+	overflow: visible; // tashqariga chiqishi uchun
+
+	.team-image {
+		position: relative;
+		border-radius: 20px;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 450px;
+			object-fit: cover;
+			display: block;
+			border-radius: 20px;
+			transition: transform 0.4s ease;
+		}
+
+		/* Dark overlay */
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			border-radius: 20px;
+			background: linear-gradient(
+				to top,
+				rgba(0, 0, 0, 0.5),
+				rgba(0, 0, 0, 0.1)
+			);
+			opacity: 0;
+			transition: opacity 0.4s ease;
+			z-index: 1;
+		}
+	}
+
+	/* Soft zoom + overlay on hover */
+	&:hover {
+		.team-image img {
+			transform: scale(1.05);
+		}
+
+		.team-image::after {
+			opacity: 1;
+		}
+
+		.team-info {
+			bottom: -70px;
+			box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+		}
+
+		.team-social {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+}
+
+// =============================================
+// GLASS INFO — CARD DAN TASHQARIDA
+// =============================================
+
+.team-info {
+	position: absolute;
+	left: 50%;
+	bottom: -85px; // carddan tashqarida
+	transform: translateX(-50%);
+	width: 75%;
+
+	padding: 2rem;
+	border-radius: 22px;
+
+	background: rgba(255, 255, 255, 0.18);
+	backdrop-filter: blur(18px);
+	-webkit-backdrop-filter: blur(18px);
+
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+
+	z-index: 3;
+	transition: all 0.4s ease;
+
+	h3 {
+		font-size: 1.2rem;
+		font-weight: 600;
+		color: #fff;
+		margin-bottom: 0.4rem;
+	}
+
+	p {
+		color: #f2f2f2;
+		font-size: 0.95rem;
+		margin-bottom: 1.3rem;
+	}
+}
+
+// =============================================
+// SOCIAL ICONS — SLIDE UP & VISIBLE ON HOVER
+// =============================================
+
+.team-social {
+	display: flex;
+	gap: 0.8rem;
+
+	transform: translateY(35px);
+	opacity: 0;
+	transition: all 0.4s ease;
+
+	a {
+		width: 38px;
+		height: 38px;
+		border-radius: 50%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		background: rgba(255, 255, 255, 0.1); // 🔥 blur/gloss olib tashlandi
+		border: 1px solid rgba(255, 255, 255, 0.3);
+
+		color: #000; // 🔥 default qora, aniq ko‘rinadi
+		font-size: 14px;
+
+		transition: all 0.3s ease;
+
+		&:hover {
+			background: #ff6f61; // 🔥 hover fon rangini yangiladim
+			border-color: #ff6f61;
+			transform: translateY(-5px);
+			color: #fff; // 🔥 icon oq rangda ko‘rinadi
+		}
+	}
+}
+
+// =============================================
+// RESPONSIVE
+// =============================================
+
+@include mq-max(md) {
+	.team-card img {
+		height: 380px;
+	}
+
+	.team-info {
+		bottom: -70px;
+		width: 82%;
+	}
+}
+
+@include mq-max(sm) {
+	.about-team {
+		padding: 8rem 1rem 12rem;
+	}
+
+	.team-info {
+		width: 90%;
+		bottom: -60px;
+	}
+}
