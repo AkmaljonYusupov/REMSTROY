@@ -708,3 +708,275 @@ $breakpoints: (
 		bottom: -60px;
 	}
 }
+// =============================================
+// CTA SECTION
+// =============================================
+
+.cta-section {
+	position: relative;
+	isolation: isolate;
+	background: #f4f8fb;
+	padding: 10rem 2rem;
+	text-align: center;
+	overflow: hidden;
+
+	.container {
+		position: relative;
+		z-index: 10;
+	}
+}
+
+// =============================================
+// HEADER
+// =============================================
+
+.cta-header {
+	max-width: 800px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 10;
+}
+
+.cta-subtitle {
+	display: block;
+	color: #ffb703;
+	font-size: 14px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	margin-bottom: 1.2rem;
+	font-weight: 600;
+}
+
+.cta-title {
+	font-size: clamp(2rem, 5vw, 3.2rem);
+	font-weight: 600;
+	line-height: 1.25;
+	color: #1a365d;
+	margin-bottom: 1.5rem;
+}
+
+.cta-text {
+	font-size: clamp(15px, 1.6vw, 17px);
+	line-height: 1.7;
+	color: #64748b;
+	margin-bottom: 2.5rem;
+}
+
+// =============================================
+// BUTTON
+// =============================================
+
+.cta-button {
+	background: #ffb703;
+	color: #1e293b;
+	border: none;
+	padding: 1.1rem 3rem;
+	font-size: 1.05rem;
+	font-weight: 600;
+	border-radius: 9999px;
+	cursor: pointer;
+	transition: all 0.35s ease;
+	box-shadow: 0 10px 30px rgba(255, 183, 3, 0.35);
+	position: relative;
+	z-index: 10;
+
+	&:hover {
+		background: #ffca28;
+		transform: translateY(-4px);
+		box-shadow: 0 18px 45px rgba(255, 183, 3, 0.45);
+	}
+}
+
+// =============================================
+// DECORATION WRAPPER
+// =============================================
+
+.cta-decorations {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
+}
+
+// =============================================
+// GLOBAL ANIMATIONS
+// =============================================
+
+@keyframes slowRotate {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+@keyframes slowRotateReverse {
+	from { transform: rotate(360deg); }
+	to { transform: rotate(0deg); }
+}
+
+// =============================================
+// BACKGROUND SQUARES
+// =============================================
+
+.cta-bg-left,
+.cta-bg-right,
+.cta-shape {
+	position: absolute;
+	border-radius: 40px;
+	overflow: hidden;
+}
+
+.cta-bg-left,
+.cta-bg-right {
+	width: 220px;
+	height: 220px;
+	border-radius: 30px;
+}
+
+.cta-bg-left {
+	left: 5%;
+	top: 30%;
+	transform: rotate(15deg);
+}
+
+.cta-bg-right {
+	right: 5%;
+	bottom: 20%;
+	transform: rotate(-15deg);
+}
+
+// =============================================
+// SHAPE INNER ROTATOR (animation safe)
+// =============================================
+
+.cta-bg-left::before,
+.cta-bg-right::before,
+.cta-shape::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	background: rgba(255, 183, 3, 0.08);
+	backdrop-filter: blur(18px);
+	-webkit-backdrop-filter: blur(18px);
+	animation: slowRotate 90s linear infinite;
+}
+
+// Reverse animation for variety
+.cta-bg-right::before {
+	animation: slowRotateReverse 120s linear infinite;
+}
+
+// =============================================
+// EXTRA DECORATIVE SHAPES
+// =============================================
+
+.shape-1 {
+	width: 260px;
+	height: 260px;
+	top: 12%;
+	left: 4%;
+	transform: rotate(20deg);
+
+	&::before { animation-duration: 70s; }
+}
+
+.shape-2 {
+	width: 180px;
+	height: 180px;
+	bottom: 15%;
+	left: 10%;
+	transform: rotate(-18deg);
+
+	&::before {
+		animation-name: slowRotateReverse;
+		animation-duration: 90s;
+	}
+}
+
+.shape-3 {
+	width: 220px;
+	height: 220px;
+	top: 18%;
+	right: 6%;
+	transform: rotate(25deg);
+
+	&::before { animation-duration: 80s; }
+}
+
+.shape-4 {
+	width: 150px;
+	height: 150px;
+	bottom: 20%;
+	right: 12%;
+	transform: rotate(-20deg);
+
+	&::before {
+		animation-name: slowRotateReverse;
+		animation-duration: 100s;
+	}
+}
+
+.shape-5 {
+	width: 120px;
+	height: 120px;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(35deg);
+	opacity: 0.05;
+
+	&::before { animation-duration: 120s; }
+}
+
+.shape-6 {
+	width: 90px;
+	height: 90px;
+	top: 70%;
+	right: 40%;
+	transform: rotate(12deg);
+	opacity: 0.05;
+
+	&::before {
+		animation-name: slowRotateReverse;
+		animation-duration: 110s;
+	}
+}
+
+// =============================================
+// RESPONSIVE
+// =============================================
+
+@include mq-max(lg) {
+	.cta-section {
+		padding: 8rem 2rem;
+	}
+
+	.cta-bg-left,
+	.cta-bg-right {
+		width: 160px;
+		height: 160px;
+	}
+}
+
+@include mq-max(md) {
+	.cta-section {
+		padding: 7rem 1.5rem;
+	}
+
+	.cta-title {
+		font-size: clamp(1.8rem, 6vw, 2.4rem);
+	}
+
+	.cta-decorations {
+		display: none;
+	}
+}
+
+@include mq-max(sm) {
+	.cta-section {
+		padding: 6rem 1rem;
+	}
+
+	.cta-button {
+		padding: 0.9rem 2.2rem;
+		font-size: 1rem;
+	}
+}

@@ -69,22 +69,27 @@
 			"awards": "Olingan mukofotlar"
 		},
 		"team": {
-  "small": "Bizning jamoamiz",
-  "title": "Mutaxassislar jamoasi bilan tanishing",
-
-  "member1": {
-    "name": "Mike Hardson",
-    "position": "Bosh menejer"
-  },
-  "member2": {
-    "name": "Rayan Collins",
-    "position": "Direktor o‘rinbosari"
-  },
-  "member3": {
-    "name": "Brian Rooney",
-    "position": "Maydon boshlig‘i"
-  }
-}
+			"small": "Bizning jamoamiz",
+			"title": "Mutaxassislar jamoasi bilan tanishing",
+			"member1": {
+				"name": "Mike Hardson",
+				"position": "Bosh menejer"
+			},
+			"member2": {
+				"name": "Rayan Collins",
+				"position": "Direktor o‘rinbosari"
+			},
+			"member3": {
+				"name": "Brian Rooney",
+				"position": "Maydon boshlig‘i"
+			}
+		},
+		"cta": {
+			"small": "Keling, biror narsani boshlaylik",
+			"title": "Boshlashga tayyormisiz?",
+			"text": "Bu yerda siz istalgan loyihani boshlashingiz mumkin. Barcha kerakli resurslar va imkoniyatlar tayyor.",
+			"button": "Boshlash"
+		}
 	},
 	"advantages": {
 		"label": "Afzalliklar",

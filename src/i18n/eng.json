@@ -61,33 +61,36 @@
 			"readMore": "Read More"
 		},
 		"stats": {
-	"small": "Our Statistics",
-	"title": "We do big things with big ideas.",
-	"projects": "Projects Complete",
-	"team": "Team Members",
-	"coffee": "Cups Of Coffee",
-	"awards": "Winning Awards"
-},
-"team": {
-  "small": "Our Team Members",
-  "title": "Meet Experts Team",
-
-  "member1": {
-    "name": "Mike Hardson",
-    "position": "Manager"
-  },
-  "member2": {
-    "name": "Rayan Collins",
-    "position": "Field Officer"
-  },
-  "member3": {
-    "name": "Brian Rooney",
-    "position": "Field Supervisor"
-  }
-}
-
+			"small": "Our Statistics",
+			"title": "We do big things with big ideas.",
+			"projects": "Projects Complete",
+			"team": "Team Members",
+			"coffee": "Cups Of Coffee",
+			"awards": "Winning Awards"
+		},
+		"team": {
+			"small": "Our Team Members",
+			"title": "Meet Experts Team",
+			"member1": {
+				"name": "Mike Hardson",
+				"position": "Manager"
+			},
+			"member2": {
+				"name": "Rayan Collins",
+				"position": "Field Officer"
+			},
+			"member3": {
+				"name": "Brian Rooney",
+				"position": "Field Supervisor"
+			}
+		},
+		"cta": {
+			"small": "Let’s Start Something",
+			"title": "Ready To Get Started?",
+			"text": "Here you can start any project. All the necessary resources and opportunities are ready.",
+			"button": "Get Started"
+		}
 	},
-
 	"advantages": {
 		"label": "Advantages",
 		"items": {

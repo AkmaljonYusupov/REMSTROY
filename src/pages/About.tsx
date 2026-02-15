@@ -295,6 +295,51 @@ function About() {
 				</div>
 			</div>
 
+			{/* CTA SECTION */}
+			<div className='cta-section'>
+
+				{/* Background shapes */}
+				<div className="cta-decorations">
+					<div className="cta-bg-left"></div>
+					<div className="cta-bg-right"></div>
+
+					<div className="cta-shape shape-1">
+
+					</div>
+					<div className="cta-shape shape-2"></div>
+					<div className="cta-shape shape-3"></div>
+					<div className="cta-shape shape-4"></div>
+					<div className="cta-shape shape-5"></div>
+					<div className="cta-shape shape-6"></div>
+				</div>
+
+				<div className='container'>
+
+					<div className='cta-header'>
+						<span className='cta-subtitle'>
+							{t('about.cta.small')}
+						</span>
+
+						<h2 className='cta-title'>
+							{t('about.cta.title')}
+						</h2>
+
+						<p className='cta-text'>
+							{t('about.cta.text')}
+						</p>
+
+						<button className='cta-button'>
+							{t('about.cta.button')}
+						</button>
+					</div>
+
+
+
+
+
+				</div>
+			</div>
+
 
 
 		</section>
