@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 
+import projectImg1 from '../assets/images/project1.jpg'
 
 import { useEffect, useRef, useState } from 'react'
 import './Projects.scss'
@@ -71,6 +72,7 @@ function Projects() {
 
 	return (
 		<section className="about-page">
+
 			{/* HERO */}
 			<div className="about-hero">
 				<div className="container">
@@ -90,6 +92,86 @@ function Projects() {
 						>
 							{t('projects.projectsjoyiy')}
 						</span>
+					</div>
+				</div>
+			</div>
+
+			{/* LATEST PROJECTS SECTION – rasmdagi 3 ta karta dizayni */}
+			<div className="latest-projects">
+				<div className="container">
+					<div className="projects-header">
+						<span className="projects-small-label">
+							{t('projects.workWeHaveDone')}
+						</span>
+						<h2 className="projects-main-title">
+							{t('projects.ourLatestProjects')}
+						</h2>
+
+					</div>
+
+					<div className="projects-grid">
+						<div className="project-card">
+							<div className="project-image-wrapper">
+								<img
+									src={projectImg1}
+									alt="Modern skyscraper"
+									className="project-image"
+								/>
+							</div>
+							<div className="project-content">
+								<h3 className="project-title">
+									{t('projects.project1.title')}
+								</h3>
+								<p className="project-desc">
+									{t('projects.project1.desc')}
+								</p>
+								<a href="#" className="read-more-btn">
+									{t('projects.readMore')}
+								</a>
+							</div>
+						</div>
+
+						<div className="project-card">
+							<div className="project-image-wrapper">
+								<img
+									src={projectImg1}
+									alt="Curved glass building"
+									className="project-image"
+								/>
+							</div>
+							<div className="project-content">
+								<h3 className="project-title">
+									{t('projects.project2.title')}
+								</h3>
+								<p className="project-desc">
+									{t('projects.project2.desc')}
+								</p>
+								<a href="#" className="read-more-btn">
+									{t('projects.readMore')}
+								</a>
+							</div>
+						</div>
+
+						<div className="project-card">
+							<div className="project-image-wrapper">
+								<img
+									src={projectImg1}
+									alt="Blue modern tower"
+									className="project-image"
+								/>
+							</div>
+							<div className="project-content">
+								<h3 className="project-title">
+									{t('projects.project3.title')}
+								</h3>
+								<p className="project-desc">
+									{t('projects.project3.desc')}
+								</p>
+								<a href="#" className="read-more-btn">
+									{t('projects.readMore')}
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

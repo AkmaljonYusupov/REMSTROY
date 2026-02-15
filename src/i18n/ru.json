@@ -158,7 +158,22 @@
 		"label": "ПРОЕКТЫ",
 		"objects": "ОБЪЕКТЫ",
 		"experience": "лет опыта",
-		"completed": "выполненные проекты"
+		"completed": "выполненные проекты",
+		"workWeHaveDone": "Выполненные работы",
+		"ourLatestProjects": "Наши последние проекты",
+		"readMore": "Читать далее",
+		"project1": {
+			"title": "Ratione voluptatem sequi",
+			"desc": "Quaerahenderit rui in ea voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+		},
+		"project2": {
+			"title": "Aute irure dolor in rearen",
+			"desc": "Incidunt ut labore et dolore magna aliqua ut enim ad minim veniam."
+		},
+		"project3": {
+			"title": "Fugiat quo voluptates nulla",
+			"desc": "Ratione voluptatem sequi nesciunt neque porro quisquam est qui dolorem ipsum."
+		}
 	},
 	"reviews": {
 		"title": "Отзывы о нас",

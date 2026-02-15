@@ -158,7 +158,22 @@
 		"label": "PROJECTS",
 		"objects": "OBJECTS",
 		"experience": "years of experience",
-		"completed": "completed projects"
+		"completed": "completed projects",
+		"workWeHaveDone": "Work We Have Done",
+		"ourLatestProjects": "Our Latest Projects",
+		"readMore": "Read More",
+		"project1": {
+			"title": "Ratione voluptatem sequi",
+			"desc": "Quaerahenderit rui in ea voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+		},
+		"project2": {
+			"title": "Aute irure dolor in rearen",
+			"desc": "Incidunt ut labore et dolore magna aliqua ut enim ad minim veniam."
+		},
+		"project3": {
+			"title": "Fugiat quo voluptates nulla",
+			"desc": "Ratione voluptatem sequi nesciunt neque porro quisquam est qui dolorem ipsum."
+		}
 	},
 	"reviews": {
 		"title": "Our clients' feedback",
