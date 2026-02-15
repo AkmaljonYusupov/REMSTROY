@@ -5,10 +5,10 @@
 		"button": "Отправить заявку"
 	},
 	"nav": {
-		"projects": "Главная",
-		"about": "Проекты",
-		"reviews": "О нас",
-		"news": "Контакты"
+		"home": "Главная",
+		"project": "Проекты",
+		"about": "О нас",
+		"contact": "Контакты"
 	},
 	"features": {
 		"standard": {

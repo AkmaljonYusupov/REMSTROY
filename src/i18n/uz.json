@@ -5,10 +5,10 @@
 		"button": "Ariza yuborish"
 	},
 	"nav": {
-		"projects": "Bosh sahifa",
-		"about": "Loyihalar",
-		"reviews": "Biz haqimizda",
-		"news": "Aloqa"
+		"home": "Bosh sahifa",
+		"project": "Loyihalar",
+		"about": "Biz haqimizda",
+		"contact": "Aloqa"
 	},
 	"features": {
 		"standard": {
@@ -158,7 +158,8 @@
 		"label": "LOYIHALAR",
 		"objects": "OBYEKTLAR",
 		"experience": "yillik tajriba",
-		"completed": "tugallangan loyihalar"
+		"completed": "tugallangan loyihalar",
+		"projectsjoyiy": "Loyihalar"
 	},
 	"reviews": {
 		"title": "Mijozlarimiz fikri",

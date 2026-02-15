@@ -32,10 +32,10 @@ function Footer() {
 				{/* RIGHT */}
 				<div className='footer__right'>
 					<nav className='footer__nav'>
-						<a href='#projects'>{t('nav.projects')}</a>
-						<a href='#about'>{t('nav.about')}</a>
-						<a href='#reviews'>{t('nav.reviews')}</a>
-						<a href='#news'>{t('nav.news')}</a>
+						<a href='/'>{t('nav.home')}</a>
+						<a href='project'>{t('nav.project')}</a>
+						<a href='about'>{t('nav.about')}</a>
+						<a href='contact'>{t('nav.contact')}</a>
 					</nav>
 
 					<div className='footer__info'>
@@ -68,57 +68,57 @@ function Footer() {
 
 					<div className='footer__bottom'>
 						<div className='footer__socials'>
-	<a
-		href='#'
-		target='_blank'
-		rel='noopener noreferrer'
-		aria-label='Share on Facebook'
-		title="Facebook"
-	>
-		<i className='fab fa-facebook-f'></i>
-	</a>
+							<a
+								href='#'
+								target='_blank'
+								rel='noopener noreferrer'
+								aria-label='Share on Facebook'
+								title="Facebook"
+							>
+								<i className='fab fa-facebook-f'></i>
+							</a>
 
-	<a
-		href='#'
-		target='_blank'
-		rel='noopener noreferrer'
-		aria-label='Share on LinkedIn'
-		title="LinkedIn"
-	>
-		<i className='fab fa-linkedin-in'></i>
-	</a>
+							<a
+								href='#'
+								target='_blank'
+								rel='noopener noreferrer'
+								aria-label='Share on LinkedIn'
+								title="LinkedIn"
+							>
+								<i className='fab fa-linkedin-in'></i>
+							</a>
 
-	<a
-		href='#'
-		target='_blank'
-		rel='noopener noreferrer'
-		aria-label='Share on Twitter'
-		title="Twitter"
-		
-	>
-		<i className='fab fa-twitter'></i>
-	</a>
+							<a
+								href='#'
+								target='_blank'
+								rel='noopener noreferrer'
+								aria-label='Share on Twitter'
+								title="Twitter"
 
-	<a
-		href='#'
-		target='_blank'
-		rel='noopener noreferrer'
-		aria-label='Share on Telegram'
-			title="Telegram"
-	>
-		<i className='fab fa-telegram-plane'></i>
-	</a>
+							>
+								<i className='fab fa-twitter'></i>
+							</a>
 
-	<a
-		href='#'
-		target='_blank'
-		rel='noopener noreferrer'
-		aria-label='Share on WhatsApp'
-		title="WhatsApp"
-	>
-		<i className='fab fa-whatsapp'></i>
-	</a>
-</div>
+							<a
+								href='#'
+								target='_blank'
+								rel='noopener noreferrer'
+								aria-label='Share on Telegram'
+								title="Telegram"
+							>
+								<i className='fab fa-telegram-plane'></i>
+							</a>
+
+							<a
+								href='#'
+								target='_blank'
+								rel='noopener noreferrer'
+								aria-label='Share on WhatsApp'
+								title="WhatsApp"
+							>
+								<i className='fab fa-whatsapp'></i>
+							</a>
+						</div>
 
 
 						<p>

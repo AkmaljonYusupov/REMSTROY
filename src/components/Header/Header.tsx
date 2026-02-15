@@ -50,10 +50,10 @@ const Header = () => {
 						<NavLink to='/' className='logo'>
 							<img src={Logo} alt='Logo' />
 						</NavLink>
-						<NavLink to='/projects'>{t('nav.projects')}</NavLink>
-						<NavLink to='/projects'>{t('nav.about')}</NavLink>
-						<NavLink to='/about'>{t('nav.reviews')}</NavLink>
-						<NavLink to='/contact'>{t('nav.news')}</NavLink>
+						<NavLink to='/'>{t('nav.home')}</NavLink>
+						<NavLink to='/projects'>{t('nav.project')}</NavLink>
+						<NavLink to='/about'>{t('nav.about')}</NavLink>
+						<NavLink to='/contact'>{t('nav.contact')}</NavLink>
 					</nav>
 
 					<div className='actions'>
@@ -121,24 +121,24 @@ const Header = () => {
 
 				{/* Nav Links */}
 				<nav className='offcanvas__nav'>
+					<NavLink to='/' onClick={() => setOpen(false)}>
+						{t('nav.home')}
+					</NavLink>
 					<NavLink to='/projects' onClick={() => setOpen(false)}>
-						{t('nav.projects')}
+						{t('nav.project')}
 					</NavLink>
 					<NavLink to='/about' onClick={() => setOpen(false)}>
 						{t('nav.about')}
 					</NavLink>
-					<NavLink to='/reviews' onClick={() => setOpen(false)}>
-						{t('nav.reviews')}
-					</NavLink>
-					<NavLink to='/news' onClick={() => setOpen(false)}>
-						{t('nav.news')}
+					<NavLink to='/contact' onClick={() => setOpen(false)}>
+						{t('nav.contact')}
 					</NavLink>
 				</nav>
 
 				{/* Language Buttons */}
 				<div className='offcanvas__lang'>
 					<button onClick={() => changeLang('uz')}>
-						<UzFlag width={20} height={14} /> uzek
+						<UzFlag width={20} height={14} /> Uzbek
 					</button>
 					<button onClick={() => changeLang('ru')}>
 						<RuFlag width={20} height={14} /> Russian
