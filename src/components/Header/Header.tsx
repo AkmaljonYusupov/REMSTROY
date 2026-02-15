@@ -53,7 +53,7 @@ const Header = () => {
 						<NavLink to='/projects'>{t('nav.projects')}</NavLink>
 						<NavLink to='/projects'>{t('nav.about')}</NavLink>
 						<NavLink to='/about'>{t('nav.reviews')}</NavLink>
-						<NavLink to='/news'>{t('nav.news')}</NavLink>
+						<NavLink to='/contact'>{t('nav.news')}</NavLink>
 					</nav>
 
 					<div className='actions'>
