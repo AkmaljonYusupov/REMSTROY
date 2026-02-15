@@ -91,6 +91,40 @@
 			"button": "Boshlash"
 		}
 	},
+	"contact": {
+		"contactjoyiy": "Bog'lanish",
+		"home": "Bosh sahifa",
+		"getInTouch": "Bog'laning",
+		"sendMessage": "Xabar yuboring",
+		"card1": {
+			"title": "Manzil",
+			"text": "Toshkent shahri, Yashnobod tumani, Parkent"
+		},
+		"card2": {
+			"title": "Telefon",
+			"text": "+998 93 900 99 59"
+		},
+		"card3": {
+			"title": "Email",
+			"text": "info@webera.uz"
+		},
+		"form": {
+			"name": "Ism",
+			"namePlaceholder": "Ismingiz",
+			"phone": "Telefon",
+			"phonePlaceholder": "Telefon raqamingiz",
+			"email": "Email",
+			"emailPlaceholder": "Email manzilingiz",
+			"message": "Xabar",
+			"messagePlaceholder": "Qanday yordam bera olamiz?",
+			"submit": "Yuborish",
+			"sending": "Yuborilmoqda...",
+			"successMessage": "Xabaringiz muvaffaqiyatli yuborildi! Tez orada javob beramiz.",
+			"errorMessage": "Xabar yuborishda xatolik yuz berdi. Iltimos, qayta urinib ko'ring yoki telefon orqali bog'laning.",
+			"networkError": "Internet aloqasi uzildi. Iltimos, internetingizni tekshiring.",
+			"validationError": "Iltimos, barcha majburiy maydonlarni to'ldiring."
+		}
+	},
 	"advantages": {
 		"label": "Afzalliklar",
 		"items": {

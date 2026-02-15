@@ -91,6 +91,40 @@
 			"button": "Get Started"
 		}
 	},
+	"contact": {
+		"contactjoyiy": "Contact",
+		"home": "Home",
+		"getInTouch": "Get In Touch",
+		"sendMessage": "Send Us a Message",
+		"card1": {
+			"title": "Location",
+			"text": "Tashkent city, Yashnabad district, Parkent"
+		},
+		"card2": {
+			"title": "Phone",
+			"text": "+998 93 900 99 59"
+		},
+		"card3": {
+			"title": "Email",
+			"text": "info@webera.uz"
+		},
+		"form": {
+			"name": "Name",
+			"namePlaceholder": "Your Name",
+			"phone": "Phone",
+			"phonePlaceholder": "Your Phone Number",
+			"email": "Email",
+			"emailPlaceholder": "Your Email Address",
+			"message": "Message",
+			"messagePlaceholder": "How can we help you?",
+			"submit": "Submit",
+			"sending": "Sending...",
+			"successMessage": "Your message has been sent successfully! We'll get back to you soon.",
+			"errorMessage": "There was an error sending your message. Please try again or contact us by phone.",
+			"networkError": "Network connection lost. Please check your internet connection.",
+			"validationError": "Please fill in all required fields."
+		}
+	},
 	"advantages": {
 		"label": "Advantages",
 		"items": {
