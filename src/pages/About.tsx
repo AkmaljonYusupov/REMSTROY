@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa"
+import { FaFacebookF, FaInstagram } from "react-icons/fa"
 
 
 import aboutpageImg from '../../src/assets/images/aboutpage-image.jpg'
@@ -249,8 +249,8 @@ function About() {
 
 								<div className='team-social'>
 									<a href="#"><FaFacebookF /></a>
-									<a href="#"><FaTwitter /></a>
-									<a href="#"><FaLinkedinIn /></a>
+									<a href="#"><FaInstagram /></a>
+
 								</div>
 							</div>
 						</div>
@@ -267,8 +267,7 @@ function About() {
 
 								<div className='team-social'>
 									<a href="#"><FaFacebookF /></a>
-									<a href="#"><FaTwitter /></a>
-									<a href="#"><FaLinkedinIn /></a>
+									<a href="#"><FaInstagram /></a>
 								</div>
 							</div>
 						</div>
@@ -285,8 +284,8 @@ function About() {
 
 								<div className='team-social'>
 									<a href="#"><FaFacebookF /></a>
-									<a href="#"><FaTwitter /></a>
-									<a href="#"><FaLinkedinIn /></a>
+									<a href="#"><FaInstagram /></a>
+
 								</div>
 							</div>
 						</div>

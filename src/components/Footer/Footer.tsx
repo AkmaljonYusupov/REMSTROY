@@ -1,13 +1,22 @@
+import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { NavLink, useLocation } from 'react-router-dom'
 import './Footer.scss'
 
 function Footer() {
 	const { t } = useTranslation()
+	const location = useLocation()
 	const currentYear = new Date().getFullYear()
+
+	/* ✅ ROUTE O'ZGARGANDA TEPADAN OCHILSIN */
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [location.pathname])
 
 	return (
 		<footer className='footer'>
 			<div className='container footer__wrapper'>
+
 				{/* LEFT CARD */}
 				<div className='footer__left'>
 					<div className='footer__card'>
@@ -31,11 +40,13 @@ function Footer() {
 
 				{/* RIGHT */}
 				<div className='footer__right'>
+
+					{/* ✅ NAVIGATION FIXED */}
 					<nav className='footer__nav'>
-						<a href='/'>{t('nav.home')}</a>
-						<a href='project'>{t('nav.project')}</a>
-						<a href='about'>{t('nav.about')}</a>
-						<a href='contact'>{t('nav.contact')}</a>
+						<NavLink to='/'>{t('nav.home')}</NavLink>
+						<NavLink to='/projects'>{t('nav.project')}</NavLink>
+						<NavLink to='/about'>{t('nav.about')}</NavLink>
+						<NavLink to='/contact'>{t('nav.contact')}</NavLink>
 					</nav>
 
 					<div className='footer__info'>
@@ -68,63 +79,24 @@ function Footer() {
 
 					<div className='footer__bottom'>
 						<div className='footer__socials'>
-							<a
-								href='#'
-								target='_blank'
-								rel='noopener noreferrer'
-								aria-label='Share on Facebook'
-								title="Facebook"
-							>
+							<a href='#' target='_blank' rel='noopener noreferrer'>
 								<i className='fab fa-facebook-f'></i>
 							</a>
-
-							<a
-								href='#'
-								target='_blank'
-								rel='noopener noreferrer'
-								aria-label='Share on LinkedIn'
-								title="LinkedIn"
-							>
-								<i className='fab fa-linkedin-in'></i>
+							<a href='#' target='_blank' rel='noopener noreferrer'>
+								<i className='fab fa-instagram'></i>
 							</a>
 
-							<a
-								href='#'
-								target='_blank'
-								rel='noopener noreferrer'
-								aria-label='Share on Twitter'
-								title="Twitter"
-
-							>
-								<i className='fab fa-twitter'></i>
-							</a>
-
-							<a
-								href='#'
-								target='_blank'
-								rel='noopener noreferrer'
-								aria-label='Share on Telegram'
-								title="Telegram"
-							>
+							<a href='#' target='_blank' rel='noopener noreferrer'>
 								<i className='fab fa-telegram-plane'></i>
 							</a>
 
-							<a
-								href='#'
-								target='_blank'
-								rel='noopener noreferrer'
-								aria-label='Share on WhatsApp'
-								title="WhatsApp"
-							>
-								<i className='fab fa-whatsapp'></i>
-							</a>
 						</div>
-
 
 						<p>
 							Copyright © {currentYear} RSC Construction. {t('footer.rights')}
 						</p>
 					</div>
+
 				</div>
 			</div>
 		</footer>

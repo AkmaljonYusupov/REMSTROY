@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import './Header.scss'
 
 import CloseIcon from '../../assets/icons/close.svg?react'
@@ -11,13 +11,21 @@ import Logo from '../../assets/images/logo.png'
 
 const Header = () => {
 	const { i18n, t } = useTranslation()
+	const location = useLocation()
+
 	const [open, setOpen] = useState(false)
-	const [lang, setLang] = useState<'uz' | 'ru'>('uz')
+	const [lang, setLang] = useState<'uz' | 'ru' | 'eng'>('uz')
 	const [langMenu, setLangMenu] = useState(false)
 	const langRef = useRef<HTMLDivElement>(null)
 
+	/* ✅ ROUTE O'ZGARGANDA SAHIFA TEPADAN OCHILADI (ANIMATSIYASIZ) */
 	useEffect(() => {
-		const savedLang = localStorage.getItem('lang') as 'uz' | 'ru'
+		window.scrollTo(0, 0)
+	}, [location.pathname])
+
+	/* ✅ LANGUAGE + OUTSIDE CLICK */
+	useEffect(() => {
+		const savedLang = localStorage.getItem('lang') as 'uz' | 'ru' | 'eng'
 		if (savedLang) {
 			setLang(savedLang)
 			i18n.changeLanguage(savedLang)
@@ -33,7 +41,7 @@ const Header = () => {
 		return () => document.removeEventListener('mousedown', handleClickOutside)
 	}, [i18n])
 
-	const changeLang = (newLang: 'uz' | 'ru') => {
+	const changeLang = (newLang: 'uz' | 'ru' | 'eng') => {
 		setLang(newLang)
 		i18n.changeLanguage(newLang)
 		localStorage.setItem('lang', newLang)
@@ -45,7 +53,6 @@ const Header = () => {
 		<>
 			<header className='header'>
 				<div className='header__inner'>
-					{/* NAV + LOGO */}
 					<nav className='nav'>
 						<NavLink to='/' className='logo'>
 							<img src={Logo} alt='Logo' />
@@ -57,7 +64,6 @@ const Header = () => {
 					</nav>
 
 					<div className='actions'>
-						{/* LANGUAGE */}
 						<div className='lang' ref={langRef}>
 							<button
 								className='current-lang'
@@ -70,9 +76,9 @@ const Header = () => {
 								) : (
 									<EngFlag width={24} height={16} />
 								)}
-
 								<span>{lang.toUpperCase()}</span>
 							</button>
+
 							<ul className={`lang-dropdown ${langMenu ? 'show' : ''}`}>
 								<li onClick={() => changeLang('uz')}>
 									<UzFlag width={24} height={16} /> O‘zbekcha
@@ -86,12 +92,6 @@ const Header = () => {
 							</ul>
 						</div>
 
-						{/* USER ICON */}
-						{/* <div className='user'>
-							<UserIcon width={24} height={24} />
-						</div> */}
-
-						{/* BURGER */}
 						<button className='burger' onClick={() => setOpen(true)}>
 							<span />
 							<span />
@@ -101,14 +101,12 @@ const Header = () => {
 				</div>
 			</header>
 
-			{/* OVERLAY */}
 			<div
 				className={`overlay ${open ? 'show' : ''}`}
 				onClick={() => setOpen(false)}
 			/>
 
 			<aside className={`offcanvas ${open ? 'open' : ''}`}>
-				{/* Header */}
 				<div className='offcanvas__header'>
 					<span>Menu</span>
 					<CloseIcon
@@ -119,7 +117,6 @@ const Header = () => {
 					/>
 				</div>
 
-				{/* Nav Links */}
 				<nav className='offcanvas__nav'>
 					<NavLink to='/' onClick={() => setOpen(false)}>
 						{t('nav.home')}
@@ -135,7 +132,6 @@ const Header = () => {
 					</NavLink>
 				</nav>
 
-				{/* Language Buttons */}
 				<div className='offcanvas__lang'>
 					<button onClick={() => changeLang('uz')}>
 						<UzFlag width={20} height={14} /> Uzbek
