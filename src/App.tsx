@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import FloatingButtons from './components/FloatingButtons'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import About from './pages/About'
@@ -17,6 +18,7 @@ function App() {
 				<Route path='/contact' element={<Contact />} />
 			</Routes>
 			<Footer />
+			<FloatingButtons />
 		</>
 	)
 }

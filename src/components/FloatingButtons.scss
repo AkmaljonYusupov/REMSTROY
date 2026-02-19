@@ -1,0 +1,98 @@
+.floating-btn {
+	position: fixed;
+	bottom: 25px;
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 22px;
+	color: #fff;
+	box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+	opacity: 0;
+	transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1), transform 0.2s ease;
+}
+
+/* Left button - Phone */
+.floating-btn.left {
+	left: 25px;
+	background-color: #1e88e5;
+	opacity: 1;
+}
+
+/* Right button - Scroll Top */
+.floating-btn.right.scroll-top {
+	right: 25px;
+	background: linear-gradient(135deg, #42a5f5, #1e88e5);
+	box-shadow: 0 8px 25px rgba(30,136,229,0.6);
+	font-weight: bold;
+	border-radius: 50%;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+/* Scroll Top show/fade */
+.floating-btn.show {
+	opacity: 1;
+	transform: translateY(0) scale(1);
+}
+
+/* Hover effect */
+.floating-btn.right.scroll-top:hover {
+	transform: scale(1.2);
+	box-shadow: 0 12px 35px rgba(30,136,229,0.8);
+	background: linear-gradient(45deg, #42a5f5, #1e88e5, #64b5f6);
+	background-size: 400% 400%;
+	animation: gradient-move 3s ease infinite;
+}
+
+/* Arrow animation */
+.floating-btn .arrow {
+	display: inline-block;
+	animation: arrow-bounce 1s infinite;
+	font-size: 24px;
+}
+
+@keyframes arrow-bounce {
+	0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+	40% { transform: translateY(-6px); }
+	60% { transform: translateY(-3px); }
+}
+
+/* Gradient move */
+@keyframes gradient-move {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+/* Pulse animation for Phone */
+.pulse::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background: #1e88e5;
+	animation: pulse-animation 1.8s infinite;
+	z-index: -1;
+}
+
+@keyframes pulse-animation {
+	0% { transform: scale(1); opacity: 0.7; }
+	70% { transform: scale(1.6); opacity: 0; }
+	100% { transform: scale(1); opacity: 0; }
+}
+
+/* Hover scale for Phone */
+.floating-btn.left:hover {
+	transform: scale(1.2);
+	box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
