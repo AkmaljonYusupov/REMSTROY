@@ -208,7 +208,10 @@
 		"addressValue": "Tashkent city, Yashnobod district, Parkent",
 		"worktime": "Working hours",
 		"worktimeValue": "Every day from 09:00 to 20:00",
-		"rights": "All rights reserved"
+		"rights": "All rights reserved",
+		"success": "Your request has been sent successfully!",
+		"error": "An error occurred. Please try again.",
+		"sending": "Sending..."
 	},
 	"partners": {
 		"title": "OUR PARTNERS",

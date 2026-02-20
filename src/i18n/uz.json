@@ -209,7 +209,10 @@
 		"addressValue": "Toshkent shahar, Yashnobod tumani, Parkent",
 		"worktime": "Ish vaqti",
 		"worktimeValue": "Har kuni 09:00 dan 20:00 gacha",
-		"rights": "Barcha huquqlar himoyalangan"
+		"rights": "Barcha huquqlar himoyalangan",
+		"success": "So‘rovingiz muvaffaqiyatli yuborildi!",
+		"error": "Xatolik yuz berdi. Qayta urinib ko‘ring.",
+		"sending": "Yuborilmoqda..."
 	},
 	"partners": {
 		"title": "BIZNING HAMKORLAR",
