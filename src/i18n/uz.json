@@ -51,13 +51,13 @@
 			"label": "asosiy yo‘nalish"
 		},
 		"believe": {
-			"title": "Biz Buyuk G‘oyalarning Kuchiga Ishonamiz",
-			"desc": "Reprehenderit qui in ea voluptate velitatum vel eum quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
-			"check1": "Oemno enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-			"check2": "Aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-			"check3": "Voluptatem sequi nesciunt neque porro quisquam est qui dolorem ipsum quia dolor sit amet.",
-			"check4": "Reprehenderit in ea voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-			"check5": "Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+			"title": "Biz katta g‘oyalar kuchiga ishonamiz",
+			"desc": "2007-yildan buyon kompaniyamiz yo‘l qurilishi, magistral quvurlar va sanoat inshootlari qurilishi sohasida faoliyat yuritib kelmoqda. Zamonaviy texnika va tajribali mutaxassislar jamoasi bilan har bir loyihani sifatli va belgilangan muddatda bajarishni ta’minlaymiz.",
+			"check1": "Yo‘l qurilishi va infratuzilma obyektlarini barpo etish",
+			"check2": "Magistral quvurlar va sanoat inshootlarini qurish",
+			"check3": "Metallokonstruksiyalarni ishlab chiqarish va montaj qilish",
+			"check4": "Zamonaviy maxsus texnika va yuqori malakali mutaxassislar",
+			"check5": "Murakkab iqlim sharoitida ishlash tajribasi",
 			"readMore": "Batafsil o‘qish"
 		},
 		"stats": {
