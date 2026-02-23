@@ -50,16 +50,16 @@
 			"value": "Government orders",
 			"label": "main direction"
 		},
-		"believe": {
-			"title": "We Believe In The Power of Great Ideas",
-			"desc": "Reprehenderit qui in ea voluptate velitatum vel eum quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
-			"check1": "Oemno enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-			"check2": "Aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-			"check3": "Voluptatem sequi nesciunt neque porro quisquam est qui dolorem ipsum quia dolor sit amet.",
-			"check4": "Reprehenderit in ea voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-			"check5": "Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-			"readMore": "Read More"
-		},
+	"believe": {
+  "title": "We Believe in the Power of Big Ideas",
+  "desc": "Since 2007, our company has been successfully operating in road construction, main pipeline installation, and industrial facility development. With modern equipment and an experienced team, we ensure high-quality project execution within agreed deadlines.",
+  "check1": "Road and infrastructure construction",
+  "check2": "Main pipeline and industrial facility construction",
+  "check3": "Manufacturing and installation of metal structures",
+  "check4": "Modern heavy equipment and highly qualified specialists",
+  "check5": "Experience working in challenging climate conditions",
+  "readMore": "Read More"
+},
 		"stats": {
 			"small": "Our Statistics",
 			"title": "We do big things with big ideas.",

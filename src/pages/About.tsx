@@ -143,7 +143,7 @@ function About() {
 
 						<div className='us-text-side'>
 							<span className='us-small-label'>
-								{t('nav.reviews')}
+								{t('nav.about')}
 							</span>
 
 							<h2 className='us-main-title'>
