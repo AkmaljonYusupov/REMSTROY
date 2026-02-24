@@ -58,7 +58,8 @@ const Home = () => {
 					<div className='features'>
 						<div className='feature'>
 							<h3 className='feature__title'>{t('features.standard.title')}</h3>
-							<p className='feature__desc'>{t('features.standard.desc')}</p>
+							<p className='feature__desc'>{t('features.standard.desc')}
+							</p>
 						</div>
 
 						<div className='feature'>
@@ -84,7 +85,16 @@ const Home = () => {
 
 						<div className='about__content'>
 							<h2 className='about__title'>{t('about.title')}</h2>
-							<p className='about__text'>{t('about.text')}</p>
+							<p className='about__text'>{t('about.text')}
+								<p>
+									<span className='check-mark'>✔</span>
+									{t('about.textNested1')}
+								</p>
+								<p>
+									<span className='check-mark'>✔</span>
+									{t('about.textNested2')}
+								</p>
+							</p>
 
 							<div className='about__stats'>
 								<div className='about__stat'>
@@ -200,9 +210,8 @@ const Home = () => {
 							{projectImages.slice(1).map((img, index) => (
 								<div
 									key={index}
-									className={`projects__box ${
-										activeIndex === index + 1 ? 'is-active' : ''
-									}`}
+									className={`projects__box ${activeIndex === index + 1 ? 'is-active' : ''
+										}`}
 									onClick={() => setActiveIndex(index + 1)}
 								>
 									<img src={img} alt={`Detail ${index + 1}`} />
@@ -250,9 +259,8 @@ const Home = () => {
 							{projectImages.slice(1).map((img, index) => (
 								<div
 									key={index}
-									className={`projects__box ${
-										activeIndex === index + 1 ? 'is-active' : ''
-									}`}
+									className={`projects__box ${activeIndex === index + 1 ? 'is-active' : ''
+										}`}
 									onClick={() => setActiveIndex(index + 1)}
 								>
 									<img src={img} alt={`Detail ${index + 1}`} />
@@ -300,9 +308,8 @@ const Home = () => {
 							{projectImages.slice(1).map((img, index) => (
 								<div
 									key={index}
-									className={`projects__box ${
-										activeIndex === index + 1 ? 'is-active' : ''
-									}`}
+									className={`projects__box ${activeIndex === index + 1 ? 'is-active' : ''
+										}`}
 									onClick={() => setActiveIndex(index + 1)}
 								>
 									<img src={img} alt={`Detail ${index + 1}`} />
@@ -350,9 +357,8 @@ const Home = () => {
 							{projectImages.slice(1).map((img, index) => (
 								<div
 									key={index}
-									className={`projects__box ${
-										activeIndex === index + 1 ? 'is-active' : ''
-									}`}
+									className={`projects__box ${activeIndex === index + 1 ? 'is-active' : ''
+										}`}
 									onClick={() => setActiveIndex(index + 1)}
 								>
 									<img src={img} alt={`Detail ${index + 1}`} />

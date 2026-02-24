@@ -394,6 +394,12 @@ $breakpoints: (
 	color: #374151;
 	max-width: 520px;
 	margin-bottom: 48px;
+	.check-mark {
+		color: #22c55e; // zamonaviy yashil (rasmdagi checkga yaqin)
+		font-size: 1.7rem;
+		line-height: 1;
+		font-weight: bold;
+	}
 
 	@include mq-max(md) {
 		margin-bottom: 32px;

@@ -26,9 +26,11 @@
 	},
 	"about": {
 		"label": "KOMPANIYA HAQIDA",
-		"title": "Har bir loyihada sifat va mas’uliyat",
+		"title": "Qurilishda ishonchlilik va professionallik",
 		"aboutjoyiy": "Biz haqimizda",
-		"text": "REMSTROY nodavlat binolar va davlat tashkilotlari uchun infratuzilma obyektlarini qurishga ixtisoslashgan qurilish kompaniyasidir. Kompaniya qurilish normalari, sifat standartlari va muddatlarga qat’iy rioya qiladi.",
+		"text": "REMSTROY — 2007-yilda tashkil etilgan qurilish kompaniyasi bo‘lib, yo‘l va sanoat infratuzilmasi loyihalarini amalga oshirib kelmoqda. Zamonaviy texnika va malakali mutaxassislar yordamida ishlar sifatli va o‘z muddatida bajariladi.",
+		"textNested1": "Asosiy yo‘nalishlar: magistral quvurlar qurilishi, metallokonstruksiya montaji, kapital ta’mirlash hamda yo‘l qurilishi.",
+		"textNested2": "Kompaniya barcha qurilish me’yorlari va sifat standartlariga qat’iy rioya qiladi.",
 		"home": "Bosh sahifa",
 		"card1": {
 			"title": "Tajriba ega muhandislarimiz bor.",
@@ -44,11 +46,11 @@
 		},
 		"stat1": {
 			"value": "18+ yil",
-			"label": "qurilish tajribasi"
+			"label": "qurilish sohasida tajriba"
 		},
 		"stat2": {
 			"value": "Davlat buyurtmalari",
-			"label": "asosiy yo‘nalish"
+			"label": "asosiy faoliyat yo‘nalishi"
 		},
 		"believe": {
 			"title": "Biz katta g‘oyalar kuchiga ishonamiz",
@@ -129,28 +131,28 @@
 		"label": "Afzalliklar",
 		"items": {
 			"1": {
-				"title": "Davlat standartlariga rioya",
-				"desc": "Barcha ishlar amaldagi norma va talablar bo‘yicha bajariladi"
+				"title": "Davlat standartlariga muvofiqlik",
+				"desc": "Ishlar amaldagi me’yor va talablar asosida bajariladi. Barcha litsenziyalar mavjud. Texnika «Yevro-3» standartiga mos."
 			},
 			"2": {
-				"title": "Tajriba ega mutaxassislar",
-				"desc": "Malakali muhandislar va texnik xodimlar"
+				"title": "Tajribali mutaxassislar",
+				"desc": "2007-yildan buyon katta tajribaga ega malakali muhandis va texnik xodimlar."
 			},
 			"3": {
 				"title": "Individual yondashuv",
-				"desc": "Har bir loyiha uning xususiyatlariga mos ishlab chiqiladi"
+				"desc": "Har bir loyiha uning o‘ziga xos xususiyatlari va sharoitlarini inobatga olgan holda amalga oshiriladi."
 			},
 			"4": {
-				"title": "Xavfsizlik qoidalari",
-				"desc": "Mehnatni muhofaza qilish qoidalariga qat’iy rioya"
+				"title": "Xavfsizlik texnikasi",
+				"desc": "Mehnat muhofazasi va texnologik talablar qat’iy rioya qilinadi."
 			},
 			"5": {
 				"title": "Ishonchlilik va mas’uliyat",
-				"desc": "Mijozga bo‘lgan majburiyatlarni aniq bajarish"
+				"desc": "Buyurtmachi oldidagi majburiyatlar to‘liq va aniq bajariladi."
 			},
 			"6": {
-				"title": "Muddatga rioya",
-				"desc": "Obyektlarni o‘z vaqtida topshirish"
+				"title": "Muddatlarga rioya qilish",
+				"desc": "Obyektlar belgilangan muddatda topshiriladi."
 			}
 		}
 	},

@@ -25,10 +25,12 @@
 		}
 	},
 	"about": {
-		"label": "ABOUT THE COMPANY",
-		"title": "Quality and responsibility in every project",
-		"aboutjoyiy": "About us",
-		"text": "REMSTROY is a construction company specializing in the construction of non-residential buildings and infrastructure facilities for government organizations. The company strictly follows construction norms, quality standards, and deadlines.",
+		"label": "ABOUT COMPANY",
+		"title": "Reliability and Professionalism in Construction",
+		"aboutjoyiy": "About Us",
+		"text": "REMSTROY is a construction company founded in 2007, implementing road and industrial infrastructure projects. With modern equipment and qualified specialists, all work is completed with high quality and on time.",
+		"textNested1": "Main activities include construction of main pipelines, metal structure installation, capital renovation, and road construction.",
+		"textNested2": "The company strictly complies with construction regulations and quality standards.",
 		"home": "Home",
 		"card1": {
 			"title": "We have experienced engineers.",
@@ -44,11 +46,11 @@
 		},
 		"stat1": {
 			"value": "18+ years",
-			"label": "construction experience"
+			"label": "experience in construction"
 		},
 		"stat2": {
-			"value": "Government orders",
-			"label": "main direction"
+			"value": "Government contracts",
+			"label": "main area of activity"
 		},
 	"believe": {
   "title": "We Believe in the Power of Big Ideas",
@@ -129,28 +131,28 @@
 		"label": "Advantages",
 		"items": {
 			"1": {
-				"title": "Compliance with state standards",
-				"desc": "All work is performed according to current norms and requirements"
+				"title": "Compliance with State Standards",
+				"desc": "All work is carried out in accordance with current regulations. All required licenses are available. Equipment complies with Euro-3 standards."
 			},
 			"2": {
-				"title": "Experienced specialists",
-				"desc": "Qualified engineers and technical staff"
+				"title": "Experienced Specialists",
+				"desc": "Qualified engineers and technical staff with extensive experience since 2007."
 			},
 			"3": {
-				"title": "Individual approach",
-				"desc": "Each project is developed according to its specific features"
+				"title": "Individual Approach",
+				"desc": "Each project is implemented considering its specific features and conditions."
 			},
 			"4": {
-				"title": "Safety regulations",
-				"desc": "Strict compliance with labor protection rules"
+				"title": "Safety Standards",
+				"desc": "Strict compliance with occupational safety and technological requirements."
 			},
 			"5": {
-				"title": "Reliability and responsibility",
-				"desc": "Clear fulfillment of obligations to the customer"
+				"title": "Reliability and Responsibility",
+				"desc": "Full and precise fulfillment of obligations to the client."
 			},
 			"6": {
-				"title": "Deadline adherence",
-				"desc": "Delivery of objects on time"
+				"title": "Meeting Deadlines",
+				"desc": "Projects are delivered strictly within the agreed timeframe."
 			}
 		}
 	},
