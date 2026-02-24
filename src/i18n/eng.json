@@ -175,7 +175,22 @@
 		"project3": {
 			"title": "Fugiat quo voluptates nulla",
 			"desc": "Ratione voluptatem sequi nesciunt neque porro quisquam est qui dolorem ipsum."
-		}
+		},
+		"project4": {
+  "title": "Business Tower",
+  "desc": "Modern commercial skyscraper",
+  "fullDesc": "This is a full detailed description of Business Tower project..."
+},
+"project5": {
+  "title": "Luxury Residence",
+  "desc": "Premium class apartments",
+  "fullDesc": "Full information about Luxury Residence project..."
+},
+"project6": {
+  "title": "Shopping Mall",
+  "desc": "Large commercial complex",
+  "fullDesc": "Detailed description of Shopping Mall project..."
+}
 	},
 	"reviews": {
 		"title": "Our clients' feedback",
