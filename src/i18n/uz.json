@@ -12,16 +12,16 @@
 	},
 	"features": {
 		"standard": {
-			"title": "Standartlarga rioya",
-			"desc": "REMSTROY ixtisoslashgan qurilish kompaniyasidir"
+			"title": "Standartlarga to‘liq rioya",
+			"desc": "REMSTROY barcha milliy va xalqaro qurilish standartlariga qat’iy amal qiladi."
 		},
 		"quality": {
-			"title": "Sifat kafolati",
-			"desc": "REMSTROY yuqori sifat standartlariga rioya qiladi"
+			"title": "Yuqori sifat kafolati",
+			"desc": "Har bir loyiha yuqori sifat nazorati asosida amalga oshiriladi."
 		},
 		"tech": {
-			"title": "Zamonaviy texnologiyalar",
-			"desc": "REMSTROY so‘nggi qurilish texnologiyalaridan foydalanadi"
+			"title": "Yuqori sifat kafolati",
+			"desc": "Qurilishda ilg‘or va samarali texnologiyalardan foydalaniladi."
 		}
 	},
 	"about": {
