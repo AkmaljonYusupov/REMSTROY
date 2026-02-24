@@ -141,6 +141,7 @@ $breakpoints: (
   font-weight: 700;
   color: #1e3a5f;
   margin-bottom: 0.8rem;
+  text-align: left;
 }
 
 .project-desc {
@@ -148,6 +149,7 @@ $breakpoints: (
   color: #6b7280;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+ 
 }
 
 .read-more-btn {
@@ -233,7 +235,7 @@ $breakpoints: (
 
 .modal-image {
   width: 100%;
-  height: 380px;
+  height: 540px;
   object-fit: cover;
   border-radius: 18px;
   transition: transform 0.4s ease, opacity 0.4s ease;
@@ -328,7 +330,7 @@ $breakpoints: (
 // Responsive
 @include mq-max(md) {
   .modal-image {
-    height: 250px;
+    height: 450px;
   }
 
   .slider-btn {
@@ -346,4 +348,93 @@ $breakpoints: (
   .modal-image {
     height: 200px;
   }
+}
+
+.project-desc-short {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; // 3 qatorda qisqargan ko‘rinish uchun
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  margin-bottom: 0.8rem;
+  text-align: left;
+  color: #6b7280;
+}
+
+.project-icons-short {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+  color: #1e3a5f;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: left;
+
+  .icon-cost,
+  .icon-year {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}
+
+.project-full-desc {
+  margin: 1rem 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.project-icons-full {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 18px;
+  color: #ffd54f;
+  font-weight: 600;
+  margin-top: 10px;
+  flex-wrap: wrap;
+
+  .icon-cost,
+  .icon-year {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  // Tablet
+  @include mq-max(md) {
+    gap: 20px;
+    font-size: 16px;
+  }
+
+  // Mobile
+  @include mq-max(sm) {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+
+    .icon-cost,
+    .icon-year {
+      gap: 6px;
+    }
+  }
+}
+
+.project-modal.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 850px;
+  border-radius: 24px;
+  padding: 2.5rem;
+  color: white;
+  text-align: center;
+  animation: scaleIn 0.35s ease;
+  position: relative;
 }
