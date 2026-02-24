@@ -9,6 +9,11 @@ import newsImg from '../assets/images/news-main.png'
 import sliderImg1 from '../assets/images/split_image_1.png'
 import sliderImg10 from '../assets/images/split_image_10.png'
 import sliderImg11 from '../assets/images/split_image_11.png'
+import sliderImg12 from '../assets/images/split_image_12.png'
+import sliderImg13 from '../assets/images/split_image_13.png'
+import sliderImg14 from '../assets/images/split_image_14.png'
+import sliderImg15 from '../assets/images/split_image_15.png'
+import sliderImg16 from '../assets/images/split_image_16.png'
 import sliderImg2 from '../assets/images/split_image_2.png'
 import sliderImg3 from '../assets/images/split_image_3.png'
 import sliderImg4 from '../assets/images/split_image_4.png'
@@ -29,8 +34,8 @@ const Home = () => {
 	// IMAGE GROUPS
 	const projectImages1 = [sliderImg1, sliderImg2, sliderImg3, sliderImg4]
 	const projectImages2 = [sliderImg5, sliderImg6, sliderImg7, sliderImg8]
-	const projectImages3 = [sliderImg9, sliderImg10, sliderImg1, sliderImg2]
-	const projectImages4 = [sliderImg3, sliderImg4, sliderImg5, sliderImg11]
+	const projectImages3 = [sliderImg9, sliderImg10, sliderImg11, sliderImg12]
+	const projectImages4 = [sliderImg13, sliderImg14, sliderImg15, sliderImg16]
 
 	// STATES
 	const [activeIndex1, setActiveIndex1] = useState(0)

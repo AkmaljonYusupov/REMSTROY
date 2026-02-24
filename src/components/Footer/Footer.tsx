@@ -44,7 +44,7 @@ function Footer() {
 			const CHAT_ID = "630353326"
 
 			const text = `
-📞 New Request footer section
+📞 New Request (footer section)
 🌐 Language: ${i18n.language.toUpperCase()}
 📱 Phone: ${phone}
 🕒 Time: ${new Date().toLocaleString()}
