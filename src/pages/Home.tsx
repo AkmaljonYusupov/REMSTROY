@@ -6,11 +6,18 @@ import gearsGif from '../assets/images/1667-yellow-gears.gif'
 import AboutImage from '../assets/images/about_company.png'
 
 import newsImg from '../assets/images/news-main.png'
-import bgSlider from '../assets/images/projects-main.webp'
-import sliderImg1 from '../assets/images/slider1.png'
-import sliderImg2 from '../assets/images/slider2.avif'
-import sliderImg3 from '../assets/images/slider3.webp'
-import sliderImg4 from '../assets/images/slider4.webp'
+import sliderImg1 from '../assets/images/split_image_1.png'
+import sliderImg10 from '../assets/images/split_image_10.png'
+import sliderImg11 from '../assets/images/split_image_11.png'
+import sliderImg2 from '../assets/images/split_image_2.png'
+import sliderImg3 from '../assets/images/split_image_3.png'
+import sliderImg4 from '../assets/images/split_image_4.png'
+import sliderImg5 from '../assets/images/split_image_5.png'
+import sliderImg6 from '../assets/images/split_image_6.png'
+import sliderImg7 from '../assets/images/split_image_7.png'
+import sliderImg8 from '../assets/images/split_image_8.png'
+import sliderImg9 from '../assets/images/split_image_9.png'
+
 
 import alarm from '../assets/images/unnamed.png'
 import './Home.scss'
@@ -19,21 +26,44 @@ const Home = () => {
 	const { t } = useTranslation()
 
 	// ================= PROJECTS SLIDER =================
-	const projectImages = [
-		bgSlider,
-		sliderImg1,
-		sliderImg2,
-		sliderImg3,
-		sliderImg4,
-	]
-	const [activeIndex, setActiveIndex] = useState(0)
+	// IMAGE GROUPS
+	const projectImages1 = [sliderImg1, sliderImg2, sliderImg3, sliderImg4]
+	const projectImages2 = [sliderImg5, sliderImg6, sliderImg7, sliderImg8]
+	const projectImages3 = [sliderImg9, sliderImg10, sliderImg1, sliderImg2]
+	const projectImages4 = [sliderImg3, sliderImg4, sliderImg5, sliderImg11]
 
-	// AUTO SLIDER (responsive uchun)
+	// STATES
+	const [activeIndex1, setActiveIndex1] = useState(0)
+	const [activeIndex2, setActiveIndex2] = useState(0)
+	const [activeIndex3, setActiveIndex3] = useState(0)
+	const [activeIndex4, setActiveIndex4] = useState(0)
+
+	// AUTO SLIDERS
 	useEffect(() => {
 		const interval = setInterval(() => {
-			setActiveIndex(prev => (prev + 1) % projectImages.length)
+			setActiveIndex1(prev => (prev + 1) % projectImages1.length)
 		}, 4500)
+		return () => clearInterval(interval)
+	}, [])
 
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setActiveIndex2(prev => (prev + 1) % projectImages2.length)
+		}, 4500)
+		return () => clearInterval(interval)
+	}, [])
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setActiveIndex3(prev => (prev + 1) % projectImages3.length)
+		}, 4500)
+		return () => clearInterval(interval)
+	}, [])
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setActiveIndex4(prev => (prev + 1) % projectImages4.length)
+		}, 4500)
 		return () => clearInterval(interval)
 	}, [])
 
@@ -180,8 +210,8 @@ const Home = () => {
 					<div className='projects__card'>
 						{/* SLIDER BACKGROUND */}
 						<img
-							key={activeIndex}
-							src={projectImages[activeIndex]}
+							key={activeIndex1}
+							src={projectImages1[activeIndex1]}
 							alt='Projects'
 							className='projects__bg projects__bg--animate'
 						/>
@@ -207,14 +237,14 @@ const Home = () => {
 
 						{/* RIGHT SIDE (CONTROLS SLIDER) */}
 						<div className='projects__right'>
-							{projectImages.slice(1).map((img, index) => (
+							{projectImages1.map((img, index) => (
 								<div
 									key={index}
-									className={`projects__box ${activeIndex === index + 1 ? 'is-active' : ''
+									className={`projects__box ${activeIndex1 === index ? 'is-active' : ''
 										}`}
-									onClick={() => setActiveIndex(index + 1)}
+									onClick={() => setActiveIndex1(index)}
 								>
-									<img src={img} alt={`Detail ${index + 1}`} />
+									<img src={img} alt='' />
 								</div>
 							))}
 						</div>
@@ -229,8 +259,8 @@ const Home = () => {
 					<div className='projects__card'>
 						{/* SLIDER BACKGROUND */}
 						<img
-							key={activeIndex}
-							src={projectImages[activeIndex]}
+							key={activeIndex2}
+							src={projectImages2[activeIndex2]}
 							alt='Projects'
 							className='projects__bg projects__bg--animate'
 						/>
@@ -256,14 +286,14 @@ const Home = () => {
 
 						{/* RIGHT SIDE (CONTROLS SLIDER) */}
 						<div className='projects__right'>
-							{projectImages.slice(1).map((img, index) => (
+							{projectImages2.map((img, index) => (
 								<div
 									key={index}
-									className={`projects__box ${activeIndex === index + 1 ? 'is-active' : ''
+									className={`projects__box ${activeIndex2 === index ? 'is-active' : ''
 										}`}
-									onClick={() => setActiveIndex(index + 1)}
+									onClick={() => setActiveIndex2(index)}
 								>
-									<img src={img} alt={`Detail ${index + 1}`} />
+									<img src={img} alt='' />
 								</div>
 							))}
 						</div>
@@ -278,8 +308,8 @@ const Home = () => {
 					<div className='projects__card'>
 						{/* SLIDER BACKGROUND */}
 						<img
-							key={activeIndex}
-							src={projectImages[activeIndex]}
+							key={activeIndex3}
+							src={projectImages3[activeIndex3]}
 							alt='Projects'
 							className='projects__bg projects__bg--animate'
 						/>
@@ -305,14 +335,14 @@ const Home = () => {
 
 						{/* RIGHT SIDE (CONTROLS SLIDER) */}
 						<div className='projects__right'>
-							{projectImages.slice(1).map((img, index) => (
+							{projectImages3.map((img, index) => (
 								<div
 									key={index}
-									className={`projects__box ${activeIndex === index + 1 ? 'is-active' : ''
+									className={`projects__box ${activeIndex3 === index ? 'is-active' : ''
 										}`}
-									onClick={() => setActiveIndex(index + 1)}
+									onClick={() => setActiveIndex3(index)}
 								>
-									<img src={img} alt={`Detail ${index + 1}`} />
+									<img src={img} alt='' />
 								</div>
 							))}
 						</div>
@@ -327,8 +357,8 @@ const Home = () => {
 					<div className='projects__card'>
 						{/* SLIDER BACKGROUND */}
 						<img
-							key={activeIndex}
-							src={projectImages[activeIndex]}
+							key={activeIndex4}
+							src={projectImages4[activeIndex4]}
 							alt='Projects'
 							className='projects__bg projects__bg--animate'
 						/>
@@ -354,20 +384,22 @@ const Home = () => {
 
 						{/* RIGHT SIDE (CONTROLS SLIDER) */}
 						<div className='projects__right'>
-							{projectImages.slice(1).map((img, index) => (
+							{projectImages4.map((img, index) => (
 								<div
 									key={index}
-									className={`projects__box ${activeIndex === index + 1 ? 'is-active' : ''
+									className={`projects__box ${activeIndex4 === index ? 'is-active' : ''
 										}`}
-									onClick={() => setActiveIndex(index + 1)}
+									onClick={() => setActiveIndex4(index)}
 								>
-									<img src={img} alt={`Detail ${index + 1}`} />
+									<img src={img} alt='' />
 								</div>
 							))}
 						</div>
 					</div>
 				</div>
 			</section>
+
+
 			{/* ================= PARTNERS ================= */}
 			<section className='partners-section'>
 				<div className='container'>
