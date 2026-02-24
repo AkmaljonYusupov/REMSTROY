@@ -1,16 +1,13 @@
-import { useTranslation } from 'react-i18next'
 import { useEffect, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
-import projectImg1 from '../assets/images/split_image_1.png'
 import projectImg02 from '../assets/images/projectImg02.png'
 import projectImg03 from '../assets/images/projectImg03.png'
-import projectImg2 from '../assets/images/split_image_2.png'
 import projectImg04 from '../assets/images/projectImg04.png'
 import projectImg05 from '../assets/images/projectImg05.png'
+import projectImg1 from '../assets/images/split_image_1.png'
+import projectImg2 from '../assets/images/split_image_2.png'
 import projectImg3 from '../assets/images/split_image_3.png'
-import projectImg4 from '../assets/images/split_image_4.png'
-import projectImg5 from '../assets/images/split_image_5.png'
-import projectImg6 from '../assets/images/split_image_6.png'
 
 import './Projects.scss'
 
@@ -66,50 +63,50 @@ function Projects() {
 
   // ================= PROJECT DATA =================
   // Matnlar i18next orqali tarjima qilinadi, shu uchun faqat keylar beriladi
- const projectsData = [
-  {
-    id: 1,
-    key: 'project1',
-    images: [projectImg1, projectImg02, projectImg03],
-    cost: "$1.725 mln",
-    year: "2024"
-  },
-  {
-    id: 2,
-    key: 'project2',
-    images: [projectImg2, projectImg04, projectImg05],
-    cost: "$2.3 mln",
-    year: "2023"
-  },
-  {
-    id: 3,
-    key: 'project3',
-    images: [projectImg3, projectImg1, projectImg2],
-    cost: "$1.8 mln",
-    year: "2022"
-  },
-  {
-    id: 4,
-    key: 'project4',
-    images: [projectImg1, projectImg2, projectImg3],
-    cost: "$1.0 mln",
-    year: "2021"
-  },
-  {
-    id: 5,
-    key: 'project5',
-    images: [projectImg2, projectImg1, projectImg3],
-    cost: "$1.5 mln",
-    year: "2020"
-  },
-  {
-    id: 6,
-    key: 'project6',
-    images: [projectImg3, projectImg2, projectImg1],
-    cost: "$1.9 mln",
-    year: "2019"
-  },
-]
+  const projectsData = [
+    {
+      id: 1,
+      key: 'project1',
+      images: [projectImg1, projectImg02, projectImg03],
+      cost: "$1.725 mln",
+      year: "2024"
+    },
+    {
+      id: 2,
+      key: 'project2',
+      images: [projectImg2, projectImg04, projectImg05],
+      cost: "$2.3 mln",
+      year: "2023"
+    },
+    {
+      id: 3,
+      key: 'project3',
+      images: [projectImg3, projectImg1, projectImg2],
+      cost: "$1.8 mln",
+      year: "2022"
+    },
+    {
+      id: 4,
+      key: 'project4',
+      images: [projectImg1, projectImg2, projectImg3],
+      cost: "$1.0 mln",
+      year: "2021"
+    },
+    {
+      id: 5,
+      key: 'project5',
+      images: [projectImg2, projectImg1, projectImg3],
+      cost: "$1.5 mln",
+      year: "2020"
+    },
+    {
+      id: 6,
+      key: 'project6',
+      images: [projectImg3, projectImg2, projectImg1],
+      cost: "$1.9 mln",
+      year: "2019"
+    },
+  ]
 
   // ================= MODAL STATE =================
   const [selectedProject, setSelectedProject] = useState(null)
@@ -188,91 +185,91 @@ function Projects() {
         </div>
       </div>
 
-     {/* LATEST PROJECTS */}
-<div className="latest-projects">
-  <div className="container">
-    <div className="projects-header">
-      <span className="projects-small-label">{t('projects.workWeHaveDone')}</span>
-      <h2 className="projects-main-title">{t('projects.ourLatestProjects')}</h2>
-    </div>
-
-    <div className="projects-grid">
-      {projectsData.map((project) => (
-        <div
-          className="project-card"
-          key={project.id}
-          onClick={() => openModal(project)}
-          style={{ cursor: 'pointer' }}
-        >
-          <div className="project-image-wrapper">
-            <img
-              src={project.images[0]}
-              alt={t(`projects.${project.key}.title`)}
-              className="project-image"
-            />
+      {/* LATEST PROJECTS */}
+      <div className="latest-projects">
+        <div className="container">
+          <div className="projects-header">
+            <span className="projects-small-label">{t('projects.workWeHaveDone')}</span>
+            <h2 className="projects-main-title">{t('projects.ourLatestProjects')}</h2>
           </div>
 
-          <div className="project-content">
-            <h3 className="project-title">{t(`projects.${project.key}.title`)}</h3>
-            <p className="project-desc-short">{t(`projects.${project.key}.descShort`)}</p>
+          <div className="projects-grid">
+            {projectsData.map((project) => (
+              <div
+                className="project-card"
+                key={project.id}
+                onClick={() => openModal(project)}
+                style={{ cursor: 'pointer' }}
+              >
+                <div className="project-image-wrapper">
+                  <img
+                    src={project.images[0]}
+                    alt={t(`projects.${project.key}.title`)}
+                    className="project-image"
+                  />
+                </div>
 
-            <div className="project-icons-short">
-              <span className="icon-cost">{t(`projects.${project.key}.projectCost`)} 💲 {project.cost}</span>
-              <span className="icon-year">{t(`projects.${project.key}.projectYear`)} 📅 {project.year}</span>
-            </div>
+                <div className="project-content">
+                  <h3 className="project-title">{t(`projects.${project.key}.title`)}</h3>
+                  <p className="project-desc-short">{t(`projects.${project.key}.descShort`)}</p>
 
-            <span className="read-more-btn">{t('projects.readMore')}</span>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
+                  <div className="project-icons-short">
+                    <span className="icon-cost">{t(`projects.${project.key}.projectCost`)} 💲 {project.cost}</span>
+                    <span className="icon-year">{t(`projects.${project.key}.projectYear`)} 📅 {project.year}</span>
+                  </div>
 
-  {/* MODAL */}
-  {selectedProject && (
-    <div className="project-modal-overlay" onClick={closeModal}>
-      <div className="project-modal glass" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={closeModal}>×</button>
-
-        <div
-          className="modal-slider"
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-        >
-          <button className="slider-btn left" onClick={prevSlide}>‹</button>
-
-          <img
-            src={selectedProject.images[currentSlide]}
-            alt={t(`projects.${selectedProject.key}.title`)}
-            className={`modal-image ${isZoomed ? 'zoomed' : ''}`}
-            onClick={() => setIsZoomed(!isZoomed)}
-          />
-
-          <button className="slider-btn right" onClick={nextSlide}>›</button>
-
-          <div className="slider-dots">
-            {selectedProject.images.map((_, index) => (
-              <span
-                key={index}
-                className={`dot ${index === currentSlide ? 'active' : ''}`}
-                onClick={() => setCurrentSlide(index)}
-              />
+                  <span className="read-more-btn">{t('projects.readMore')}</span>
+                </div>
+              </div>
             ))}
           </div>
         </div>
 
-        <h3>{t(`projects.${selectedProject.key}.title`)}</h3>
+        {/* MODAL */}
+        {selectedProject && (
+          <div className="project-modal-overlay" onClick={closeModal}>
+            <div className="project-modal glass" onClick={(e) => e.stopPropagation()}>
+              <button className="modal-close" onClick={closeModal}>×</button>
 
-        <p className="project-full-desc">{t(`projects.${selectedProject.key}.descFull`)}</p>
+              <div
+                className="modal-slider"
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+              >
+                <button className="slider-btn left" onClick={prevSlide}>‹</button>
 
-        <div className="project-icons-full">
-          <span className="icon-cost">{t(`projects.${selectedProject.key}.projectCost`)} 💲 {selectedProject.cost}</span>
-          <span className="icon-year">{t(`projects.${selectedProject.key}.projectYear`)} 📅 {selectedProject.year}</span>
-        </div>
+                <img
+                  src={selectedProject.images[currentSlide]}
+                  alt={t(`projects.${selectedProject.key}.title`)}
+                  className={`modal-image ${isZoomed ? 'zoomed' : ''}`}
+                  onClick={() => setIsZoomed(!isZoomed)}
+                />
+
+                <button className="slider-btn right" onClick={nextSlide}>›</button>
+
+                <div className="slider-dots">
+                  {selectedProject.images.map((_, index) => (
+                    <span
+                      key={index}
+                      className={`dot ${index === currentSlide ? 'active' : ''}`}
+                      onClick={() => setCurrentSlide(index)}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              <h3>{t(`projects.${selectedProject.key}.title`)}</h3>
+
+              <p className="project-full-desc">{t(`projects.${selectedProject.key}.descFull`)}</p>
+
+              <div className="project-icons-full">
+                <span className="icon-cost">{t(`projects.${selectedProject.key}.projectCost`)} 💲 {selectedProject.cost}</span>
+                <span className="icon-year">{t(`projects.${selectedProject.key}.projectYear`)} 📅 {selectedProject.year}</span>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
-    </div>
-  )}
-</div>
 
       {/* STATISTICS */}
       <div className="about-stats" ref={statsRef}>

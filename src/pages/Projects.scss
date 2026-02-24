@@ -192,31 +192,39 @@ $breakpoints: (
   }
 }
 // =============================================
-// PREMIUM GLASS MODAL
+// PREMIUM GLASS MODAL (FIXED & PRO VERSION)
 // =============================================
 
 .project-modal-overlay {
   position: fixed;
   inset: 0;
   backdrop-filter: blur(8px);
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.55);
+
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: flex-start; // 🔥 center emas
+  overflow-y: auto;        // 🔥 scroll
+  padding: 
+    calc(60px + env(safe-area-inset-top))
+    20px
+    calc(60px + env(safe-area-inset-bottom));
+
   z-index: 9999;
   animation: fadeIn 0.3s ease;
 }
 
 .project-modal.glass {
-  position: relative;   // 🔥 MUHIM
-  overflow: visible;    // 🔥 MUHIM
-
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.25);
-  box-shadow: 0 25px 80px rgba(0,0,0,0.3);
-  width: 90%;
+  position: relative;
+  width: 100%;
   max-width: 850px;
+
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+
   border-radius: 24px;
   padding: 2.5rem;
   color: white;
@@ -243,11 +251,14 @@ $breakpoints: (
 }
 
 .modal-image.zoomed {
-  transform: scale(1.4);
+  transform: scale(1.3);
   cursor: zoom-out;
 }
 
+// =============================================
 // NAV BUTTONS
+// =============================================
+
 .slider-btn {
   position: absolute;
   top: 50%;
@@ -257,7 +268,7 @@ $breakpoints: (
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255, 255, 255, 0.85);
   color: #1e293b;
   font-size: 28px;
   z-index: 5;
@@ -272,7 +283,10 @@ $breakpoints: (
 .slider-btn.left { left: 15px; }
 .slider-btn.right { right: 15px; }
 
+// =============================================
 // DOTS
+// =============================================
+
 .slider-dots {
   display: flex;
   justify-content: center;
@@ -284,18 +298,21 @@ $breakpoints: (
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.4);
+  background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
   transition: 0.3s ease;
 
   &.active {
     background: #ffb703;
     transform: scale(1.3);
-    box-shadow: 0 0 0 4px rgba(255,183,3,0.3);
+    box-shadow: 0 0 0 4px rgba(255, 183, 3, 0.3);
   }
 }
 
+// =============================================
 // CLOSE BUTTON
+// =============================================
+
 .modal-close {
   position: absolute;
   top: -18px;
@@ -309,56 +326,35 @@ $breakpoints: (
   cursor: pointer;
   transition: 0.3s;
   z-index: 20;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
 .modal-close:hover {
   transform: rotate(90deg) scale(1.1);
   background: #ffca28;
 }
-// Animations
-@keyframes fadeIn {
-  from { opacity: 0 }
-  to { opacity: 1 }
-}
 
-@keyframes scaleIn {
-  from { transform: scale(0.8); opacity: 0 }
-  to { transform: scale(1); opacity: 1 }
-}
-
-// Responsive
-@include mq-max(md) {
-  .modal-image {
-    height: 450px;
-  }
-
-  .slider-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-  }
-
-  .project-modal.glass {
-    padding: 1.8rem;
-  }
-}
-
-@include mq-max(sm) {
-  .modal-image {
-    height: 200px;
-  }
-}
+// =============================================
+// TEXT BLOCKS
+// =============================================
 
 .project-desc-short {
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3; // 3 qatorda qisqargan ko‘rinish uchun
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   margin-bottom: 0.8rem;
   text-align: left;
   color: #6b7280;
+}
+
+.project-full-desc {
+  margin: 1rem 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
 }
 
 .project-icons-short {
@@ -379,14 +375,6 @@ $breakpoints: (
   }
 }
 
-.project-full-desc {
-  margin: 1rem 0;
-  color: #fff;
-  font-size: 16px;
-  line-height: 1.5;
-  text-align: justify;
-}
-
 .project-icons-full {
   display: flex;
   justify-content: center;
@@ -404,13 +392,11 @@ $breakpoints: (
     gap: 8px;
   }
 
-  // Tablet
   @include mq-max(md) {
     gap: 20px;
     font-size: 16px;
   }
 
-  // Mobile
   @include mq-max(sm) {
     flex-direction: column;
     align-items: center;
@@ -424,17 +410,42 @@ $breakpoints: (
   }
 }
 
-.project-modal.glass {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
-  width: 90%;
-  max-width: 850px;
-  border-radius: 24px;
-  padding: 2.5rem;
-  color: white;
-  text-align: center;
-  animation: scaleIn 0.35s ease;
-  position: relative;
+// =============================================
+// RESPONSIVE
+// =============================================
+
+@include mq-max(md) {
+  .modal-image {
+    height: 450px;
+  }
+
+  .slider-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+
+  .project-modal.glass {
+    padding: 1.8rem;
+  }
+}
+
+@include mq-max(sm) {
+  .modal-image {
+    height: 220px;
+  }
+}
+
+// =============================================
+// ANIMATIONS
+// =============================================
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0 }
+  to { transform: scale(1); opacity: 1 }
 }
