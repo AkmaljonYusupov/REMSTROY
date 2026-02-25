@@ -95,7 +95,6 @@ $breakpoints: (
     gap: 1.8rem;
   }
 }
-
 .project-card {
   background: white;
   border-radius: 16px;
@@ -103,6 +102,13 @@ $breakpoints: (
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   transition: all 0.35s ease;
   position: relative;
+
+  /* ====================== */
+  /* NEW: make content column flex to push button down */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* top content stays top */
+  /* ====================== */
 
   &:hover {
     transform: translateY(-12px);
@@ -134,6 +140,13 @@ $breakpoints: (
 .project-content {
   padding: 2rem 1.8rem 2.5rem;
   text-align: center;
+
+  /* ====================== */
+  /* NEW: push read-more-btn to bottom */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* fills space so button goes to bottom */
+  /* ====================== */
 }
 
 .project-title {
@@ -151,20 +164,21 @@ $breakpoints: (
   margin-bottom: 1.5rem;
  
 }
-
 .read-more-btn {
-  display: inline-block;
+  display: inline-block;       // tugma kattalashmasligi uchun
   background: #ffb703;
   color: #1e293b;
-  padding: 0.8rem 2rem;
-  font-size: 1rem;
+  padding: 0.8rem 1.8rem;      // kichikroq padding
+  font-size: 0.95rem;          // biroz kichikroq font
   font-weight: 600;
   border-radius: 50px;
   text-decoration: none;
   transition: all 0.35s ease;
   box-shadow: 0 4px 12px rgba(255,183,3,0.2);
-}
 
+  margin-top: auto;             // tugmani pastga surish
+  align-self: center;           // tugmani horizontal markazga olish
+}
 // Responsive tweaks
 @include mq-max(lg) {
   .projects-grid {
