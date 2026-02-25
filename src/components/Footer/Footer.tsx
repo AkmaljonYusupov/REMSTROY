@@ -153,6 +153,19 @@ function Footer() {
 						</div>
 						<p>Copyright © {currentYear} RSC Construction. {t('footer.rights')}</p>
 					</div>
+					{/* ===== Author info (modern & universal) ===== */}
+					<div className='footer__author'>
+						<p>
+							{t('developedBy.dev')}
+							<a
+								href='https://t.me/AkmaljonYusupov'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Akmaljon Yusufov
+							</a>
+						</p>
+					</div>
 				</div>
 			</div>
 		</footer>
