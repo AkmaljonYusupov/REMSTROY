@@ -200,6 +200,24 @@
 			"clientName": "JSC “O‘z qishloq elektr qurilish”",
 			"projectCost": "Project Cost:",
 			"projectYear": "Project Year:"
+		},
+		"project5": {
+			"title": "Construction of Ustyurt Gas Chemical Complex at Surgil Field",
+			"descShort": "Project for the construction of the Ustyurt Gas Chemical Complex at the Surgil field...",
+			"descFull": "This project was implemented on behalf of UzKorGas Chemical for the construction and installation of the Ustyurt Gas Chemical Complex at the Surgil field. All necessary infrastructure and installation works were completed within the scope of construction. The project aims to increase the production capacity of the gas industry and ensure the full operational launch of the complex.",
+			"client": "Client:",
+			"clientName": "UzKorGas Chemical",
+			"projectCost": "Project cost:",
+			"projectYear": "Project year:"
+		},
+		"project6": {
+			"title": "Construction of Ustyurt Gas Chemical Complex at Surgil Field",
+			"descShort": "Project for the construction of Ustyurt Gas Chemical Complex at Surgil Field...",
+			"descFull": "This project was implemented on behalf of UzKorGas Chemical for the construction and installation of the Ustyurt Gas Chemical Complex at the Surgil field. All necessary infrastructure and installation works were completed within the construction scope. The project aims to increase the production capacity of the gas industry and bring the complex into full operation.",
+			"client": "Client:",
+			"clientName": "UzKorGas Chemical",
+			"projectCost": "Project cost:",
+			"projectYear": "Project year:"
 		}
 	},
 	"reviews": {

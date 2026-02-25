@@ -9,11 +9,17 @@ import projectImg06 from '../assets/images/projectImg06.png'
 import projectImg07 from '../assets/images/projectImg07.png'
 import projectImg08 from '../assets/images/projectImg08.png'
 import projectImg09 from '../assets/images/projectImg09.png'
+import projectImg012 from '../assets/images/split_image_006.png'
+import projectImg013 from '../assets/images/split_image_007.png'
+import projectImg010 from '../assets/images/split_image_06.png'
+import projectImg011 from '../assets/images/split_image_07.png'
+
 import projectImg1 from '../assets/images/split_image_1.png'
 import projectImg2 from '../assets/images/split_image_2.png'
 import projectImg3 from '../assets/images/split_image_3.png'
 import projectImg4 from '../assets/images/split_image_4.png'
-
+import projectImg5 from '../assets/images/split_image_5.png'
+import projectImg6 from '../assets/images/split_image_6.png'
 import './Projects.scss'
 
 function Projects() {
@@ -100,15 +106,15 @@ function Projects() {
     {
       id: 5,
       key: 'project5',
-      images: [projectImg2, projectImg1, projectImg3],
-      cost: "$1.5 mln",
+      images: [projectImg010, projectImg5, projectImg011],
+      cost: "$12 mln",
       year: "2020"
     },
     {
       id: 6,
       key: 'project6',
-      images: [projectImg3, projectImg2, projectImg1],
-      cost: "$1.9 mln",
+      images: [projectImg012, projectImg6, projectImg013],
+      cost: "$8 mln",
       year: "2019"
     },
   ]
