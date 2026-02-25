@@ -166,30 +166,40 @@
 		"ourLatestProjects": "Bizning so'nggi loyihalarimiz",
 		"readMore": "Batafsil",
 		"project1": {
-			"title": "Navbahor TPSdan 220kV Ikki Zanjirli Elektr Uzatish Liniyasi Qurilishi (2024)",
-			"descShort": "Navbahor TPSdan 220kV ikki zanjirli elektr uzatish liniyasi qurilishi loyihasi...",
-			"descFull": "Ushbu loyiha Navbahor TPSdan 220kV kuchlanishli ikki zanjirli elektr uzatish liniyasini qurish bo‘yicha amalga oshirilgan bo‘lib, hududning elektr ta’minoti barqarorligini oshirishga qaratilgan. Qurilish doirasida zamonaviy tayanch konstruksiyalarini o‘rnatish, yuqori kuchlanishli elektr uzatish simlarini tortish, himoya va xavfsizlik tizimlarini joriy etish hamda barcha zarur montaj ishlari bajarildi. Loyiha 2024 yilda muvaffaqiyatli yakunlanib, energetika infratuzilmasini mustahkamlash va elektr tarmoqlarining o‘tkazuvchanlik quvvatini oshirishga xizmat qiladi.",
+			"title": "Navbahor TPSdan Parvoz TPSgacha 220kV Ikki Zanjirli Elektr Uzatish Liniyasi Qurilishi (2024)",
+			"descShort": "Navbahor TPSdan Parvoz TPSgacha 220kV ikki zanjirli elektr uzatish liniyasi qurish va montaj ishlari loyihasi...",
+			"descFull": "Mazkur loyiha JSC “O‘z qishloq elektr qurilish” buyurtmasi asosida Navbahor TPS 220/27,5/10kV dan Parvoz TPS 220/27,5/10kV gacha 220kV ikki zanjirli elektr uzatish liniyasini qurish va montaj qilishni o‘z ichiga oladi. Loyiha hududning elektr ta’minotini barqaror qilishga qaratilgan va barcha zarur qurilish-montaj ishlari bajarildi. Loyiha 2024 yilda yakunlandi.",
+			"client": "Buyurtmachi:",
+			"clientName": "JSC “O‘z qishloq elektr qurilish”",
 			"projectCost": "Loyiha qiymati:",
 			"projectYear": "Loyiha yili:"
 		},
 		"project2": {
-			"title": "Sarimay PSdan 220kV Ikki Zanjirli Elektr Uzatish Liniyasi Qurilishi (2024)",
-			"descShort": "Sarimay PSdan 220kV ikki zanjirli elektr uzatish liniyasi qurilishi loyihasi...",
-			"descFull": "Sarimay PSdan 220kV kuchlanishli ikki zanjirli elektr uzatish liniyasini qurish loyihasi doirasida zamonaviy tayanch konstruksiyalari o‘rnatildi, yuqori kuchlanishli elektr uzatish simlari tortildi hamda barcha zarur montaj ishlari amalga oshirildi. Loyiha 2024 yilda muvaffaqiyatli yakunlanib, elektr tarmoqlarining o‘tkazuvchanlik quvvatini oshirish, energiya ta’minoti ishonchliligini kuchaytirish va hudud energetika infratuzilmasini yanada mustahkamlashga xizmat qiladi.",
+			"title": "Sarymay PSdan Jayhun TPSgacha 220kV Ikki Zanjirli Elektr Uzatish Liniyasi Qurilishi (2024)",
+			"descShort": "Sarymay PSdan Jayhun TPSgacha 220kV ikki zanjirli elektr uzatish liniyasi qurish va montaj ishlari loyihasi...",
+			"descFull": "Mazkur loyiha JSC “O‘z qishloq elektr qurilish” buyurtmasi asosida Sarymay PS 220kV dan Jayhun TPS 220/27,5/10kV gacha 220kV ikki zanjirli elektr uzatish liniyasini qurish va montaj qilishni o‘z ichiga oladi. Loyiha hududning elektr ta’minotini barqaror qilishga qaratilgan va barcha zarur qurilish-montaj ishlari bajarildi. Loyiha 2024 yilda yakunlandi.",
+			"client": "Buyurtmachi:",
+			"clientName": "JSC “O‘z qishloq elektr qurilish”",
 			"projectCost": "Loyiha qiymati:",
 			"projectYear": "Loyiha yili:"
 		},
 		"project3": {
-			"title": "220 kV juft liniya: Navbahor TPS  220/27.5/10 kV TPS (2024)",
-			 "descShort": "Navbahor TPS dan 220/27,5/10 kV TPS ga 220 kV juft liniya qurilishi va o‘rnatish ishlari…",
-  "descFull": "Loyiha 2024 yilda Navbahor TPS dan 220/27,5/10 kV TPS ga 220 kV juft uzatish liniyasini qurishni o‘z ichiga oladi. Ishlar zamonaviy tayanch konstruktsiyalarini o‘rnatish, yuqori kuchlanishli liniyalarni tortish va barcha zarur qurilish-o‘rnatish ishlarini o‘z ichiga oladi. Loyiha mintaqadagi energiya infratuzilmasini mustahkamlash va elektr ta’minoti ishonchliligini oshirishni maqsad qiladi.",
-  "projectCost": "Loyiha qiymati:",
-  "projectYear": "Loyiha yili:"
+			"title": "Turakurgan Chodak 500kV Elektr Uzatish Liniyasi Qurilishi (2014)",
+			"descShort": "Turakurgan Chodak 500kV kuchlanishli elektr uzatish liniyasini qurish loyihasi...",
+			"descFull": "Mazkur loyiha JSC “UZBEKENERGO” buyurtmasi asosida Turakurgan Chodak 500kV kuchlanishli elektr uzatish liniyasini qurish va montaj qilishni o‘z ichiga oladi. Loyiha hududning elektr ta’minotini barqaror qilishga qaratilgan va barcha zarur qurilish-montaj ishlari bajarildi. Loyiha 2014 yilda yakunlandi.",
+			"client": "Buyurtmachi:",
+			"clientName": "JSC “UZBEKENERGO”",
+			"projectCost": "Loyiha qiymati:",
+			"projectYear": "Loyiha yili:"
 		},
 		"project4": {
-			"title": "Ratione voluptatem sequi",
-			"descShort": "Quaerahenderit rui in ea voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-			"descFull": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			"title": "Navbahor TPSdan Parvoz TPSgacha 220kV Ikki Zanjirli Elektr Uzatish Liniyasi Qurilishi (2024)",
+			"descShort": "Navbahor TPSdan Parvoz TPSgacha 220kV kuchlanishli ikki zanjirli elektr uzatish liniyasi qurilishi loyihasi...",
+			"descFull": "Mazkur loyiha JSC “O‘z qishloq elektr qurilish” buyurtmasi asosida Navbahor TPS 220/27,5/10kV dan Parvoz TPS 220/27,5/10kV gacha 220kV kuchlanishli ikki zanjirli elektr uzatish liniyasini qurish va montaj qilish bo‘yicha amalga oshirildi. Qurilish doirasida zamonaviy tayanch konstruksiyalar o‘rnatildi, yuqori kuchlanishli simlar tortildi va barcha zarur montaj ishlari bajarildi. Loyiha hududning elektr ta’minoti barqarorligini oshirish va energiya uzatish quvvatini kengaytirishga qaratilgan bo‘lib, 2024 yilda muvaffaqiyatli yakunlandi.",
+			"client": "Buyurtmachi:",
+			"clientName": "JSC “O‘z qishloq elektr qurilish”",
+			"projectCost": "Loyiha qiymati:",
+			"projectYear": "Loyiha yili:"
 		},
 		"project5": {
 			"title": "Aute irure dolor in rearen",

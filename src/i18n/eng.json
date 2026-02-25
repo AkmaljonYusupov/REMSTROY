@@ -166,25 +166,40 @@
 		"ourLatestProjects": "Our Latest Projects",
 		"readMore": "Read More",
 		"project1": {
-    "title": "Construction of 220kV Double-Circuit Transmission Line from Navbahor TPS (2024)",
-    "descShort": "Project for the construction of a 220kV double-circuit transmission line from Navbahor TPS...",
-    "descFull": "This project involved the construction of a 220kV double-circuit transmission line from Navbahor TPS, aimed at improving the stability of the region's electricity supply. The construction included the installation of modern support structures, stringing of high-voltage transmission lines, implementation of protection and safety systems, and all necessary installation works. The project was successfully completed in 2024, contributing to the strengthening of the energy infrastructure and increasing the transmission capacity of the power grids.",
-    "projectCost": "Project Cost:",
-    "projectYear": "Project Year:"
-},
+			"title": "Construction of 220kV Double-Circuit Power Line from Navbahor TPS to Parvoz TPS (2024)",
+			"descShort": "Project for construction and installation of a 220kV double-circuit power line from Navbahor TPS to Parvoz TPS...",
+			"descFull": "This project, commissioned by JSC “O‘z qishloq elektr qurilish”, involves the construction and installation of a 220kV double-circuit power line from Navbahor TPS 220/27.5/10kV to Parvoz TPS 220/27.5/10kV. The project aims to ensure stable electricity supply in the region, and all necessary construction and installation works were completed. The project was successfully completed in 2024.",
+			"client": "Client:",
+			"clientName": "JSC “O‘z qishloq elektr qurilish”",
+			"projectCost": "Project Cost:",
+			"projectYear": "Project Year:"
+		},
 		"project2": {
-    "title": "Construction of 220kV Double-Circuit Transmission Line from Sarimay PS (2024)",
-    "descShort": "Project for the construction of a 220kV double-circuit transmission line from Sarimay PS...",
-    "descFull": "As part of the project for the construction of a 220kV double-circuit transmission line from Sarimay PS, modern support structures were installed, high-voltage transmission lines were strung, and all necessary installation works were completed. The project was successfully completed in 2024, contributing to increasing the transmission capacity of power grids, strengthening the reliability of electricity supply, and further developing the region's energy infrastructure.",
-    "projectCost": "Project Cost:",
-    "projectYear": "Project Year:"
-},
+			"title": "Construction of 220kV Double-Circuit Power Line from Sarymay PS to Jayhun TPS (2024)",
+			"descShort": "Project for construction and installation of a 220kV double-circuit power line from Sarymay PS to Jayhun TPS...",
+			"descFull": "This project, commissioned by JSC “O‘z qishloq elektr qurilish”, involves the construction and installation of a 220kV double-circuit power line from Sarymay PS 220kV to Jayhun TPS 220/27.5/10kV. The project aims to ensure stable electricity supply in the region, and all necessary construction and installation works were completed. The project was successfully completed in 2024.",
+			"client": "Client:",
+			"clientName": "JSC “O‘z qishloq elektr qurilish”",
+			"projectCost": "Project Cost:",
+			"projectYear": "Project Year:"
+		},
 		"project3": {
-			 "title": "220kV Double-Circuit Line: Navbahor TPS  220/27.5/10kV TPS (2024)",
-    "descShort": "Construction and installation of 220kV double-circuit line from Navbahor TPS to 220/27.5/10kV TPS…",
-  "descFull": "The project involves the construction of a 220kV double-circuit transmission line from Navbahor TPS to 220/27.5/10kV TPS in 2024. The works included the installation of modern support structures, stringing of high-voltage transmission lines, and all necessary construction and installation works. The project aims to strengthen the energy infrastructure and improve the reliability of electricity supply in the region.",
-  "projectCost": "Project Cost:",
-  "projectYear": "Project Year:"
+			"title": "Construction of 500kV Power Transmission Line Turakurgan Chodak (2014)",
+			"descShort": "Project for construction of a 500kV power transmission line Turakurgan Chodak...",
+			"descFull": "This project, commissioned by JSC “UZBEKENERGO”, involves the construction and installation of a 500kV power transmission line in Turakurgan Chodak. The project aims to ensure stable electricity supply in the region, and all necessary construction and installation works were completed. The project was successfully completed in 2014.",
+			"client": "Client:",
+			"clientName": "JSC “UZBEKENERGO”",
+			"projectCost": "Project Cost:",
+			"projectYear": "Project Year:"
+		},
+		"project4": {
+			"title": "Construction of 220kV Double-Circuit Power Transmission Line from Navbahor to Parvoz TPS (2024)",
+			"descShort": "Project for construction of a 220kV double-circuit power transmission line from Navbahor to Parvoz TPS...",
+			"descFull": "This project, commissioned by JSC “O‘z qishloq elektr qurilish”, involves the construction and installation of a 220kV double-circuit power transmission line from 220/27.5/10 kV Navbahor TPS to 220/27.5/10 kV Parvoz TPS. Modern support structures were installed, high-voltage transmission lines were laid, and all necessary construction and installation works were completed. The project aims to increase the stability of electricity supply and the transmission capacity and was successfully completed in 2024.",
+			"client": "Client:",
+			"clientName": "JSC “O‘z qishloq elektr qurilish”",
+			"projectCost": "Project Cost:",
+			"projectYear": "Project Year:"
 		}
 	},
 	"reviews": {

@@ -5,9 +5,14 @@ import projectImg02 from '../assets/images/projectImg02.png'
 import projectImg03 from '../assets/images/projectImg03.png'
 import projectImg04 from '../assets/images/projectImg04.png'
 import projectImg05 from '../assets/images/projectImg05.png'
+import projectImg06 from '../assets/images/projectImg06.png'
+import projectImg07 from '../assets/images/projectImg07.png'
+import projectImg08 from '../assets/images/projectImg08.png'
+import projectImg09 from '../assets/images/projectImg09.png'
 import projectImg1 from '../assets/images/split_image_1.png'
 import projectImg2 from '../assets/images/split_image_2.png'
 import projectImg3 from '../assets/images/split_image_3.png'
+import projectImg4 from '../assets/images/split_image_4.png'
 
 import './Projects.scss'
 
@@ -75,22 +80,22 @@ function Projects() {
       id: 2,
       key: 'project2',
       images: [projectImg2, projectImg04, projectImg05],
-      cost: "$2.3 mln",
-      year: "2023"
+      cost: "$1.725 mln",
+      year: "2024"
     },
     {
       id: 3,
       key: 'project3',
-      images: [projectImg3, projectImg1, projectImg2],
-      cost: "$1.8 mln",
-      year: "2022"
+      images: [projectImg3, projectImg06, projectImg07],
+      cost: "$700.000",
+      year: "2014"
     },
     {
       id: 4,
       key: 'project4',
-      images: [projectImg1, projectImg2, projectImg3],
-      cost: "$1.0 mln",
-      year: "2021"
+      images: [projectImg4, projectImg08, projectImg09],
+      cost: "$1.725 mln",
+      year: "2024"
     },
     {
       id: 5,
@@ -214,6 +219,7 @@ function Projects() {
                   <p className="project-desc-short">{t(`projects.${project.key}.descShort`)}</p>
 
                   <div className="project-icons-short">
+                    <span className="icon-client">{t(`projects.${project.key}.client`)} {t(`projects.${project.key}.clientName`)}</span>
                     <span className="icon-cost">{t(`projects.${project.key}.projectCost`)} 💲 {project.cost}</span>
                     <span className="icon-year">{t(`projects.${project.key}.projectYear`)} 📅 {project.year}</span>
                   </div>
@@ -263,6 +269,7 @@ function Projects() {
               <p className="project-full-desc">{t(`projects.${selectedProject.key}.descFull`)}</p>
 
               <div className="project-icons-full">
+                <span className="icon-client">{t(`projects.${selectedProject.key}.client`)} {t(`projects.${selectedProject.key}.clientName`)}</span>
                 <span className="icon-cost">{t(`projects.${selectedProject.key}.projectCost`)} 💲 {selectedProject.cost}</span>
                 <span className="icon-year">{t(`projects.${selectedProject.key}.projectYear`)} 📅 {selectedProject.year}</span>
               </div>

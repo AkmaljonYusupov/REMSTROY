@@ -356,57 +356,111 @@ $breakpoints: (
   line-height: 1.5;
   text-align: justify;
 }
+// =============================================
+// SHORT INFO (CARD)
+// =============================================
 
 .project-icons-short {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  font-size: 16px;
-  color: #1e3a5f;
-  font-weight: 700;
+  gap: 12px;
+  font-size: 15px;
   margin-bottom: 1rem;
   text-align: left;
 
-  .icon-cost,
-  .icon-year {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-}
-
-.project-icons-full {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  font-size: 18px;
-  color: #ffd54f;
-  font-weight: 600;
-  margin-top: 10px;
-  flex-wrap: wrap;
-
+  .icon-client,
   .icon-cost,
   .icon-year {
     display: flex;
     align-items: center;
     gap: 8px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: rgba(30, 58, 95, 0.06);
+    font-weight: 600;
+    transition: 0.25s ease;
+  }
+
+  // 🔥 Client alohida ajralib turadi
+  .icon-client {
+    background: linear-gradient(135deg, #1e3a5f, #274c77);
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 6px 15px rgba(30, 58, 95, 0.25);
+  }
+
+  .icon-cost {
+    color: #0f766e;
+  }
+
+  .icon-year {
+    color: #334155;
+  }
+
+  .icon-client:hover,
+  .icon-cost:hover,
+  .icon-year:hover {
+    transform: translateX(4px);
+  }
+}
+
+// =============================================
+// FULL MODAL INFO
+// =============================================
+
+.project-icons-full {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  font-size: 17px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+
+  .icon-client,
+  .icon-cost,
+  .icon-year {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    font-weight: 600;
+    transition: 0.3s ease;
+  }
+
+  // 🔥 Client highlight (premium badge)
+  .icon-client {
+    background: linear-gradient(135deg, #ffb703, #ffca28);
+    color: #1e293b;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(255, 183, 3, 0.35);
+  }
+
+  .icon-cost {
+    color: #ffd54f;
+  }
+
+  .icon-year {
+    color: #e2e8f0;
+  }
+
+  .icon-client:hover,
+  .icon-cost:hover,
+  .icon-year:hover {
+    transform: translateY(-4px);
   }
 
   @include mq-max(md) {
-    gap: 20px;
-    font-size: 16px;
+    gap: 16px;
+    font-size: 15px;
   }
 
   @include mq-max(sm) {
     flex-direction: column;
     align-items: center;
-    gap: 12px;
-    font-size: 15px;
-
-    .icon-cost,
-    .icon-year {
-      gap: 6px;
-    }
+    gap: 10px;
   }
 }
 
