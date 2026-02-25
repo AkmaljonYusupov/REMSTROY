@@ -361,59 +361,60 @@ $breakpoints: (
 	&.success { color: #28a745; }
 	&.error { color: #dc3545; }
 }
-// {/* ===== Author info (modern & universal) ===== */}
 
-.footer__author {
-  text-align: center;
-  margin-top: 1.5rem;
-  font-size: 0.85rem;
-  color: #94a3b8; // subtle gray
-  font-family: 'Inter', sans-serif;
-  transition: color 0.3s ease;
+// // {/* ===== Author info (modern & universal) ===== */}
 
-  p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.4rem; // small spacing between text and link
-    flex-wrap: wrap;
-  }
+// .footer__author {
+//   text-align: center;
+//   margin-top: 1.5rem;
+//   font-size: 0.85rem;
+//   color: #94a3b8; // subtle gray
+//   font-family: 'Inter', sans-serif;
+//   transition: color 0.3s ease;
 
-  a {
-    color: #ffb703; // accent color
-    font-weight: 600;
-    text-decoration: none;
-    position: relative;
-    transition: all 0.3s ease;
+//   p {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 0.4rem; // small spacing between text and link
+//     flex-wrap: wrap;
+//   }
 
-    &:hover {
-      color: #ffca28;
-      &::after {
-        width: 100%;
-      }
-    }
+//   a {
+//     color: #ffb703; // accent color
+//     font-weight: 600;
+//     text-decoration: none;
+//     position: relative;
+//     transition: all 0.3s ease;
 
-    &::after {
-      content: '';
-      display: block;
-      height: 2px;
-      width: 0;
-      background: #ffb703;
-      transition: width 0.3s ease;
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      border-radius: 1px;
-    }
-  }
+//     &:hover {
+//       color: #ffca28;
+//       &::after {
+//         width: 100%;
+//       }
+//     }
 
-  @include mq-max(md) {
-    font-size: 0.8rem;
-    margin-top: 1rem;
-  }
+//     &::after {
+//       content: '';
+//       display: block;
+//       height: 2px;
+//       width: 0;
+//       background: #ffb703;
+//       transition: width 0.3s ease;
+//       position: absolute;
+//       bottom: -2px;
+//       left: 0;
+//       border-radius: 1px;
+//     }
+//   }
 
-  @include mq-max(sm) {
-    font-size: 0.75rem;
-    margin-top: 0.8rem;
-  }
-}
+//   @include mq-max(md) {
+//     font-size: 0.8rem;
+//     margin-top: 1rem;
+//   }
+
+//   @include mq-max(sm) {
+//     font-size: 0.75rem;
+//     margin-top: 0.8rem;
+//   }
+// }
