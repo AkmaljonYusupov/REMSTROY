@@ -421,39 +421,39 @@ const Home = () => {
 			</section>
 
 			{/* ================= REVIEWS ================= */}
-			<section className='reviews'>
+			{/* <section className='reviews'>
 				<div className='container'>
 					<h2 className='reviews__title'>{t('reviews.title')}</h2>
 					<p className='reviews__subtitle'>{t('reviews.subtitle')}</p>
 
-					<div className='reviews__grid'>
+					<div className='reviews__grid'> */}
 						{/* Review 1 */}
-						<div className='review'>
+						{/* <div className='review'>
 							<div className='review__stars'>★★★★★</div>
 							<p className='review__text'>{t('reviews.items.1.text')}</p>
 							<h4 className='review__author'>{t('reviews.items.1.author')}</h4>
 						</div>
 
-						<div className='review__divider' />
+						<div className='review__divider' /> */}
 
 						{/* Review 2 */}
-						<div className='review'>
+						{/* <div className='review'>
 							<div className='review__stars'>★★★★★</div>
 							<p className='review__text'>{t('reviews.items.2.text')}</p>
 							<h4 className='review__author'>{t('reviews.items.2.author')}</h4>
 						</div>
 
-						<div className='review__divider' />
+						<div className='review__divider' /> */}
 
 						{/* Review 3 */}
-						<div className='review'>
+						{/* <div className='review'>
 							<div className='review__stars'>★★★★★</div>
 							<p className='review__text'>{t('reviews.items.3.text')}</p>
 							<h4 className='review__author'>{t('reviews.items.3.author')}</h4>
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 
 			{/* ================= NEWS ================= */}
 			<section className='news'>

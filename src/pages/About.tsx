@@ -1,15 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { FaFacebookF, FaInstagram } from "react-icons/fa"
 
 
 import aboutpageImg from '../../src/assets/images/aboutpage-image.jpg'
 import aboutCartimg1 from '../assets/icons/card1-icon.png'
 import aboutCartimg2 from '../assets/icons/card2-icon.png'
 import aboutCartimg3 from '../assets/icons/card3-icon.png'
-import teamImg1 from '../assets/images/team-image1.jpg'
-import teamImg2 from '../assets/images/team-image2.jpg'
-import teamImg3 from '../assets/images/team-image3.jpg'
 
 import './About.scss'
 
@@ -224,21 +220,21 @@ function About() {
 			</div>
 
 			{/* TEAM SECTION */}
-			<div className='about-team'>
-				<div className='container'>
-					<div className='team-header'>
+			{/* <div className='about-team'> */}
+				{/* <div className='container'> */}
+					{/* <div className='team-header'>
 						<span className='team-small'>
 							{t('about.team.small')}
 						</span>
 						<h2 className='team-title'>
 							{t('about.team.title')}
 						</h2>
-					</div>
+					</div> */}
 
-					<div className='team-grid'>
+					{/* <div className='team-grid'> */}
 
 						{/* MEMBER 1 */}
-						<div className='team-card'>
+						{/* <div className='team-card'>
 							<div className='team-image'>
 								<img src={teamImg1} alt={t('about.team.member1.name')} />
 							</div>
@@ -253,10 +249,10 @@ function About() {
 
 								</div>
 							</div>
-						</div>
+						</div> */}
 
 						{/* MEMBER 2 */}
-						<div className='team-card'>
+						{/* <div className='team-card'>
 							<div className='team-image'>
 								<img src={teamImg2} alt={t('about.team.member2.name')} />
 							</div>
@@ -270,10 +266,10 @@ function About() {
 									<a href="#"><FaInstagram /></a>
 								</div>
 							</div>
-						</div>
+						</div> */}
 
 						{/* MEMBER 3 */}
-						<div className='team-card'>
+						{/* <div className='team-card'>
 							<div className='team-image'>
 								<img src={teamImg3} alt={t('about.team.member3.name')} />
 							</div>
@@ -288,11 +284,11 @@ function About() {
 
 								</div>
 							</div>
-						</div>
+						</div> */}
 
-					</div>
+					{/* </div>
 				</div>
-			</div>
+			</div> */}
 
 			{/* CTA SECTION */}
 			<div className='cta-section'>
