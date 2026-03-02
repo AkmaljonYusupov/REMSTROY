@@ -126,8 +126,9 @@ function Footer() {
 					<div className='footer__info'>
 						<div className='footer__item'>
 							<h4>{t('footer.contact')}</h4>
-							<a href='tel:+998939009959'>+998 93 900 99 59</a>
-							<a href='mailto:info@webera.uz'>info@webera.uz</a>
+							<a href='tel:+998997164613'>+998997164613</a>
+							<a href='tel:+998994574543'>+998994574543</a>
+							<a href='mailto:info@webera.uz'>krsc-uz@mail.ru</a>
 						</div>
 
 						<div className='footer__line' />

@@ -100,15 +100,16 @@
 		"sendMessage": "Send Us a Message",
 		"card1": {
 			"title": "Location",
-			"text": "Tashkent city, Yashnabad district, Parkent"
+			"text": "Office Tashkent City, Chilonzor District, Chilonzor Street 4"
 		},
 		"card2": {
 			"title": "Phone",
-			"text": "+998 93 900 99 59"
+			"text": "+998997164613",
+			"text2": "+998994574543"
 		},
 		"card3": {
 			"title": "Email",
-			"text": "info@webera.uz"
+			"text": "krsc-uz@mail.ru"
 		},
 		"form": {
 			"name": "Name",
@@ -250,7 +251,7 @@
 		"send": "Send",
 		"contact": "Contact",
 		"address": "Address",
-		"addressValue": "Tashkent city, Yashnobod district, Parkent",
+		"addressValue": "Office Tashkent City, Chilonzor District, Chilonzor Street 4",
 		"worktime": "Working hours",
 		"worktimeValue": "Every day from 09:00 to 20:00",
 		"rights": "All rights reserved",

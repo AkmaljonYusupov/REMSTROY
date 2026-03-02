@@ -158,7 +158,7 @@ ${formData.message || 'bo‘sh'}
 							/>
 							<h3>{t('contact.card1.title')}</h3>
 							<a
-								href="https://maps.app.goo.gl/YvHgNQ4uP8pkiefx5"
+								href="#"
 								className="contact-link"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -180,7 +180,7 @@ ${formData.message || 'bo‘sh'}
 							/>
 							<h3>{t('contact.card2.title')}</h3>
 							<a
-								href="tel:+998901234567"
+								href="tel:+998997164613"
 								className="contact-link"
 								style={{
 									textDecoration: 'none',
@@ -189,6 +189,19 @@ ${formData.message || 'bo‘sh'}
 								}}
 							>
 								{t('contact.card2.text')}
+							
+							</a>
+							<a
+								href="tel:+998994574543"
+								className="contact-link"
+								style={{
+									textDecoration: 'none',
+									fontWeight: '600',
+									fontSize: '18px',
+								}}
+							>
+								{t('contact.card2.text2')}
+							
 							</a>
 						</div>
 

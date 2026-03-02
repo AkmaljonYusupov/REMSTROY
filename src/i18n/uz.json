@@ -100,15 +100,16 @@
 		"sendMessage": "Xabar yuboring",
 		"card1": {
 			"title": "Manzil",
-			"text": "Toshkent shahri, Yashnobod tumani, Parkent"
+			"text": "Ofis Toshkent Shahar,chilonzor tumami,chilonzor köchasi 4 uy"
 		},
 		"card2": {
 			"title": "Telefon",
-			"text": "+998 93 900 99 59"
+			"text": "+998997164613",
+			"text2": "+998994574543"
 		},
 		"card3": {
 			"title": "Email",
-			"text": "info@webera.uz"
+			"text": "krsc-uz@mail.ru"
 		},
 		"form": {
 			"name": "Ism",
@@ -250,7 +251,7 @@
 		"send": "Yuborish",
 		"contact": "Aloqa",
 		"address": "Manzil",
-		"addressValue": "Toshkent shahar, Yashnobod tumani, Parkent",
+		"addressValue": "Ofis Toshkent Shahar, chilonzor tumami, chilonzor köchasi 4 uy",
 		"worktime": "Ish vaqti",
 		"worktimeValue": "Har kuni 09:00 dan 20:00 gacha",
 		"rights": "Barcha huquqlar himoyalangan",
