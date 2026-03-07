@@ -219,7 +219,34 @@
 			"clientName": "UzKorGas Chemical",
 			"projectCost": "Project cost:",
 			"projectYear": "Project year:"
-		}
+		},
+		"project7": {
+  "title": "Construction of a gas pipeline from Surgil GPP to UGCC",
+  "descShort": "Gas pipeline construction project from the Surgil Gas Processing Plant to UGCC...",
+  "descFull": "This project was implemented by order of UzKorGas Chemical. Within the framework of the project, a crude gas pipeline with a diameter of D1020 mm was constructed from the Surgil Gas Processing Plant (GPP “Surgil”) to the UGCC complex, as well as a condensate pipeline with a diameter of D168 mm. The construction works aim to ensure uninterrupted gas supply and support the development of industrial infrastructure.",
+  "client": "Client:",
+  "clientName": "UzKorGas Chemical",
+  "projectCost": "Project cost:",
+  "projectYear": "Project year:"
+},
+"project8": {
+  "title": "Construction of petroleum reservoirs",
+  "descShort": "Petroleum reservoir construction project at the Shurtan Gas Chemical Complex...",
+  "descFull": "This project was implemented by order of the Shurtan Gas Chemical Complex. Within the project, modern reservoirs for storing petroleum products were constructed. The construction works were carried out in accordance with industrial safety and quality standards, ensuring reliable storage of petroleum products and supporting the development of industrial infrastructure.",
+  "client": "Client:",
+  "clientName": "Shurtan Gas Chemical Complex",
+  "projectCost": "Project cost:", 
+  "projectYear": "Project year:"
+},
+"project9": {
+  "title": "Construction of IT Park and Hotels (pr-77)",
+  "descShort": "IT Park and hotel construction project in Bukhara City on pr-77 territory...",
+  "descFull": "This project was implemented by order of Bukhara City. Within the framework of the project, modern IT Park facilities and hotel complexes were constructed in the pr-77 area. The construction works were carried out according to modern architectural and infrastructure standards, contributing to the economic and tourism development of the region.",
+  "client": "Client:",
+  "clientName": "Bukhara City",
+  "projectCost": "Project cost:",
+  "projectYear": "Project year:"
+}
 	},
 	"reviews": {
 		"title": "Our clients' feedback",

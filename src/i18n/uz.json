@@ -219,7 +219,34 @@
 			"clientName": "UzKorGas Chemical",
 			"projectCost": "Loyiha qiymati:",
 			"projectYear": "Loyiha yili:"
-		}
+		},
+		"project7": {
+  "title": "Surgil GPP dan UGKhK gacha gaz quvuri qurilishi",
+  "descShort": "Surgil gazni qayta ishlash zavodidan UGKhK gacha gaz quvuri qurilishi loyihasi...",
+  "descFull": "Mazkur loyiha UzKorGas Chemical buyurtmasi asosida amalga oshirilgan. Loyiha doirasida Surgil gazni qayta ishlash zavodidan (GPP “Surgil”) UGKhK majmuasigacha diametri D1020 mm bo‘lgan xom gaz quvuri hamda diametri D168 mm bo‘lgan kondensat quvuri qurildi. Qurilish ishlari gazni uzluksiz yetkazib berish va sanoat infratuzilmasini rivojlantirishga xizmat qiladi.",
+  "client": "Buyurtmachi:",
+  "clientName": "UzKorGas Chemical",
+  "projectCost": "Loyiha qiymati:",
+  "projectYear": "Loyiha yili:"
+},
+"project8": {
+  "title": "Neft rezervuarlarini qurish",
+  "descShort": "Shurtan Gas Chemical Complex hududida neft rezervuarlarini qurish loyihasi...",
+  "descFull": "Mazkur loyiha Shurtan Gas Chemical Complex buyurtmasi asosida amalga oshirilgan. Loyiha doirasida neft mahsulotlarini saqlash uchun zamonaviy rezervuarlar qurildi. Qurilish ishlari sanoat xavfsizligi va yuqori sifat standartlariga muvofiq bajarilib, neft mahsulotlarini ishonchli saqlash hamda ishlab chiqarish infratuzilmasini rivojlantirishga xizmat qiladi.",
+  "client": "Buyurtmachi:",
+  "clientName": "Shurtan Gas Chemical Complex",
+  "projectCost": "Loyiha qiymati:",
+  "projectYear": "Loyiha yili:"
+},
+"project9": {
+  "title": "IT Park va mehmonxonalar qurilishi (pr-77)",
+  "descShort": "Buxoro shahrida pr-77 hududida IT Park va mehmonxonalar qurilishi loyihasi...",
+  "descFull": "Mazkur loyiha Bukhara City buyurtmasi asosida amalga oshirilgan. Loyiha doirasida pr-77 hududida zamonaviy IT Park va mehmonxona majmualari qurildi. Qurilish ishlari zamonaviy arxitektura va infratuzilma talablariga muvofiq bajarilib, hududning iqtisodiy va turistik rivojlanishiga xizmat qiladi.",
+  "client": "Buyurtmachi:",
+  "clientName": "Bukhara City",
+  "projectCost": "Loyiha qiymati:",
+  "projectYear": "Loyiha yili:"
+}
 	},
 	"reviews": {
 		"title": "Mijozlarimiz fikri",

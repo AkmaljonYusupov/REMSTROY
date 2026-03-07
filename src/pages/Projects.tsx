@@ -1,6 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
+import projectImg0100 from '../assets/images/projectImg010.png'
+import projectImg0110 from '../assets/images/projectImg0110.jpg'
+import projectImg0120 from '../assets/images/projectImg0120.jpg'
+import projectImg0130 from '../assets/images/projectImg0130.png'
+import projectImg0140 from '../assets/images/projectImg0140.jpg'
+import projectImg0150 from '../assets/images/projectImg0150.jpg'
 import projectImg02 from '../assets/images/projectImg02.png'
 import projectImg03 from '../assets/images/projectImg03.png'
 import projectImg04 from '../assets/images/projectImg04.png'
@@ -9,12 +15,15 @@ import projectImg06 from '../assets/images/projectImg06.png'
 import projectImg07 from '../assets/images/projectImg07.png'
 import projectImg08 from '../assets/images/projectImg08.png'
 import projectImg09 from '../assets/images/projectImg09.png'
+import projectImg110 from '../assets/images/projectImg110.jpg'
 import projectImg012 from '../assets/images/split_image_006.png'
 import projectImg013 from '../assets/images/split_image_007.png'
 import projectImg010 from '../assets/images/split_image_06.png'
 import projectImg011 from '../assets/images/split_image_07.png'
 
 import projectImg1 from '../assets/images/split_image_1.png'
+import projectImg11 from '../assets/images/split_image_11.png'
+import projectImg120 from '../assets/images/split_image_110.png'
 import projectImg2 from '../assets/images/split_image_2.png'
 import projectImg3 from '../assets/images/split_image_3.png'
 import projectImg4 from '../assets/images/split_image_4.png'
@@ -117,6 +126,27 @@ function Projects() {
       cost: "$8 mln",
       year: "2019"
     },
+      {
+      id: 7,
+      key: 'project7',
+      images: [projectImg0100, projectImg0110, projectImg0120],
+      cost: "$3.5 mln",
+      year: "2019"
+    },
+    {
+      id: 8,
+      key: 'project8',
+      images: [projectImg0130, projectImg0140, projectImg0150],
+      cost: "$4.5 mln",
+      year: "2020"
+    },
+    {
+      id: 9,
+      key: 'project9',
+      images: [projectImg11, projectImg110, projectImg120],
+      cost: "$30 mln",
+      year: "2020"
+    }
   ]
 
   // ================= MODAL STATE =================
