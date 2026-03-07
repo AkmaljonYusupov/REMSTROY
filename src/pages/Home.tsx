@@ -14,7 +14,19 @@ import sliderImg13 from '../assets/images/split_image_13.png'
 import sliderImg14 from '../assets/images/split_image_14.png'
 import sliderImg15 from '../assets/images/split_image_15.png'
 import sliderImg16 from '../assets/images/split_image_16.png'
+import sliderImg17 from '../assets/images/split_image_17.jpg'
+import sliderImg18 from '../assets/images/split_image_18.jpg'
+import sliderImg19 from '../assets/images/split_image_19.jpg'
 import sliderImg2 from '../assets/images/split_image_2.png'
+import sliderImg20 from '../assets/images/split_image_20.jpg'
+import sliderImg21 from '../assets/images/split_image_21.jpg'
+import sliderImg22 from '../assets/images/split_image_22.jpg'
+import sliderImg23 from '../assets/images/split_image_23.jpg'
+import sliderImg24 from '../assets/images/split_image_24.jpg'
+import sliderImg25 from '../assets/images/split_image_25.jpg'
+import sliderImg26 from '../assets/images/split_image_26.jpg'
+import sliderImg27 from '../assets/images/split_image_27.jpg'
+import sliderImg28 from '../assets/images/split_image_28.jpg'
 import sliderImg3 from '../assets/images/split_image_3.png'
 import sliderImg4 from '../assets/images/split_image_4.png'
 import sliderImg5 from '../assets/images/split_image_5.png'
@@ -36,12 +48,18 @@ const Home = () => {
 	const projectImages2 = [sliderImg5, sliderImg6, sliderImg7, sliderImg8]
 	const projectImages3 = [sliderImg9, sliderImg10, sliderImg11, sliderImg12]
 	const projectImages4 = [sliderImg13, sliderImg14, sliderImg15, sliderImg16]
+	const projectImages5 = [sliderImg17, sliderImg18, sliderImg19, sliderImg20]
+	const projectImages6 = [sliderImg21, sliderImg22, sliderImg23, sliderImg24]
+	const projectImages7 = [sliderImg25, sliderImg26, sliderImg27, sliderImg28]
 
 	// STATES
 	const [activeIndex1, setActiveIndex1] = useState(0)
 	const [activeIndex2, setActiveIndex2] = useState(0)
 	const [activeIndex3, setActiveIndex3] = useState(0)
 	const [activeIndex4, setActiveIndex4] = useState(0)
+	const [activeIndex5, setActiveIndex5] = useState(0)
+	const [activeIndex6, setActiveIndex6] = useState(0)
+	const [activeIndex7, setActiveIndex7] = useState(0)
 
 	// AUTO SLIDERS
 	useEffect(() => {
@@ -68,6 +86,27 @@ const Home = () => {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setActiveIndex4(prev => (prev + 1) % projectImages4.length)
+		}, 4500)
+		return () => clearInterval(interval)
+	}, [])
+	
+		useEffect(() => {
+		const interval = setInterval(() => {
+			setActiveIndex5(prev => (prev + 1) % projectImages5.length)
+		}, 4500)
+		return () => clearInterval(interval)
+	}, [])
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setActiveIndex6(prev => (prev + 1) % projectImages6.length)
+		}, 4500)
+		return () => clearInterval(interval)
+	}, [])
+
+		useEffect(() => {
+		const interval = setInterval(() => {
+			setActiveIndex7(prev => (prev + 1) % projectImages7.length)
 		}, 4500)
 		return () => clearInterval(interval)
 	}, [])
@@ -403,6 +442,154 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
+				{/* ================= PROJECTS 5 ================= */}
+			<section className='projects'>
+				<div className='container'>
+					{/* <h2 className='projects__label'>{t('projects.label')}</h2> */}
+
+					<div className='projects__card'>
+						{/* SLIDER BACKGROUND */}
+						<img
+							key={activeIndex5}
+							src={projectImages5[activeIndex5]}
+							alt='Projects'
+							className='projects__bg projects__bg--animate'
+						/>
+
+						<div className='projects__overlay' />
+
+						{/* LEFT INFO */}
+						<div className='projects__left'>
+							<h3 className='projects__title'>{t('projects.objects')}</h3>
+
+							<div className='projects__badges'>
+								<div className='badge'>
+									<strong>10+</strong>
+									<span>{t('projects.experience')}</span>
+								</div>
+
+								<div className='badge'>
+									<strong>150+</strong>
+									<span>{t('projects.completed')}</span>
+								</div>
+							</div>
+						</div>
+
+						{/* RIGHT SIDE (CONTROLS SLIDER) */}
+						<div className='projects__right'>
+							{projectImages5.map((img, index) => (
+								<div
+									key={index}
+									className={`projects__box ${activeIndex5 === index ? 'is-active' : ''
+										}`}
+									onClick={() => setActiveIndex5(index)}
+								>
+									<img src={img} alt='' />
+								</div>
+							))}
+						</div>
+					</div>
+				</div>
+			</section>
+				{/* ================= PROJECTS 6 ================= */}
+			<section className='projects'>
+				<div className='container'>
+					{/* <h2 className='projects__label'>{t('projects.label')}</h2> */}
+
+					<div className='projects__card'>
+						{/* SLIDER BACKGROUND */}
+						<img
+							key={activeIndex6}
+							src={projectImages6[activeIndex6]}
+							alt='Projects'
+							className='projects__bg projects__bg--animate'
+						/>
+
+						<div className='projects__overlay' />
+
+						{/* LEFT INFO */}
+						<div className='projects__left'>
+							<h3 className='projects__title'>{t('projects.objects')}</h3>
+
+							<div className='projects__badges'>
+								<div className='badge'>
+									<strong>10+</strong>
+									<span>{t('projects.experience')}</span>
+								</div>
+
+								<div className='badge'>
+									<strong>150+</strong>
+									<span>{t('projects.completed')}</span>
+								</div>
+							</div>
+						</div>
+
+						{/* RIGHT SIDE (CONTROLS SLIDER) */}
+						<div className='projects__right'>
+							{projectImages6.map((img, index) => (
+								<div
+									key={index}
+									className={`projects__box ${activeIndex6 === index ? 'is-active' : ''
+										}`}
+									onClick={() => setActiveIndex6(index)}
+								>
+									<img src={img} alt='' />
+								</div>
+							))}
+						</div>
+					</div>
+				</div>
+			</section>
+				{/* ================= PROJECTS 7 ================= */}
+			<section className='projects'>
+				<div className='container'>
+					{/* <h2 className='projects__label'>{t('projects.label')}</h2> */}
+
+					<div className='projects__card'>
+						{/* SLIDER BACKGROUND */}
+						<img
+							key={activeIndex7}
+							src={projectImages7[activeIndex7]}
+							alt='Projects'
+							className='projects__bg projects__bg--animate'
+						/>
+
+						<div className='projects__overlay' />
+
+						{/* LEFT INFO */}
+						<div className='projects__left'>
+							<h3 className='projects__title'>{t('projects.objects')}</h3>
+
+							<div className='projects__badges'>
+								<div className='badge'>
+									<strong>10+</strong>
+									<span>{t('projects.experience')}</span>
+								</div>
+
+								<div className='badge'>
+									<strong>150+</strong>
+									<span>{t('projects.completed')}</span>
+								</div>
+							</div>
+						</div>
+
+						{/* RIGHT SIDE (CONTROLS SLIDER) */}
+						<div className='projects__right'>
+							{projectImages7.map((img, index) => (
+								<div
+									key={index}
+									className={`projects__box ${activeIndex7 === index ? 'is-active' : ''
+										}`}
+									onClick={() => setActiveIndex7(index)}
+								>
+									<img src={img} alt='' />
+								</div>
+							))}
+						</div>
+					</div>
+				</div>
+			</section>
+		
 
 
 			{/* ================= PARTNERS ================= */}

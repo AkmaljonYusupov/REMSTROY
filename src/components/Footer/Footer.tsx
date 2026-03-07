@@ -150,7 +150,7 @@ function Footer() {
 						<div className='footer__socials'>
 							{/* <a href='#' target='_blank' rel='noopener noreferrer'><i className='fab fa-facebook-f'></i></a>
 							<a href='#' target='_blank' rel='noopener noreferrer'><i className='fab fa-instagram'></i></a> */}
-							<a href='https://t.me/RSII_UZ' target='_blank' rel='noopener noreferrer'><i className='fab fa-telegram-plane'></i></a>
+							<a href='https://t.me/RSII_UZ' target='_blank' rel='noopener noreferrer' ><i className='fab fa-telegram-plane'></i></a>
 						</div>
 						<p>Copyright © {currentYear} RSC Construction. {t('footer.rights')}</p>
 					</div>
