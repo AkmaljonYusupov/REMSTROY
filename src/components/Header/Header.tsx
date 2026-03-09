@@ -60,6 +60,7 @@ const Header = () => {
 						<NavLink to='/'>{t('nav.home')}</NavLink>
 						<NavLink to='/projects'>{t('nav.project')}</NavLink>
 						<NavLink to='/about'>{t('nav.about')}</NavLink>
+						<NavLink to='/gallery'>{t('nav.gallery')}</NavLink>
 						<NavLink to='/contact'>{t('nav.contact')}</NavLink>
 					</nav>
 
@@ -126,6 +127,9 @@ const Header = () => {
 					</NavLink>
 					<NavLink to='/about' onClick={() => setOpen(false)}>
 						{t('nav.about')}
+					</NavLink>
+					<NavLink to='/gallery' onClick={() => setOpen(false)}>
+						{t('nav.gallery')}
 					</NavLink>
 					<NavLink to='/contact' onClick={() => setOpen(false)}>
 						{t('nav.contact')}

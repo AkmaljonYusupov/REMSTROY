@@ -36,42 +36,42 @@ function About() {
 		return () => observer.disconnect()
 	}, [])
 
-	const useCountUp = (end, duration = 2000) => {
-		const [count, setCount] = useState(0)
+	// const useCountUp = (end, duration = 2000) => {
+	// 	const [count, setCount] = useState(0)
 
-		useEffect(() => {
-			if (!visible) return
+	// 	useEffect(() => {
+	// 		if (!visible) return
 
-			let startTime = null
-			let animationFrame
+	// 		let startTime = null
+	// 		let animationFrame
 
-			const animate = (time) => {
-				if (!startTime) startTime = time
-				const progress = time - startTime
-				const percent = Math.min(progress / duration, 1)
+	// 		const animate = (time) => {
+	// 			if (!startTime) startTime = time
+	// 			const progress = time - startTime
+	// 			const percent = Math.min(progress / duration, 1)
 
-				const value = Math.floor(end * percent)
-				setCount(value)
+	// 			const value = Math.floor(end * percent)
+	// 			setCount(value)
 
-				if (percent < 1) {
-					animationFrame = requestAnimationFrame(animate)
-				} else {
-					setCount(end) // oxirida aniq end ga tenglashadi
-				}
-			}
+	// 			if (percent < 1) {
+	// 				animationFrame = requestAnimationFrame(animate)
+	// 			} else {
+	// 				setCount(end) // oxirida aniq end ga tenglashadi
+	// 			}
+	// 		}
 
-			animationFrame = requestAnimationFrame(animate)
+	// 		animationFrame = requestAnimationFrame(animate)
 
-			return () => cancelAnimationFrame(animationFrame)
-		}, [visible, end, duration]) // MUHIM
+	// 		return () => cancelAnimationFrame(animationFrame)
+	// 	}, [visible, end, duration]) // MUHIM
 
-		return count
-	}
+	// 	return count
+	// }
 
-	const projects = useCountUp(5698)
-	const team = useCountUp(864)
-	const coffee = useCountUp(9654)
-	const awards = useCountUp(578)
+	// const projects = useCountUp(5698)
+	// const team = useCountUp(864)
+	// const coffee = useCountUp(9654)
+	// const awards = useCountUp(578)
 
 	return (
 		<section className='about-page'>
