@@ -11,6 +11,15 @@
 		"gallery": "Gallery",
 		"contact": "Contact"
 	},
+	"gallery": {
+    "images": [
+      "Bitumen Mastic",
+      "Polymer Mastic",
+      "Waterproofing",
+      "Bitum Primer",
+      "Production"
+    ]
+  },
 	"features": {
 		"standard": {
 			"title": "Full Compliance with Standards",

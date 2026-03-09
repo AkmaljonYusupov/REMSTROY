@@ -11,6 +11,15 @@
 		"gallery": "Galereya",
 		"contact": "Aloqa"
 	},
+	"gallery": {
+    "images": [
+      "Bitumen Mastika",
+      "Polimer Mastika",
+      "Gidroizolyatsiya",
+      "Bitum Primer",
+      "Ishlab chiqarish"
+    ]
+  },
 	"features": {
 		"standard": {
 			"title": "Standartlarga to‘liq rioya",
