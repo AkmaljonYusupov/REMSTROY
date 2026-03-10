@@ -16,9 +16,14 @@ import img7 from "../assets/images/projectImg07.png"
 import img8 from "../assets/images/projectImg08.png"
 import img9 from "../assets/images/projectImg09.png"
 import img14 from "../assets/images/projectImg110.jpg"
+import img47 from "../assets/images/split_image_006.png"
+import img44 from "../assets/images/split_image_007.png"
+import img46 from "../assets/images/split_image_06.png"
+import img45 from "../assets/images/split_image_07.png"
 import img12 from "../assets/images/split_image_1.png"
 import img24 from "../assets/images/split_image_10.png"
 import img25 from "../assets/images/split_image_11.png"
+import img43 from "../assets/images/split_image_110.png"
 import img26 from "../assets/images/split_image_12.png"
 import img27 from "../assets/images/split_image_13.png"
 import img28 from "../assets/images/split_image_14.png"
@@ -99,6 +104,11 @@ export default function Gallery() {
 		{ id: 40, src: img40 },
 		{ id: 41, src: img41 },
 		{ id: 42, src: img42 },
+		{ id: 43, src: img43 },
+		{ id: 44, src: img44 },
+		{ id: 45, src: img45 },
+		{ id: 46, src: img46 },
+		{ id: 47, src: img47 },
 		{ id: 12, src: img12 }
 	]
 
