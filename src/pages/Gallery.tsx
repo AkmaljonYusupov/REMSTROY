@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import "./Gallery.scss"
 
+// barcha rasmlar importlari (siznikidek o'zgarmasdan qoldi)
 import img68 from "../assets/images/Galreya020.jpg"
 import img48 from "../assets/images/Galreya1.jpg"
 import img57 from "../assets/images/Galreya10.jpg"
@@ -85,204 +86,329 @@ import img23 from "../assets/images/split_image_9.png"
 import heroImage from "../assets/images/sub-banner-img.jpg"
 
 type ImageType = {
-	id: number
-	src: string
+  id: number
+  src: string
 }
 
 export default function Gallery() {
-	const { t } = useTranslation()
-	const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
-	const modalRef = useRef<HTMLDivElement>(null)
+  const { t } = useTranslation()
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
+  const modalRef = useRef<HTMLDivElement>(null)
 
-	// Rasm massivlari
-	const images: ImageType[] = [
-		{ id: 1, src: img1 },
-		{ id: 2, src: img2 },
-		{ id: 3, src: img3 },
-		{ id: 4, src: img4 },
-		{ id: 5, src: img5 },
-		{ id: 6, src: img6 },
-		{ id: 7, src: img7 },
-		{ id: 8, src: img8 },
-		{ id: 9, src: img9 },
-		{ id: 10, src: img10 },
-		{ id: 11, src: img11 },
-		{ id: 13, src: img13 },
-		{ id: 14, src: img14 },
-		{ id: 15, src: img15 },
-		{ id: 16, src: img16 },
-		{ id: 17, src: img17 },
-		{ id: 18, src: img18 },
-		{ id: 19, src: img19 },
-		{ id: 20, src: img20 },
-		{ id: 21, src: img21 },
-		{ id: 22, src: img22 },
-		{ id: 23, src: img23 },
-		{ id: 24, src: img24 },
-		{ id: 25, src: img25 },
-		{ id: 26, src: img26 },
-		{ id: 27, src: img27 },
-		{ id: 28, src: img28 },
-		{ id: 29, src: img29 },
-		{ id: 30, src: img30 },
-		{ id: 31, src: img31 },
-		{ id: 32, src: img32 },
-		{ id: 33, src: img33 },
-		{ id: 34, src: img34 },
-		{ id: 35, src: img35 },
-		{ id: 36, src: img36 },
-		{ id: 37, src: img37 },
-		{ id: 38, src: img38 },
-		{ id: 39, src: img39 },
-		{ id: 40, src: img40 },
-		{ id: 41, src: img41 },
-		{ id: 42, src: img42 },
-		{ id: 43, src: img43 },
-		{ id: 44, src: img44 },
-		{ id: 45, src: img45 },
-		{ id: 46, src: img46 },
-		{ id: 47, src: img47 },
-		{ id: 48, src: img48 },
-		{ id: 49, src: img49 },
-		{ id: 50, src: img50 },
-		{ id: 51, src: img51 },
-		{ id: 52, src: img52 },
-		{ id: 53, src: img53 },
-		{ id: 54, src: img54 },
-		{ id: 55, src: img55 },
-		{ id: 56, src: img56 },
-		{ id: 57, src: img57 },
-		{ id: 58, src: img58 },
-		{ id: 59, src: img59 },
-		{ id: 60, src: img60 },
-		{ id: 61, src: img61 },
-		{ id: 62, src: img62 },
-		{ id: 63, src: img63 },
-		{ id: 64, src: img64 },
-		{ id: 65, src: img65 },
-		{ id: 66, src: img66 },
-		{ id: 67, src: img67 },
-		{ id: 68, src: img68 },
-		{ id: 69, src: img69 },
-		{ id: 70, src: img70 },
-		{ id: 71, src: img71 },
-		{ id: 72, src: img72 },
-		{ id: 73, src: img73 },
-		{ id: 74, src: img74 },
-		{ id: 75, src: img75 },
-		{ id: 76, src: img76 },
-		{ id: 77, src: img77 },
-		{ id: 78, src: img78 },
-		{ id: 79, src: img79 },
-		{ id: 80, src: img80 },
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1)
+  const imagesPerPage = 20
 
+  const images: ImageType[] = [
+    { id: 1, src: img1 },
+    { id: 2, src: img2 },
+    { id: 3, src: img3 },
+    { id: 4, src: img4 },
+    { id: 5, src: img5 },
+    { id: 6, src: img6 },
+    { id: 7, src: img7 },
+    { id: 8, src: img8 },
+    { id: 9, src: img9 },
+    { id: 10, src: img10 },
+    { id: 11, src: img11 },
+    { id: 13, src: img13 },
+    { id: 14, src: img14 },
+    { id: 15, src: img15 },
+    { id: 16, src: img16 },
+    { id: 17, src: img17 },
+    { id: 18, src: img18 },
+    { id: 19, src: img19 },
+    { id: 20, src: img20 },
+    { id: 21, src: img21 },
+    { id: 22, src: img22 },
+    { id: 23, src: img23 },
+    { id: 24, src: img24 },
+    { id: 25, src: img25 },
+    { id: 26, src: img26 },
+    { id: 27, src: img27 },
+    { id: 28, src: img28 },
+    { id: 29, src: img29 },
+    { id: 30, src: img30 },
+    { id: 31, src: img31 },
+    { id: 32, src: img32 },
+    { id: 33, src: img33 },
+    { id: 34, src: img34 },
+    { id: 35, src: img35 },
+    { id: 36, src: img36 },
+    { id: 37, src: img37 },
+    { id: 38, src: img38 },
+    { id: 39, src: img39 },
+    { id: 40, src: img40 },
+    { id: 41, src: img41 },
+    { id: 42, src: img42 },
+    { id: 43, src: img43 },
+    { id: 44, src: img44 },
+    { id: 45, src: img45 },
+    { id: 46, src: img46 },
+    { id: 47, src: img47 },
+    { id: 48, src: img48 },
+    { id: 49, src: img49 },
+    { id: 50, src: img50 },
+    { id: 51, src: img51 },
+    { id: 52, src: img52 },
+    { id: 53, src: img53 },
+    { id: 54, src: img54 },
+    { id: 55, src: img55 },
+    { id: 56, src: img56 },
+    { id: 57, src: img57 },
+    { id: 58, src: img58 },
+    { id: 59, src: img59 },
+    { id: 60, src: img60 },
+    { id: 61, src: img61 },
+    { id: 62, src: img62 },
+    { id: 63, src: img63 },
+    { id: 64, src: img64 },
+    { id: 65, src: img65 },
+    { id: 66, src: img66 },
+    { id: 67, src: img67 },
+    { id: 68, src: img68 },
+    { id: 69, src: img69 },
+    { id: 70, src: img70 },
+    { id: 71, src: img71 },
+    { id: 72, src: img72 },
+    { id: 73, src: img73 },
+    { id: 74, src: img74 },
+    { id: 75, src: img75 },
+    { id: 76, src: img76 },
+    { id: 77, src: img77 },
+    { id: 78, src: img78 },
+    { id: 79, src: img79 },
+    { id: 80, src: img80 },
+    { id: 12, src: img12 },
+  ]
 
-		{ id: 12, src: img12 }
-	]
+  const imageTitle = t("gallery.images")
 
-	const imageTitle = t("gallery.images")
+  // Pagination hisoblash
+  const totalImages = images.length
+  const totalPages = Math.ceil(totalImages / imagesPerPage)
 
-	// ================= NAVIGATION =================
-	const handlePrev = () => {
-		if (selectedIndex !== null)
-			setSelectedIndex((selectedIndex - 1 + images.length) % images.length)
-	}
+  const indexOfLastImage = currentPage * imagesPerPage
+  const indexOfFirstImage = indexOfLastImage - imagesPerPage
+  const currentImages = images.slice(indexOfFirstImage, indexOfLastImage)
 
-	const handleNext = () => {
-		if (selectedIndex !== null)
-			setSelectedIndex((selectedIndex + 1) % images.length)
-	}
+  // Ellipsis bilan sahifa raqamlari
+  const getPageNumbers = () => {
+    const maxVisible = 7
+    const pages: (number | string)[] = []
 
-	// Keyboard navigation
-	useEffect(() => {
-		const handleKey = (e: KeyboardEvent) => {
-			if (selectedIndex !== null) {
-				if (e.key === "ArrowLeft") handlePrev()
-				if (e.key === "ArrowRight") handleNext()
-				if (e.key === "Escape") setSelectedIndex(null)
-			}
-		}
-		window.addEventListener("keydown", handleKey)
-		return () => window.removeEventListener("keydown", handleKey)
-	}, [selectedIndex])
+    if (totalPages <= maxVisible) {
+      for (let i = 1; i <= totalPages; i++) pages.push(i)
+      return pages
+    }
 
-	// ================= TOUCH SWIPE =================
-	const touchStartX = useRef<number>(0)
-	const touchEndX = useRef<number>(0)
+    pages.push(1)
 
-	const handleTouchStart = (e: React.TouchEvent) => {
-		touchStartX.current = e.touches[0].clientX
-	}
-	const handleTouchMove = (e: React.TouchEvent) => {
-		touchEndX.current = e.touches[0].clientX
-	}
-	const handleTouchEnd = () => {
-		const distance = touchStartX.current - touchEndX.current
-		if (distance > 50) handleNext()
-		if (distance < -50) handlePrev()
-	}
+    if (currentPage > 4) pages.push("...")
 
-	return (
-		<section className="galleryPage">
-			{/* HERO */}
-			<div className="galleryBanner" style={{ backgroundImage: `url(${heroImage})` }}>
-				<div className="galleryBannerOverlay">
-					<div className="container">
-						<div className="galleryBannerContent">
-							<h1 className="galleryBannerTitle">{t("nav.gallery")}</h1>
-							<div className="galleryBreadcrumb">
-								<span className="galleryBreadcrumbLink" onClick={() => (window.location.href = "/")}>
-									{t("nav.home")}
-								</span>
-								<span className="galleryBreadcrumbDivider">→</span>
-								<span className="galleryBreadcrumbActive">{t("nav.gallery")}</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+    const start = Math.max(2, currentPage - 2)
+    const end = Math.min(totalPages - 1, currentPage + 2)
 
-			{/* GALLERY GRID */}
-			<div className="container">
-				<div className="galleryGrid">
-					{images.map((image, index) => (
-						<div
-							key={image.id}
-							className="galleryCard"
-							onClick={() => setSelectedIndex(index)}
-						>
-							<img src={image.src} alt={imageTitle} />
-							<div className="galleryCardOverlay">
-								<span>{imageTitle}</span>
-							</div>
-						</div>
-					))}
-				</div>
-			</div>
+    for (let i = start; i <= end; i++) pages.push(i)
 
-			{/* MODAL */}
-			{selectedIndex !== null && (
-				<div
-					className="galleryModal"
-					ref={modalRef}
-					onClick={() => setSelectedIndex(null)}
-					onTouchStart={handleTouchStart}
-					onTouchMove={handleTouchMove}
-					onTouchEnd={handleTouchEnd}
-				>
-					<div className="galleryModalBox" onClick={(e) => e.stopPropagation()}>
-						<button className="galleryModalClose" onClick={() => setSelectedIndex(null)}>×</button>
-						<button className="galleryModalPrev" onClick={handlePrev}>‹</button>
-						<img
-							src={images[selectedIndex].src}
-							alt={imageTitle}
-							className="modalImage"
-						/>
-						<button className="galleryModalNext" onClick={handleNext}>›</button>
-						<h3>{imageTitle}</h3>
-					</div>
-				</div>
-			)}
-		</section>
-	)
+    if (currentPage < totalPages - 3) pages.push("...")
+
+    if (totalPages > 1) pages.push(totalPages)
+
+    return pages
+  }
+
+  const pageNumbers = getPageNumbers()
+
+  const paginate = (pageNumber: number) => {
+    if (pageNumber < 1 || pageNumber > totalPages) return
+    setCurrentPage(pageNumber)
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+  // ================= NAVIGATION =================
+  const handlePrev = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex - 1 + totalImages) % totalImages)
+    }
+  }
+
+  const handleNext = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex + 1) % totalImages)
+    }
+  }
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (selectedIndex !== null) {
+        if (e.key === "ArrowLeft") handlePrev()
+        if (e.key === "ArrowRight") handleNext()
+        if (e.key === "Escape") setSelectedIndex(null)
+      }
+    }
+    window.addEventListener("keydown", handleKey)
+    return () => window.removeEventListener("keydown", handleKey)
+  }, [selectedIndex])
+
+  // ================= TOUCH SWIPE =================
+  const touchStartX = useRef<number>(0)
+  const touchEndX = useRef<number>(0)
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX
+  }
+
+  const handleTouchEnd = () => {
+    const distance = touchStartX.current - touchEndX.current
+    if (distance > 50) handleNext()
+    if (distance < -50) handlePrev()
+  }
+
+  return (
+    <section className="galleryPage">
+      {/* HERO */}
+      <div className="galleryBanner" style={{ backgroundImage: `url(${heroImage})` }}>
+        <div className="galleryBannerOverlay">
+          <div className="container">
+            <div className="galleryBannerContent">
+              <h1 className="galleryBannerTitle">{t("nav.gallery")}</h1>
+              <div className="galleryBreadcrumb">
+                <span
+                  className="galleryBreadcrumbLink"
+                  onClick={() => (window.location.href = "/")}
+                >
+                  {t("nav.home")}
+                </span>
+                <span className="galleryBreadcrumbDivider">→</span>
+                <span className="galleryBreadcrumbActive">{t("nav.gallery")}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* GALLERY GRID */}
+      <div className="container">
+        <div className="galleryGrid">
+          {currentImages.map((image, localIndex) => {
+            const globalIndex = indexOfFirstImage + localIndex
+
+            return (
+              <div
+                key={image.id}
+                className="galleryCard"
+                onClick={() => setSelectedIndex(globalIndex)}
+              >
+                <img src={image.src} alt={imageTitle} loading="lazy" />
+                <div className="galleryCardOverlay">
+                  <span>{imageTitle}</span>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+
+        {/* Pagination – active raqamga alohida fon va rang */}
+        {totalPages > 1 && (
+          <nav className="pagination mt-12 flex justify-center items-center gap-2 sm:gap-3 flex-wrap">
+            {/* Oldingi */}
+            <button
+              onClick={() => paginate(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="flex items-center justify-center w-11 h-11 rounded-xl bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 disabled:opacity-50 transition-all duration-200 shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-[#ffb703]/40 focus:ring-offset-1"
+              aria-label="Oldingi sahifa"
+            >
+              <span className="text-2xl">‹</span>
+            </button>
+
+            {/* Sahifalar */}
+            {pageNumbers.map((page, idx) => {
+              if (page === "...") {
+                return (
+                  <span
+                    key={`ellipsis-${idx}`}
+                    className="flex items-center justify-center w-11 h-11 text-gray-500 font-medium select-none"
+                  >
+                    ...
+                  </span>
+                )
+              }
+
+              const isActive = currentPage === page
+
+              return (
+                <button
+                  key={page}
+                  onClick={() => paginate(page as number)}
+                  className={`
+                    flex items-center justify-center 
+                    w-11 h-11 rounded-xl font-semibold 
+                    transition-all duration-200 
+                    shadow-sm hover:shadow 
+                    focus:outline-none focus:ring-2 focus:ring-[#ffb703]/40 focus:ring-offset-1
+                    ${
+                      isActive
+                        ? "bg-[green] text-black font-bold shadow-lg scale-110 border-2 border-[#e0a800]"
+                        : "bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 hover:border-gray-300"
+                    }
+                  `}
+                >
+                  {page}
+                </button>
+              )
+            })}
+
+            {/* Keyingi */}
+            <button
+              onClick={() => paginate(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className="flex items-center justify-center w-11 h-11 rounded-xl bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 disabled:opacity-50 transition-all duration-200 shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-[#ffb703]/40 focus:ring-offset-1"
+              aria-label="Keyingi sahifa"
+            >
+              <span className="text-2xl">›</span>
+            </button>
+          </nav>
+        )}
+      </div>
+
+      {/* MODAL */}
+      {selectedIndex !== null && (
+        <div
+          className="galleryModal"
+          ref={modalRef}
+          onClick={() => setSelectedIndex(null)}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          <div className="galleryModalBox" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="galleryModalClose"
+              onClick={() => setSelectedIndex(null)}
+            >
+              ×
+            </button>
+            <button className="galleryModalPrev" onClick={handlePrev}>
+              ‹
+            </button>
+            <img
+              src={images[selectedIndex].src}
+              alt={imageTitle}
+              className="modalImage"
+            />
+            <button className="galleryModalNext" onClick={handleNext}>
+              ›
+            </button>
+            <h3>{imageTitle}</h3>
+          </div>
+        </div>
+      )}
+    </section>
+  )
 }
