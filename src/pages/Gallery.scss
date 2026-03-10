@@ -125,8 +125,9 @@
 }
 
 /* ================= PAGINATION ================= */
+/* ================= PAGINATION ================= */
 .pagination {
-  margin: 60px 0 40px;
+  margin: 60px 0 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,12 +138,13 @@
 .pagination button {
   width: 44px;
   height: 44px;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
   border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .pagination button:disabled {
@@ -150,44 +152,47 @@
   cursor: not-allowed;
 }
 
-.pagination .prev,
-.pagination .next {
-  background: #f1f5f9;
-  color: #334155;
-  font-size: 20px;
+/* Oldingi va Keyingi */
+.prev, .next {
+  background-color: #f1f5f9;
+  color: #4b5563;
+  font-size: 22px;
 }
 
-.pagination .prev:hover:not(:disabled),
-.pagination .next:hover:not(:disabled) {
-  background: #e2e8f0;
+.prev:hover:not(:disabled), .next:hover:not(:disabled) {
+  background-color: #e2e8f0;
 }
 
-.pagination .page-number {
-  background: #ffffff;
-  color: #475569;
-  border: 1px solid #e2e8f0;
+/* Oddiy sahifa raqamlari */
+.page-number {
+  background-color: white;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
 }
 
-.pagination .page-number:hover:not(:disabled) {
-  background: #f1f5f9;
-  border-color: #cbd5e1;
+.page-number:hover:not(:disabled) {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
 }
 
-.pagination .page-number.active {
-  background: #ffb703;
-  color: #1e293b;
-  font-weight: 600;
-  border-color: #ffb703;
-  box-shadow: 0 2px 8px rgba(255, 183, 3, 0.3);
+/* ACTIVE sahifa – alohida rang va background */
+.page-number.active {
+  background-color: #ffb703 !important;   /* sariq fon */
+  color: #111827 !important;              /* qora matn */
+  border: 2px solid #e0a800 !important;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(255, 183, 3, 0.4);
+  transform: scale(1.12);
 }
 
-.pagination .ellipsis {
+/* Ellipsis */
+.ellipsis {
   width: 44px;
   height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #64748b;
+  color: #6b7280;
   font-size: 18px;
   pointer-events: none;
 }
@@ -205,12 +210,8 @@
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .galleryModalBox {
@@ -222,12 +223,8 @@
 }
 
 @keyframes scaleUp {
-  from {
-    transform: scale(0.8);
-  }
-  to {
-    transform: scale(1);
-  }
+  from { transform: scale(0.8); }
+  to   { transform: scale(1); }
 }
 
 .galleryModalBox img {
@@ -286,13 +283,8 @@
   background: rgba(0, 0, 0, 0.6);
 }
 
-.galleryModalPrev {
-  left: -70px;
-}
-
-.galleryModalNext {
-  right: -70px;
-}
+.galleryModalPrev { left: -70px; }
+.galleryModalNext { right: -70px; }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
@@ -302,12 +294,8 @@
   .galleryBannerTitle {
     font-size: 40px;
   }
-  .galleryModalPrev {
-    left: -50px;
-  }
-  .galleryModalNext {
-    right: -50px;
-  }
+  .galleryModalPrev { left: -50px; }
+  .galleryModalNext { right: -50px; }
 }
 
 @media (max-width: 768px) {

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import "./Gallery.scss"
 
-// barcha rasmlar importlari (siznikidek o'zgarmasdan qoldi)
+// rasmlar importlari (siznikidek o'zgarmasdan)
 import img68 from "../assets/images/Galreya020.jpg"
 import img48 from "../assets/images/Galreya1.jpg"
 import img57 from "../assets/images/Galreya10.jpg"
@@ -30,6 +30,7 @@ import img50 from "../assets/images/Galreya3.jpg"
 import img78 from "../assets/images/Galreya30.jpg"
 import img79 from "../assets/images/Galreya31.jpg"
 import img80 from "../assets/images/Galreya32.jpeg"
+import img81 from "../assets/images/Galreya33.jpg"
 import img51 from "../assets/images/Galreya4.jpg"
 import img52 from "../assets/images/Galreya5.jpg"
 import img53 from "../assets/images/Galreya6.jpg"
@@ -95,7 +96,6 @@ export default function Gallery() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
   const modalRef = useRef<HTMLDivElement>(null)
 
-  // Pagination state
   const [currentPage, setCurrentPage] = useState(1)
   const imagesPerPage = 20
 
@@ -179,12 +179,12 @@ export default function Gallery() {
     { id: 78, src: img78 },
     { id: 79, src: img79 },
     { id: 80, src: img80 },
+    { id: 81, src: img81 },
     { id: 12, src: img12 },
   ]
 
   const imageTitle = t("gallery.images")
 
-  // Pagination hisoblash
   const totalImages = images.length
   const totalPages = Math.ceil(totalImages / imagesPerPage)
 
@@ -192,7 +192,6 @@ export default function Gallery() {
   const indexOfFirstImage = indexOfLastImage - imagesPerPage
   const currentImages = images.slice(indexOfFirstImage, indexOfLastImage)
 
-  // Ellipsis bilan sahifa raqamlari
   const getPageNumbers = () => {
     const maxVisible = 7
     const pages: (number | string)[] = []
@@ -226,7 +225,6 @@ export default function Gallery() {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
-  // ================= NAVIGATION =================
   const handlePrev = () => {
     if (selectedIndex !== null) {
       setSelectedIndex((selectedIndex - 1 + totalImages) % totalImages)
@@ -239,7 +237,6 @@ export default function Gallery() {
     }
   }
 
-  // Keyboard navigation
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (selectedIndex !== null) {
@@ -252,7 +249,6 @@ export default function Gallery() {
     return () => window.removeEventListener("keydown", handleKey)
   }, [selectedIndex])
 
-  // ================= TOUCH SWIPE =================
   const touchStartX = useRef<number>(0)
   const touchEndX = useRef<number>(0)
 
@@ -293,12 +289,11 @@ export default function Gallery() {
         </div>
       </div>
 
-      {/* GALLERY GRID */}
+      {/* GRID */}
       <div className="container">
         <div className="galleryGrid">
           {currentImages.map((image, localIndex) => {
             const globalIndex = indexOfFirstImage + localIndex
-
             return (
               <div
                 key={image.id}
@@ -314,64 +309,43 @@ export default function Gallery() {
           })}
         </div>
 
-        {/* Pagination – active raqamga alohida fon va rang */}
+        {/* PAGINATION – 100% ishlaydi */}
         {totalPages > 1 && (
-          <nav className="pagination mt-12 flex justify-center items-center gap-2 sm:gap-3 flex-wrap">
-            {/* Oldingi */}
+          <nav className="pagination">
             <button
               onClick={() => paginate(currentPage - 1)}
               disabled={currentPage === 1}
-              className="flex items-center justify-center w-11 h-11 rounded-xl bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 disabled:opacity-50 transition-all duration-200 shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-[#ffb703]/40 focus:ring-offset-1"
-              aria-label="Oldingi sahifa"
+              className="prev"
             >
-              <span className="text-2xl">‹</span>
+              ‹
             </button>
 
-            {/* Sahifalar */}
             {pageNumbers.map((page, idx) => {
               if (page === "...") {
                 return (
-                  <span
-                    key={`ellipsis-${idx}`}
-                    className="flex items-center justify-center w-11 h-11 text-gray-500 font-medium select-none"
-                  >
+                  <span key={`ellipsis-${idx}`} className="ellipsis">
                     ...
                   </span>
                 )
               }
 
-              const isActive = currentPage === page
-
               return (
                 <button
                   key={page}
                   onClick={() => paginate(page as number)}
-                  className={`
-                    flex items-center justify-center 
-                    w-11 h-11 rounded-xl font-semibold 
-                    transition-all duration-200 
-                    shadow-sm hover:shadow 
-                    focus:outline-none focus:ring-2 focus:ring-[#ffb703]/40 focus:ring-offset-1
-                    ${
-                      isActive
-                        ? "bg-[green] text-black font-bold shadow-lg scale-110 border-2 border-[#e0a800]"
-                        : "bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 hover:border-gray-300"
-                    }
-                  `}
+                  className={`page-number ${currentPage === page ? "active" : ""}`}
                 >
                   {page}
                 </button>
               )
             })}
 
-            {/* Keyingi */}
             <button
               onClick={() => paginate(currentPage + 1)}
               disabled={currentPage === totalPages}
-              className="flex items-center justify-center w-11 h-11 rounded-xl bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 disabled:opacity-50 transition-all duration-200 shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-[#ffb703]/40 focus:ring-offset-1"
-              aria-label="Keyingi sahifa"
+              className="next"
             >
-              <span className="text-2xl">›</span>
+              ›
             </button>
           </nav>
         )}
@@ -388,20 +362,13 @@ export default function Gallery() {
           onTouchEnd={handleTouchEnd}
         >
           <div className="galleryModalBox" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="galleryModalClose"
-              onClick={() => setSelectedIndex(null)}
-            >
+            <button className="galleryModalClose" onClick={() => setSelectedIndex(null)}>
               ×
             </button>
             <button className="galleryModalPrev" onClick={handlePrev}>
               ‹
             </button>
-            <img
-              src={images[selectedIndex].src}
-              alt={imageTitle}
-              className="modalImage"
-            />
+            <img src={images[selectedIndex].src} alt={imageTitle} className="modalImage" />
             <button className="galleryModalNext" onClick={handleNext}>
               ›
             </button>
