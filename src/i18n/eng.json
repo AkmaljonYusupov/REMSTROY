@@ -29,6 +29,11 @@
 		}
 	},
 	"about": {
+		"certificate":{
+			"small":"Certificates confirming our achievements",
+			"title":"Official Certificates",
+			"text":"Each of our certificates reflects quality and professionalism."
+		},
 		"label": "ABOUT COMPANY",
 		"title": "Reliability and Professionalism in Construction",
 		"aboutjoyiy": "About Us",

@@ -20,15 +20,20 @@
 			"desc": "REMSTROY barcha milliy va xalqaro qurilish standartlariga qat’iy amal qiladi."
 		},
 		"quality": {
-			"title": "Yuqori sifat kafolati",
-			"desc": "Har bir loyiha yuqori sifat nazorati asosida amalga oshiriladi."
+			"title": "Sifat kafolati",
+			"desc": "Qurilishda ilg‘or va samarali texnologiyalardan foydalaniladi."
 		},
 		"tech": {
-			"title": "Yuqori sifat kafolati",
-			"desc": "Qurilishda ilg‘or va samarali texnologiyalardan foydalaniladi."
+			"title": "Ishonchli sifat ta’minoti",
+			"desc": "Qurilish jarayonida zamonaviy va samarali texnologiyalar qo‘llaniladi."
 		}
 	},
 	"about": {
+		"certificate":{
+			"small":"Yutuqlarimizni tasdiqlovchi sertifikatlar",
+			"title":"Rasmiy sertifikatlar",
+			"text":"Har bir sertifikatimiz sifat va professionalizmni aks ettiradi."
+		},
 		"label": "KOMPANIYA HAQIDA",
 		"title": "Qurilishda ishonchlilik va professionallik",
 		"aboutjoyiy": "Biz haqimizda",

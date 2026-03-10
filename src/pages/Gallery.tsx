@@ -13,22 +13,17 @@ import img61 from "../assets/images/Galreya14.jpg"
 import img62 from "../assets/images/Galreya15.jpg"
 import img63 from "../assets/images/Galreya16.jpg"
 import img64 from "../assets/images/Galreya17.jpg"
-import img65 from "../assets/images/Galreya18.jpg"
 import img66 from "../assets/images/Galreya19.jpg"
 import img49 from "../assets/images/Galreya2.jpg"
 import img67 from "../assets/images/Galreya20.jpg"
 import img69 from "../assets/images/Galreya21.jpg"
 import img70 from "../assets/images/Galreya22.jpg"
 import img71 from "../assets/images/Galreya23.jpg"
-import img72 from "../assets/images/Galreya24.jpg"
-import img73 from "../assets/images/Galreya25.jpg"
 import img74 from "../assets/images/Galreya26.jpg"
 import img75 from "../assets/images/Galreya27.jpg"
 import img76 from "../assets/images/Galreya28.jpg"
 import img77 from "../assets/images/Galreya29.jpg"
 import img50 from "../assets/images/Galreya3.jpg"
-import img78 from "../assets/images/Galreya30.jpg"
-import img79 from "../assets/images/Galreya31.jpg"
 import img80 from "../assets/images/Galreya32.jpeg"
 import img81 from "../assets/images/Galreya33.jpg"
 import img51 from "../assets/images/Galreya4.jpg"
@@ -163,21 +158,19 @@ export default function Gallery() {
     { id: 62, src: img62 },
     { id: 63, src: img63 },
     { id: 64, src: img64 },
-    { id: 65, src: img65 },
+    
     { id: 66, src: img66 },
     { id: 67, src: img67 },
     { id: 68, src: img68 },
     { id: 69, src: img69 },
     { id: 70, src: img70 },
     { id: 71, src: img71 },
-    { id: 72, src: img72 },
-    { id: 73, src: img73 },
+   
     { id: 74, src: img74 },
     { id: 75, src: img75 },
     { id: 76, src: img76 },
     { id: 77, src: img77 },
-    { id: 78, src: img78 },
-    { id: 79, src: img79 },
+   
     { id: 80, src: img80 },
     { id: 81, src: img81 },
     { id: 12, src: img12 },

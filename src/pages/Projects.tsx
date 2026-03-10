@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from "react-router-dom"
 
 import projectImg0100 from '../assets/images/projectImg010.png'
 import projectImg0110 from '../assets/images/projectImg0110.jpg'
@@ -52,37 +53,39 @@ function Projects() {
     return () => observer.disconnect()
   }, [])
 
-  const useCountUp = (end, duration = 2000) => {
-    const [count, setCount] = useState(0)
+  // const useCountUp = (end, duration = 2000) => {
+  //   const [count, setCount] = useState(0)
 
-    useEffect(() => {
-      if (!visible) return
-      let startTime = null
-      let animationFrame
+  //   useEffect(() => {
+  //     if (!visible) return
+  //     let startTime = null
+  //     let animationFrame
 
-      const animate = (time) => {
-        if (!startTime) startTime = time
-        const progress = time - startTime
-        const percent = Math.min(progress / duration, 1)
-        setCount(Math.floor(end * percent))
-        if (percent < 1) animationFrame = requestAnimationFrame(animate)
-        else setCount(end)
-      }
+  //     const animate = (time) => {
+  //       if (!startTime) startTime = time
+  //       const progress = time - startTime
+  //       const percent = Math.min(progress / duration, 1)
+  //       setCount(Math.floor(end * percent))
+  //       if (percent < 1) animationFrame = requestAnimationFrame(animate)
+  //       else setCount(end)
+  //     }
 
-      animationFrame = requestAnimationFrame(animate)
-      return () => cancelAnimationFrame(animationFrame)
-    }, [visible, end, duration])
+  //     animationFrame = requestAnimationFrame(animate)
+  //     return () => cancelAnimationFrame(animationFrame)
+  //   }, [visible, end, duration])
 
-    return count
-  }
+  //   return count
+  // }
 
-  const projectsCount = useCountUp(5698)
-  const team = useCountUp(864)
-  const coffee = useCountUp(9654)
-  const awards = useCountUp(578)
+  // const projectsCount = useCountUp(5698)
+  // const team = useCountUp(864)
+  // const coffee = useCountUp(9654)
+  // const awards = useCountUp(578)
 
   // ================= PROJECT DATA =================
   // Matnlar i18next orqali tarjima qilinadi, shu uchun faqat keylar beriladi
+  
+  const navigate = useNavigate();
   const projectsData = [
     {
       id: 1,
@@ -126,7 +129,7 @@ function Projects() {
       cost: "$8 mln",
       year: "2019"
     },
-      {
+    {
       id: 7,
       key: 'project7',
       images: [projectImg0100, projectImg0110, projectImg0120],
@@ -358,7 +361,14 @@ function Projects() {
             <span className="cta-subtitle">{t('about.cta.small')}</span>
             <h2 className="cta-title">{t('about.cta.title')}</h2>
             <p className="cta-text">{t('about.cta.text')}</p>
-            <button className="cta-button">{t('about.cta.button')}</button>
+
+            <button
+              className="cta-button"
+              onClick={() => navigate("/contact")}
+            >
+              {t('about.cta.button')}
+            </button>
+
           </div>
         </div>
       </div>
@@ -367,7 +377,7 @@ function Projects() {
       <div className="about-map">
         <div className="map-frame">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.001242271041!2d69.22358488575746!3d41.28707742825704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8a5ab20d00ef%3A0xdaf9592f91854135!2sChilanzar%20Street%204%2C%20100115%2C%20Tashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1772885584954!5m2!1sen!2s" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.001242271041!2d69.22358488575746!3d41.28707742825704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8a5ab20d00ef%3A0xdaf9592f91854135!2sChilanzar%20Street%204%2C%20100115%2C%20Tashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1772885584954!5m2!1sen!2s"
             width="100%"
             height="450"
             style={{ border: 0 }}
