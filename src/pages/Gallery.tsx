@@ -17,7 +17,33 @@ import img8 from "../assets/images/projectImg08.png"
 import img9 from "../assets/images/projectImg09.png"
 import img14 from "../assets/images/projectImg110.jpg"
 import img12 from "../assets/images/split_image_1.png"
+import img24 from "../assets/images/split_image_10.png"
+import img25 from "../assets/images/split_image_11.png"
+import img26 from "../assets/images/split_image_12.png"
+import img27 from "../assets/images/split_image_13.png"
+import img28 from "../assets/images/split_image_14.png"
+import img29 from "../assets/images/split_image_15.png"
+import img30 from "../assets/images/split_image_16.png"
+import img31 from "../assets/images/split_image_17.jpg"
+import img32 from "../assets/images/split_image_18.jpg"
+import img33 from "../assets/images/split_image_19.jpg"
 import img16 from "../assets/images/split_image_2.png"
+import img34 from "../assets/images/split_image_20.jpg"
+import img35 from "../assets/images/split_image_21.jpg"
+import img36 from "../assets/images/split_image_22.jpg"
+import img37 from "../assets/images/split_image_23.jpg"
+import img38 from "../assets/images/split_image_24.jpg"
+import img39 from "../assets/images/split_image_25.jpg"
+import img40 from "../assets/images/split_image_26.jpg"
+import img41 from "../assets/images/split_image_27.jpg"
+import img42 from "../assets/images/split_image_28.jpg"
+import img17 from "../assets/images/split_image_3.png"
+import img18 from "../assets/images/split_image_4.png"
+import img19 from "../assets/images/split_image_5.png"
+import img20 from "../assets/images/split_image_6.png"
+import img21 from "../assets/images/split_image_7.png"
+import img22 from "../assets/images/split_image_8.png"
+import img23 from "../assets/images/split_image_9.png"
 import heroImage from "../assets/images/sub-banner-img.jpg"
 
 type ImageType = {
@@ -47,6 +73,32 @@ export default function Gallery() {
 		{ id: 14, src: img14 },
 		{ id: 15, src: img15 },
 		{ id: 16, src: img16 },
+		{ id: 17, src: img17 },
+		{ id: 18, src: img18 },
+		{ id: 19, src: img19 },
+		{ id: 20, src: img20 },
+		{ id: 21, src: img21 },
+		{ id: 22, src: img22 },
+		{ id: 23, src: img23 },
+		{ id: 24, src: img24 },
+		{ id: 25, src: img25 },
+		{ id: 26, src: img26 },
+		{ id: 27, src: img27 },
+		{ id: 28, src: img28 },
+		{ id: 29, src: img29 },
+		{ id: 30, src: img30 },
+		{ id: 31, src: img31 },
+		{ id: 32, src: img32 },
+		{ id: 33, src: img33 },
+		{ id: 34, src: img34 },
+		{ id: 35, src: img35 },
+		{ id: 36, src: img36 },
+		{ id: 37, src: img37 },
+		{ id: 38, src: img38 },
+		{ id: 39, src: img39 },
+		{ id: 40, src: img40 },
+		{ id: 41, src: img41 },
+		{ id: 42, src: img42 },
 		{ id: 12, src: img12 }
 	]
 
