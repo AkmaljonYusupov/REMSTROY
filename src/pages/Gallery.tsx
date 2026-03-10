@@ -2,6 +2,39 @@ import { useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import "./Gallery.scss"
 
+import img68 from "../assets/images/Galreya020.jpg"
+import img48 from "../assets/images/Galreya1.jpg"
+import img57 from "../assets/images/Galreya10.jpg"
+import img58 from "../assets/images/Galreya11.jpg"
+import img59 from "../assets/images/Galreya12.jpg"
+import img60 from "../assets/images/Galreya13.jpg"
+import img61 from "../assets/images/Galreya14.jpg"
+import img62 from "../assets/images/Galreya15.jpg"
+import img63 from "../assets/images/Galreya16.jpg"
+import img64 from "../assets/images/Galreya17.jpg"
+import img65 from "../assets/images/Galreya18.jpg"
+import img66 from "../assets/images/Galreya19.jpg"
+import img49 from "../assets/images/Galreya2.jpg"
+import img67 from "../assets/images/Galreya20.jpg"
+import img69 from "../assets/images/Galreya21.jpg"
+import img70 from "../assets/images/Galreya22.jpg"
+import img71 from "../assets/images/Galreya23.jpg"
+import img72 from "../assets/images/Galreya24.jpg"
+import img73 from "../assets/images/Galreya25.jpg"
+import img74 from "../assets/images/Galreya26.jpg"
+import img75 from "../assets/images/Galreya27.jpg"
+import img76 from "../assets/images/Galreya28.jpg"
+import img77 from "../assets/images/Galreya29.jpg"
+import img50 from "../assets/images/Galreya3.jpg"
+import img78 from "../assets/images/Galreya30.jpg"
+import img79 from "../assets/images/Galreya31.jpg"
+import img80 from "../assets/images/Galreya32.jpeg"
+import img51 from "../assets/images/Galreya4.jpg"
+import img52 from "../assets/images/Galreya5.jpg"
+import img53 from "../assets/images/Galreya6.jpg"
+import img54 from "../assets/images/Galreya7.jpg"
+import img55 from "../assets/images/Galreya8.jpg"
+import img56 from "../assets/images/Galreya9.jpg"
 import img6 from "../assets/images/projectImg01.jpg"
 import img10 from "../assets/images/projectImg010.png"
 import img13 from "../assets/images/projectImg0110.jpg"
@@ -109,6 +142,41 @@ export default function Gallery() {
 		{ id: 45, src: img45 },
 		{ id: 46, src: img46 },
 		{ id: 47, src: img47 },
+		{ id: 48, src: img48 },
+		{ id: 49, src: img49 },
+		{ id: 50, src: img50 },
+		{ id: 51, src: img51 },
+		{ id: 52, src: img52 },
+		{ id: 53, src: img53 },
+		{ id: 54, src: img54 },
+		{ id: 55, src: img55 },
+		{ id: 56, src: img56 },
+		{ id: 57, src: img57 },
+		{ id: 58, src: img58 },
+		{ id: 59, src: img59 },
+		{ id: 60, src: img60 },
+		{ id: 61, src: img61 },
+		{ id: 62, src: img62 },
+		{ id: 63, src: img63 },
+		{ id: 64, src: img64 },
+		{ id: 65, src: img65 },
+		{ id: 66, src: img66 },
+		{ id: 67, src: img67 },
+		{ id: 68, src: img68 },
+		{ id: 69, src: img69 },
+		{ id: 70, src: img70 },
+		{ id: 71, src: img71 },
+		{ id: 72, src: img72 },
+		{ id: 73, src: img73 },
+		{ id: 74, src: img74 },
+		{ id: 75, src: img75 },
+		{ id: 76, src: img76 },
+		{ id: 77, src: img77 },
+		{ id: 78, src: img78 },
+		{ id: 79, src: img79 },
+		{ id: 80, src: img80 },
+
+
 		{ id: 12, src: img12 }
 	]
 
