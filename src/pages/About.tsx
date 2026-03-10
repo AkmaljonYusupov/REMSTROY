@@ -9,222 +9,309 @@ import cert1 from "../assets/images/certificate/certificate1.png"
 import cert2 from "../assets/images/certificate/certificate2.png"
 import cert3 from "../assets/images/certificate/certificate3.png"
 import cert4 from "../assets/images/certificate/certificate4.png"
-
 import cert51 from "../assets/images/certificate/certificate5.1.png"
 import cert5 from "../assets/images/certificate/certificate5.png"
-
 import cert61 from "../assets/images/certificate/certificate6.1.png"
 import cert6 from "../assets/images/certificate/certificate6.png"
-
 import cert7 from "../assets/images/certificate/certificate7.png"
 import cert8 from "../assets/images/certificate/certificate8.png"
-
 import cert91 from "../assets/images/certificate/certificate9.1.png"
 import cert9 from "../assets/images/certificate/certificate9.png"
 
 import "./About.scss"
 
 function About() {
-  const { t } = useTranslation();
-  const navigate = useNavigate();
+	const { t } = useTranslation()
+	const navigate = useNavigate()
 
-  const certificates = [
-    cert1,
-    cert2,
-    cert3,
-    cert4,
-    cert5,
-    cert51,
-    cert6,
-    cert61,
-    cert7,
-    cert8,
-    cert9,
-    cert91,
-  ];
+	const certificates = [
+		cert1, cert2, cert3, cert4, cert5, cert51,
+		cert6, cert61, cert7, cert8, cert9, cert91,
+	]
 
-  const statsRef = useRef(null);
-  const [visible, setVisible] = useState(false);
+	const statsRef = useRef(null)
+	const [visible, setVisible] = useState(false)
 
-  // MODAL STATE
-  const [modalOpen, setModalOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState(null);
+	// Certificate modal
+	const [modalOpen, setModalOpen] = useState(false)
+	const [currentImage, setCurrentImage] = useState(null)
 
-  const openModal = (img) => {
-    setCurrentImage(img);
-    setModalOpen(true);
-  };
+	// Read More modal (yangi)
+	const [readMoreOpen, setReadMoreOpen] = useState(false)
 
-  const closeModal = () => {
-    setModalOpen(false);
-    setCurrentImage(null);
-  };
+	const openCertModal = (img) => {
+		setCurrentImage(img)
+		setModalOpen(true)
+	}
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.4 }
-    );
+	const closeCertModal = () => {
+		setModalOpen(false)
+		setCurrentImage(null)
+	}
 
-    if (statsRef.current) {
-      observer.observe(statsRef.current);
-    }
+	const openReadMore = () => setReadMoreOpen(true)
+	const closeReadMore = () => setReadMoreOpen(false)
 
-    return () => observer.disconnect();
-  }, []);
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) {
+					setVisible(true)
+					observer.disconnect()
+				}
+			},
+			{ threshold: 0.4 }
+		)
 
-  return (
-    <section className="about-page">
-      {/* HERO */}
-      <div className="about-hero">
-        <div className="container">
-          <h1 className="about-title">{t("about.aboutjoyiy")}</h1>
+		if (statsRef.current) {
+			observer.observe(statsRef.current)
+		}
 
-          <div className="breadcrumb">
-            <span className="breadcrumb-link" onClick={() => navigate("/")}>
-              {t("about.home")}
-            </span>
+		return () => observer.disconnect()
+	}, [])
 
-            <span className="arrow">→</span>
+	return (
+		<section className="about-page">
+			{/* HERO */}
+			<div className="about-hero">
+				<div className="container">
+					<h1 className="about-title">{t("about.aboutjoyiy")}</h1>
+					<div className="breadcrumb">
+						<span className="breadcrumb-link" onClick={() => navigate("/")}>
+							{t("about.home")}
+						</span>
+						<span className="arrow">→</span>
+						<span className="breadcrumb-link active">
+							{t("about.aboutjoyiy")}
+						</span>
+					</div>
+				</div>
+			</div>
 
-            <span className="breadcrumb-link active">
-              {t("about.aboutjoyiy")}
-            </span>
-          </div>
-        </div>
+			{/* ABOUT US */}
+			<div className="about-us-hero">
+				<div className="container">
+					<div className="us-grid">
+						<div className="us-image-side">
+							<img
+								src={aboutpageImg}
+								alt="Construction team"
+								className="us-main-photo"
+							/>
+						</div>
+
+						<div className="us-text-side">
+							<span className="us-small-label">{t("nav.about")}</span>
+
+							<h2 className="us-main-title">
+								{t("about.believe.title")}
+							</h2>
+
+							<p className="us-description">
+								{t("about.believe.desc")}
+							</p>
+
+							<ul className="us-check-list">
+								<li>
+									<span className="check-mark">✔</span>
+									{t("about.believe.check1")}
+								</li>
+								<li>
+									<span className="check-mark">✔</span>
+									{t("about.believe.check2")}
+								</li>
+								<li>
+									<span className="check-mark">✔</span>
+									{t("about.believe.check3")}
+								</li>
+								<li>
+									<span className="check-mark">✔</span>
+									{t("about.believe.check4")}
+								</li>
+								<li>
+									<span className="check-mark">✔</span>
+									{t("about.believe.check5")}
+								</li>
+							</ul>
+
+							<button className="read-more-btn" onClick={openReadMore}>
+								{t("about.believe.readMore")}
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{/* CERTIFICATES */}
+			<div className="certificates-section">
+				<div className="container">
+					<div className="cert-header">
+						<span className="cert-small">{t("about.certificate.small")}</span>
+						<h2 className="cert-title">{t("about.certificate.title")}</h2>
+						<p className="cert-text">{t("about.certificate.text")}</p>
+					</div>
+
+					<div className="cert-grid">
+						{certificates.map((cert, index) => (
+							<div
+								className="cert-card"
+								key={index}
+								onClick={() => openCertModal(cert)}
+							>
+								<img src={cert} alt={`certificate-${index}`} />
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+
+{/* Sertifikat MODAL – yanada qulay va chiroyli versiya */}
+{modalOpen && (
+  <div className="cert-modal-overlay" onClick={closeCertModal}>
+    <div 
+      className="cert-modal-content"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button 
+        className="cert-modal-close"
+        onClick={closeCertModal}
+        aria-label={t("common.close")}
+      >
+        ×
+      </button>
+
+      <div className="cert-image-wrapper">
+        <img 
+          src={currentImage} 
+          alt="Sertifikat to'liq o'lchamda"
+          className="cert-enlarged-image"
+          loading="lazy"
+        />
       </div>
+    </div>
+  </div>
+)}
+			{/* Read More MODAL – faqat matnli ma'lumotlar, sertifikatlar olib tashlandi */}
+			{readMoreOpen && (
+				<div className="readmore-overlay" onClick={closeReadMore}>
+					<div
+						className="readmore-modal"
+						onClick={(e) => e.stopPropagation()}
+					>
+						<button
+							className="modal-close-btn"
+							onClick={closeReadMore}
+							aria-label={t("common.close")}
+						>
+							×
+						</button>
 
-      {/* ABOUT US */}
-      <div className="about-us-hero">
-        <div className="container">
-          <div className="us-grid">
-            <div className="us-image-side">
-              <img
-                src={aboutpageImg}
-                alt="Construction team"
-                className="us-main-photo"
-              />
-            </div>
+						<div className="modal-header">
+							<h2 className="modal-main-title">{t("about.detailed.title")}</h2>
+						</div>
 
-            <div className="us-text-side">
-              <span className="us-small-label">{t("nav.about")}</span>
+						<div className="modal-body scrollable-content">
+							<p className="modal-intro">{t("about.detailed.intro")}</p>
 
-              <h2 className="us-main-title">
-                {t("about.believe.title")}
-              </h2>
+							<h3 className="modal-subtitle">{t("about.detailed.specialization")}</h3>
+							<ul className="modal-list">
+								{t("about.detailed.specialization_list", { returnObjects: true }).map((item, index) => (
+									<li key={index}>{item}</li>
+								))}
+							</ul>
 
-              <p className="us-description">
-                {t("about.believe.desc")}
-              </p>
+							<h3 className="modal-subtitle">{t("about.detailed.equipment")}</h3>
+							<p>{t("about.detailed.equipment_text")}</p>
 
-              <ul className="us-check-list">
-                <li><span className="check-mark">✔</span>{t("about.believe.check1")}</li>
-                <li><span className="check-mark">✔</span>{t("about.believe.check2")}</li>
-                <li><span className="check-mark">✔</span>{t("about.believe.check3")}</li>
-                <li><span className="check-mark">✔</span>{t("about.believe.check4")}</li>
-                <li><span className="check-mark">✔</span>{t("about.believe.check5")}</li>
-              </ul>
+							<h3 className="modal-subtitle">{t("about.detailed.projects")}</h3>
+							<ul className="modal-list">
+								{t("about.detailed.projects_list", { returnObjects: true }).map((item, index) => (
+									<li key={index}>{item}</li>
+								))}
+							</ul>
 
-              <button className="read-more-btn">
-                {t("about.believe.readMore")}
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+							<h3 className="modal-subtitle">{t("about.detailed.experience")}</h3>
+							<p>{t("about.detailed.experience_text")}</p>
 
-      {/* CERTIFICATES */}
-      <div className="certificates-section">
-        <div className="container">
-          <div className="cert-header">
-            <span className="cert-small">
-              {t("about.certificate.small")}
-            </span>
+							<h3 className="modal-subtitle">{t("about.detailed.welding")}</h3>
+							<p>{t("about.detailed.welding_text")}</p>
 
-            <h2 className="cert-title">
-              {t("about.certificate.title")}
-            </h2>
+							<h3 className="modal-subtitle">{t("about.detailed.materials")}</h3>
+							<p>{t("about.detailed.materials_text")}</p>
 
-            <p className="cert-text">
-              {t("about.certificate.text")}
-            </p>
-          </div>
+							<p className="modal-conclusion">
+								{t("about.detailed.conclusion")}
+							</p>
+						</div>
 
-          <div className="cert-grid">
-            {certificates.map((cert, index) => (
-              <div className="cert-card" key={index} onClick={() => openModal(cert)}>
-                <img src={cert} alt={`certificate-${index}`} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+						<div className="modal-actions">
+							<button className="modal-btn-primary" onClick={closeReadMore}>
+								{t("common.close")}
+							</button>
+							<button
+								className="modal-btn-outline"
+								onClick={() => {
+									closeReadMore()
+									navigate("/contact")
+								}}
+							>
+								{t("about.cta.button")}
+							</button>
+						</div>
+					</div>
+				</div>
+			)}
 
-      {/* MODAL */}
-      {modalOpen && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <img src={currentImage} alt="certificate-large" />
-            <button className="modal-close" onClick={closeModal}>×</button>
-          </div>
-        </div>
-      )}
+			{/* CTA */}
+			<div className="cta-section">
+				<div className="cta-decorations">
+					<div className="cta-bg-left"></div>
+					<div className="cta-bg-right"></div>
 
-      {/* CTA */}
-      <div className="cta-section">
-        <div className="cta-decorations">
-          <div className="cta-bg-left"></div>
-          <div className="cta-bg-right"></div>
+					<div className="cta-shape shape-1"></div>
+					<div className="cta-shape shape-2"></div>
+					<div className="cta-shape shape-3"></div>
+					<div className="cta-shape shape-4"></div>
+					<div className="cta-shape shape-5"></div>
+					<div className="cta-shape shape-6"></div>
+				</div>
 
-          <div className="cta-shape shape-1"></div>
-          <div className="cta-shape shape-2"></div>
-          <div className="cta-shape shape-3"></div>
-          <div className="cta-shape shape-4"></div>
-          <div className="cta-shape shape-5"></div>
-          <div className="cta-shape shape-6"></div>
-        </div>
+				<div className="container">
+					<div className="cta-header">
+						<span className="cta-subtitle">{t("about.cta.small")}</span>
 
-        <div className="container">
-          <div className="cta-header">
-            <span className="cta-subtitle">{t("about.cta.small")}</span>
+						<h2 className="cta-title">
+							{t("about.cta.title")}
+						</h2>
 
-            <h2 className="cta-title">
-              {t("about.cta.title")}
-            </h2>
+						<p className="cta-text">
+							{t("about.cta.text")}
+						</p>
 
-            <p className="cta-text">
-              {t("about.cta.text")}
-            </p>
+						<button
+							className="cta-button"
+							onClick={() => navigate("/contact")}
+						>
+							{t("about.cta.button")}
+						</button>
+					</div>
+				</div>
+			</div>
 
-            <button
-              className="cta-button"
-              onClick={() => navigate("/contact")}
-            >
-              {t("about.cta.button")}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* MAP */}
-      <div className="about-map">
-        <div className="map-frame">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.001242271041!2d69.22358488575746!3d41.28707742825704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8a5ab20d00ef%3A0xdaf9592f91854135!2sChilanzar%20Street%204%2C%20100115%2C%20Tashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1772885584954!5m2!1sen!2s"
-            width="100%"
-            height="450"
-            style={{ border: 0 }}
-            loading="lazy"
-          ></iframe>
-        </div>
-      </div>
-    </section>
-  );
+			{/* MAP */}
+			<div className="about-map">
+				<div className="map-frame">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.001242271041!2d69.22358488575746!3d41.28707742825704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8a5ab20d00ef%3A0xdaf9592f91854135!2sChilanzar%20Street%204%2C%20100115%2C%20Tashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1772885584954!5m2!1sen!2s"
+						width="100%"
+						height="450"
+						style={{ border: 0 }}
+						loading="lazy"
+					></iframe>
+				</div>
+			</div>
+		</section>
+	)
 }
 
-export default About;
+export default About

@@ -28,80 +28,116 @@
 			"desc": "Qurilish jarayonida zamonaviy va samarali texnologiyalar qo‘llaniladi."
 		}
 	},
-	"about": {
-		"certificate":{
-			"small":"Yutuqlarimizni tasdiqlovchi sertifikatlar",
-			"title":"Rasmiy sertifikatlar",
-			"text":"Har bir sertifikatimiz sifat va professionalizmni aks ettiradi."
-		},
-		"label": "KOMPANIYA HAQIDA",
-		"title": "Qurilishda ishonchlilik va professionallik",
-		"aboutjoyiy": "Biz haqimizda",
-		"text": "REMSTROY — 2007-yilda tashkil etilgan qurilish kompaniyasi bo‘lib, yo‘l va sanoat infratuzilmasi loyihalarini amalga oshirib kelmoqda. Zamonaviy texnika va malakali mutaxassislar yordamida ishlar sifatli va o‘z muddatida bajariladi.",
-		"textNested1": "Asosiy yo‘nalishlar: magistral quvurlar qurilishi, metallokonstruksiya montaji, kapital ta’mirlash hamda yo‘l qurilishi.",
-		"textNested2": "Kompaniya barcha qurilish me’yorlari va sifat standartlariga qat’iy rioya qiladi.",
-		"home": "Bosh sahifa",
-		"card1": {
-			"title": "Tajriba ega muhandislarimiz bor.",
-			"text": "Mutaxassislarimiz yuqori malakaga ega va har bir loyihani sifat bilan bajaradi."
-		},
-		"card2": {
-			"title": "24/7 mijozlarni qo‘llab-quvvatlash.",
-			"text": "Biz har doim mijozlarimizga yordam berishga tayyormiz va tezkor xizmat ko‘rsatamiz."
-		},
-		"card3": {
-			"title": "Iqtidorli jamoa a’zolari.",
-			"text": "Jamoamiz professional va mas’uliyatli xodimlardan iborat."
-		},
-		"stat1": {
-			"value": "18+ yil",
-			"label": "qurilish sohasida tajriba"
-		},
-		"stat2": {
-			"value": "Davlat buyurtmalari",
-			"label": "asosiy faoliyat yo‘nalishi"
-		},
-		"believe": {
-			"title": "Biz katta g‘oyalar kuchiga ishonamiz",
-			"desc": "2007-yildan buyon kompaniyamiz yo‘l qurilishi, magistral quvurlar va sanoat inshootlari qurilishi sohasida faoliyat yuritib kelmoqda. Zamonaviy texnika va tajribali mutaxassislar jamoasi bilan har bir loyihani sifatli va belgilangan muddatda bajarishni ta’minlaymiz.",
-			"check1": "Yo‘l qurilishi va infratuzilma obyektlarini barpo etish",
-			"check2": "Magistral quvurlar va sanoat inshootlarini qurish",
-			"check3": "Metallokonstruksiyalarni ishlab chiqarish va montaj qilish",
-			"check4": "Zamonaviy maxsus texnika va yuqori malakali mutaxassislar",
-			"check5": "Murakkab iqlim sharoitida ishlash tajribasi",
-			"readMore": "Batafsil o‘qish"
-		},
-		"stats": {
-			"small": "Bizning Statistikamiz",
-			"title": "Katta g‘oyalar bilan katta ishlarni qilamiz.",
-			"projects": "Tugallangan loyihalar",
-			"team": "Jamoa a’zolari",
-			"coffee": "Stakan kofe",
-			"awards": "Olingan mukofotlar"
-		},
-		"team": {
-			"small": "Bizning jamoamiz",
-			"title": "Mutaxassislar jamoasi bilan tanishing",
-			"member1": {
-				"name": "Mike Hardson",
-				"position": "Bosh menejer"
-			},
-			"member2": {
-				"name": "Rayan Collins",
-				"position": "Direktor o‘rinbosari"
-			},
-			"member3": {
-				"name": "Brian Rooney",
-				"position": "Maydon boshlig‘i"
-			}
-		},
-		"cta": {
-			"small": "Keling, biror narsani boshlaylik",
-			"title": "Boshlashga tayyormisiz?",
-			"text": "Bu yerda siz istalgan loyihani boshlashingiz mumkin. Barcha kerakli resurslar va imkoniyatlar tayyor.",
-			"button": "Boshlash"
-		}
-	},
+"about": {
+  "certificate": {
+    "small": "Yutuqlarimizni tasdiqlovchi sertifikatlar",
+    "title": "Rasmiy sertifikatlar",
+    "text": "Har bir sertifikatimiz sifat va professionalizmni aks ettiradi."
+  },
+  "label": "KOMPANIYA HAQIDA",
+  "title": "Qurilishda ishonchlilik va professionallik",
+  "aboutjoyiy": "Biz haqimizda",
+  "text": "REMSTROY — 2007-yilda tashkil etilgan qurilish kompaniyasi bo‘lib, yo‘l va sanoat infratuzilmasi loyihalarini amalga oshirib kelmoqda. Zamonaviy texnika va malakali mutaxassislar yordamida ishlar sifatli va o‘z muddatida bajariladi.",
+  "textNested1": "Asosiy yo‘nalishlar: magistral quvurlar qurilishi, metallokonstruksiya montaji, kapital ta’mirlash hamda yo‘l qurilishi.",
+  "textNested2": "Kompaniya barcha qurilish me’yorlari va sifat standartlariga qat’iy rioya qiladi.",
+  "home": "Bosh sahifa",
+  "card1": {
+    "title": "Tajriba ega muhandislarimiz bor.",
+    "text": "Mutaxassislarimiz yuqori malakaga ega va har bir loyihani sifat bilan bajaradi."
+  },
+  "card2": {
+    "title": "24/7 mijozlarni qo‘llab-quvvatlash.",
+    "text": "Biz har doim mijozlarimizga yordam berishga tayyormiz va tezkor xizmat ko‘rsatamiz."
+  },
+  "card3": {
+    "title": "Iqtidorli jamoa a’zolari.",
+    "text": "Jamoamiz professional va mas’uliyatli xodimlardan iborat."
+  },
+  "stat1": {
+    "value": "18+ yil",
+    "label": "qurilish sohasida tajriba"
+  },
+  "stat2": {
+    "value": "Davlat buyurtmalari",
+    "label": "asosiy faoliyat yo‘nalishi"
+  },
+  "believe": {
+    "title": "Biz katta g‘oyalar kuchiga ishonamiz",
+    "desc": "2007-yildan buyon kompaniyamiz yo‘l qurilishi, magistral quvurlar va sanoat inshootlari qurilishi sohasida faoliyat yuritib kelmoqda. Zamonaviy texnika va tajribali mutaxassislar jamoasi bilan har bir loyihani sifatli va belgilangan muddatda bajarishni ta’minlaymiz.",
+    "check1": "Yo‘l qurilishi va infratuzilma obyektlarini barpo etish",
+    "check2": "Magistral quvurlar va sanoat inshootlarini qurish",
+    "check3": "Metallokonstruksiyalarni ishlab chiqarish va montaj qilish",
+    "check4": "Zamonaviy maxsus texnika va yuqori malakali mutaxassislar",
+    "check5": "Murakkab iqlim sharoitida ishlash tajribasi",
+    "readMore": "Batafsil o‘qish"
+  },
+  "stats": {
+    "small": "Bizning Statistikamiz",
+    "title": "Katta g‘oyalar bilan katta ishlarni qilamiz.",
+    "projects": "Tugallangan loyihalar",
+    "team": "Jamoa a’zolari",
+    "coffee": "Stakan kofe",
+    "awards": "Olingan mukofotlar"
+  },
+  "team": {
+    "small": "Bizning jamoamiz",
+    "title": "Mutaxassislar jamoasi bilan tanishing",
+    "member1": {
+      "name": "Mike Hardson",
+      "position": "Bosh menejer"
+    },
+    "member2": {
+      "name": "Rayan Collins",
+      "position": "Direktor o‘rinbosari"
+    },
+    "member3": {
+      "name": "Brian Rooney",
+      "position": "Maydon boshlig‘i"
+    }
+  },
+  "cta": {
+    "small": "Keling, biror narsani boshlaylik",
+    "title": "Boshlashga tayyormisiz?",
+    "text": "Bu yerda siz istalgan loyihani boshlashingiz mumkin. Barcha kerakli resurslar va imkoniyatlar tayyor.",
+    "button": "Boshlash"
+  },
+  "detailed": {
+    "title": "Kompaniya haqida batafsil",
+    "intro": "Kompaniyamiz 2007-yilda tashkil etilgan. Qisqa muddat ichida bozor sharoitlariga moslashib, yuqori professionalizm va sifatli ish natijalari bilan o‘z o‘rnini topdi.",
+    "specialization": "Asosiy yo‘nalishlar va xizmatlar",
+    "specialization_list": [
+      "Yo‘l qurilishi va yo‘l-ta’mirlash ishlari",
+      "Rezervuarlarni listli yig‘ish va razvyortka usulida montaj/demontaj",
+      "Yuqori bosimli magistral quvurlarni yer usti va yer ostida izolyatsiya bilan qurish",
+      "Issiqlik almashinuv qurilmalari, texnologik pechlar, suv va kanalizatsiya tarmoqlarini kapital ta’mirlash va montaj",
+      "Neft-gaz sanoati uchun metall konstruktsiyalar va texnologik uzellar ishlab chiqarish va montaj",
+      "Yuk tashish va maxsus texnika xizmatlari"
+    ],
+    "equipment": "Zamonaviy texnika va uskunalari",
+    "equipment_text": "Kompaniyamizda HITACHI, LONKING, HYUNDAI, FOTON, SHANTUI, ZOOMLION ekskavatorlari, buldozerlar, avtokranlar (50–200 tonna), avtobeton aralashtirgichlar, polivomoechnye mashinalar va boshqa maxsus texnikalar mavjud. Asosan 2009–2014 yillarda ishlab chiqarilgan, Yevro-3 standartlariga mos.",
+    "projects": "Aralbo‘yi va Ustyurt mintaqasida bajarilgan asosiy loyihalar",
+    "projects_list": [
+      "Ustyurt gaz-kimyo kompleksi (Ustyurt GKhK) qurilishi va Surgil koni ob'ektlari",
+      "Avtomobil og‘irliklari uchun inshootlar, pod‘ezd yo‘llari, darvozalar va operativ xizmatlar",
+      "Gaz quvurlari: D1020 mm (xom gaz), D168 mm (kondensat), D720 mm (tovar gaz)",
+      "33 ta quduq va GSP №1,3,4,6 qurilishi (turnkey usulida)",
+      "Suv ta’minoti tarmoqlari, sun’iy suv havzasi qurilishi va betoni",
+      "Kungirot suv ta’minoti ob’ektlarini kengaytirish va modernizatsiya",
+      "Taxiatash–Kungirot texnik suv quvuri (D1020 mm, uzunligi 2 km)",
+      "Quduqlardan GSPga 5-toifa avtomobil yo‘li (uzunligi 14,9 km)"
+    ],
+    "experience": "Tajriba va bajarilgan hajmlar",
+    "experience_text": "66 ta rezervuar (1,25 dan 20 ming m³ gacha), 10 km dan 80 km gacha gaz va kondensat quvurlari (Ø720 mm, Ø1020 mm, Ø168 mm), umumiy taxminan 25 km uzunlikdagi turli diametrli (108–1200 mm) quvurlar qurilgan.",
+    "welding": "Payvandlash va kesish uskunalari",
+    "welding_text": "MILLER (AQSh), BARRACUDA plazma kesish (Germaniya), NEON apparatlari, VDM-1202 rectifiers, Perkins elektrostansiyalari (50–100 kVt), 40 mm gacha metallni plazmali kesish imkoniyati.",
+    "materials": "Materiallar bazasi",
+    "materials_text": "Volzhskiy, Pervouralsk, Severstal, Magnitogorsk metall kombinatlaridan yuqori sifatli po‘lat quvurlar, listlar, burchaklar, ikki tavanli profillar, UONI-13/55 va boshqa elektrodlar mavjud.",
+    "conclusion": "REMSTROY — murakkab loyihalarni yuqori sifatda va belgilangan muddatlarda bajaradigan ishonchli hamkor."
+  }
+},
+"common": {
+  "close": "Yopish"
+},
 	"contact": {
 		"contactjoyiy": "Bog'lanish",
 		"home": "Bosh sahifa",

@@ -1,991 +1,216 @@
 // =============================================
-// ABOUT PAGE RESPONSIVE SCSS
-// =============================================
-
-// =============================================
 // BREAKPOINTS
 // =============================================
 $breakpoints: (
-	xs: 480px,
-	sm: 576px,
-	md: 768px,
-	lg: 992px,
-	xl: 1200px,
-	xxl: 1400px,
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
 );
 
 @mixin mq($bp) {
-	@if map-has-key($breakpoints, $bp) {
-		@media (min-width: map-get($breakpoints, $bp)) {
-			@content;
-		}
-	}
+  @if map-has-key($breakpoints, $bp) {
+    @media (min-width: map-get($breakpoints, $bp)) {
+      @content;
+    }
+  }
 }
 
 @mixin mq-max($bp) {
-	@if map-has-key($breakpoints, $bp) {
-		@media (max-width: (map-get($breakpoints, $bp) - 1px)) {
-			@content;
-		}
-	}
+  @if map-has-key($breakpoints, $bp) {
+    @media (max-width: (map-get($breakpoints, $bp) - 1px)) {
+      @content;
+    }
+  }
 }
 
 // =============================================
-// ABOUT HERO (yuqori qism – breadcrumb bilan)
+// ABOUT HERO
 // =============================================
 .about-hero {
-	position: relative;
-	background: url('/src/assets/images/sub-banner-img.jpg') center / cover
-		no-repeat;
-	padding: 12vw 0;
-	text-align: center;
-	color: #fff;
+  position: relative;
+  background: url('/src/assets/images/sub-banner-img.jpg') center / cover no-repeat;
+  padding: 12vw 0;
+  text-align: center;
+  color: #fff;
 
-	&::before {
-		content: '';
-		position: absolute;
-		inset: 0;
-		background: rgba(0, 0, 0, 0.35); // overlay
-		z-index: 1;
-	}
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+  }
 }
 
 .about-title {
-	position: relative;
-	z-index: 2;
-	font-size: clamp(32px, 6vw, 64px);
-	font-weight: 500;
-	margin-bottom: 1.5rem;
-	text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  font-size: clamp(32px, 6vw, 64px);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
 }
 
 .breadcrumb {
-	position: relative;
-	z-index: 2;
-	display: inline-flex;
-	flex-wrap: wrap;
-	gap: 0.5rem;
-	padding: 0.5rem 1rem;
-	border: 1px solid rgba(255, 255, 255, 0.4);
-	border-radius: 6px;
-	font-size: clamp(12px, 1.2vw, 14px);
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  font-size: clamp(12px, 1.2vw, 14px);
 
-	.breadcrumb-link {
-		cursor: pointer;
-		color: #fff;
-		transition: color 0.2s;
+  .breadcrumb-link {
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.2s;
 
-		&:hover {
-			color: #ffb703;
-		}
+    &:hover { color: #ffb703; }
+    &.active { color: #ffb703; font-weight: bold; }
+  }
 
-		&.active {
-			color: #ffb703;
-			font-weight: bold;
-		}
-	}
-
-	.arrow {
-		color: rgba(255, 255, 255, 0.6);
-	}
+  .arrow { color: rgba(255, 255, 255, 0.6); }
 }
 
 // =============================================
-// FEATURES GRID (3 ta karta bo'limi)
-// =============================================
-.about-features {
-	background: #eef2f5;
-	padding: 8vw 2vw;
-	position: relative;
-	z-index: 2;
-}
-
-.features-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	gap: 2rem;
-}
-
-.feature-card {
-	border-top: 2px solid black;
-	background: #fff;
-	border-radius: 12px;
-	padding: 2rem;
-	text-align: left;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	transition:
-		transform 0.3s,
-		box-shadow 0.3s;
-	position: relative;
-
-	&:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-	}
-
-	img {
-		width: 60px;
-		height: 60px;
-		object-fit: cover;
-		margin-bottom: 1.5rem;
-		border-radius: 8px;
-		transition: transform 0.3s ease;
-	}
-
-	&:hover img {
-		transform: scale(1.1);
-	}
-
-	h3 {
-		font-size: clamp(18px, 2vw, 20px);
-		margin-bottom: 1rem;
-		color: #1e3a5f;
-	}
-
-	p {
-		font-size: clamp(14px, 1.2vw, 16px);
-		line-height: 1.6;
-		color: #6c757d;
-	}
-}
-
-// =============================================
-// ABOUT US HERO SECTION – rasmdagi dizayn bilan 1:1 yaqin
-// chapda rasm, o'ngda matn, och ko'k fon + subtle pattern
+// ABOUT US HERO
 // =============================================
 .about-us-hero {
-	background: #f0f8ff; // och ko'k / alice blue
-	padding: 7rem 2rem 9rem;
-	position: relative;
-	overflow: hidden;
+  background: #f0f8ff;
+  padding: 7rem 2rem 9rem;
+  position: relative;
+  overflow: hidden;
 
-	// Subtle dotted / kvadrat pattern (rasmdagi fon effektiga yaqin)
-	&::before {
-		content: '';
-		position: absolute;
-		inset: 0;
-		background:
-			radial-gradient(
-				circle at 12% 18%,
-				rgba(200, 220, 255, 0.18) 1.2px,
-				transparent 1.2px
-			),
-			radial-gradient(
-				circle at 88% 82%,
-				rgba(200, 220, 255, 0.14) 1px,
-				transparent 1px
-			);
-		background-size: 48px 48px;
-		pointer-events: none;
-		z-index: 0;
-	}
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 12% 18%, rgba(200, 220, 255, 0.18) 1.2px, transparent 1.2px),
+      radial-gradient(circle at 88% 82%, rgba(200, 220, 255, 0.14) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+  }
 }
 
 .us-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 5rem;
-	align-items: center;
-	position: relative;
-	z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
 
-	@include mq-max(lg) {
-		grid-template-columns: 1fr;
-		gap: 4rem;
-		text-align: center;
-	}
+  @include mq-max(lg) {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    text-align: center;
+  }
 }
 
 .us-image-side {
-	position: relative;
+  position: relative;
 
-	// engil gradient overlay (rasmdagi kabi yumshoq effekt)
-	&::after {
-		content: '';
-		position: absolute;
-		inset: 0;
-		background: linear-gradient(
-			to right,
-			rgba(240, 248, 255, 0.18),
-			transparent 50%
-		);
-		pointer-events: none;
-		border-radius: 12px;
-	}
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(240, 248, 255, 0.18), transparent 50%);
+    pointer-events: none;
+    border-radius: 12px;
+  }
 }
 
 .us-main-photo {
-	width: 100%;
-	height: auto;
-	border-radius: 12px;
-	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
-	display: block;
-	object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
+  display: block;
+  object-fit: cover;
 }
 
-.us-text-side {
-	padding: 1rem 0;
-}
+.us-text-side { padding: 1rem 0; }
 
 .us-small-label {
-	font-size: clamp(14px, 1.4vw, 16px);
-	font-weight: 600;
-	color: #ffb703;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	display: block;
-	margin-bottom: 1.2rem;
+  font-size: clamp(14px, 1.4vw, 16px);
+  font-weight: 600;
+  color: #ffb703;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 1.2rem;
 }
 
 .us-main-title {
-	font-size: clamp(2.5rem, 5.5vw, 4.2rem);
-	font-weight: 700;
-	line-height: 1.12;
-	color: #1a365d;
-	margin-bottom: 1.6rem;
+  font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: #1a365d;
+  margin-bottom: 1.6rem;
 }
 
 .us-description {
-	font-size: clamp(16px, 1.7vw, 1.125rem);
-	line-height: 1.75;
-	color: #4a5568;
-	margin-bottom: 2.8rem;
+  font-size: clamp(16px, 1.7vw, 1.125rem);
+  line-height: 1.75;
+  color: #4a5568;
+  margin-bottom: 2.8rem;
 }
 
 .us-check-list {
-	list-style: none;
-	padding: 0;
-	margin: 0 0 3rem 0;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 3rem 0;
 
-	li {
-		font-size: clamp(15px, 1.6vw, 17px);
-		margin-bottom: 1.3rem;
-		display: flex;
-		align-items: center;
-		gap: 1.1rem;
-		color: #2d3748;
+  li {
+    font-size: clamp(15px, 1.6vw, 17px);
+    margin-bottom: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    color: #2d3748;
 
-		@include mq-max(lg) {
-			justify-content: center;
-		}
-	}
+    @include mq-max(lg) { justify-content: center; }
+  }
 
-	.check-mark {
-		color: #22c55e; // zamonaviy yashil (rasmdagi checkga yaqin)
-		font-size: 1.7rem;
-		line-height: 1;
-		font-weight: bold;
-	}
+  .check-mark {
+    color: #22c55e;
+    font-size: 1.7rem;
+    line-height: 1;
+    font-weight: bold;
+  }
 }
 
 .read-more-btn {
-	background: #ffb703;
-	color: #1e293b;
-	border: none;
-	padding: 1.1rem 3rem;
-	font-size: 1.125rem;
-	font-weight: 600;
-	border-radius: 9999px;
-	cursor: pointer;
-	transition: all 0.35s ease;
-	box-shadow: 0 6px 20px rgba(255, 183, 3, 0.28);
-
-	&:hover {
-		background: #ffca28;
-		transform: translateY(-4px);
-		box-shadow: 0 14px 35px rgba(255, 183, 3, 0.4);
-	}
-
-	@include mq-max(lg) {
-		margin: 1.5rem auto 0;
-	}
-}
-
-// =============================================
-// RESPONSIVE BREAKPOINTS (oldingi qismlar uchun)
-// =============================================
-@include mq-max(xl) {
-	.features-grid {
-		gap: 1.5rem;
-	}
-}
-
-@include mq-max(lg) {
-	.features-grid {
-		grid-template-columns: repeat(2, 1fr);
-	}
-}
-
-@include mq-max(md) {
-	.about-hero {
-		padding: 10vw 2vw;
-	}
-
-	.about-title {
-		font-size: clamp(28px, 6vw, 40px);
-		margin-top: 80px;
-	}
-
-	.features-grid {
-		grid-template-columns: 1fr;
-		gap: 1rem;
-	}
-
-	.feature-card img {
-		width: 50px;
-		height: 50px;
-	}
-}
-
-@include mq-max(sm) {
-	.about-hero {
-		padding: 15vw 2vw;
-	}
-
-	.about-title {
-		font-size: clamp(24px, 7vw, 32px);
-		margin-top: 80px;
-	}
-
-	.breadcrumb {
-		font-size: 12px;
-		padding: 0.4rem 0.8rem;
-	}
-
-	.feature-card {
-		padding: 1.5rem;
-
-		h3 {
-			font-size: 18px;
-		}
-
-		p {
-			font-size: 14px;
-		}
-
-		img {
-			width: 40px;
-			height: 40px;
-		}
-	}
-}
-
-// =============================================
-// ABOUT STATISTICS SECTION – rasmga 1:1 yaqin
-// =============================================
-.about-stats {
-	position: relative;
-	padding: 8rem 2rem;
-	background: linear-gradient(
-			rgba(10, 28, 38, 0.88),
-			rgba(10, 28, 38, 0.88)
-		),
-		url('/src/assets/images/sub-banner-img.jpg') center / cover no-repeat;
-	color: #fff;
-	overflow: hidden;
-
-	// subtle kvadrat pattern (rasmdagi fon effektiga yaqin)
-	&::before {
-		content: '';
-		position: absolute;
-		inset: 0;
-		background-image: linear-gradient(
-				rgba(255, 255, 255, 0.03) 1px,
-				transparent 1px
-			),
-			linear-gradient(
-				90deg,
-				rgba(255, 255, 255, 0.03) 1px,
-				transparent 1px
-			);
-		background-size: 80px 80px;
-		pointer-events: none;
-		z-index: 0;
-	}
-
-	.container {
-		position: relative;
-		z-index: 1;
-	}
-}
-
-.stats-header {
-	text-align: center;
-	margin-bottom: 4.5rem;
-}
-
-.stats-small {
-	display: block;
-	color: #ffb703;
-	font-size: 14px;
-	letter-spacing: 3px;
-	text-transform: uppercase;
-	margin-bottom: 1.2rem;
-	font-weight: 600;
-}
-
-.stats-title {
-	font-size: clamp(2rem, 5vw, 3.2rem);
-	font-weight: 600;
-	line-height: 1.25;
-	max-width: 900px;
-	margin: 0 auto;
-}
-
-.stats-grid {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 2.5rem;
-
-	@include mq-max(lg) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	@include mq-max(sm) {
-		grid-template-columns: 1fr;
-	}
-}
-
-.stat-card {
-	background: rgba(18, 45, 60, 0.95);
-	padding: 3rem 2rem;
-	border-radius: 16px;
-	text-align: center;
-	transition: all 0.35s ease;
-	backdrop-filter: blur(6px);
-	border: 1px solid rgba(255, 255, 255, 0.04);
-
-	&:hover {
-		transform: translateY(-10px);
-		background: rgba(25, 60, 80, 1);
-		box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
-	}
-
-	h3 {
-		font-size: clamp(2rem, 4vw, 2.4rem);
-		font-weight: 700;
-		margin-bottom: 0.8rem;
-	}
-
-	p {
-		color: #ffb703;
-		font-size: 1rem;
-		font-weight: 500;
-		letter-spacing: 0.5px;
-	}
-}
-
-// =============================================
-// RESPONSIVE TWEAKS (sizning strukturangizga mos)
-// =============================================
-
-@include mq-max(md) {
-	.about-stats {
-		padding: 6rem 1.5rem;
-	}
-
-	.stats-header {
-		margin-bottom: 3rem;
-	}
-}
-
-@include mq-max(sm) {
-	.about-stats {
-		padding: 5rem 1rem;
-	}
-
-	.stat-card {
-		padding: 2.5rem 1.5rem;
-	}
-}
-// =============================================
-// TEAM SECTION — GLASSMORPHISM CLEAN VERSION
-// =============================================
-.team-header{
-	text-align: center;
-	margin-bottom: 4rem;
-
-	.team-small {
-		display: block;
-		color: #ffb703;
-		font-size: 14px;
-		letter-spacing: 3px;
-		text-transform: uppercase;
-		margin-bottom: 1.2rem;
-		font-weight: 600;
-	}
-
-	.team-title {
-		font-size: clamp(2rem, 5vw, 3.2rem);
-		font-weight: 600;
-		line-height: 1.25;
-		max-width: 900px;
-		margin: 0 auto;
-	}
-}
-.about-team {
-	background: #eaf1f7;
-	padding: 10rem 2rem 14rem; // pastga joy ochildi
-	position: relative;
-}
-
-.team-grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 3rem;
-
-	@include mq-max(lg) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	@include mq-max(sm) {
-		grid-template-columns: 1fr;
-	}
-}
-
-// =============================================
-// TEAM CARD
-// =============================================
-
-.team-card {
-	position: relative;
-	border-radius: 20px;
-	cursor: pointer;
-	transition: transform 0.3s ease;
-	overflow: visible; // tashqariga chiqishi uchun
-
-	.team-image {
-		position: relative;
-		border-radius: 20px;
-		overflow: hidden;
-
-		img {
-			width: 100%;
-			height: 450px;
-			object-fit: cover;
-			display: block;
-			border-radius: 20px;
-			transition: transform 0.4s ease;
-		}
-
-		/* Dark overlay */
-		&::after {
-			content: '';
-			position: absolute;
-			inset: 0;
-			border-radius: 20px;
-			background: linear-gradient(
-				to top,
-				rgba(0, 0, 0, 0.5),
-				rgba(0, 0, 0, 0.1)
-			);
-			opacity: 0;
-			transition: opacity 0.4s ease;
-			z-index: 1;
-		}
-	}
-
-	/* Soft zoom + overlay on hover */
-	&:hover {
-		.team-image img {
-			transform: scale(1.05);
-		}
-
-		.team-image::after {
-			opacity: 1;
-		}
-
-		.team-info {
-			bottom: -70px;
-			box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
-		}
-
-		.team-social {
-			transform: translateY(0);
-			opacity: 1;
-		}
-	}
-}
-
-// =============================================
-// GLASS INFO — CARD DAN TASHQARIDA
-// =============================================
-
-.team-info {
-	position: absolute;
-	left: 50%;
-	bottom: -85px; // carddan tashqarida
-	transform: translateX(-50%);
-	width: 75%;
-
-	padding: 2rem;
-	border-radius: 22px;
-
-	background: rgba(255, 255, 255, 0.18);
-	backdrop-filter: blur(18px);
-	-webkit-backdrop-filter: blur(18px);
-
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-
-	z-index: 3;
-	transition: all 0.4s ease;
-
-	h3 {
-		font-size: 1.2rem;
-		font-weight: 600;
-		color: #fff;
-		margin-bottom: 0.4rem;
-	}
-
-	p {
-		color: #f2f2f2;
-		font-size: 0.95rem;
-		margin-bottom: 1.3rem;
-	}
-}
-
-// =============================================
-// SOCIAL ICONS — SLIDE UP & VISIBLE ON HOVER
-// =============================================
-
-.team-social {
-	display: flex;
-	gap: 0.8rem;
-
-	transform: translateY(35px);
-	opacity: 0;
-	transition: all 0.4s ease;
-
-	a {
-		width: 38px;
-		height: 38px;
-		border-radius: 50%;
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		background: rgba(255, 255, 255, 0.1); // 🔥 blur/gloss olib tashlandi
-		border: 1px solid rgba(255, 255, 255, 0.3);
-
-		color: #000; // 🔥 default qora, aniq ko‘rinadi
-		font-size: 14px;
-
-		transition: all 0.3s ease;
-
-		&:hover {
-			background: #ff6f61; // 🔥 hover fon rangini yangiladim
-			border-color: #ff6f61;
-			transform: translateY(-5px);
-			color: #fff; // 🔥 icon oq rangda ko‘rinadi
-		}
-	}
-}
-
-// =============================================
-// RESPONSIVE
-// =============================================
-
-@include mq-max(md) {
-	.team-card img {
-		height: 380px;
-	}
-
-	.team-info {
-		bottom: -70px;
-		width: 82%;
-	}
-}
-
-@include mq-max(sm) {
-	.about-team {
-		padding: 8rem 1rem 12rem;
-	}
-
-	.team-info {
-		width: 90%;
-		bottom: -60px;
-	}
-}
-// =============================================
-// CTA SECTION
-// =============================================
-
-.cta-section {
-	position: relative;
-	isolation: isolate;
-	background: #f4f8fb;
-	padding: 10rem 2rem;
-	text-align: center;
-	overflow: hidden;
-
-	.container {
-		position: relative;
-		z-index: 10;
-	}
-}
-
-// =============================================
-// HEADER
-// =============================================
-
-.cta-header {
-	max-width: 800px;
-	margin: 0 auto;
-	position: relative;
-	z-index: 10;
-}
-
-.cta-subtitle {
-	display: block;
-	color: #ffb703;
-	font-size: 14px;
-	letter-spacing: 3px;
-	text-transform: uppercase;
-	margin-bottom: 1.2rem;
-	font-weight: 600;
-}
-
-.cta-title {
-	font-size: clamp(2rem, 5vw, 3.2rem);
-	font-weight: 600;
-	line-height: 1.25;
-	color: #1a365d;
-	margin-bottom: 1.5rem;
-}
-
-.cta-text {
-	font-size: clamp(15px, 1.6vw, 17px);
-	line-height: 1.7;
-	color: #64748b;
-	margin-bottom: 2.5rem;
-}
-
-// =============================================
-// BUTTON
-// =============================================
-
-.cta-button {
-	background: #ffb703;
-	color: #1e293b;
-	border: none;
-	padding: 1.1rem 3rem;
-	font-size: 1.05rem;
-	font-weight: 600;
-	border-radius: 9999px;
-	cursor: pointer;
-	transition: all 0.35s ease;
-	box-shadow: 0 10px 30px rgba(255, 183, 3, 0.35);
-	position: relative;
-	z-index: 10;
-
-	&:hover {
-		background: #ffca28;
-		transform: translateY(-4px);
-		box-shadow: 0 18px 45px rgba(255, 183, 3, 0.45);
-	}
-}
-
-// =============================================
-// DECORATION WRAPPER
-// =============================================
-
-.cta-decorations {
-	position: absolute;
-	inset: 0;
-	z-index: 0;
-	pointer-events: none;
-}
-
-// =============================================
-// GLOBAL ANIMATIONS
-// =============================================
-
-@keyframes slowRotate {
-	from { transform: rotate(0deg); }
-	to { transform: rotate(360deg); }
-}
-
-@keyframes slowRotateReverse {
-	from { transform: rotate(360deg); }
-	to { transform: rotate(0deg); }
-}
-
-// =============================================
-// BACKGROUND SQUARES
-// =============================================
-
-.cta-bg-left,
-.cta-bg-right,
-.cta-shape {
-	position: absolute;
-	border-radius: 40px;
-	overflow: hidden;
-}
-
-.cta-bg-left,
-.cta-bg-right {
-	width: 220px;
-	height: 220px;
-	border-radius: 30px;
-}
-
-.cta-bg-left {
-	left: 5%;
-	top: 30%;
-	transform: rotate(15deg);
-}
-
-.cta-bg-right {
-	right: 5%;
-	bottom: 20%;
-	transform: rotate(-15deg);
-}
-
-// =============================================
-// SHAPE INNER ROTATOR (animation safe)
-// =============================================
-
-.cta-bg-left::before,
-.cta-bg-right::before,
-.cta-shape::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	border-radius: inherit;
-	background: rgba(255, 183, 3, 0.08);
-	backdrop-filter: blur(18px);
-	-webkit-backdrop-filter: blur(18px);
-	animation: slowRotate 90s linear infinite;
-}
-
-// Reverse animation for variety
-.cta-bg-right::before {
-	animation: slowRotateReverse 120s linear infinite;
-}
-
-// =============================================
-// EXTRA DECORATIVE SHAPES
-// =============================================
-
-.shape-1 {
-	width: 260px;
-	height: 260px;
-	top: 12%;
-	left: 4%;
-	transform: rotate(20deg);
-
-	&::before { animation-duration: 70s; }
-}
-
-.shape-2 {
-	width: 180px;
-	height: 180px;
-	bottom: 15%;
-	left: 10%;
-	transform: rotate(-18deg);
-
-	&::before {
-		animation-name: slowRotateReverse;
-		animation-duration: 90s;
-	}
-}
-
-.shape-3 {
-	width: 220px;
-	height: 220px;
-	top: 18%;
-	right: 6%;
-	transform: rotate(25deg);
-
-	&::before { animation-duration: 80s; }
-}
-
-.shape-4 {
-	width: 150px;
-	height: 150px;
-	bottom: 20%;
-	right: 12%;
-	transform: rotate(-20deg);
-
-	&::before {
-		animation-name: slowRotateReverse;
-		animation-duration: 100s;
-	}
-}
-
-.shape-5 {
-	width: 120px;
-	height: 120px;
-	top: 55%;
-	left: 50%;
-	transform: translate(-50%, -50%) rotate(35deg);
-	opacity: 0.05;
-
-	&::before { animation-duration: 120s; }
-}
-
-.shape-6 {
-	width: 90px;
-	height: 90px;
-	top: 70%;
-	right: 40%;
-	transform: rotate(12deg);
-	opacity: 0.05;
-
-	&::before {
-		animation-name: slowRotateReverse;
-		animation-duration: 110s;
-	}
-}
-
-
-
-/* =========================
-CERTIFICATES SECTION
-========================= */
-/* Modal styles */
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  overflow: auto;
-  padding: 2rem;
-}
-
-.modal-content {
-  position: relative;
-  max-width: 90%;
-  max-height: 90%;
-}
-
-.modal-content img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 12px;
-  display: block;
-}
-
-.modal-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 2rem;
-  color: #fff;
-  background: none;
+  background: #ffb703;
+  color: #1e293b;
   border: none;
+  padding: 1.1rem 3rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 9999px;
   cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 20px rgba(255, 183, 3, 0.28);
+
+  &:hover {
+    background: #ffca28;
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(255, 183, 3, 0.4);
+  }
+
+  @include mq-max(lg) { margin: 1.5rem auto 0; }
 }
 
-
+// =============================================
+// CERTIFICATES SECTION
+// =============================================
 .certificates-section {
   padding: 100px 0;
   background: #f5f7fa;
@@ -1025,8 +250,6 @@ CERTIFICATES SECTION
   gap: 30px;
 }
 
-/* card */
-
 .cert-card {
   background: #fff;
   border-radius: 12px;
@@ -1036,99 +259,465 @@ CERTIFICATES SECTION
   cursor: pointer;
   position: relative;
   overflow: hidden;
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.4s;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    img { transform: scale(1.05); }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #ffb400, #ff6a00);
+    top: 0;
+    left: 0;
+  }
 }
 
-.cert-card img {
+// =============================================
+// SERTIFIKAT MODAL – premium, qulay va mobil mos
+// =============================================
+.cert-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.cert-modal-content {
+  position: relative;
+  width: 96vw;
+  max-width: 1800px;
+  height: 94vh;
+  max-height: 94vh;
+  background: #0a0a0a;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cert-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 20;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+
+  &:hover {
+    background: rgba(239, 68, 68, 0.9);
+    transform: scale(1.12) rotate(90deg);
+    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.5);
+  }
+
+  @include mq-max(sm) {
+    top: 12px;
+    right: 12px;
+    width: 48px;
+    height: 48px;
+    font-size: 2rem;
+  }
+}
+
+.cert-image-wrapper {
   width: 100%;
-  border-radius: 8px;
-  transition: transform 0.4s;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  background: #000;
 }
 
-/* hover effect */
+.cert-enlarged-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.8);
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: zoom-in;
 
-.cert-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  &:hover { transform: scale(1.025); }
+
+  @include mq-max(md) { max-height: 86vh; }
+  @include mq-max(sm) {
+    max-height: 82vh;
+    padding: 0 0.5rem;
+  }
 }
 
-.cert-card:hover img {
-  transform: scale(1.05);
+// Juda katta ekranlar uchun
+@media (min-width: 1800px) {
+  .cert-modal-content {
+    max-width: 1600px;
+    border-radius: 24px;
+  }
 }
 
-/* decorative gradient line */
+// =============================================
+// READ MORE MODAL (matnli qism)
+// =============================================
+.readmore-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
 
-.cert-card::before {
+.readmore-modal {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 860px;
+  max-height: 92vh;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  animation: modalPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.4rem;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  z-index: 10;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.2);
+    transform: rotate(90deg);
+  }
+}
+
+.modal-header {
+  padding: 1.8rem 2.5rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.modal-main-title {
+  margin: 0;
+  font-size: 1.95rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.modal-body {
+  padding: 1.8rem 2.5rem;
+  overflow-y: auto;
+  flex: 1;
+  font-size: 1.05rem;
+  line-height: 1.78;
+  color: #334155;
+}
+
+.modal-intro {
+  font-size: 1.12rem;
+  font-weight: 500;
+  margin-bottom: 1.8rem;
+  color: #475569;
+}
+
+.modal-subtitle {
+  font-size: 1.38rem;
+  font-weight: 600;
+  margin: 2.2rem 0 1.1rem;
+  color: #1e40af;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #3b82f6;
+    border-radius: 2px;
+  }
+}
+
+.modal-list {
+  padding-left: 1.4rem;
+  margin: 1rem 0 1.8rem;
+
+  li {
+    margin-bottom: 0.9rem;
+    position: relative;
+    padding-left: 1.6rem;
+
+    &:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #3b82f6;
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+  }
+}
+
+.modal-conclusion {
+  font-style: italic;
+  color: #1e40af;
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 1.08rem;
+  padding: 1.2rem;
+  background: #eff6ff;
+  border-radius: 12px;
+}
+
+.modal-actions {
+  padding: 1.4rem 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  border-top: 1px solid #e2e8f0;
+  background: white;
+}
+
+.modal-btn-primary,
+.modal-btn-outline {
+  padding: 0.95rem 2.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.22s;
+}
+
+.modal-btn-primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+
+  &:hover { background: #1d4ed8; transform: translateY(-2px); }
+}
+
+.modal-btn-outline {
+  background: transparent;
+  border: 2px solid #2563eb;
+  color: #2563eb;
+
+  &:hover { background: #eff6ff; transform: translateY(-2px); }
+}
+
+// =============================================
+// CTA SECTION
+// =============================================
+.cta-section {
+  position: relative;
+  isolation: isolate;
+  background: #f4f8fb;
+  padding: 10rem 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta-header {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.cta-subtitle {
+  display: block;
+  color: #ffb703;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+.cta-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: #1a365d;
+  margin-bottom: 1.5rem;
+}
+
+.cta-text {
+  font-size: clamp(15px, 1.6vw, 17px);
+  line-height: 1.7;
+  color: #64748b;
+  margin-bottom: 2.5rem;
+}
+
+.cta-button {
+  background: #ffb703;
+  color: #1e293b;
+  border: none;
+  padding: 1.1rem 3rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 30px rgba(255, 183, 3, 0.35);
+  position: relative;
+  z-index: 10;
+
+  &:hover {
+    background: #ffca28;
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgba(255, 183, 3, 0.45);
+  }
+}
+
+.cta-decorations {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.cta-bg-left, .cta-bg-right, .cta-shape {
+  position: absolute;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.cta-bg-left, .cta-bg-right {
+  width: 220px;
+  height: 220px;
+  border-radius: 30px;
+}
+
+.cta-bg-left { left: 5%; top: 30%; transform: rotate(15deg); }
+.cta-bg-right { right: 5%; bottom: 20%; transform: rotate(-15deg); }
+
+.cta-bg-left::before,
+.cta-bg-right::before,
+.cta-shape::before {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg,#ffb400,#ff6a00);
-  top: 0;
-  left: 0;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(255, 183, 3, 0.08);
+  backdrop-filter: blur(18px);
+  animation: slowRotate 90s linear infinite;
 }
 
-/* responsive */
+.cta-bg-right::before { animation: slowRotateReverse 120s linear infinite; }
 
-@media (max-width: 1100px) {
-  .cert-grid {
-    grid-template-columns: repeat(3,1fr);
-  }
+// Shape-lar
+.shape-1, .shape-2, .shape-3, .shape-4, .shape-5, .shape-6 {
+  position: absolute;
+  background: rgba(255, 183, 3, 0.05);
+  animation: slowRotate 80s linear infinite;
 }
-
-@media (max-width: 768px) {
-  .cert-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .cert-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cert-title {
-    font-size: 28px;
-  }
-}
-
 
 // =============================================
 // RESPONSIVE
 // =============================================
+@include mq-max(1100px) {
+  .cert-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@include mq-max(768px) {
+  .cert-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .readmore-modal {
+    max-width: 96%;
+    border-radius: 16px;
+  }
+
+  .modal-main-title { font-size: 1.7rem; }
+  .modal-body { padding: 1.4rem 1.8rem; }
+  .modal-actions { flex-direction: column; gap: 0.9rem; }
+}
+
+@include mq-max(500px) {
+  .cert-grid { grid-template-columns: 1fr; }
+  .cert-title { font-size: 28px; }
+}
 
 @include mq-max(lg) {
-	.cta-section {
-		padding: 8rem 2rem;
-	}
-
-	.cta-bg-left,
-	.cta-bg-right {
-		width: 160px;
-		height: 160px;
-	}
+  .cta-section { padding: 8rem 2rem; }
+  .cta-bg-left, .cta-bg-right { width: 160px; height: 160px; }
 }
 
 @include mq-max(md) {
-	.cta-section {
-		padding: 7rem 1.5rem;
-	}
-
-	.cta-title {
-		font-size: clamp(1.8rem, 6vw, 2.4rem);
-	}
-
-	.cta-decorations {
-		display: none;
-	}
+  .cta-section { padding: 7rem 1.5rem; }
+  .cta-title { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+  .cta-decorations { display: none; }
 }
 
 @include mq-max(sm) {
-	.cta-section {
-		padding: 6rem 1rem;
-	}
+  .cta-section { padding: 6rem 1rem; }
+  .cta-button { padding: 0.9rem 2.2rem; font-size: 1rem; }
+}
 
-	.cta-button {
-		padding: 0.9rem 2.2rem;
-		font-size: 1rem;
-	}
+// =============================================
+// ANIMATIONS
+// =============================================
+@keyframes slowRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes slowRotateReverse {
+  from { transform: rotate(360deg); }
+  to   { transform: rotate(0deg); }
+}
+
+@keyframes modalPop {
+  from { opacity: 0; transform: scale(0.92) translateY(40px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
 }
