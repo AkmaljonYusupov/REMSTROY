@@ -165,32 +165,32 @@ function About() {
 				</div>
 			</div>
 
-{/* Sertifikat MODAL – yanada qulay va chiroyli versiya */}
-{modalOpen && (
-  <div className="cert-modal-overlay" onClick={closeCertModal}>
-    <div 
-      className="cert-modal-content"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <button 
-        className="cert-modal-close"
-        onClick={closeCertModal}
-        aria-label={t("common.close")}
-      >
-        ×
-      </button>
+			{/* Sertifikat MODAL – to‘liq uzunlikda ko‘rinishi uchun */}
+			{modalOpen && (
+				<div className="cert-modal-overlay" onClick={closeCertModal}>
+					<div
+						className="cert-modal-content"
+						onClick={(e) => e.stopPropagation()}
+					>
+						<button
+							className="cert-modal-close"
+							onClick={closeCertModal}
+							aria-label={t("common.close")}
+						>
+							×
+						</button>
 
-      <div className="cert-image-wrapper">
-        <img 
-          src={currentImage} 
-          alt="Sertifikat to'liq o'lchamda"
-          className="cert-enlarged-image"
-          loading="lazy"
-        />
-      </div>
-    </div>
-  </div>
-)}
+						<div className="cert-image-wrapper">
+							<img
+								src={currentImage}
+								alt="Sertifikat to'liq o'lchamda"
+								className="cert-enlarged-image"
+								loading="lazy"
+							/>
+						</div>
+					</div>
+				</div>
+			)}
 			{/* Read More MODAL – faqat matnli ma'lumotlar, sertifikatlar olib tashlandi */}
 			{readMoreOpen && (
 				<div className="readmore-overlay" onClick={closeReadMore}>

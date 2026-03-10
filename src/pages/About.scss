@@ -209,7 +209,7 @@ $breakpoints: (
 }
 
 // =============================================
-// CERTIFICATES SECTION
+// CERTIFICATES SECTION – to'liq rasm + responsiv
 // =============================================
 .certificates-section {
   padding: 100px 0;
@@ -244,99 +244,128 @@ $breakpoints: (
   line-height: 1.6;
 }
 
+// GRID
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 2.5rem 2rem;
+  padding: 0 1rem;
+
+  @include mq-max(xxl) { gap: 2rem 1.8rem; }
+  @include mq-max(xl)  { gap: 1.8rem 1.6rem; }
+  @include mq-max(lg)  { 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem 1.5rem;
+  }
+  @include mq-max(md)  { 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1.2rem;
+    padding: 0 0.8rem;
+  }
+  @include mq-max(xs)  { 
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    padding: 0 0.5rem;
+  }
 }
 
+// KARTA
 .cert-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.07);
   transition: all 0.35s ease;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
-
-  img {
-    width: 100%;
-    border-radius: 8px;
-    transition: transform 0.4s;
-  }
+  display: flex;
+  flex-direction: column;
 
   &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-    img { transform: scale(1.05); }
+    transform: translateY(-12px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.18);
   }
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #ffb400, #ff6a00);
-    top: 0;
-    left: 0;
+// Rasm konteyneri – to'liq ko'rinishi uchun
+.cert-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;           // 4:3 nisbati (agar sertifikatlar kvadratga yaqin bo‘lsa 100% qo‘yish mumkin)
+  overflow: hidden;
+  background: #f8f9fa;
+
+  @include mq-max(md) {
+    padding-top: 80%;         // kichik ekranlarda biroz balandroq
   }
+}
+
+.cert-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;        // TO‘LIQ KO‘RINISHI UCHUN ENG MUHIMI
+  object-position: center;
+  padding: 1rem;              // chetlaridan joy qoldiramiz
+  box-sizing: border-box;
+  transition: transform 0.45s ease;
+
+  .cert-card:hover & {
+    transform: scale(1.01);
+  }
+}
+
+// Agar rasm vertikal bo‘lsa (uzun sertifikatlar uchun)
+.cert-image.vertical {
+  padding: 0.8rem 1.5rem;     // agar kerak bo‘lsa class qo‘shib ishlatish mumkin
 }
 
 // =============================================
-// SERTIFIKAT MODAL – premium, qulay va mobil mos
+// SERTIFIKAT MODAL – premium va mobil mos
 // =============================================
 .cert-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.88);
+  background: rgba(0, 0, 0, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 2000;
   display: flex;
-  align-items: center;
+  align-items: flex-start;       /* yuqoridan boshlanadi */
   justify-content: center;
-  padding: 1rem;
+  padding: 0;
+  overflow-y: auto;              /* agar rasm juda uzun bo‘lsa skroll chiqadi */
 }
 
 .cert-modal-content {
   position: relative;
-  width: 96vw;
-  max-width: 1800px;
-  height: 94vh;
-  max-height: 94vh;
-  background: #0a0a0a;
-  border-radius: 16px;
+  width: 100vw;
+  min-height: 100vh;             /* butun ekran balandligi */
+  background: #000;
+  border-radius: 0;              /* chetlar yumaloq bo‘lmasin */
   overflow: hidden;
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
 }
 
 .cert-modal-close {
-  position: absolute;
+  position: fixed;               /* ekranga yopishib turadi */
   top: 20px;
   right: 25px;
-  z-index: 20;
+  z-index: 30;
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.65);
-  color: #ffffff;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
   font-size: 2.4rem;
-  font-weight: 300;
   line-height: 1;
   border: none;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 
   &:hover {
-    background: rgba(239, 68, 68, 0.9);
-    transform: scale(1.12) rotate(90deg);
-    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.5);
+    background: rgba(220, 38, 38, 0.95);
+    transform: scale(1.1) rotate(90deg);
   }
 
   @include mq-max(sm) {
@@ -350,36 +379,41 @@ $breakpoints: (
 
 .cert-image-wrapper {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;       /* yuqoridan boshlab ko‘rsatadi */
   justify-content: center;
-  padding: 2.5rem;
+  padding: 80px 20px 40px;       /* yuqoridan joy + pastdan joy */
   box-sizing: border-box;
   background: #000;
 }
 
 .cert-enlarged-image {
-  max-width: 100%;
-  max-height: 100%;
   width: auto;
   height: auto;
+  max-width: 100%;
+  min-height: 0;                 /* cheklov olib tashlandi */
+  max-height: none;              /* to‘liq balandlikda ko‘rsatiladi */
   object-fit: contain;
-  border-radius: 10px;
-  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.8);
-  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border-radius: 8px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.8);
+  transition: transform 0.4s ease;
   cursor: zoom-in;
 
-  &:hover { transform: scale(1.025); }
+  &:hover {
+    transform: scale(1.015);
+  }
 
-  @include mq-max(md) { max-height: 86vh; }
+  @include mq-max(md) {
+    padding: 60px 15px 30px;
+  }
+
   @include mq-max(sm) {
-    max-height: 82vh;
-    padding: 0 0.5rem;
+    padding: 50px 10px 20px;
   }
 }
 
-// Juda katta ekranlar uchun
+// Juda katta ekranlar
 @media (min-width: 1800px) {
   .cert-modal-content {
     max-width: 1600px;
@@ -388,7 +422,7 @@ $breakpoints: (
 }
 
 // =============================================
-// READ MORE MODAL (matnli qism)
+// READ MORE MODAL
 // =============================================
 .readmore-overlay {
   position: fixed;
@@ -664,30 +698,8 @@ $breakpoints: (
 }
 
 // =============================================
-// RESPONSIVE
+// RESPONSIVE (umumiy)
 // =============================================
-@include mq-max(1100px) {
-  .cert-grid { grid-template-columns: repeat(3, 1fr); }
-}
-
-@include mq-max(768px) {
-  .cert-grid { grid-template-columns: repeat(2, 1fr); }
-
-  .readmore-modal {
-    max-width: 96%;
-    border-radius: 16px;
-  }
-
-  .modal-main-title { font-size: 1.7rem; }
-  .modal-body { padding: 1.4rem 1.8rem; }
-  .modal-actions { flex-direction: column; gap: 0.9rem; }
-}
-
-@include mq-max(500px) {
-  .cert-grid { grid-template-columns: 1fr; }
-  .cert-title { font-size: 28px; }
-}
-
 @include mq-max(lg) {
   .cta-section { padding: 8rem 2rem; }
   .cta-bg-left, .cta-bg-right { width: 160px; height: 160px; }
