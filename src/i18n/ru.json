@@ -12,13 +12,7 @@
 		"contact": "Контакты"
 	},
 	"gallery": {
-    "images": [
-      "Bitumen Mastika",
-      "Polimer Mastika",
-      "Gidroizolyatsiya",
-      "Bitum Primer",
-      "Ishlab chiqarish"
-    ]
+    "images": "Иллюстрации из процесса строительства"
   },
 	"features": {
 		"standard": {

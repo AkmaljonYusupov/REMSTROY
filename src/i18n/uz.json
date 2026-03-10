@@ -12,13 +12,7 @@
 		"contact": "Aloqa"
 	},
 	"gallery": {
-    "images": [
-      "Bitumen Mastika",
-      "Polimer Mastika",
-      "Gidroizolyatsiya",
-      "Bitum Primer",
-      "Ishlab chiqarish"
-    ]
+    "images": "Ish jarayonidan lavhalar"      
   },
 	"features": {
 		"standard": {

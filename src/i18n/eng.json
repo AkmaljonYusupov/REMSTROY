@@ -12,13 +12,7 @@
 		"contact": "Contact"
 	},
 	"gallery": {
-    "images": [
-      "Bitumen Mastic",
-      "Polymer Mastic",
-      "Waterproofing",
-      "Bitum Primer",
-      "Production"
-    ]
+    "images": "Illustrations from the construction process"
   },
 	"features": {
 		"standard": {
