@@ -326,7 +326,7 @@
 		"address": "Address",
 		"addressValue": "Office Tashkent City, Chilonzor District, Chilonzor Street 4",
 		"worktime": "Working hours",
-		"worktimeValue": "Every day from 09:00 to 20:00",
+		"worktimeValue": "Working hours are from 8:00 to 17:00.",
 		"rights": "All rights reserved",
 		"success": "Your request has been sent successfully!",
 		"error": "An error occurred. Please try again.",
