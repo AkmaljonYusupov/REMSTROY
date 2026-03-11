@@ -46,6 +46,7 @@ $breakpoints: (
 }
 
 .about-title {
+  margin-top: 80px;
   position: relative;
   z-index: 2;
   font-size: clamp(32px, 6vw, 64px);
@@ -526,7 +527,8 @@ $breakpoints: (
 .modal-list {
   padding-left: 1.4rem;
   margin: 1rem 0 1.8rem;
-
+  list-style-type: none !important;
+  
   li {
     margin-bottom: 0.9rem;
     position: relative;
