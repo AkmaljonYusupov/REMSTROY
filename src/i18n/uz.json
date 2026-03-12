@@ -291,6 +291,33 @@
   "clientName": "Bukhara City",
   "projectCost": "Loyiha qiymati:",
   "projectYear": "Loyiha yili:"
+},
+"project10": {
+  "title": "Magistral suv quvuri qurilishi",
+  "descShort": "AO Uzbekistan Railways buyurtmasi asosida magistral suv quvuri qurilishi loyihasi...",
+  "descFull": "Mazkur loyiha AO Uzbekistan Railways buyurtmasi asosida amalga oshirilgan. Loyiha doirasida magistral suv quvuri qurilishi ishlari bajarildi. Qurilish ishlari zamonaviy texnologiyalar asosida amalga oshirilib, suv ta’minoti infratuzilmasini yaxshilashga xizmat qiladi.",
+  "client": "Buyurtmachi:",
+  "clientName": "AO Uzbekistan Railways",
+  "projectCost": "Loyiha qiymati:",
+  "projectYear": "Loyiha yili:"
+},
+"project11": {
+  "title": "Amudaryo ostidan 1020 mm gaz quvuri qurilishi",
+  "descShort": "Urgench TransGaz buyurtmasi asosida Amudaryo ostidan 1020 mm diametrli gaz quvuri qurilishi loyihasi...",
+  "descFull": "Mazkur loyiha Urgench TransGaz buyurtmasi asosida amalga oshirilgan. Loyiha doirasida Amudaryo daryosi ostidan HDD (Horizontal Directional Drilling) texnologiyasi yordamida 1020 mm diametrli gaz quvuri qurildi. Qurilish ishlari zamonaviy texnologiyalar asosida bajarilib, hududning gaz ta’minoti infratuzilmasini rivojlantirishga xizmat qiladi.",
+  "client": "Buyurtmachi:",
+  "clientName": "Urgench TransGaz", 
+  "projectCost": "Loyiha qiymati:",
+  "projectYear": "Loyiha yili:"
+},
+"project12": {
+  "title": "Amudaryo ostidan 1020 mm gaz quvuri qurilishi",
+  "descShort": "Urgench TransGaz buyurtmasi asosida Amudaryo ostidan 1020 mm diametrli gaz quvuri qurilishi loyihasi...",
+  "descFull": "Mazkur loyiha Urgench TransGaz buyurtmasi asosida amalga oshirilgan. Loyiha doirasida Amudaryo daryosi ostidan HDD (Horizontal Directional Drilling) texnologiyasi yordamida 1020 mm diametrli gaz quvuri qurildi. Qurilish ishlari zamonaviy texnologiyalar asosida bajarilib, hududning gaz ta’minoti infratuzilmasini rivojlantirishga xizmat qiladi.",
+  "client": "Buyurtmachi:",
+  "clientName": "Urgench TransGaz",  
+  "projectCost": "Loyiha qiymati:",
+  "projectYear": "Loyiha yili:"
 }
 	},
 	"reviews": {

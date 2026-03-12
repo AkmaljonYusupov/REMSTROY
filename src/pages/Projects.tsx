@@ -22,14 +22,21 @@ import projectImg013 from '../assets/images/split_image_007.png'
 import projectImg010 from '../assets/images/split_image_06.png'
 import projectImg011 from '../assets/images/split_image_07.png'
 
+import projectImg000011 from '../assets/images/Screenshot_1.png'
+import projectImg00001100 from '../assets/images/split_image_00015.png'
+import projectImg0000110 from '../assets/images/split_image_0015.png'
 import projectImg1 from '../assets/images/split_image_1.png'
 import projectImg11 from '../assets/images/split_image_11.png'
 import projectImg120 from '../assets/images/split_image_110.png'
+import projectImg0000011 from '../assets/images/split_image_15.png'
 import projectImg2 from '../assets/images/split_image_2.png'
+import projectImg000010 from '../assets/images/split_image_20.jpg'
+import projectImg000012 from '../assets/images/split_image_21.jpg'
 import projectImg3 from '../assets/images/split_image_3.png'
 import projectImg4 from '../assets/images/split_image_4.png'
 import projectImg5 from '../assets/images/split_image_5.png'
 import projectImg6 from '../assets/images/split_image_6.png'
+import projectImg01200 from '../assets/images/split_image_9.png'
 import './Projects.scss'
 
 function Projects() {
@@ -51,40 +58,7 @@ function Projects() {
     )
     if (statsRef.current) observer.observe(statsRef.current)
     return () => observer.disconnect()
-  }, [])
-
-  // const useCountUp = (end, duration = 2000) => {
-  //   const [count, setCount] = useState(0)
-
-  //   useEffect(() => {
-  //     if (!visible) return
-  //     let startTime = null
-  //     let animationFrame
-
-  //     const animate = (time) => {
-  //       if (!startTime) startTime = time
-  //       const progress = time - startTime
-  //       const percent = Math.min(progress / duration, 1)
-  //       setCount(Math.floor(end * percent))
-  //       if (percent < 1) animationFrame = requestAnimationFrame(animate)
-  //       else setCount(end)
-  //     }
-
-  //     animationFrame = requestAnimationFrame(animate)
-  //     return () => cancelAnimationFrame(animationFrame)
-  //   }, [visible, end, duration])
-
-  //   return count
-  // }
-
-  // const projectsCount = useCountUp(5698)
-  // const team = useCountUp(864)
-  // const coffee = useCountUp(9654)
-  // const awards = useCountUp(578)
-
-  // ================= PROJECT DATA =================
-  // Matnlar i18next orqali tarjima qilinadi, shu uchun faqat keylar beriladi
-  
+  }, []) 
   const navigate = useNavigate();
   const projectsData = [
     {
@@ -147,9 +121,31 @@ function Projects() {
       id: 9,
       key: 'project9',
       images: [projectImg11, projectImg110, projectImg120],
+      cost: "$15.6 mln",
+      year: "2020"
+    },
+     {
+      id: 10,
+      key: 'project10',
+      images: [projectImg000010, projectImg000012, projectImg000011],
+      cost: "$37 mln",
+      year: "2020"
+    },
+     {
+      id: 11,
+      key: 'project11',
+      images: [projectImg0000011, projectImg0000110, projectImg00001100],
       cost: "$30 mln",
       year: "2020"
+    },
+     {
+      id: 12,
+      key: 'project12',
+      images: [projectImg01200, projectImg0000110, projectImg0000011],
+      cost: "$3.7 mln",
+      year: "2020"
     }
+
   ]
 
   // ================= MODAL STATE =================
@@ -316,33 +312,6 @@ function Projects() {
           </div>
         )}
       </div>
-
-      {/* STATISTICS */}
-      {/* <div className="about-stats" ref={statsRef}>
-        <div className="stats-overlay">
-          <div className="container">
-            <div className="stats-grid">
-              <div className="stat-card">
-                <h3>{projectsCount.toLocaleString()}+</h3>
-                <p>{t('about.stats.projects')}</p>
-              </div>
-              <div className="stat-card">
-                <h3>{team.toLocaleString()}+</h3>
-                <p>{t('about.stats.team')}</p>
-              </div>
-              <div className="stat-card">
-                <h3>{coffee.toLocaleString()}+</h3>
-                <p>{t('about.stats.coffee')}</p>
-              </div>
-              <div className="stat-card">
-                <h3>{awards.toLocaleString()}+</h3>
-                <p>{t('about.stats.awards')}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       {/* CTA SECTION */}
       <div className="cta-section">
         <div className="cta-decorations">
