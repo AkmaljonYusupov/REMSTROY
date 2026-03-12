@@ -16,15 +16,15 @@
   },
 	"features": {
 		"standard": {
-			"title": "Full Compliance with Standards",
+			"title": "Full compliance with standards",
 			"desc": "REMSTROY strictly follows all national and international construction standards."
 		},
 		"quality": {
-			"title": "High Quality Guarantee",
+			"title": "High quality guarantee",
 			"desc": "Each project is carried out under continuous quality control."
 		},
 		"tech": {
-			"title": "Modern Technologies",
+			"title": "Modern technologies",
 			"desc": "Advanced and efficient construction technologies are used."
 		}
 	},
