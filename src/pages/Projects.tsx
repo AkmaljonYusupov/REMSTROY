@@ -23,7 +23,6 @@ import projectImg010 from '../assets/images/split_image_06.png'
 import projectImg011 from '../assets/images/split_image_07.png'
 
 import projectImg000011 from '../assets/images/Screenshot_1.png'
-import projectImg00001100 from '../assets/images/split_image_00015.png'
 import projectImg0000110 from '../assets/images/split_image_0015.png'
 import projectImg1 from '../assets/images/split_image_1.png'
 import projectImg11 from '../assets/images/split_image_11.png'
@@ -134,15 +133,8 @@ function Projects() {
      {
       id: 11,
       key: 'project11',
-      images: [projectImg0000011, projectImg0000110, projectImg00001100],
-      cost: "$30 mln",
-      year: "2020"
-    },
-     {
-      id: 12,
-      key: 'project12',
-      images: [projectImg01200, projectImg0000110, projectImg0000011],
-      cost: "$3.7 mln",
+      images: [projectImg0000011, projectImg01200,projectImg0000110],
+      cost: "$37 mln",
       year: "2020"
     }
 
