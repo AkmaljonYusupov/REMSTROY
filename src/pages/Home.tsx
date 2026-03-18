@@ -653,16 +653,7 @@ const Home = () => {
 
 						<p className='news__desc'>{t('news.desc')}</p>
 
-						<div className='news__video'>
-							<video
-								src='/videos/news-video.mp4'
-								controls
-								autoPlay
-								muted
-								loop
-								playsInline
-							/>
-						</div>
+						
 					</div>
 
 					{/* RIGHT */}

@@ -43,7 +43,7 @@ function Contact() {
 		try {
 			// Telegram Bot ma'lumotlari
 			const botToken = '7539744657:AAGDnXeMk5Ylu8GNTU8vd9-68Zqv7kxSOHE'
-			const chatId = '630353326'
+			const chatId = '-1003826202647'
 
 			if (!botToken || !chatId) {
 				throw new Error('Bot token yoki chat ID topilmadi')
